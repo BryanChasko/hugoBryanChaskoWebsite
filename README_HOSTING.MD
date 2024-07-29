@@ -66,7 +66,7 @@ cat > dns-record.json <<EOL
 }
 EOL
 
-aws route53 change-resource-record-sets --hosted-zone-id Z09216723VDB0N04DM9LL --change-batch file://dns-record.json
+aws route53 change-resource-record-sets --hosted-zone-id <hosted zone id> --change-batch file://dns-record.json
 
 
     "ChangeInfo": {
@@ -82,7 +82,7 @@ aws route53 change-resource-record-sets --hosted-zone-id Z09216723VDB0N04DM9LL -
 aws acm request-certificate --domain-name bryanchasko.com --validation-method DNS --region us-west-2
 
 {
-    "CertificateArn": "arn:aws:acm:us-west-2:211125425201:certificate/6b265cac-9099-441c-b66a-508363db3be7"
+    "CertificateArn": "<>"
 }
 
 ## Create a CloudFront distribution with the S3 bucket as the origin and the ACM certificate for HTTP
@@ -99,8 +99,8 @@ cat > cloudfront-config.json <<EOL
     "Quantity": 1,
     "Items": [
       {
-        "Id": "S3-bryanchasko-com",
-        "DomainName": "bryanchasko.com.s3-website-us-west-2.amazonaws.com",
+        "Id": "<>",
+        "DomainName": "<>",
         "OriginPath": "",
         "CustomHeaders": {
           "Quantity": 0
@@ -141,16 +141,16 @@ cat > cloudfront-config.json <<EOL
   "Comment": "CloudFront distribution for bryanchasko.com",
   "Enabled": true,
   "ViewerCertificate": {
-    "ACMCertificateArn": "arn:aws:acm:us-west-2:211125425201:certificate/6b265cac-9099-441c-b66a-508363db3be7",
+    "ACMCertificateArn": "<arn here>",
     "SSLSupportMethod": "sni-only",
     "MinimumProtocolVersion": "TLSv1.2_2018"
   }
 }
 EOL
 
-aws route53 change-resource-record-sets --hosted-zone-id Z09216723VDB0N04DM9LL --change-batch file://cloudfront-dns-record.json
+aws route53 change-resource-record-sets --hosted-zone-id <hosted zone id> --change-batch file://cloudfront-dns-record.json
 
 
 ### TIPS AND TRICKS
 see dns settings using hosted zone details' "hosted zone ID" from console
-aws route53 list-resource-record-sets --hosted-zone-id Z09216723VDB0N04DM9LL
+aws route53 list-resource-record-sets --hosted-zone-id <hosted zone id>
