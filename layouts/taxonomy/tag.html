@@ -1,0 +1,26 @@
+{{ define "main" }}
+<h1>Topics</h1>
+
+<ul>
+    {{ range .Data.Pages }}
+    <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </li>
+    {{ else }}
+    <p>No content found.</p>
+    {{ end }}
+</ul>
+
+<style>
+    /* Add your fancy formatting styles here */
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+</style>
+{{ end }}

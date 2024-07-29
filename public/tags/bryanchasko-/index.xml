@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>BryanChasko 🦊 on Bryan Chasko&#39;s Portfolio</title>
+    <link>http://localhost:1313/tags/bryanchasko-/</link>
+    <description>Recent content in BryanChasko 🦊 on Bryan Chasko&#39;s Portfolio</description>
+    <image>
+      <title>Bryan Chasko&#39;s Portfolio</title>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.128.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 27 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/bryanchasko-/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bryan Chasko&#39;s Basics  🦊</title>
+      <link>http://localhost:1313/blog/posts/about-bryan-chasko/</link>
+      <pubDate>Sat, 27 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/about-bryan-chasko/</guid>
+      <description>About Bryan 🦊 #AWSHero since 2018 known for 🌟 Community ~ Spatial Computing 🌍
+Personal Background US Army Special Operations Veteran 🎖️
+New York Institute of Photography Alumni 📸
+Nature Lover 🌲
+From New Mexico&amp;rsquo;s Sacramento Mountains 🏞️
+Top 5000 🏆
+In EA&amp;rsquo;s Madden NFL 3 times as the New England Patriots 🏈
+80&amp;rsquo;s Baby 🦊
+Born with an MS-DOS Computer 💻
+Has a cat named Buddy 🐱</description>
+    </item>
+  </channel>
+</rss>
