@@ -1,5 +1,6 @@
 # uploading this file to your private repo
-git add -f _README_HOSTING.md
+git add -f _AWS_ENVIRONMENT_DETAILS.md _README_HOSTING.md bucket-policy.json cloudfront-config.json cloudfront-dns-record.json cors.json current-bucket-policy.json dns-record.json
+
  1 file changed, 156 insertions(+)
  create mode 100644 _README_HOSTING.md
 
