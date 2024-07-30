@@ -1,3 +1,26 @@
+# uploading this file to your private repo
+git add -f _README_HOSTING.md
+ 1 file changed, 156 insertions(+)
+ create mode 100644 _README_HOSTING.md
+
+git commit -m "Added _README_HOSTING.md to private repository"
+[main f579a4c] Added _README_HOSTING.md to private repository
+ 1 file changed, 156 insertions(+)
+ create mode 100644 _README_HOSTING.md
+
+➜  bryanChaskoHugo git:(main) ✗ git remote add private-repo https://github.com/BryanChasko/hugoBryanChaskoWebsitePrivate.git
+
+➜  bryanChaskoHugo git:(main) ✗ git push private-repo main
+Enumerating objects: 203, done.
+Counting objects: 100% (203/203), done.
+Delta compression using up to 24 threads
+Compressing objects: 100% (176/176), done.
+Writing objects: 100% (203/203), 110.12 KiB | 6.12 MiB/s, done.
+Total 203 (delta 93), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (93/93), done.
+To https://github.com/BryanChasko/hugoBryanChaskoWebsitePrivate.git
+ * [new branch]      main -> main
+
 # STEPS TAKEN TO DEPLOY
 
 ## Create The Bucket
