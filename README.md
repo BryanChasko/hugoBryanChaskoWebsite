@@ -1,4 +1,4 @@
-# Bryan Chasko - People from the Past 🌿🦊🌸
+# Bryan Chasko - Cloudcroft Cloud Company 🌿🦊🌸
 
 Development Command:
 hugo server --config config.dev.toml
@@ -113,7 +113,7 @@ bash
 toml
     baseURL = "https://bryanchasko.com"
     languageCode = "en-us"
-    title = "Bryan Chasko - People from the Past"
+    title = "Bryan Chasko - Cloudcroft Cloud Company"
     theme = "PaperMod"
   
 

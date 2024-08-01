@@ -1,1 +1,9 @@
 themes/PaperMod/
+_README_HOSTING.md
+_AWS_ENVIRONMENT_DETAILS.md
+bucket-policy.json
+cloudfront-config.json
+cloudfront-dns-record.json
+cors.json
+current-bucket-policy.json
+dns-record.json
