@@ -1,5 +1,5 @@
 ---
-title: "☁️ How I Became an AWS Hero 🦸‍♂️"
+title: "☁️ How I Became an AWS Hero 🦸‍️"
 date: 2024-07-07
 tags: ["Cloud", "AWS", "AboutMe", "bryanChasko", "ProfessionalExperience", "TechSkills", "CareerProfile", "TechnicalExpertise", "ITConsulting", "SoftwareDevelopment", "Amazon", "Getting Started", "Solutions Architect", "AWS Hero", "#AWSHero"]
 ---

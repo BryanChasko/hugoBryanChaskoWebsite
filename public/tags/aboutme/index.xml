@@ -2,65 +2,98 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>AboutMe on Bryan Chasko&#39;s Portfolio</title>
-    <link>https://bryanchasko.com/tags/aboutme/</link>
+    <link>http://localhost:1313/tags/aboutme/</link>
     <description>Recent content in AboutMe on Bryan Chasko&#39;s Portfolio</description>
     <image>
       <title>Bryan Chasko&#39;s Portfolio</title>
-      <url>https://bryanchasko.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://bryanchasko.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
     <lastBuildDate>Sun, 07 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://bryanchasko.com/tags/aboutme/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/aboutme/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>☁️ How I Became an AWS Hero 🦸‍♂️</title>
-      <link>https://bryanchasko.com/blog/posts/aws-hero-bryan-chasko/</link>
+      <title>☁️ How I Became an AWS Hero 🦸‍️</title>
+      <link>http://localhost:1313/blog/posts/aws-hero-bryan-chasko/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/blog/posts/aws-hero-bryan-chasko/</guid>
-      <description>☁️ Day 1 on Amazon Web Services (AWS) Cloud w/Bryan Chasko A Journey of Innovation, Leadership, and AWS Expertise “One of the leading innovators in the world”
-Background Intro to ethical hacking and electronics via time in US Army Special Operations Nature Lover from New Mexico’s Sacramento Mountains New York Institute of Photography Alumni Top 5000 in EA’s Madden NFL three times as the New England Patriots Cat Compadre named Buddy 🐱 80’s Baby Born with acess to an MS-DOS Computer near Yuma Proving Grounds 💾 AWS Hero since 2008 known for Community and Spatial Computing &amp;ldquo;Bryan Chasko’s journey with Amazon’s ecosystem has been nothing short of transformative, reflecting his deep understanding of AWS and its potential.</description>
+      <guid>http://localhost:1313/blog/posts/aws-hero-bryan-chasko/</guid>
+      <description>&lt;h2 id=&#34;-day-1-on-amazon-web-services-aws-cloud-wbryan-chasko&#34;&gt;☁️ Day 1 on Amazon Web Services (AWS) Cloud w/Bryan Chasko&lt;/h2&gt;
+&lt;h3 id=&#34;a-journey-of-innovation-leadership-and-aws-expertise&#34;&gt;A Journey of Innovation, Leadership, and AWS Expertise&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.lascrucesbulletin.com/stories/local-company-takes-cutting-edge-health-technology-global,2642&#34;&gt;“One of the leading innovators in the world”&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;background&#34;&gt;Background&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Intro to ethical hacking and electronics via time in US Army Special Operations&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Nature Lover from New Mexico’s Sacramento Mountains&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;New York Institute of Photography Alumni&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Top 5000 in EA’s Madden NFL three times as the New England Patriots&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cat Compadre named Buddy 🐱&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;80’s Baby Born with acess to an MS-DOS Computer near Yuma Proving Grounds 💾&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AWS Hero since 2008 known for Community and Spatial Computing&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;ldquo;Bryan Chasko’s journey with Amazon’s ecosystem has been nothing short of transformative, reflecting his deep understanding of AWS and its potential.&amp;rdquo;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Bryan Chasko&#39;s Skills and Experience 🦊</title>
-      <link>https://bryanchasko.com/blog/posts/my-skills-and-experience/</link>
+      <link>http://localhost:1313/blog/posts/my-skills-and-experience/</link>
       <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/blog/posts/my-skills-and-experience/</guid>
-      <description>Skills and Experience 🦊 Quick Links Skills: Cloud Platforms &amp;amp; Services ☁️ • Infrastructure &amp;amp; Networking 🔧 • Data Management 📊 • Observability &amp;amp; Monitoring 📈 • Security &amp;amp; Compliance 🔒 • Design &amp;amp; Prototyping 🎨 • Project Management &amp;amp; Leadership 👥 • Data Visualization 📊 • CRM Systems 💼 • Industry Experience 🏢 • Design &amp;amp; Engineering 🏗️ • Machine Learning &amp;amp; AI 🤖 • Internet of Things (IoT) 🌐 • Big Data 📉 • Additional Skills 🔧</description>
+      <guid>http://localhost:1313/blog/posts/my-skills-and-experience/</guid>
+      <description>&lt;hr&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h2 id=&#34;skills-and-experience-&#34;&gt;Skills and Experience 🦊&lt;/h2&gt;
+&lt;h3 id=&#34;quick-links&#34;&gt;Quick Links&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Skills:&lt;/strong&gt; &lt;a href=&#34;#cloud-platforms--services-&#34;&gt;Cloud Platforms &amp;amp; Services ☁️&lt;/a&gt; • &lt;a href=&#34;#infrastructure--networking-&#34;&gt;Infrastructure &amp;amp; Networking 🔧&lt;/a&gt; • &lt;a href=&#34;#data-management-&#34;&gt;Data Management 📊&lt;/a&gt; • &lt;a href=&#34;#observability--monitoring-&#34;&gt;Observability &amp;amp; Monitoring 📈&lt;/a&gt; • &lt;a href=&#34;#security--compliance-&#34;&gt;Security &amp;amp; Compliance 🔒&lt;/a&gt; • &lt;a href=&#34;#design--prototyping-&#34;&gt;Design &amp;amp; Prototyping 🎨&lt;/a&gt; • &lt;a href=&#34;#project-management--leadership-&#34;&gt;Project Management &amp;amp; Leadership 👥&lt;/a&gt; • &lt;a href=&#34;#data-visualization-&#34;&gt;Data Visualization 📊&lt;/a&gt; • &lt;a href=&#34;#crm-systems-&#34;&gt;CRM Systems 💼&lt;/a&gt; • &lt;a href=&#34;#industry-experience-&#34;&gt;Industry Experience 🏢&lt;/a&gt; • &lt;a href=&#34;#design--engineering-&#34;&gt;Design &amp;amp; Engineering 🏗️&lt;/a&gt; • &lt;a href=&#34;#machine-learning--ai-&#34;&gt;Machine Learning &amp;amp; AI 🤖&lt;/a&gt; • &lt;a href=&#34;#internet-of-things-iot-&#34;&gt;Internet of Things (IoT) 🌐&lt;/a&gt; • &lt;a href=&#34;#big-data-&#34;&gt;Big Data 📉&lt;/a&gt; • &lt;a href=&#34;#additional-skills-&#34;&gt;Additional Skills 🔧&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>My Cat Buddy 🐈</title>
-      <link>https://bryanchasko.com/blog/posts/my-cat-buddy/</link>
+      <link>http://localhost:1313/blog/posts/my-cat-buddy/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/blog/posts/my-cat-buddy/</guid>
-      <description>Adopt a pet from Guadalupe County Animal Control
-My Cat Buddy 🐱 Buddy is a tabby cat from Mesilla Park, New Mexico. He likes to play catch with springs and eat fish. See #caturday on my insta, X, and threads. We both appreciate your donations to
-Guadalupe County Animal Control Phone: 505-472-3711
-Santa Rosa Animal Shelter, 117 S. 5th Street, Santa Rosa, New Mexico 88435
-Get directions to adopt your new pet from beautiful Santa Rosa NM on Route 66</description>
+      <guid>http://localhost:1313/blog/posts/my-cat-buddy/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.animalshelter.org/search/shelterpets.asp?rescueId=3220&#34;&gt;Adopt a pet from Guadalupe County Animal Control&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;my-cat-buddy-&#34;&gt;My Cat Buddy 🐱&lt;/h2&gt;
+&lt;p&gt;Buddy is a tabby cat from Mesilla Park, New Mexico. He likes to play catch with springs and eat fish. See #caturday on my insta, X, and threads. Buddy and Bryan both appreciate your donations to, and adoptions from:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Guadalupe County Animal Control&lt;/strong&gt;
+Phone: &lt;a href=&#34;tel:505-472-3711&#34;&gt;505-472-3711&lt;/a&gt;&lt;br&gt;
+Santa Rosa Animal Shelter, 117 S. 5th Street,
+Santa Rosa, New Mexico 88435&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.google.com/maps/place/Santa+Rosa+Animal+Shelter,+117+S+5th+St,+Santa+Rosa,+NM+88435/@34.7289485,-104.513631,15z&#34;&gt;Get directions to adopt your new pet from beautiful Santa Rosa NM on Route 66&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Bryan Chasko&#39;s Basics  🦊</title>
-      <link>https://bryanchasko.com/blog/posts/about-bryan-chasko/</link>
+      <link>http://localhost:1313/blog/posts/about-bryan-chasko/</link>
       <pubDate>Thu, 13 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/blog/posts/about-bryan-chasko/</guid>
-      <description>About Bryan 🦊 #AWSHero since 2018 known for 🌟
-Community &amp;amp; Spatial Computing 🌍AWS Hero Bio
-Personal Background US Army Special Operations Veteran 🎖️
-New York Institute of Photography Alumni 📸. insta
-Nature Lover 🌲
-From New Mexico&amp;rsquo;s Sacramento Mountains 🏞️. trails
-Top 5000 🏆
-In EA&amp;rsquo;s Madden NFL 3 times as the New England Patriots 🏈
-Eighties Baby 🦊
-Born comfortable with a terminal thanks to an MS-DOS Computer 💻.</description>
+      <guid>http://localhost:1313/blog/posts/about-bryan-chasko/</guid>
+      <description>&lt;h2 id=&#34;about-bryan--&#34;&gt;About Bryan  🦊&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;content/blog/posts/aws-hero-bryan-chasko.md&#34;&gt;#AWSHero&lt;/a&gt; since 2018 &lt;a href=&#34;content/blog/posts/my-skills-and-experience.md&#34;&gt;known for 🌟&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Community &amp;amp; Spatial Computing&lt;/strong&gt; 🌍&lt;a href=&#34;https://aws.amazon.com/developer/community/heroes/bryan-chasko/&#34;&gt;AWS Hero Bio&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;personal-background&#34;&gt;Personal Background&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;US Army Special Operations Veteran&lt;/strong&gt; 🎖️&lt;br&gt;
+New York Institute of Photography Alumni 📸. &lt;a href=&#34;https://instagram.com/bryanChasko&#34;&gt;insta&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Nature Lover&lt;/strong&gt; 🌲&lt;br&gt;
+From New Mexico&amp;rsquo;s Sacramento Mountains 🏞️. &lt;a href=&#34;https://www.fs.usda.gov/Internet/FSE_DOCUMENTS/fseprd512805.pdf&#34;&gt;trails&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/posts/new-england-patriots-fandom.md&#34;&gt;&lt;strong&gt;Top 5000&lt;/strong&gt; 🏆&lt;br&gt;
+In EA&amp;rsquo;s Madden NFL 3 times as the New England Patriots 🏈&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Eighties Baby&lt;/strong&gt; 🦊&lt;br&gt;
+Born comfortable with a terminal thanks to an MS-DOS Computer 💻. &lt;a href=&#34;https://www.computerhistory.org/timeline/1981/&#34;&gt;IBM 1981&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/posts/my-cat-buddy.md&#34;&gt;&lt;strong&gt;Has a cat named Buddy&lt;/strong&gt; 🐱&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>New England Patriots Fandom 🏈</title>
-      <link>https://bryanchasko.com/blog/posts/new-england-patriots-fandom/</link>
+      <link>http://localhost:1313/blog/posts/new-england-patriots-fandom/</link>
       <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/blog/posts/new-england-patriots-fandom/</guid>
-      <description>New England Patriots Fandom 🏈 I&amp;rsquo;ve been lucky enough to see professional american football in 15 cities and visited all but 1 NFL stadium.</description>
+      <guid>http://localhost:1313/blog/posts/new-england-patriots-fandom/</guid>
+      <description>&lt;h2 id=&#34;new-england-patriots-fandom-&#34;&gt;New England Patriots Fandom 🏈&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;ve been lucky enough to see professional american football in 15 cities and visited all but 1 NFL stadium.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

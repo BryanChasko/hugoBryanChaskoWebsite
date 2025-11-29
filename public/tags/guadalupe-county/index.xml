@@ -2,27 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Guadalupe County on Bryan Chasko&#39;s Portfolio</title>
-    <link>https://bryanchasko.com/tags/guadalupe-county/</link>
+    <link>http://localhost:1313/tags/guadalupe-county/</link>
     <description>Recent content in Guadalupe County on Bryan Chasko&#39;s Portfolio</description>
     <image>
       <title>Bryan Chasko&#39;s Portfolio</title>
-      <url>https://bryanchasko.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://bryanchasko.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
     <lastBuildDate>Thu, 27 Jun 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://bryanchasko.com/tags/guadalupe-county/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/guadalupe-county/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My Cat Buddy 🐈</title>
-      <link>https://bryanchasko.com/blog/posts/my-cat-buddy/</link>
+      <link>http://localhost:1313/blog/posts/my-cat-buddy/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/blog/posts/my-cat-buddy/</guid>
-      <description>Adopt a pet from Guadalupe County Animal Control
-My Cat Buddy 🐱 Buddy is a tabby cat from Mesilla Park, New Mexico. He likes to play catch with springs and eat fish. See #caturday on my insta, X, and threads. We both appreciate your donations to
-Guadalupe County Animal Control Phone: 505-472-3711
-Santa Rosa Animal Shelter, 117 S. 5th Street, Santa Rosa, New Mexico 88435
-Get directions to adopt your new pet from beautiful Santa Rosa NM on Route 66</description>
+      <guid>http://localhost:1313/blog/posts/my-cat-buddy/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.animalshelter.org/search/shelterpets.asp?rescueId=3220&#34;&gt;Adopt a pet from Guadalupe County Animal Control&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;my-cat-buddy-&#34;&gt;My Cat Buddy 🐱&lt;/h2&gt;
+&lt;p&gt;Buddy is a tabby cat from Mesilla Park, New Mexico. He likes to play catch with springs and eat fish. See #caturday on my insta, X, and threads. Buddy and Bryan both appreciate your donations to, and adoptions from:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Guadalupe County Animal Control&lt;/strong&gt;
+Phone: &lt;a href=&#34;tel:505-472-3711&#34;&gt;505-472-3711&lt;/a&gt;&lt;br&gt;
+Santa Rosa Animal Shelter, 117 S. 5th Street,
+Santa Rosa, New Mexico 88435&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.google.com/maps/place/Santa+Rosa+Animal+Shelter,+117+S+5th+St,+Santa+Rosa,+NM+88435/@34.7289485,-104.513631,15z&#34;&gt;Get directions to adopt your new pet from beautiful Santa Rosa NM on Route 66&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
