@@ -80,3 +80,12 @@ You can suppress this warning by adding the following to your site configuration
 ignoreLogs = ['warning-goldmark-raw-html']
 Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
 Total in 23 ms
+
+Change detected, rebuilding site (#9).
+2025-11-29 20:53:51.788 -0700
+Source changed /cloudcroft-cloud-company/help/_index.md
+WARN  Raw HTML omitted while rendering "/"; see https://gohugo.io/getting-started/configuration-markup/#rendererunsafe
+You can suppress this warning by adding the following to your site configuration:
+ignoreLogs = ['warning-goldmark-raw-html']
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Total in 56 ms
