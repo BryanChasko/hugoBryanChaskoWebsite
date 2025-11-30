@@ -59,3 +59,24 @@ Change detected, rebuilding site (#6).
 Source changed /help-services/_index.md
 Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
 Total in 32 ms
+WARN  Raw HTML omitted while rendering "/"; see https://gohugo.io/getting-started/configuration-markup/#rendererunsafe
+You can suppress this warning by adding the following to your site configuration:
+ignoreLogs = ['warning-goldmark-raw-html']
+
+Change detected, rebuilding site (#7).
+2025-11-29 20:48:26.297 -0700
+Source changed /cloudcroft-cloud-company/_index.md
+WARN  Raw HTML omitted while rendering "/"; see https://gohugo.io/getting-started/configuration-markup/#rendererunsafe
+You can suppress this warning by adding the following to your site configuration:
+ignoreLogs = ['warning-goldmark-raw-html']
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Total in 36 ms
+
+Change detected, rebuilding site (#8).
+2025-11-29 20:48:51.296 -0700
+Source changed /cloudcroft-cloud-company/_index.md
+WARN  Raw HTML omitted while rendering "/"; see https://gohugo.io/getting-started/configuration-markup/#rendererunsafe
+You can suppress this warning by adding the following to your site configuration:
+ignoreLogs = ['warning-goldmark-raw-html']
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Total in 23 ms
