@@ -2,6 +2,9 @@
 title: "Help & Services"
 date: 2025-11-29T00:00:00-07:00
 draft: false
+url: "/help/"
+aliases:
+  - "/help-services/"
 description: "Strategic, quick-win consulting focused on AWS Security, Cost Optimization, and GenAI Readiness. Secure a 2-day engagement for $500."
 ---
 
@@ -15,46 +18,18 @@ Choose your highest-priority focus below to initiate a quick discovery call and 
 
 ---
 
-## 1. 🛡️ Security & Access Audit (IAM/SSO)
+## Services
 
-**Short Description:** A two-day, high-fidelity security assessment to establish professional access protocols and compliance guardrails across your AWS environment, ensuring you meet enterprise standards and minimize organizational risk.
+Below are the current offers — click a service to view details and book a dedicated engagement.
 
-* **Implement IAM Identity Center (SSO):** Full review and establishment of SSO/Federation best practices to simplify access and remove reliance on insecure IAM users.
-* **Stale Access Remediation:** Identify and revoke unused or over-privileged access keys and roles, including the secure separation of duties.
-* **HIPAA/SOC 2 Assessment:** Review your current system's compliance posture and provide immediate, actionable fixes for mandated security controls and auditing protocols.
-* **Secure Deployment:** Establish patterns for secure service interaction and deployment methods your developers can trust.
-
-**CTA:** **Book a $500 Security Audit Block Now (Limited Slots!)** — [https://www.upwork.com/services/product/development-it-aws-account-access-audit-remediation-1994568317264259092]
-
----
-
-## 2. 💰 Cost Optimization & Serverless Review
-
-**Short Description:** Analyze and refine your existing AWS Serverless architecture to find immediate cost savings, improve performance, and ensure your services are designed to scale efficiently or "spin down to zero" when not in use.
-
-* **Deep-Dive Service Audit:** Comprehensive review of core cost centers: Lambda functions, DynamoDB tables, SQS/SNS configuration, and API Gateway usage.
-* **Cost-Optimized Architecture:** Restructure expensive patterns into event-driven, cost-efficient models (e.g., leveraging Fargate Spot or reserved concurrency strategies).
-* **Performance Bottleneck Correction:** Identify and correct configurations that lead to unnecessary latency or resource over-provisioning (e.g., cold starts, inefficient database queries).
-* **Actionable Cost Plan:** Deliver a clear, prioritized document outlining exactly where and how to minimize idle cloud spend without sacrificing reliability.
-
-**CTA:** **Book a $500 Cost Optimization Block Now** — [https://www.upwork.com/services/custom/bryan-chasko/cost-optimization-500]
-
----
-
-## 3. 🤖 GenAI/RAG Readiness Blueprint
-
-**Short Description:** A structured two-day plan to architect and prepare your environment for integrating modern Artificial Intelligence solutions, such as Retrieval-Augmented Generation (RAG) using AWS Bedrock and Serverless data services.
-
-* **GenAI Integration Roadmap:** Deliver a clear, step-by-step plan for introducing your first AI feature, focusing on business value and technical feasibility.
-* **Recommended AWS Stack:** Define the optimal architecture using AWS Bedrock, Lambda, and specialized services like Amazon S3 Vector Search for scalable, efficient data retrieval.
-* **Preliminary Architecture & Security:** Detail the data flow, ingestion, and retrieval mechanisms while baking in security and compliance from day one.
-* **Developer Environment Prep:** Guidance on setting up your team to leverage agentic assistants and coding-friendly GenAI tools safely and effectively.
-
-**CTA:** **Book a $500 GenAI Blueprint Block Now** — [https://www.upwork.com/services/custom/bryan-chasko/genai-blueprint-500]
+- [AWS Account Access Audit & Remediation](/help-services/aws-account-access-audit/) — Two-day access audit, IAM/SSO, remediation, HIPAA/SOC2 posture fixes. **Flat $500**.
+- [GenAI / RAG Readiness Blueprint](/help-services/genai-rag-readiness/) — Two-day GenAI architecture & blueprint (Bedrock, RAG, vector search). **Flat $500**.
+- [2 Days — Focused CTO-Level AWS Expertise](/help-services/2-day-cto-expertise/) — Hands-on CTO block for rapid fixes or high-impact delivery. **Flat $500**.
+- [CTO Cloud Strategy Session — Non-Profits](/help-services/cto-cloud-strategy-nonprofits/) — Introductory $5 discovery + research-backed follow-up for mission-driven orgs.
 
 ---
 
 If you require ongoing strategic partnership beyond these quick-win engagements, please contact us.
 
-**Contact Bryan:** [https://www.upwork.com/freelancers/~01bedbb18511deb2d1]
+**Contact Bryan:** [Upwork profile](https://www.upwork.com/freelancers/~01bedbb18511deb2d1) • [LinkedIn](https://www.linkedin.com/in/bryanChasko)
 

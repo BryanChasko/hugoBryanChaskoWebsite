@@ -24,7 +24,7 @@ Choose your highest-priority focus below to initiate a quick discovery call and 
 * **HIPAA/SOC 2 Assessment:** Review your current system's compliance posture and provide immediate, actionable fixes for mandated security controls and auditing protocols.
 * **Secure Deployment:** Establish patterns for secure service interaction and deployment methods your developers can trust.
 
-**CTA:** **Book a $500 Security Audit Block Now (Limited Slots!)** — [https://www.upwork.com/services/product/development-it-aws-account-access-audit-remediation-1994568317264259092]
+**CTA:** {{< cta-button href="https://www.upwork.com/services/product/development-it-aws-account-access-audit-remediation-1994568317264259092" label="Book $500 Security Audit (Limited)" >}}
 
 ---
 
@@ -37,7 +37,7 @@ Choose your highest-priority focus below to initiate a quick discovery call and 
 * **Performance Bottleneck Correction:** Identify and correct configurations that lead to unnecessary latency or resource over-provisioning (e.g., cold starts, inefficient database queries).
 * **Actionable Cost Plan:** Deliver a clear, prioritized document outlining exactly where and how to minimize idle cloud spend without sacrificing reliability.
 
-**CTA:** **Book a $500 Cost Optimization Block Now** — [https://www.upwork.com/services/custom/bryan-chasko/cost-optimization-500]
+**CTA:** {{< cta-button href="https://www.upwork.com/services/product/development-it-2-days-of-focused-cto-level-aws-expertise-1995148283888870048" label="Book 2-Day CTO AWS Expertise" >}}
 
 ---
 
@@ -50,10 +50,40 @@ Choose your highest-priority focus below to initiate a quick discovery call and 
 * **Preliminary Architecture & Security:** Detail the data flow, ingestion, and retrieval mechanisms while baking in security and compliance from day one.
 * **Developer Environment Prep:** Guidance on setting up your team to leverage agentic assistants and coding-friendly GenAI tools safely and effectively.
 
-**CTA:** **Book a $500 GenAI Blueprint Block Now** — [https://www.upwork.com/services/custom/bryan-chasko/genai-blueprint-500]
+**CTA:** {{< cta-button href="https://www.upwork.com/services/product/development-it-genai-rag-readiness-aws-architecture-blueprint-documentation-1995119551074186001" label="Book GenAI/RAG Blueprint" >}}
 
 ---
 
 If you require ongoing strategic partnership beyond these quick-win engagements, please contact Bryan.
 
-**Contact Bryan:** [https://www.upwork.com/freelancers/~01bedbb18511deb2d1]
+**Contact Bryan:** [Upwork profile](https://www.upwork.com/freelancers/~01bedbb18511deb2d1) • [LinkedIn](https://www.linkedin.com/in/bryanChasko)
+
+---
+
+## Additional Services
+
+### CTO Cloud Strategy Session — Non-Profits (AWS / AI for Good)
+
+**Price:** $5 (Introductory Project Catalog offering)
+
+**What's included (Core):**
+
+- **Non-Profit AWS/AI Discovery (2-hour call):** Brainstorm mission goals, constraints, and quick-win ideas for cloud + GenAI that respect privacy and cost limits.
+- **Research-backed follow-up:** Within 5 days provide a concise Strategic Summary with recommended next steps and prioritized architecture notes (available as a $1 add-on follow-up report).
+
+**Delivery time:** 5 days (delivery window begins after receipt of requirements)
+
+**Why this helps non-profits:**
+
+- Aligns technology choices with mission outcomes while minimizing costs.
+- Rapid plan to validate feasibility for AI/RAG and serverless adoption with compliance-minded patterns.
+- Helps prepare grant- or donor-friendly proposals with an actionable architecture outline.
+
+**Project flow / steps:**
+
+1. Purchase / schedule the 2-hour discovery call and share basic requirements or program materials.
+2. Conduct the video strategy session (set agenda and immediate priorities).
+3. Follow-up research & a short Strategic Summary delivered within 5 days (optional $1 follow-up expands the summary into an action checklist).
+
+**CTA:** {{< cta-button href="https://www.upwork.com/services/product/development-it-cto-cloud-strategy-session-for-non-profits-aws-ai-for-good-projects-1995140857463618651" label="Book CTO Strategy Session — $5" >}}
+
