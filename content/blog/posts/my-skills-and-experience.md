@@ -1,12 +1,7 @@
-Here is the final revision. I have elevated the tone to match the professional, authoritative style of your original website while maintaining the structural improvements we made (consolidating the contract work and highlighting the four key pillars of your career in the intro).
-
-I replaced the casual LinkedIn idioms with precise, executive-level language.
-
-```markdown
 ---
-title: "Bryan Chasko's Skills and Experience 🦊"
+title: "Bryan Chasko's Skills and Experience"
 date: 2024-07-02
-tags: ["Resume", "Skills", "AboutMe", "bryanChasko", "ProfessionalExperience", "TechSkills", "CareerProfile", "TechnicalExpertise", "ITConsulting", "SoftwareDevelopment", "Leadership", "ProjectManagement"]
+tags: ["Artificial Intelligence", "GameTech", "Bryan Chasko", "AWS Hero", "Freelancer for Hire", "Fractional CTO", "Career Profile", "Technical Expertise", "Consulting", "Software Development", "Leadership", "ProjectManagement"]
 
 ---
 ---
@@ -17,7 +12,7 @@ tags: ["Resume", "Skills", "AboutMe", "bryanChasko", "ProfessionalExperience", "
 
 **Skills:** [Cloud Platforms & Services ☁️](#cloud-platforms--services-) • [Infrastructure & Networking 🔧](#infrastructure--networking-) • [Data Management 📊](#data-management-) • [Observability & Monitoring 📈](#observability--monitoring-) • [Security & Compliance 🔒](#security--compliance-) • [Design & Prototyping 🎨](#design--prototyping-) • [Project Management & Leadership 👥](#project-management--leadership-) • [Data Visualization 📊](#data-visualization-) • [CRM Systems 💼](#crm-systems-) • [Industry Experience 🏢](#industry-experience-) • [Design & Engineering 🏗️](#design--engineering-) • [Machine Learning & AI 🤖](#machine-learning--ai-) • [Internet of Things (IoT) 🌐](#internet-of-things-iot-) • [Big Data 📉](#big-data-) • [Additional Skills 🔧](#additional-skills-)
 
-**Experience:** [Chief Technology Officer 🚀](#chief-technology-officer-) • [Software Developer 💻](#software-developer-) • [General Manager 🏆](#general-manager-) • [Chief Technology Officer 🌐](#chief-technology-officer-1) • [Public Relations Vice President 📣](#public-relations-vice-president-) • [Chief Marketing Officer 📈](#chief-marketing-officer-) • [Sales and Engineering Manager 🔧](#sales-and-engineering-manager-) • [Electro-Mechanical Technician, Nuclear Biological Chemical Defense Quartermaster ⚙️](#electro-mechanical-technician-nuclear-biological-chemical-defense-quartermaster-)
+**Employment Experience:** [Chief Technology Officer at Cloudcroft Cloud Company 🚀](#chief-technology-officer-) • [Software Developer at X2nSat 💻](#software-developer-) • [General Manager 🏆] • [Chief Technology Officer at Electronic Caregiver, Inc 🌐](#chief-technology-officer-1) • [Public Relations Vice President 📣] • Sales and Engineering Manager 🔧• [Electro-Mechanical Technician, Nuclear Biological Chemical Defense Quartermaster at US Army ⚙️](#electro-mechanical-technician-nuclear-biological-chemical-defense-quartermaster-)
 
 ---
 
@@ -208,66 +203,38 @@ _Petaluma, California, United States_
 - Promoted innovation and mentored team members in applying generative AI technologies ✨.
 
 ---
+Chief Technology Officer, Product & Strategy 🌐
+<a name="chief-technology-officer-1"></a> Electronic Caregiver,
 
-### Chief Technology Officer 🌐
-<a name="chief-technology-officer-1"></a>
-**Electronic Caregiver** · Full-time  
-_2015 - 2020_  
-_Las Cruces, NM, United States_
+2005 - 2020
 
-- Oversaw the development and implementation of technology solutions for remote patient monitoring and telehealth services 🩺.
-- Led a team in designing and scaling healthcare technologies to enhance patient care and operational efficiency 💡.
-- Managed the integration of cloud services, including AWS and Azure, to support scalable and reliable healthcare applications ☁️.
-- Implemented data security measures and compliance strategies to ensure adherence to HIPAA and other regulations 🔒.
-- Drove innovation in product development, contributing to new features and enhancements that improved user experience and expanded market reach 🚀.
-- Collaborated with cross-functional teams to align technological solutions with business goals and user needs 📊.
+Las Cruces, NM, United States
 
----
+Technology Leadership & Scaling (ECG): Oversaw the development and implementation of technology solutions for remote patient monitoring and telehealth services 🩺. Led a team in designing and scaling healthcare technologies using AWS and Azure to enhance patient care and operational efficiency 💡. Streamlined product development, team recruiting and training, and intellectual and information security.
 
-### Public Relations Vice President 📣
-<a name="public-relations-vice-president-"></a>
-**LifeSupport Medical** · Full-time  
-_2012 - 2015_  
-_Las Cruces, NM_
+Compliance & Security: Implemented data security measures and compliance strategies, including PHI/HIPAA regulations 🔒.
 
-- Managed over 140 website launches 🌐, major industry events 🎉, and global media relations 🌍.
-- Deployed diverse tech stacks including Windows Server, Ruby on Rails, Xcode, and others for deployment and analytics 🔧.
-- Developed custom CRM solutions and led lead generation efforts, enhancing sales team efficiency 📈.
-- Established a mobile motion capture lab and created an augmented reality interface for iPhones and Android devices 📱.
-- Conducted field research and contributed to over 12 academic publications 📚.
+Product Innovation: Drove innovation in product development, contributing to new features that improved user experience, expanded market reach 🚀, and advanced technology applications such as mobile motion capture and augmented reality interfaces 📱.
 
----
+System Design & Deployment: Managed the integration of cloud services, deployed diverse tech stacks (Windows Server, Ruby on Rails, Xcode, etc.), and provided design input for custom fulfillment and logistics systems 🚚.
 
-### Chief Marketing Officer 📈
-<a name="chief-marketing-officer-"></a>
-**Abstract Spacecraft** · Full-time  
-_2008 - 2015_  
-_Las Cruces, New Mexico Area_
+Digital Marketing & CRM: Led SEO, full-stack web app development, digital marketing strategies, and deployment of CRM and SAP solutions to streamline customer relations and sales processes 🛠️.
 
-- Led SEO and full-stack web app development initiatives to improve online visibility and client engagement 🌟.
-- Managed digital marketing and reputation strategies to enhance company presence in the market 🌐.
+Partner, Client & Media Engagement: Managed over 140 website launches 🌐, clinical research in the field in 17 states, established 3 university clinical labs, developed relationships with fortune 10 companies including Alphabet and Intel, worked directly with 100s of health care practies and 1000s of patients and their familes. Spoke, ran booths, generated investor and press release kits, and won awards at major industry events including 10 CES, GDC and AWS Summits 🎉, and global media relations including Fox NFL Super Bowl Sunday 🌍.
 
----
-
-### Sales and Engineering Manager 🔧
-<a name="sales-and-engineering-manager-"></a>
-**LaserShield Systems, Inc** · Full-time  
-_2005 - 2019_  
-_Las Cruces, NM_
-
-- Directed phone sales staff 📞 and trained retail and inside sales teams, enhancing dealer network capabilities 🔗.
-- Deployed CRM and SAP solutions to streamline customer relations and sales processes 🛠️.
-- Provided design input for custom fulfillment and logistics systems, supporting nationwide distribution 🚚.
-- Collaborated on market research and field trials across 23 states 🗺️, leading sales and user satisfaction teams 👍.
-- Overhauled returns processes and implemented advanced tracking systems, managing fulfillment with major retailers 📦.
+Research & Field Trials: Collaborated on market research and field trials across 23 states 🗺️, leading sales and user satisfaction teams 👍, and contributed to over 12 academic publications 📚.
 
 ---
 
 ### Electro-Mechanical Technician, Nuclear Biological Chemical Defense Quartermaster ⚙️
 <a name="electro-mechanical-technician-nuclear-biological-chemical-defense-quartermaster-"></a>
+
 **US Army** · Full-time  
 _1999 - 2002_
 
 - Provided mission-critical support during key deployments, managing $30M worth of equipment and protection gear 🎖️.
 - Trained soldiers in special operations procedures and maintained readiness of advanced systems 🎯.
-- Created schematic diagrams for mission planning and participated in airborne operations ✈️, showcasing versatility.
+- Created schematic diagrams for electrical equipment and participated in airborne operations ✈️, showcasing versatility.
+- Gained red team / blue team field mentality for information security and setup remote electrical / network grids.
+
+[🔝 Return to Top](#top)

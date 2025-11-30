@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>✍️ Posts by Bryan Chasko on Bryan Chasko&#39;s Portfolio</title>
-    <link>http://localhost:1313/blog/</link>
+    <link>https://bryanchasko.com/blog/</link>
     <description>Recent content in ✍️ Posts by Bryan Chasko on Bryan Chasko&#39;s Portfolio</description>
     <image>
       <title>Bryan Chasko&#39;s Portfolio</title>
-      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://bryanchasko.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://bryanchasko.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
     <lastBuildDate>Sun, 07 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://bryanchasko.com/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>☁️ How I Became an AWS Hero 🦸‍️</title>
-      <link>http://localhost:1313/blog/posts/aws-hero-bryan-chasko/</link>
+      <link>https://bryanchasko.com/blog/posts/aws-hero-bryan-chasko/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/posts/aws-hero-bryan-chasko/</guid>
+      <guid>https://bryanchasko.com/blog/posts/aws-hero-bryan-chasko/</guid>
       <description>&lt;h2 id=&#34;-day-1-on-amazon-web-services-aws-cloud-wbryan-chasko&#34;&gt;☁️ Day 1 on Amazon Web Services (AWS) Cloud w/Bryan Chasko&lt;/h2&gt;
 &lt;h3 id=&#34;a-journey-of-innovation-leadership-and-aws-expertise&#34;&gt;A Journey of Innovation, Leadership, and AWS Expertise&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.lascrucesbulletin.com/stories/local-company-takes-cutting-edge-health-technology-global,2642&#34;&gt;“One of the leading innovators in the world”&lt;/a&gt;&lt;/p&gt;
@@ -34,10 +34,21 @@
 &lt;p&gt;&amp;ldquo;Bryan Chasko’s journey with Amazon’s ecosystem has been nothing short of transformative, reflecting his deep understanding of AWS and its potential.&amp;rdquo;&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Bryan Chasko&#39;s Skills and Experience</title>
+      <link>https://bryanchasko.com/blog/posts/my-skills-and-experience/</link>
+      <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://bryanchasko.com/blog/posts/my-skills-and-experience/</guid>
+      <description>&lt;hr&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h2 id=&#34;skills-and-experience-&#34;&gt;Skills and Experience 🦊&lt;/h2&gt;
+&lt;h3 id=&#34;quick-links&#34;&gt;Quick Links&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Skills:&lt;/strong&gt; &lt;a href=&#34;#cloud-platforms--services-&#34;&gt;Cloud Platforms &amp;amp; Services ☁️&lt;/a&gt; • &lt;a href=&#34;#infrastructure--networking-&#34;&gt;Infrastructure &amp;amp; Networking 🔧&lt;/a&gt; • &lt;a href=&#34;#data-management-&#34;&gt;Data Management 📊&lt;/a&gt; • &lt;a href=&#34;#observability--monitoring-&#34;&gt;Observability &amp;amp; Monitoring 📈&lt;/a&gt; • &lt;a href=&#34;#security--compliance-&#34;&gt;Security &amp;amp; Compliance 🔒&lt;/a&gt; • &lt;a href=&#34;#design--prototyping-&#34;&gt;Design &amp;amp; Prototyping 🎨&lt;/a&gt; • &lt;a href=&#34;#project-management--leadership-&#34;&gt;Project Management &amp;amp; Leadership 👥&lt;/a&gt; • &lt;a href=&#34;#data-visualization-&#34;&gt;Data Visualization 📊&lt;/a&gt; • &lt;a href=&#34;#crm-systems-&#34;&gt;CRM Systems 💼&lt;/a&gt; • &lt;a href=&#34;#industry-experience-&#34;&gt;Industry Experience 🏢&lt;/a&gt; • &lt;a href=&#34;#design--engineering-&#34;&gt;Design &amp;amp; Engineering 🏗️&lt;/a&gt; • &lt;a href=&#34;#machine-learning--ai-&#34;&gt;Machine Learning &amp;amp; AI 🤖&lt;/a&gt; • &lt;a href=&#34;#internet-of-things-iot-&#34;&gt;Internet of Things (IoT) 🌐&lt;/a&gt; • &lt;a href=&#34;#big-data-&#34;&gt;Big Data 📉&lt;/a&gt; • &lt;a href=&#34;#additional-skills-&#34;&gt;Additional Skills 🔧&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>My Cat Buddy 🐈</title>
-      <link>http://localhost:1313/blog/posts/my-cat-buddy/</link>
+      <link>https://bryanchasko.com/blog/posts/my-cat-buddy/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/posts/my-cat-buddy/</guid>
+      <guid>https://bryanchasko.com/blog/posts/my-cat-buddy/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.animalshelter.org/search/shelterpets.asp?rescueId=3220&#34;&gt;Adopt a pet from Guadalupe County Animal Control&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;my-cat-buddy-&#34;&gt;My Cat Buddy 🐱&lt;/h2&gt;
 &lt;p&gt;Buddy is a tabby cat from Mesilla Park, New Mexico. He likes to play catch with springs and eat fish. See #caturday on my insta, X, and threads. Buddy and Bryan both appreciate your donations to, and adoptions from:&lt;/p&gt;
@@ -49,9 +60,9 @@ Santa Rosa, New Mexico 88435&lt;/p&gt;
     </item>
     <item>
       <title>Bryan Chasko&#39;s Basics  🦊</title>
-      <link>http://localhost:1313/blog/posts/about-bryan-chasko/</link>
+      <link>https://bryanchasko.com/blog/posts/about-bryan-chasko/</link>
       <pubDate>Thu, 13 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/posts/about-bryan-chasko/</guid>
+      <guid>https://bryanchasko.com/blog/posts/about-bryan-chasko/</guid>
       <description>&lt;h2 id=&#34;about-bryan--&#34;&gt;About Bryan  🦊&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;content/blog/posts/aws-hero-bryan-chasko.md&#34;&gt;#AWSHero&lt;/a&gt; since 2018 &lt;a href=&#34;content/blog/posts/my-skills-and-experience.md&#34;&gt;known for 🌟&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Community &amp;amp; Spatial Computing&lt;/strong&gt; 🌍&lt;a href=&#34;https://aws.amazon.com/developer/community/heroes/bryan-chasko/&#34;&gt;AWS Hero Bio&lt;/a&gt;&lt;/p&gt;
@@ -66,7 +77,7 @@ New York Institute of Photography Alumni 📸. &lt;a href=&#34;https://instagram
 From New Mexico&amp;rsquo;s Sacramento Mountains 🏞️. &lt;a href=&#34;https://www.fs.usda.gov/Internet/FSE_DOCUMENTS/fseprd512805.pdf&#34;&gt;trails&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/posts/new-england-patriots-fandom.md&#34;&gt;&lt;strong&gt;Top 5000&lt;/strong&gt; 🏆&lt;br&gt;
+&lt;p&gt;&lt;a href=&#34;https://bryanchasko.com/blog/posts/new-england-patriots-fandom.md&#34;&gt;&lt;strong&gt;Top 5000&lt;/strong&gt; 🏆&lt;br&gt;
 In EA&amp;rsquo;s Madden NFL 3 times as the New England Patriots 🏈&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -74,295 +85,18 @@ In EA&amp;rsquo;s Madden NFL 3 times as the New England Patriots 🏈&lt;/a&gt;&
 Born comfortable with a terminal thanks to an MS-DOS Computer 💻. &lt;a href=&#34;https://www.computerhistory.org/timeline/1981/&#34;&gt;IBM 1981&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/posts/my-cat-buddy.md&#34;&gt;&lt;strong&gt;Has a cat named Buddy&lt;/strong&gt; 🐱&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://bryanchasko.com/blog/posts/my-cat-buddy.md&#34;&gt;&lt;strong&gt;Has a cat named Buddy&lt;/strong&gt; 🐱&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>New England Patriots Fandom 🏈</title>
-      <link>http://localhost:1313/blog/posts/new-england-patriots-fandom/</link>
+      <link>https://bryanchasko.com/blog/posts/new-england-patriots-fandom/</link>
       <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/posts/new-england-patriots-fandom/</guid>
+      <guid>https://bryanchasko.com/blog/posts/new-england-patriots-fandom/</guid>
       <description>&lt;h2 id=&#34;new-england-patriots-fandom-&#34;&gt;New England Patriots Fandom 🏈&lt;/h2&gt;
 &lt;p&gt;My first football memory was rooting for the 1985 patriots as they got pummeled in the super bowl-&lt;/p&gt;
 &lt;p&gt;In elementary we were the Ronald Reagan Patriots&lt;/p&gt;
 &lt;p&gt;In rural New Mexico, the Drew Bledsoe era patriots had superior coverage to any other team as the world&amp;rsquo;s first pro sports website and world&amp;rsquo;s original podcast&lt;/p&gt;
 &lt;p&gt;I mowed lawns dreaming unrealistically of getting to visit old foxboro stadium&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/blog/posts/my-skills-and-experience/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/posts/my-skills-and-experience/</guid>
-      <description>&lt;p&gt;Here is the final revision. I have elevated the tone to match the professional, authoritative style of your original website while maintaining the structural improvements we made (consolidating the contract work and highlighting the four key pillars of your career in the intro).&lt;/p&gt;
-&lt;p&gt;I replaced the casual LinkedIn idioms with precise, executive-level language.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;title: &amp;#34;Bryan Chasko&amp;#39;s Skills and Experience 🦊&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;date: 2024-07-02
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tags: [&amp;#34;Resume&amp;#34;, &amp;#34;Skills&amp;#34;, &amp;#34;AboutMe&amp;#34;, &amp;#34;bryanChasko&amp;#34;, &amp;#34;ProfessionalExperience&amp;#34;, &amp;#34;TechSkills&amp;#34;, &amp;#34;CareerProfile&amp;#34;, &amp;#34;TechnicalExpertise&amp;#34;, &amp;#34;ITConsulting&amp;#34;, &amp;#34;SoftwareDevelopment&amp;#34;, &amp;#34;Leadership&amp;#34;, &amp;#34;ProjectManagement&amp;#34;]
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;a name=&amp;#34;top&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;## Skills and Experience 🦊
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;### Quick Links
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gs&#34;&gt;**Skills:**&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;Cloud Platforms &amp;amp; Services ☁️&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#cloud-platforms--services-&lt;/span&gt;) • [&lt;span class=&#34;nt&#34;&gt;Infrastructure &amp;amp; Networking 🔧&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#infrastructure--networking-&lt;/span&gt;) • [&lt;span class=&#34;nt&#34;&gt;Data Management 📊&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#data-management-&lt;/span&gt;) • [&lt;span class=&#34;nt&#34;&gt;Observability &amp;amp; Monitoring 📈&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#observability--monitoring-&lt;/span&gt;) • [&lt;span class=&#34;nt&#34;&gt;Security &amp;amp; Compliance 🔒&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#security--compliance-&lt;/span&gt;) • [&lt;span class=&#34;nt&#34;&gt;Design &amp;amp; Prototyping 🎨&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#design--prototyping-&lt;/span&gt;) • [&lt;span class=&#34;nt&#34;&gt;Project Management &amp;amp; Leadership 👥&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#project-management--leadership-&lt;/span&gt;) • [&lt;span class=&#34;nt&#34;&gt;Data Visualization 📊&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#data-visualization-&lt;/span&gt;) • [&lt;span class=&#34;nt&#34;&gt;CRM Systems 💼&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#crm-systems-&lt;/span&gt;) • [&lt;span class=&#34;nt&#34;&gt;Industry Experience 🏢&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#industry-experience-&lt;/span&gt;) • [&lt;span class=&#34;nt&#34;&gt;Design &amp;amp; Engineering 🏗️&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#design--engineering-&lt;/span&gt;) • [&lt;span class=&#34;nt&#34;&gt;Machine Learning &amp;amp; AI 🤖&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#machine-learning--ai-&lt;/span&gt;) • [&lt;span class=&#34;nt&#34;&gt;Internet of Things (IoT) 🌐&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#internet-of-things-iot-&lt;/span&gt;) • [&lt;span class=&#34;nt&#34;&gt;Big Data 📉&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#big-data-&lt;/span&gt;) • [&lt;span class=&#34;nt&#34;&gt;Additional Skills 🔧&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#additional-skills-&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gs&#34;&gt;**Experience:**&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;Chief Technology Officer 🚀&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#chief-technology-officer-&lt;/span&gt;) • [&lt;span class=&#34;nt&#34;&gt;Software Developer 💻&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#software-developer-&lt;/span&gt;) • [&lt;span class=&#34;nt&#34;&gt;General Manager 🏆&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#general-manager-&lt;/span&gt;) • [&lt;span class=&#34;nt&#34;&gt;Chief Technology Officer 🌐&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#chief-technology-officer-1&lt;/span&gt;) • [&lt;span class=&#34;nt&#34;&gt;Public Relations Vice President 📣&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#public-relations-vice-president-&lt;/span&gt;) • [&lt;span class=&#34;nt&#34;&gt;Chief Marketing Officer 📈&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#chief-marketing-officer-&lt;/span&gt;) • [&lt;span class=&#34;nt&#34;&gt;Sales and Engineering Manager 🔧&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#sales-and-engineering-manager-&lt;/span&gt;) • [&lt;span class=&#34;nt&#34;&gt;Electro-Mechanical Technician, Nuclear Biological Chemical Defense Quartermaster ⚙️&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#electro-mechanical-technician-nuclear-biological-chemical-defense-quartermaster-&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;a name=&amp;#34;about&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;## About Bryan Chasko 🚀
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;[&lt;span class=&#34;nt&#34;&gt;🔝 Return to Top&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#top&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;I am a mission-driven technology leader and &lt;span class=&#34;gs&#34;&gt;**AWS Hero**&lt;/span&gt; applying &lt;span class=&#34;gs&#34;&gt;**digital-first strategies**&lt;/span&gt; in software, data pipelines, AI, and automation. My expertise lies in designing and deploying systems across diverse, mission-critical sectors including healthcare, education, utilities, and rural connectivity.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;My professional focus centers on transforming complex business logic into reliable systems with accessible interfaces. My career is defined by technical innovation and leadership across four distinct phases:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; **Cloudcroft Cloud Company:** Delivering strategic project execution and cutting-edge cloud implementation. This encompasses contract leadership in &lt;span class=&#34;gs&#34;&gt;**Education (Alamogordo Public Schools)**&lt;/span&gt; and &lt;span class=&#34;gs&#34;&gt;**Telecommunications (Tularosa Communications)**&lt;/span&gt;, providing infrastructure and connectivity solutions.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; **X2nSat:** Architecting streaming and satellite connectivity solutions in a high-tech environment, bridging the gap between orbit and earth.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; **Electronic Caregiver (ECG):** Leading the transformation of patient care through telehealth and remote monitoring technology, scaling solutions from local prototypes to enterprise health systems.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; **US Army:** Managing mission-critical systems, logistics, and advanced protection gear in high-stakes defense operations.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Recognized as an &lt;span class=&#34;gs&#34;&gt;**AWS Hero**&lt;/span&gt; since 2018, I actively organize tech and design communities while guiding teams through &lt;span class=&#34;gs&#34;&gt;**servant leadership**&lt;/span&gt;—removing barriers, fostering collaboration, and ensuring innovation reaches production. I utilize cloud abstractions as a core technical strength, allowing a focus on unique mission needs by deploying over &lt;span class=&#34;gs&#34;&gt;**100 AWS services in production**&lt;/span&gt; across healthcare, education, utilities, agriculture, defense, and space.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;I have forged strategic collaborations with &lt;span class=&#34;gs&#34;&gt;**Google, Dell, Intel, and Amazon**&lt;/span&gt; to scale solutions in both private and public domains, and partnered with the &lt;span class=&#34;gs&#34;&gt;**Department of Energy and U.S. national laboratories**&lt;/span&gt; to advance projects in energy, climate modeling, and resilient infrastructure.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connecting globally and locally as a speaker and organizer, including leading &lt;span class=&#34;gs&#34;&gt;**AWS User Group RGC3**&lt;/span&gt; (El Paso, TX) and &lt;span class=&#34;gs&#34;&gt;**Blender UG NE3D**&lt;/span&gt; (Boston), I continue to explore GenAI, robotics, digital twins, and satellite data pipelines with a focus on solutions for &lt;span class=&#34;gs&#34;&gt;**underserved and rural communities**&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;a name=&amp;#34;skills&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;## Skills 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;[&lt;span class=&#34;nt&#34;&gt;🔝 Return to Top&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#top&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;### Cloud Platforms &amp;amp; Services ☁️
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&amp;lt;a name=&amp;#34;cloud-platforms--services-&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **General Cloud Computing**: Expertise in designing, deploying, and managing solutions across major cloud platforms.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **AWS**: EC2 🖥️, S3 ☁️, Lambda 🧩, CloudFormation 🛠️, IAM (identity management, end-to-end encryption) 🔒, RDS 📊, DynamoDB ⚙️, API Gateway 🌉, CloudWatch 📈, Cognito 👤, SQS 📬, SNS 📣, Amplify ⚡.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **GCP**: Google Cloud Storage ☁️, BigQuery 📊, Cloud Functions 🔄, Cloud Pub/Sub 📢, Identity-Aware Proxy 🔐.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Azure**: Azure Blob Storage ☁️, Azure Functions 🔄, Azure AD 🔐, Azure DevOps 🔧.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **OCI**: Oracle Cloud Infrastructure Compute 🖥️, Storage 🗄️, and Networking 🌐.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;### Infrastructure &amp;amp; Networking 🔧
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&amp;lt;a name=&amp;#34;infrastructure--networking-&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Virtualization**:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **VMware**: ESXi 🖥️, vSphere 🔄, vCenter 🏢, virtualization management.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Dell Servers**: Installation 🛠️, configuration ⚙️, and management 📋.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Enterprise Networking**:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Hardware**: Routers 🌐, switches 🔌, firewalls 🔥.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **NAS Solutions**: Network-attached storage configuration and management 💾.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Satellite Technologies**:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Satellite Data**: AWS Ground Station 🛰️, Amazon Kuiper 🌌.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Networking Technologies**: 5G 📶, LTE 📱, LoRaWAN 📡, SD-WAN 🌍.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;### Data Management 📊
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&amp;lt;a name=&amp;#34;data-management-&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Databases**:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **SQL Databases**: MySQL 🗃️, PostgreSQL 📂, Oracle 🏛️.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **NoSQL Databases**: MongoDB 🗂️, Cassandra 📑, CouchDB 📘.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Specialized Databases**: Time Series ⏱️, Ledger 📒, Object-Based 🗄️, Graph Databases 📈.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Data Warehousing**:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Amazon Redshift**: Data warehousing and analytics 📊.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Google BigQuery**: Data analysis and visualization 📉.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **ERP Systems**:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **SAP**: Administration and configuration ⚙️.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **NetSuite**: Integration and management 🔄.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Oracle ERP**: API integration and administration 📡.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;### Observability &amp;amp; Monitoring 📈
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&amp;lt;a name=&amp;#34;observability--monitoring-&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Logging and Monitoring**:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **CloudWatch**: AWS logging and monitoring 📊.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Metrics collection and visualization**:  Amazon X-Ray, Grafana, Data Dog 📈.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Application Performance Monitoring (APM)**.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **CI/CD**: Jenkins 🔧, GitLab CI 🔄, AWS CodeCommit, GitHub Actions 🚀, Terraform 🛠️, Serverless Framework, AWS CDK ⚙️.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;### Security &amp;amp; Compliance 🔒
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&amp;lt;a name=&amp;#34;security--compliance-&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Identity &amp;amp; Access Management (IAM)**: Role-based access control 🛡️.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Encryption**: Data-at-rest and data-in-transit 🔐.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Compliance**: PHI 🛡️, HIPAA 🏥, OSHA.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Audit Preparation**: Identity Trails, ISO documentation.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;### Design &amp;amp; Prototyping 🎨
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&amp;lt;a name=&amp;#34;design--prototyping-&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Design Tools**: Figma 🖌️, Adobe XD 🎨, Sketch ✏️.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **UI/UX Design**: Prototyping, field ux research, user interface and experience design 🖼️.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;### Project Management &amp;amp; Leadership 👥
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&amp;lt;a name=&amp;#34;project-management--leadership-&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Leadership Experience**:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Team Management**: Leading diverse teams in various roles and industries 👥.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Role Diversity**: Solutions Architect 🏗️, Developer 💻, Systems Engineer 🛠️, Project Manager 📅.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Project Management**:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Methodologies**: Agile 🔄, Scrum 🏆.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Tools**: Jira 📋, Asana 📝, Trello 🗂️, SharePoint 📂.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Client &amp;amp; Stakeholder Engagement**:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Client Management**: Requirement gathering and client satisfaction 💬.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Stakeholder Communication**: Effective communication between technical and non-technical parties 📞.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;### Data Visualization 📊
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&amp;lt;a name=&amp;#34;data-visualization-&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Visualization Tools**: Tableau 📈, Power BI 📉, Looker 🔍.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Data Analysis**: Data storytelling and dashboard creation 📊.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;### CRM Systems 💼
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&amp;lt;a name=&amp;#34;crm-systems-&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **CRM Platforms**: Salesforce 🛠️, HubSpot 📊.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Integration**: API-based integrations and automation 🔗.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;### Industry Experience 🏢
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&amp;lt;a name=&amp;#34;industry-experience-&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Retail**: Systems impacting retail operations and sales 🛒.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Education**: Technology solutions for educational institutions 🎓.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Manufacturing**: Industrial automation and related systems 🏭.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;### Design &amp;amp; Engineering 🏗️
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&amp;lt;a name=&amp;#34;design--engineering-&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **System Design**: Architectural frameworks and system design 🏛️.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Project Design**: Prototyping and designing technical solutions 💡.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;### Machine Learning &amp;amp; AI 🤖
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&amp;lt;a name=&amp;#34;machine-learning--ai-&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Machine Learning**:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Frameworks**: TensorFlow 🤖, PyTorch 🔍.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Tools**: Amazon Bedrock 📈, Amazon Sagemaker 🔬.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Techniques**: Supervised Learning 🧠, Unsupervised Learning 📊, Data Evaluation &amp;amp; Model Training 🕵️.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Generative AI**:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Models**: GPT 🧠, Hugging Face 🔍, Google Vertex &amp;amp; Gemini 🌌, Anthropic Claude, Amazon Titan, LLama.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Applications**: Prompt Engineering, Private Data Training, Model Tuning, Text generation 📝, Image synthesis 🎨, Data augmentation 📊.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **ML Ops**: Model deployment and monitoring 🔧.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;### Internet of Things (IoT) 🌐
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&amp;lt;a name=&amp;#34;internet-of-things-iot-&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **MqTT IoT Platforms**:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **AWS IoT**: Device management and data ingestion 📡.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Azure IoT**: Device provisioning and data analytics 📊.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **IoT Devices**: Sensors 📈, weather stations 🔧, IMUs, controllers/edge hubs (AWS IoT Greengrass), security credentials, updates and fleet management.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Protocols**: MQTT 🌐.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;### Big Data 📉
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&amp;lt;a name=&amp;#34;big-data-&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **ETL, Zero-ETL, and Data Processing**:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Apache Hadoop**: Distributed storage and processing 📂.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Apache Spark**: In-memory data processing 🔄.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Data Storage**: Data lakes 🌊, data warehouses 🏛️.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Analytics**: Real-time analytics 🕒, batch processing 📅.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;### Additional Skills 🔧
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&amp;lt;a name=&amp;#34;additional-skills-&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Collaboration Tools**: SharePoint 📂, Atlassian Suite (Confluence 📖, Bitbucket 📥).
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **SAML**: Google Single Sign-On integration 🔐.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Development Environments**: VSCode 🖥️, WSL2 🐧, GitHub 🧑‍💻.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **3D &amp;amp; Game Engines**: Unreal Engine 🎮, Babylon.js &amp;amp; three.js 🌟, Open Scene Description 🖼️, WebGL Shading 🌐.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Digital Twins**: Simulation and analysis 🔍.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;a name=&amp;#34;EXPERIENCE&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;## Experience
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;[&lt;span class=&#34;nt&#34;&gt;🔝 Return to Top&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#top&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;### Chief Technology Officer 🚀
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&amp;lt;a name=&amp;#34;chief-technology-officer-&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gs&#34;&gt;**Cloudcroft Cloud Company**&lt;/span&gt; · Contract  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ge&#34;&gt;_2021 - Present_&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ge&#34;&gt;_Cloudcroft, NM · Hybrid_&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gs&#34;&gt;**Contract Engagements &amp;amp; Key Projects:**&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; **General Strategy &amp;amp; Architecture:**
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Managing project execution, scalability, and the implementation of cutting-edge technologies 🛠️.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Leading partnership building and cross-disciplinary teams across engineering, product, and design.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Applying emerging technologies such as game engines, spatial computing, and 3D interfaces to practical solutions.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; **Alamogordo Public Schools (2021 - 2022):**
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Enhanced IT support operations across 16 campuses, overseeing planning, funding, and vendor management 💼.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Led the transition to Dell Chromebooks 💻, improving technology accessibility for students 🎓.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Optimized IT infrastructure by transitioning responsibilities to external contractors, increasing cost-efficiency and service quality 💰.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Directed agile transformation initiatives to improve project management and team collaboration 🔄.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; **Tularosa Communications:**
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Supported network infrastructure upgrades and rural connectivity initiatives 📡.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Advised on technology implementation for regional communications improvement.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;### Software Developer 💻
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&amp;lt;a name=&amp;#34;software-developer-&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gs&#34;&gt;**X2nSat Inc.**&lt;/span&gt; &lt;span class=&#34;ge&#34;&gt;_2022 - 2023_&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ge&#34;&gt;_Petaluma, California, United States_&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Developed and deployed applications for streaming solutions and satellite technology integration 📡.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Managed AWS resources, Python and PHP Lambda functions, and EC2 instances 🖥️, incorporating advanced AI tools for data processing 🤖.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Built and optimized web applications using JavaScript, PHP, NoSQL, SQL, and time series databases 📊.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Promoted innovation and mentored team members in applying generative AI technologies ✨.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;### Chief Technology Officer 🌐
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&amp;lt;a name=&amp;#34;chief-technology-officer-1&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gs&#34;&gt;**Electronic Caregiver**&lt;/span&gt; · Full-time  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ge&#34;&gt;_2015 - 2020_&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ge&#34;&gt;_Las Cruces, NM, United States_&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Oversaw the development and implementation of technology solutions for remote patient monitoring and telehealth services 🩺.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Led a team in designing and scaling healthcare technologies to enhance patient care and operational efficiency 💡.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Managed the integration of cloud services, including AWS and Azure, to support scalable and reliable healthcare applications ☁️.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Implemented data security measures and compliance strategies to ensure adherence to HIPAA and other regulations 🔒.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Drove innovation in product development, contributing to new features and enhancements that improved user experience and expanded market reach 🚀.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Collaborated with cross-functional teams to align technological solutions with business goals and user needs 📊.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;### Public Relations Vice President 📣
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&amp;lt;a name=&amp;#34;public-relations-vice-president-&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gs&#34;&gt;**LifeSupport Medical**&lt;/span&gt; · Full-time  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ge&#34;&gt;_2012 - 2015_&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ge&#34;&gt;_Las Cruces, NM_&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Managed over 140 website launches 🌐, major industry events 🎉, and global media relations 🌍.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Deployed diverse tech stacks including Windows Server, Ruby on Rails, Xcode, and others for deployment and analytics 🔧.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Developed custom CRM solutions and led lead generation efforts, enhancing sales team efficiency 📈.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Established a mobile motion capture lab and created an augmented reality interface for iPhones and Android devices 📱.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Conducted field research and contributed to over 12 academic publications 📚.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;### Chief Marketing Officer 📈
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&amp;lt;a name=&amp;#34;chief-marketing-officer-&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gs&#34;&gt;**Abstract Spacecraft**&lt;/span&gt; · Full-time  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ge&#34;&gt;_2008 - 2015_&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ge&#34;&gt;_Las Cruces, New Mexico Area_&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Led SEO and full-stack web app development initiatives to improve online visibility and client engagement 🌟.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Managed digital marketing and reputation strategies to enhance company presence in the market 🌐.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;### Sales and Engineering Manager 🔧
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&amp;lt;a name=&amp;#34;sales-and-engineering-manager-&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gs&#34;&gt;**LaserShield Systems, Inc**&lt;/span&gt; · Full-time  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ge&#34;&gt;_2005 - 2019_&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ge&#34;&gt;_Las Cruces, NM_&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Directed phone sales staff 📞 and trained retail and inside sales teams, enhancing dealer network capabilities 🔗.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Deployed CRM and SAP solutions to streamline customer relations and sales processes 🛠️.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Provided design input for custom fulfillment and logistics systems, supporting nationwide distribution 🚚.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Collaborated on market research and field trials across 23 states 🗺️, leading sales and user satisfaction teams 👍.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Overhauled returns processes and implemented advanced tracking systems, managing fulfillment with major retailers 📦.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;### Electro-Mechanical Technician, Nuclear Biological Chemical Defense Quartermaster ⚙️
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&amp;lt;a name=&amp;#34;electro-mechanical-technician-nuclear-biological-chemical-defense-quartermaster-&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gs&#34;&gt;**US Army**&lt;/span&gt; · Full-time  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ge&#34;&gt;_1999 - 2002_&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Provided mission-critical support during key deployments, managing $30M worth of equipment and protection gear 🎖️.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Trained soldiers in special operations procedures and maintained readiness of advanced systems 🎯.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Created schematic diagrams for mission planning and participated in airborne operations ✈️, showcasing versatility.
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
   </channel>
 </rss>

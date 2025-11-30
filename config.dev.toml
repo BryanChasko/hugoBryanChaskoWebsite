@@ -1,0 +1,151 @@
+baseURL = "https://bryanchasko.com/"
+title = "Bryan Chasko's Portfolio"
+theme = "PaperMod"
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+[params]
+  env = "production" # to enable google analytics, opengraph, twitter-cards and schema.
+  title = "Bryan Chasko"
+  description = "Welcome to Bryan Chasko's Portfolio - A showcase of projects, blog posts, and contact information."
+  keywords = ["Portfolio", "Blog", "Projects", "Bryan Chasko", "AWS", "AI"]
+  author = "Bryan Chasko"
+  images = ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat = "January 2, 2006"
+  defaultTheme = "dark" # dark, light
+  disableThemeToggle = false
+
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = false
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+  comments = false
+  hidemeta = false
+  hideSummary = false
+  showtoc = false
+  tocopen = false
+
+  [params.assets]
+    favicon = "/favicon.ico"
+    favicon16x16 = "/favicon-16x16.png"
+    favicon32x32 = "/favicon-32x32.png"
+    apple_touch_icon = "/apple-touch-icon.png"
+    safari_pinned_tab = "/safari-pinned-tab.svg"
+
+  [params.label]
+    text = "Home"
+    icon = "/apple-touch-icon.png"
+    iconHeight = 35
+
+  [params.profileMode]
+    enabled = false # needs to be explicitly set
+    title = "Bryan Chasko"
+    subtitle = "Solutions Architect | AWS Expert | AI Enthusiast"
+    imageUrl = "/profile.jpg"
+    imageWidth = 120
+    imageHeight = 120
+    imageTitle = "Bryan Chasko"
+    [[params.profileMode.buttons]]
+      name = "Cloudcroft Cloud Company"
+      url = "/cloudcroft-cloud-company/"
+    [[params.profileMode.buttons]]
+      name = "Blog"
+      url = "/blog/"
+    [[params.profileMode.buttons]]
+      name = "Topics"
+      url = "/topics/"
+    [[params.profileMode.buttons]]
+      name = "Contact"
+      url = "/contact/"
+
+[params.homeInfoParams]
+  Title = "👋 Hello, Friend. ^.^"
+Content = "[🦊me](blog/posts/about-bryan-chasko) | [🐈 Buddy](blog/posts/my-cat-buddy) | [🏈#ForeverNE](blog/posts/new-england-patriots-fandom) | [🔧SKILLS](blog/posts/my-skills-and-experience#skills)  | [📈EXPERIENCE](blog/posts/my-skills-and-experience#experience)  | [☁️AWS CLOUD](blog/posts/aws-cloud-projects)  |<br> [📅BOOK or HIRE](cloudcroft-cloud-company) "
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/BryanChasko"
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://linkedin.com/in/bryanchasko"
+  [[params.socialIcons]]
+    name = "instagram"
+    url = "https://instagram.com/bryanChasko"
+  [[params.socialIcons]]
+    name = "twitter"
+    url = "https://twitter.com/bryanChasko"
+
+  [params.analytics.google]
+    SiteVerificationTag = "YOUR_GOOGLE_SITE_VERIFICATION_TAG"
+  [params.analytics.bing]
+    SiteVerificationTag = "YOUR_BING_SITE_VERIFICATION_TAG"
+  [params.analytics.yandex]
+    SiteVerificationTag = "YOUR_YANDEX_SITE_VERIFICATION_TAG"
+
+  [params.cover]
+    hidden = true # hide everywhere but not in structured data
+    hiddenInList = true # hide on list pages and home
+    hiddenInSingle = true # hide on single page
+
+  [params.editPost]
+    URL = "https://github.com/BryanChasko/bryanChaskoHugo/content"
+    Text = "Suggest Changes" # edit text
+    appendFilePath = true # to append file path to Edit link
+
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    limit = 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys = ["title", "permalink", "summary", "content"]
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "cloudcroft-cloud-company"
+    name = "Cloudcroft Cloud Company"
+    url = "/cloudcroft-cloud-company/"
+    weight = 10
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/blog/"
+    weight = 20
+  [[menu.main]]
+    identifier = "tags"
+    name = "Topics"
+    url = "/tags/"
+    weight = 25
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 30
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[markup]
+  [markup.highlight]
+    noClasses = false

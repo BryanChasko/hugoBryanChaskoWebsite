@@ -1,0 +1,29 @@
+{{/*
+Shortcode: cta-button
+Usage:
+  {{< cta-button href="https://..." label="Book Now" emphasis="primary" >}}
+Params:
+  - href (required)
+  - label (required)
+  - emphasis (optional): primary | secondary (controls color)
+*/}}
+{{ $href := .Get "href" | default "#" }}
+{{ $label := .Get "label" | default "Learn more" }}
+{{ $em := .Get "emphasis" | default "primary" }}
+{{/* default colors (primary) */}}
+{{ $.Scratch.Set "bg" "#4F46E5" }}
+{{ $.Scratch.Set "bgHover" "#4338CA" }}
+{{ if eq $em "secondary" }}
+  {{ $.Scratch.Set "bg" "#6B7280" }}
+  {{ $.Scratch.Set "bgHover" "#4B5563" }}
+{{ end }}
+{{ $bg := $.Scratch.Get "bg" }}
+{{ $bgHover := $.Scratch.Get "bgHover" }}
+<a href="{{ $href }}" class="cta-button" role="button" aria-label="{{ $label }}" rel="noopener noreferrer" target="_blank" style="display:inline-block; background-color:{{ $bg }}; color:#fff; padding:10px 16px; border-radius:8px; text-decoration:none; font-weight:600; font-size:0.95rem; box-shadow: 0 6px 18px rgba(79,70,229,0.12);">
+  {{ $label }}
+</a>
+
+<style scoped>
+/* Minimal hover support; scoped to avoid changing global styles. */
+.cta-button:hover{ transform: translateY(-1px); box-shadow: 0 8px 22px rgba(0,0,0,0.12); }
+</style>

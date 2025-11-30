@@ -1,0 +1,74 @@
+/* Help page enhancements: hero, service list and cards */
+
+#help-hero {
+  padding: 1.75rem;
+  border-radius: 8px;
+  background: var(--entry, #f6f7f9);
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border, #e6e7ea);
+}
+
+#help-hero h1 {
+  font-size: 1.85rem;
+  margin-bottom: 0.5rem;
+}
+
+#help-hero p,
+#help-hero strong,
+#help-hero b {
+  color: var(--content, #333);
+  line-height: 1.5;
+}
+
+/* Service list as responsive cards */
+.help-services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0.5rem 0 1.25rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.help-service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border, #e6e7ea);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.01));
+}
+
+.help-service-card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.help-service-card p {
+  margin: 0.25rem 0 0.5rem 0;
+  color: var(--content, #444);
+}
+
+/* CTA link styling (will complement shortcode inline styles) */
+.help-service-card a.cta-link {
+  display: inline-block;
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  background: var(--primary, #111827);
+  color: white;
+}
+
+@media (min-width: 720px) {
+  .help-services-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .help-service-card {
+    flex: 1 1 calc(50% - 1rem);
+  }
+}

@@ -129,7 +129,7 @@ To help seniors “age in place,” Bryan utilized AWS technology to enhance pat
 
 ### Focus on Rural, Small Business, and Garage Inventors
 
-Since 2020, Bryan has turned his attention towards the community leve and grassroots conversations about new opportunities to leverage cloud technology and ai. Bryan beleives AWS democratizes the playing field by giving everyone access to supercomputing and over 200 AWS tools. This enables small businesses to innovate and compete with the same resources as Amazon.com. 
+Since 2020, Bryan has turned his attention towards the community leve and grassroots conversations about new opportunities to leverage cloud technology and ai. Bryan beleives AWS democratizes the playing field by giving everyone access to supercomputing and over 200 AWS tools. This enables small businesses to innovate and compete with the same resources as Amazon.com.
 
 "Bryan’s efforts in organizing AWS meetups and fostering community engagement are a testament to his leadership and passion for technology."
 
