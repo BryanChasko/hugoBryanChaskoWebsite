@@ -13,6 +13,9 @@ description: "Strategic, quick-win consulting focused on AWS Security, Cost Opti
 <div id="help-hero">
 
 I provide practical, CTO-level cloud architecture and consulting services to help small teams and businesses solve their most pressing security, cost, and innovation challenges fast.
+aliases:
+  - "/HELP"
+  - "/HELP/"
 
 **Limited Time Offer:** **$500 Flat Rate for a 2-Day, High-Impact Deliverable.** Secure senior expertise for immediate, actionable results starting December 8th.
 
