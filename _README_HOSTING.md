@@ -178,3 +178,35 @@ aws route53 change-resource-record-sets --hosted-zone-id <hosted zone id> --chan
 ### TIPS AND TRICKS
 see dns settings using hosted zone details' "hosted zone ID" from console
 aws route53 list-resource-record-sets --hosted-zone-id <hosted zone id>
+
+## Deploy Script (safe & cache-aware)
+
+To build, upload, and always invalidate CloudFront safely without committing secrets, use `scripts/deploy.pl`.
+
+- Reads config from environment, your home file (`~/.bcc-site/config.json`), or AWS SSM Parameter Store.
+- Auto-detects bucket region; finds CloudFront distribution by alias when possible.
+- Always runs an invalidation (`/*`) after upload.
+
+Quick start:
+
+```bash
+# one-off dry-run (no external calls)
+perl scripts/deploy.pl --dry-run --verbose
+
+# normal deploy
+perl scripts/deploy.pl --profile aerospaceug-admin
+```
+
+Optional SSM layout (low-cost):
+
+```bash
+aws ssm put-parameter --name /sites/bryanchasko.com/s3_bucket --type String --value bryanchasko.com
+aws ssm put-parameter --name /sites/bryanchasko.com/domain    --type String --value bryanchasko.com
+aws ssm put-parameter --name /sites/bryanchasko.com/cloudfront_distribution_id --type String --value <CF_DISTRIBUTION_ID>
+```
+
+Then:
+
+```bash
+perl scripts/deploy.pl --profile aerospaceug-admin --param-path /sites/bryanchasko.com
+```
