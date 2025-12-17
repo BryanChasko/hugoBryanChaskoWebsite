@@ -27,6 +27,22 @@
     line-height: var(--line-height-base);
     word-spacing: normal;
   }
+
+  /* Mobile: smaller terminal font */
+  .home-info .entry-header h1 {
+    font-size: clamp(0.85rem, 4.5vw, 1.1rem);
+  }
+
+  .home-info .entry-header {
+    padding: var(--space-xs) var(--space-sm);
+  }
+
+  /* Mobile: compact navigation buttons */
+  .home-info .entry-content a {
+    margin: 0.1em 0.1em;
+    padding: 0.3em 0.5em;
+    font-size: 0.8rem;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
@@ -34,6 +50,18 @@
     font-size: clamp(0.75rem, 2.5vw, 1rem);
     line-height: var(--line-height-relaxed);
     word-spacing: normal;
+  }
+
+  /* Tablet: medium terminal font */
+  .home-info .entry-header h1 {
+    font-size: clamp(1rem, 3vw, 1.35rem);
+  }
+
+  /* Tablet: balanced navigation buttons */
+  .home-info .entry-content a {
+    margin: 0.12em 0.15em;
+    padding: 0.32em 0.55em;
+    font-size: 0.875rem;
   }
 }
 
@@ -109,34 +137,35 @@
     0 0 0 2px rgba(129, 105, 197, 0.1);
 }
 
-/* Home Info Title - Terminal Style with Retro Green Glow */
+/* Home Info Title - Terminal Style */
+/* Light mode: Warm amber CRT aesthetic - unique colors not used elsewhere */
 .home-info .entry-header {
   max-width: 100%;
   width: 100%;
   margin-inline: auto;
   margin-bottom: var(--space-md);
-  background: #f0fdf4;
+  background: #fef9e7;
   border-radius: var(--radius-md);
   padding: var(--space-sm) var(--space-md);
-  border: 1px solid #bbf7d0;
+  border: 1px solid #f5d79e;
   box-shadow:
-    -15px 0 20px -10px rgba(94, 65, 162, 0.15),
-    15px 0 20px -10px rgba(94, 65, 162, 0.15),
-    0 15px 20px -10px rgba(94, 65, 162, 0.2),
-    inset 0 0 40px rgba(34, 197, 94, 0.05);
+    -15px 0 20px -10px rgba(180, 130, 40, 0.12),
+    15px 0 20px -10px rgba(180, 130, 40, 0.12),
+    0 15px 20px -10px rgba(180, 130, 40, 0.15),
+    inset 0 0 40px rgba(212, 160, 60, 0.08);
   animation: terminal-glitch 8s ease-in-out 3, terminal-collapse 24s ease-out forwards;
   overflow: hidden;
 }
 
-/* Light mode terminal - soft mint background */
+/* Light mode terminal text - amber/brown tones for readability */
 .home-info .entry-header h1 .terminal-text,
 .home-info .entry-header h1 .terminal-cursor {
-  color: #166534;
+  color: #78350f;
 }
 
 .home-info .entry-header h1 .terminal-cursor {
-  background: #ffffff;
-  color: #5E41A2;
+  background: #fef9e7;
+  color: #b45309;
 }
 
 [data-theme="dark"] .home-info .entry-header {
@@ -165,7 +194,7 @@
   font-size: clamp(1.2rem, 3vw, 1.75rem);
   margin-bottom: 0;
   text-align: left;
-  color: #166534;
+  color: #78350f;
   letter-spacing: 0.02em;
   display: flex;
   align-items: baseline;
@@ -204,8 +233,8 @@
 }
 
 .terminal-cursor {
-  color: #5E41A2;
-  background: #ffffff;
+  color: #b45309;
+  background: #fef9e7;
   padding: 0 2px;
   margin-left: 0;
   width: 0.6em;
@@ -291,7 +320,7 @@
 }
 
 @keyframes cursor-blink {
-  0%, 100% { background: #ffffff; color: #5E41A2; }
+  0%, 100% { background: #fef9e7; color: #b45309; }
   50% { background: transparent; color: transparent; }
 }
 
