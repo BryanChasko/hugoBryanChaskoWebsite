@@ -2,23 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>TechnicalExpertise on Bryan Chasko&#39;s Portfolio</title>
-    <link>https://bryanchasko.com/tags/technicalexpertise/</link>
+    <link>http://localhost:1313/tags/technicalexpertise/</link>
     <description>Recent content in TechnicalExpertise on Bryan Chasko&#39;s Portfolio</description>
     <image>
       <title>Bryan Chasko&#39;s Portfolio</title>
-      <url>https://bryanchasko.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://bryanchasko.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
     <lastBuildDate>Sun, 07 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://bryanchasko.com/tags/technicalexpertise/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/technicalexpertise/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>☁️ How I Became an AWS Hero 🦸‍️</title>
-      <link>https://bryanchasko.com/blog/posts/aws-hero-bryan-chasko/</link>
+      <link>http://localhost:1313/blog/posts/aws-hero-bryan-chasko/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/blog/posts/aws-hero-bryan-chasko/</guid>
-      <description>&lt;h2 id=&#34;-day-1-on-amazon-web-services-aws-cloud-wbryan-chasko&#34;&gt;☁️ Day 1 on Amazon Web Services (AWS) Cloud w/Bryan Chasko&lt;/h2&gt;
+      <guid>http://localhost:1313/blog/posts/aws-hero-bryan-chasko/</guid>
+      <description>&lt;!--
+File Path: content/blog/posts/aws-hero-bryan-chasko.md
+--&gt;
+&lt;h2 id=&#34;-day-1-on-amazon-web-services-aws-cloud-wbryan-chasko&#34;&gt;☁️ Day 1 on Amazon Web Services (AWS) Cloud w/Bryan Chasko&lt;/h2&gt;
 &lt;h3 id=&#34;a-journey-of-innovation-leadership-and-aws-expertise&#34;&gt;A Journey of Innovation, Leadership, and AWS Expertise&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.lascrucesbulletin.com/stories/local-company-takes-cutting-edge-health-technology-global,2642&#34;&gt;“One of the leading innovators in the world”&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id=&#34;background&#34;&gt;Background&lt;/h4&gt;

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="700" height="700" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg">
+  <g fill="#000000">
+    <!-- Simple M shape outline -->
+    <path d="M 100 550 L 100 150 L 200 300 L 350 150 L 500 300 L 600 150 L 600 550 L 550 550 L 550 300 L 450 420 L 350 300 L 250 420 L 150 300 L 150 550 Z"/>
+    <!-- Circle for the dot -->
+    <circle cx="350" cy="600" r="40"/>
+  </g>
+</svg>

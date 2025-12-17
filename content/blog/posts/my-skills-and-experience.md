@@ -24,7 +24,7 @@ I am a mission-driven technology leader and **AWS Hero** applying **digital-firs
 
 My professional focus centers on transforming complex business logic into reliable systems with accessible interfaces. My career is defined by technical innovation and leadership across four distinct phases:
 
-* **Cloudcroft Cloud Company:** Delivering strategic project execution and cutting-edge cloud implementation. This encompasses contract leadership in **Education (Alamogordo Public Schools)** and **Telecommunications (Tularosa Communications)**, providing infrastructure and connectivity solutions.
+* **Cloudcroft Cloud Company:** Delivering strategic project execution and cutting-edge cloud implementation across education, telecommunications, and nonprofit sectors. Modernizing technology infrastructure, improving security and compliance, and implementing solutions that enhance reliability and user access.
 * **X2nSat:** Architecting streaming and satellite connectivity solutions in a high-tech environment, bridging the gap between orbit and earth.
 * **Electronic Caregiver (ECG):** Leading the transformation of patient care through telehealth and remote monitoring technology, scaling solutions from local prototypes to enterprise health systems.
 * **US Army:** Managing mission-critical systems, logistics, and advanced protection gear in high-stakes defense operations.
@@ -170,7 +170,7 @@ Connecting globally and locally as a speaker and organizer, including leading **
 ### Chief Technology Officer 🚀
 <a name="chief-technology-officer-"></a>
 **Cloudcroft Cloud Company** · Contract  
-_2021 - Present_  
+_2020 - Present_  
 _Cloudcroft, NM · Hybrid_
 
 **Contract Engagements & Key Projects:**
@@ -180,15 +180,19 @@ _Cloudcroft, NM · Hybrid_
     - Leading partnership building and cross-disciplinary teams across engineering, product, and design.
     - Applying emerging technologies such as game engines, spatial computing, and 3D interfaces to practical solutions.
 
-* **Alamogordo Public Schools (2021 - 2022):**
-    - Enhanced IT support operations across 16 campuses, overseeing planning, funding, and vendor management 💼.
-    - Led the transition to Dell Chromebooks 💻, improving technology accessibility for students 🎓.
-    - Optimized IT infrastructure by transitioning responsibilities to external contractors, increasing cost-efficiency and service quality 💰.
-    - Directed agile transformation initiatives to improve project management and team collaboration 🔄.
+* **Public Education:**
+    - Modernized technology across 16 campuses and deployed targeted cybersecurity measures in response to statewide threats, improving reliability, security, and access for 6,000+ users 💼.
+    - Led technology infrastructure improvements, device deployment, and agile transformation initiatives 💻.
+    - Optimized IT operations by transitioning responsibilities to external contractors, increasing cost-efficiency and service quality 💰.
 
-* **Tularosa Communications:**
-    - Supported network infrastructure upgrades and rural connectivity initiatives 📡.
-    - Advised on technology implementation for regional communications improvement.
+* **Internet Service Providers and MSP:**
+    - Upgraded and secured technology systems across multiple customer networks, improving reliability and ensuring compliance with privacy and security standards 📡.
+    - Advised on network infrastructure modernization and rural connectivity initiatives.
+
+* **NGOs:**
+    - Modernizing health education platforms with more resilient architecture and faster course implementation.
+    - Migrated systems from monolith to microservices, cutting costs and freeing up time for technical contractors and volunteers.
+    - Created access paths for agentic tooling integration into education and developer experience.
 
 ---
 

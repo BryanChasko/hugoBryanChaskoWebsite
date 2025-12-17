@@ -19,7 +19,7 @@ buildExpired = false
   author = "Bryan Chasko"
   images = ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat = "January 2, 2006"
-  defaultTheme = "dark" # dark, light
+  defaultTheme = "light" # dark, light
   disableThemeToggle = false
 
   ShowReadingTime = true
@@ -147,5 +147,8 @@ Content = "[🦊me](blog/posts/about-bryan-chasko) | [🐈 Buddy](blog/posts/my-
   tag = "tags"
 
 [markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
   [markup.highlight]
     noClasses = false

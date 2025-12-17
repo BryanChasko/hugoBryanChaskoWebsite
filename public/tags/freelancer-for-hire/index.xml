@@ -2,27 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Freelancer for Hire on Bryan Chasko&#39;s Portfolio</title>
-    <link>https://bryanchasko.com/tags/freelancer-for-hire/</link>
+    <link>http://localhost:1313/tags/freelancer-for-hire/</link>
     <description>Recent content in Freelancer for Hire on Bryan Chasko&#39;s Portfolio</description>
     <image>
       <title>Bryan Chasko&#39;s Portfolio</title>
-      <url>https://bryanchasko.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://bryanchasko.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
     <lastBuildDate>Tue, 02 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://bryanchasko.com/tags/freelancer-for-hire/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/freelancer-for-hire/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bryan Chasko&#39;s Skills and Experience</title>
-      <link>https://bryanchasko.com/blog/posts/my-skills-and-experience/</link>
+      <link>http://localhost:1313/blog/posts/my-skills-and-experience/</link>
       <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/blog/posts/my-skills-and-experience/</guid>
+      <guid>http://localhost:1313/blog/posts/my-skills-and-experience/</guid>
       <description>&lt;hr&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a name=&#34;top&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;skills-and-experience-&#34;&gt;Skills and Experience 🦊&lt;/h2&gt;
 &lt;h3 id=&#34;quick-links&#34;&gt;Quick Links&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Skills:&lt;/strong&gt; &lt;a href=&#34;#cloud-platforms--services-&#34;&gt;Cloud Platforms &amp;amp; Services ☁️&lt;/a&gt; • &lt;a href=&#34;#infrastructure--networking-&#34;&gt;Infrastructure &amp;amp; Networking 🔧&lt;/a&gt; • &lt;a href=&#34;#data-management-&#34;&gt;Data Management 📊&lt;/a&gt; • &lt;a href=&#34;#observability--monitoring-&#34;&gt;Observability &amp;amp; Monitoring 📈&lt;/a&gt; • &lt;a href=&#34;#security--compliance-&#34;&gt;Security &amp;amp; Compliance 🔒&lt;/a&gt; • &lt;a href=&#34;#design--prototyping-&#34;&gt;Design &amp;amp; Prototyping 🎨&lt;/a&gt; • &lt;a href=&#34;#project-management--leadership-&#34;&gt;Project Management &amp;amp; Leadership 👥&lt;/a&gt; • &lt;a href=&#34;#data-visualization-&#34;&gt;Data Visualization 📊&lt;/a&gt; • &lt;a href=&#34;#crm-systems-&#34;&gt;CRM Systems 💼&lt;/a&gt; • &lt;a href=&#34;#industry-experience-&#34;&gt;Industry Experience 🏢&lt;/a&gt; • &lt;a href=&#34;#design--engineering-&#34;&gt;Design &amp;amp; Engineering 🏗️&lt;/a&gt; • &lt;a href=&#34;#machine-learning--ai-&#34;&gt;Machine Learning &amp;amp; AI 🤖&lt;/a&gt; • &lt;a href=&#34;#internet-of-things-iot-&#34;&gt;Internet of Things (IoT) 🌐&lt;/a&gt; • &lt;a href=&#34;#big-data-&#34;&gt;Big Data 📉&lt;/a&gt; • &lt;a href=&#34;#additional-skills-&#34;&gt;Additional Skills 🔧&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;strong&gt;Skills:&lt;/strong&gt; &lt;a href=&#34;#cloud-platforms--services-&#34;&gt;Cloud Platforms &amp;amp; Services ☁️&lt;/a&gt; • &lt;a href=&#34;#infrastructure--networking-&#34;&gt;Infrastructure &amp;amp; Networking 🔧&lt;/a&gt; • &lt;a href=&#34;#data-management-&#34;&gt;Data Management 📊&lt;/a&gt; • &lt;a href=&#34;#observability--monitoring-&#34;&gt;Observability &amp;amp; Monitoring 📈&lt;/a&gt; • &lt;a href=&#34;#security--compliance-&#34;&gt;Security &amp;amp; Compliance 🔒&lt;/a&gt; • &lt;a href=&#34;#design--prototyping-&#34;&gt;Design &amp;amp; Prototyping 🎨&lt;/a&gt; • &lt;a href=&#34;#project-management--leadership-&#34;&gt;Project Management &amp;amp; Leadership 👥&lt;/a&gt; • &lt;a href=&#34;#data-visualization-&#34;&gt;Data Visualization 📊&lt;/a&gt; • &lt;a href=&#34;#crm-systems-&#34;&gt;CRM Systems 💼&lt;/a&gt; • &lt;a href=&#34;#industry-experience-&#34;&gt;Industry Experience 🏢&lt;/a&gt; • &lt;a href=&#34;#design--engineering-&#34;&gt;Design &amp;amp; Engineering 🏗️&lt;/a&gt; • &lt;a href=&#34;#machine-learning--ai-&#34;&gt;Machine Learning &amp;amp; AI 🤖&lt;/a&gt; • &lt;a href=&#34;#internet-of-things-iot-&#34;&gt;Internet of Things (IoT) 🌐&lt;/a&gt; • &lt;a href=&#34;#big-data-&#34;&gt;Big Data 📉&lt;/a&gt; • &lt;a href=&#34;#additional-skills-&#34;&gt;Additional Skills 🔧&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Employment Experience:&lt;/strong&gt; &lt;a href=&#34;#chief-technology-officer-&#34;&gt;Chief Technology Officer at Cloudcroft Cloud Company 🚀&lt;/a&gt; • &lt;a href=&#34;#software-developer-&#34;&gt;Software Developer at X2nSat 💻&lt;/a&gt; • [General Manager 🏆] • &lt;a href=&#34;#chief-technology-officer-1&#34;&gt;Chief Technology Officer at Electronic Caregiver, Inc 🌐&lt;/a&gt; • [Public Relations Vice President 📣] • Sales and Engineering Manager 🔧• &lt;a href=&#34;#electro-mechanical-technician-nuclear-biological-chemical-defense-quartermaster-&#34;&gt;Electro-Mechanical Technician, Nuclear Biological Chemical Defense Quartermaster at US Army ⚙️&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
