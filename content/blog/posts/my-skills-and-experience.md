@@ -6,7 +6,7 @@ tags: ["Artificial Intelligence", "GameTech", "Bryan Chasko", "AWS Hero", "Freel
 ---
 ---
 <a name="top"></a>
-## Skills and Experience 🦊
+## Skills and Experience
 
 ### Quick Links
 

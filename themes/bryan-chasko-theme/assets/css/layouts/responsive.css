@@ -1,0 +1,71 @@
+/* Responsive Design Breakpoints */
+
+/* Mobile First - Base styles above are mobile */
+
+/* Tablet: 640px and up */
+@media (min-width: 640px) {
+  :root {
+    --font-size-base: 1rem;
+  }
+  
+  .container {
+    padding: 0 var(--space-xl);
+  }
+}
+
+/* Desktop Small: 768px and up */
+@media (min-width: 768px) {
+  :root {
+    --font-size-base: 1.0625rem; /* 17px */
+  }
+  
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.75rem; }
+}
+
+/* Desktop: 1024px and up */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* Desktop Large: 1280px and up */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .nav,
+  .footer,
+  .theme-toggle,
+  .social-icons {
+    display: none;
+  }
+  
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+}
+
+/* Reduce Motion for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

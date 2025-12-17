@@ -1,0 +1,154 @@
+/* Nebula Color Palette - CSS Custom Properties */
+
+:root {
+  /* === BRAND COLORS === */
+  --nebula-dark-navy: #1C2230;
+  --nebula-card-navy: #0e1324;
+  --nebula-deep-space: #0b0e14;
+  --nebula-purple: #5E41A2;
+  --nebula-lavender: #8169C5;
+  --nebula-lavender-chip: #d8b4fe;
+  --nebula-orange: #FF9900;
+  --nebula-orange-dark: #E68A00;  /* Hover state */
+  
+  /* === NEUTRAL COLORS === */
+  --white: #FFFFFF;
+  --gray-50: #F9FAFB;
+  --gray-100: #F3F4F6;
+  --gray-200: #E5E7EB;
+  --gray-300: #D1D5DB;
+  --gray-400: #9CA3AF;
+  --gray-500: #6B7280;
+  --gray-600: #4B5563;
+  --gray-700: #374151;
+  --gray-800: #2D3748;
+  --gray-900: #1F2937;
+  --gray-950: #111827;
+  --black-light: #444;
+  --black: #333;
+  
+  /* === SYNTAX HIGHLIGHTING (Catppuccin) === */
+  --syntax-bg: #24273a;
+  --syntax-text: #cad3f5;
+  --syntax-error: #ed8796;
+  --syntax-keyword: #c6a0f6;
+  --syntax-constant: #f5a97f;
+  --syntax-name: #8bd5ca;
+  --syntax-function: #8aadf4;
+  --syntax-builtin: #91d7e3;
+  --syntax-class: #eed49f;
+  --syntax-variable: #f4dbd6;
+  --syntax-string: #a6da95;
+  --syntax-comment: #6e738d;
+  --syntax-highlight-bg: #474733;
+  --syntax-line-number: #8087a2;
+  --syntax-diff-bg: #363a4f;
+  
+  /* === SEMANTIC COLOR MAPPINGS === */
+  --color-primary: var(--nebula-purple);
+  --color-primary-hover: var(--nebula-lavender);
+  --color-accent: var(--nebula-orange);
+  --color-accent-dark: var(--nebula-orange-dark);
+  --color-dark: var(--nebula-dark-navy);
+  
+  /* Light Theme Colors */
+  --color-background: var(--white);
+  --color-background-secondary: var(--gray-50);
+  --color-builder-card-bg: var(--nebula-card-navy);
+  --color-text: var(--gray-900);
+  --color-text-secondary: var(--gray-500);
+  --color-text-muted: var(--black-light);
+  --color-link: var(--nebula-purple);
+  --color-link-hover: var(--nebula-lavender-chip);
+  --color-border: var(--gray-200);
+  --color-border-hover: var(--nebula-lavender);
+  
+  /* Spacing Scale */
+  --space-xs: 0.25rem;    /* 4px */
+  --space-sm: 0.5rem;     /* 8px */
+  --space-md: 1rem;       /* 16px */
+  --space-lg: 1.5rem;     /* 24px */
+  --space-xl: 2rem;       /* 32px */
+  --space-2xl: 3rem;      /* 48px */
+  --space-3xl: 4rem;      /* 64px */
+  
+  /* Layout Containers */
+  --container-max-width: 1200px;
+  --container-padding: var(--space-lg);
+  --content-max-width: 65ch;  /* Optimal reading width: 45-75 characters */
+  
+  /* Typography */
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-heading: var(--font-body);
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  
+  --line-height-tight: 1.25;
+  --line-height-base: 1.6;
+  --line-height-relaxed: 1.75;
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark Theme Overrides */
+[data-theme="dark"] {
+  --color-background: var(--nebula-deep-space);
+  --color-background-secondary: var(--gray-800);
+  --color-builder-card-bg: #0d1220; /* slightly different shade to distinguish section */
+  --color-text: var(--gray-100);
+  --color-text-secondary: var(--gray-300);
+  --color-text-muted: var(--gray-400);
+  --color-link: var(--nebula-lavender-chip);
+  --color-link-hover: #e9d5ff;
+  --color-border: var(--gray-700);
+  --color-border-hover: var(--nebula-lavender);
+}
+
+/* Legacy PaperMod Variable Mappings for Compatibility */
+:root {
+  --theme: var(--color-background);
+  --entry: var(--color-background-secondary);
+  --primary: var(--color-text);
+  --secondary: var(--color-text-secondary);
+  --tertiary: var(--color-background-secondary);
+  --content: var(--color-text);
+  --hljs-bg: var(--gray-50);
+  --code-bg: var(--gray-100);
+  --border: var(--color-border);
+}
+
+[data-theme="dark"] {
+  --theme: var(--color-background);
+  --entry: var(--color-background-secondary);
+  --primary: var(--color-text);
+  --secondary: var(--color-text-secondary);
+  --tertiary: var(--color-background-secondary);
+  --content: var(--color-text);
+  --hljs-bg: var(--gray-800);
+  --code-bg: var(--gray-700);
+  --border: var(--color-border);
+}

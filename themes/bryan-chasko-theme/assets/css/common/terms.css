@@ -1,0 +1,35 @@
+/* Keyword/Tag Pills - Accent colored with spacing */
+.terms-tags li {
+    display: inline-block;
+    margin: 8px;
+    font-weight: 600;
+}
+
+.terms-tags a {
+    display: block;
+    padding: 6px 14px;
+    color: var(--nebula-lavender, #8169C5);
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    background: rgba(129, 105, 197, 0.1);
+    border: 1px solid rgba(129, 105, 197, 0.2);
+    border-radius: 20px;
+    transition: all 0.15s ease;
+}
+
+[data-theme="dark"] .terms-tags a {
+    background: rgba(129, 105, 197, 0.15);
+    border-color: rgba(129, 105, 197, 0.3);
+    color: var(--nebula-lavender-chip, #d8b4fe);
+}
+
+.terms-tags a:hover {
+    background: rgba(129, 105, 197, 0.25);
+    border-color: var(--nebula-lavender, #8169C5);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(129, 105, 197, 0.2);
+}
+
+.terms-tags a:active {
+    transform: scale(0.98);
+}

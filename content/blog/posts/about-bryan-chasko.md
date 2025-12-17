@@ -1,10 +1,10 @@
 ---
-title: "Bryan Chasko's Basics  🦊"
+title: "Bryan Chasko's Basics"
 date: 2024-06-13
 tags: ["AboutMe", "bryanChasko"]
 ---
 
-## About Bryan  🦊
+## About Bryan
 
 <!-- 
 ![Bryan Chasko](/images/profile.jpg) <!-- Make sure to replace this with the actual path to your image -->
@@ -23,7 +23,7 @@ tags: ["AboutMe", "bryanChasko"]
 - [**Top 5000** 🏆  
   In EA's Madden NFL 3 times as the New England Patriots 🏈](/blog/posts/new-england-patriots-fandom.md)
 
-- **Eighties Baby** 🦊  
+- **Eighties Baby**  
   Born comfortable with a terminal thanks to an MS-DOS Computer 💻. [IBM 1981](https://www.computerhistory.org/timeline/1981/)
 
 - [**Has a cat named Buddy** 🐱](/blog/posts/my-cat-buddy.md)

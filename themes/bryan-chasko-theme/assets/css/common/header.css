@@ -1,0 +1,255 @@
+/* Subtle animated gradient glow on header */
+.header {
+    position: relative;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(94, 65, 162, 0.03) 25%,
+        rgba(129, 105, 197, 0.05) 50%,
+        rgba(94, 65, 162, 0.03) 75%,
+        transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: header-glow 8s ease-in-out infinite;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(94, 65, 162, 0.15) 20%,
+        rgba(129, 105, 197, 0.25) 50%,
+        rgba(94, 65, 162, 0.15) 80%,
+        transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: header-glow 8s ease-in-out infinite;
+}
+
+[data-theme="dark"] .header {
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(129, 105, 197, 0.04) 25%,
+        rgba(129, 105, 197, 0.08) 50%,
+        rgba(129, 105, 197, 0.04) 75%,
+        transparent 100%
+    );
+    background-size: 200% 100%;
+}
+
+[data-theme="dark"] .header::after {
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(129, 105, 197, 0.2) 20%,
+        rgba(129, 105, 197, 0.4) 50%,
+        rgba(129, 105, 197, 0.2) 80%,
+        transparent 100%
+    );
+    background-size: 200% 100%;
+}
+
+@keyframes header-glow {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--container-max-width);
+    margin-inline: auto;
+    padding-inline: var(--container-padding);
+    line-height: var(--header-height);
+    gap: var(--space-sm);
+}
+
+.nav a {
+    display: block;
+}
+
+.logo,
+#menu {
+    display: flex;
+    align-items: center;
+    margin: auto var(--gap);
+}
+
+.logo {
+    flex-wrap: inherit;
+    gap: var(--space-sm);
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* 
+ * PROTECTED: Logo icon sizing
+ * DO NOT REMOVE OR MODIFY without checking favicon display.
+ * The logo img/svg must have explicit height to render properly.
+ * See copilot-instructions.md for context.
+ */
+.logo img,
+.logo svg {
+    display: inline-block !important;
+    vertical-align: middle;
+    pointer-events: none;
+    border-radius: var(--radius-md);
+    margin-inline-end: var(--space-sm);
+    height: 26px !important;
+    width: auto !important;
+}
+
+#theme-toggle {
+    font-size: 26px;
+    margin: auto 4px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: inherit;
+}
+
+#moon {
+    display: none;
+}
+
+#sun {
+    display: inline;
+}
+
+[data-theme="dark"] #moon {
+    display: inline;
+}
+
+[data-theme="dark"] #sun {
+    display: none;
+}
+
+#menu {
+    list-style: none;
+    word-break: keep-all;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+    margin: 0;
+    padding: 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+#menu::-webkit-scrollbar {
+    display: none;
+}
+
+#menu li {
+    display: inline-flex;
+}
+
+#menu .active {
+    font-weight: 500;
+    border-bottom: none;
+    position: relative;
+    background: linear-gradient(
+        180deg,
+        transparent 0%,
+        rgba(94, 65, 162, 0.08) 100%
+    );
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+}
+
+/* Gradient underline for active menu item */
+#menu .active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        var(--nebula-purple) 30%,
+        var(--nebula-lavender) 70%,
+        transparent 100%
+    );
+}
+
+/* Menu item hover - shift gradient direction */
+#menu li a {
+    position: relative;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-base);
+}
+
+#menu li a:hover {
+    background: linear-gradient(
+        180deg,
+        rgba(94, 65, 162, 0.05) 0%,
+        rgba(129, 105, 197, 0.1) 100%
+    );
+}
+
+[data-theme="dark"] #menu .active {
+    background: linear-gradient(
+        180deg,
+        transparent 0%,
+        rgba(129, 105, 197, 0.12) 100%
+    );
+}
+
+[data-theme="dark"] #menu .active::after {
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        var(--nebula-lavender) 30%,
+        var(--nebula-lavender-chip) 70%,
+        transparent 100%
+    );
+}
+
+[data-theme="dark"] #menu li a:hover {
+    background: linear-gradient(
+        180deg,
+        rgba(129, 105, 197, 0.08) 0%,
+        rgba(129, 105, 197, 0.15) 100%
+    );
+}
+
+.lang-switch li,
+.lang-switch ul,
+.logo-switches {
+    display: inline-flex;
+    align-items: center;
+    margin: auto 4px;
+}
+
+.lang-switch {
+    display: flex;
+    flex-wrap: inherit;
+}
+
+.lang-switch a {
+    margin: auto 3px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.logo-switches {
+    flex-wrap: inherit;
+}

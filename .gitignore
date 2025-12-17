@@ -7,3 +7,11 @@ cloudfront-dns-record.json
 cors.json
 current-bucket-policy.json
 dns-record.json
+# Internal development docs
+COLOR_PALETTE_REFERENCE.md
+CSS_REFACTORING_SUMMARY.md
+THEME_DEVELOPMENT.md
+.github/issues/
+
+# Hugo build artifacts - hashed CSS files
+public/assets/css/stylesheet.*.css

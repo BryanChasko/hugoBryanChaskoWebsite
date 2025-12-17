@@ -1,0 +1,88 @@
+/* Catppuccin Syntax Highlighting - Using Consolidated Variables */
+
+/* Background */ .bg { color: var(--syntax-text); background-color: var(--syntax-bg); }
+/* PreWrapper */ .chroma { color: var(--syntax-text); background-color: var(--syntax-bg); }
+/* Other */ .chroma .x {  }
+/* Error */ .chroma .err { color: var(--syntax-error) }
+/* CodeLine */ .chroma .cl {  }
+/* LineLink */ .chroma .lnlinks { outline: none; text-decoration: none; color: inherit }
+/* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
+/* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; }
+/* LineHighlight */ .chroma .hl { background-color: var(--syntax-highlight-bg) }
+/* LineNumbersTable */ .chroma .lnt { white-space: pre; -webkit-user-select: none; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em; color: var(--syntax-line-number) }
+/* LineNumbers */ .chroma .ln { white-space: pre; -webkit-user-select: none; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em; color: var(--syntax-line-number) }
+/* Line */ .chroma .line { display: flex; }
+/* Keyword */ .chroma .k { color: var(--syntax-keyword) }
+/* KeywordConstant */ .chroma .kc { color: var(--syntax-constant) }
+/* KeywordDeclaration */ .chroma .kd { color: var(--syntax-error) }
+/* KeywordNamespace */ .chroma .kn { color: var(--syntax-name) }
+/* KeywordPseudo */ .chroma .kp { color: var(--syntax-keyword) }
+/* KeywordReserved */ .chroma .kr { color: var(--syntax-keyword) }
+/* KeywordType */ .chroma .kt { color: var(--syntax-error) }
+/* Name */ .chroma .n {  }
+/* NameAttribute */ .chroma .na { color: var(--syntax-function) }
+/* NameBuiltin */ .chroma .nb { color: var(--syntax-builtin) }
+/* NameBuiltinPseudo */ .chroma .bp { color: var(--syntax-builtin) }
+/* NameClass */ .chroma .nc { color: var(--syntax-class) }
+/* NameConstant */ .chroma .no { color: var(--syntax-class) }
+/* NameDecorator */ .chroma .nd { color: var(--syntax-function); font-weight: bold }
+/* NameEntity */ .chroma .ni { color: var(--syntax-name) }
+/* NameException */ .chroma .ne { color: var(--syntax-constant) }
+/* NameFunction */ .chroma .nf { color: var(--syntax-function) }
+/* NameFunctionMagic */ .chroma .fm { color: var(--syntax-function) }
+/* NameLabel */ .chroma .nl { color: var(--syntax-builtin) }
+/* NameNamespace */ .chroma .nn { color: var(--syntax-constant) }
+/* NameOther */ .chroma .nx {  }
+/* NameProperty */ .chroma .py { color: var(--syntax-constant) }
+/* NameTag */ .chroma .nt { color: var(--syntax-keyword) }
+/* NameVariable */ .chroma .nv { color: var(--syntax-variable) }
+/* NameVariableClass */ .chroma .vc { color: var(--syntax-variable) }
+/* NameVariableGlobal */ .chroma .vg { color: var(--syntax-variable) }
+/* NameVariableInstance */ .chroma .vi { color: var(--syntax-variable) }
+/* NameVariableMagic */ .chroma .vm { color: var(--syntax-variable) }
+/* Literal */ .chroma .l {  }
+/* LiteralDate */ .chroma .ld {  }
+/* LiteralString */ .chroma .s { color: var(--syntax-string) }
+/* LiteralStringAffix */ .chroma .sa { color: var(--syntax-error) }
+/* LiteralStringBacktick */ .chroma .sb { color: var(--syntax-string) }
+/* LiteralStringChar */ .chroma .sc { color: var(--syntax-string) }
+/* LiteralStringDelimiter */ .chroma .dl { color: var(--syntax-function) }
+/* LiteralStringDoc */ .chroma .sd { color: var(--syntax-comment) }
+/* LiteralStringDouble */ .chroma .s2 { color: var(--syntax-string) }
+/* LiteralStringEscape */ .chroma .se { color: var(--syntax-function) }
+/* LiteralStringHeredoc */ .chroma .sh { color: var(--syntax-comment) }
+/* LiteralStringInterpol */ .chroma .si { color: var(--syntax-string) }
+/* LiteralStringOther */ .chroma .sx { color: var(--syntax-string) }
+/* LiteralStringRegex */ .chroma .sr { color: var(--syntax-name) }
+/* LiteralStringSingle */ .chroma .s1 { color: var(--syntax-string) }
+/* LiteralStringSymbol */ .chroma .ss { color: var(--syntax-string) }
+/* LiteralNumber */ .chroma .m { color: var(--syntax-constant) }
+/* LiteralNumberBin */ .chroma .mb { color: var(--syntax-constant) }
+/* LiteralNumberFloat */ .chroma .mf { color: var(--syntax-constant) }
+/* LiteralNumberHex */ .chroma .mh { color: var(--syntax-constant) }
+/* LiteralNumberInteger */ .chroma .mi { color: var(--syntax-constant) }
+/* LiteralNumberIntegerLong */ .chroma .il { color: var(--syntax-constant) }
+/* LiteralNumberOct */ .chroma .mo { color: var(--syntax-constant) }
+/* Operator */ .chroma .o { color: var(--syntax-builtin); font-weight: bold }
+/* OperatorWord */ .chroma .ow { color: var(--syntax-builtin); font-weight: bold }
+/* Punctuation */ .chroma .p {  }
+/* Comment */ .chroma .c { color: var(--syntax-comment); font-style: italic }
+/* CommentHashbang */ .chroma .ch { color: var(--syntax-comment); font-style: italic }
+/* CommentMultiline */ .chroma .cm { color: var(--syntax-comment); font-style: italic }
+/* CommentSingle */ .chroma .c1 { color: var(--syntax-comment); font-style: italic }
+/* CommentSpecial */ .chroma .cs { color: var(--syntax-comment); font-style: italic }
+/* CommentPreproc */ .chroma .cp { color: var(--syntax-comment); font-style: italic }
+/* CommentPreprocFile */ .chroma .cpf { color: var(--syntax-comment); font-weight: bold; font-style: italic }
+/* Generic */ .chroma .g {  }
+/* GenericDeleted */ .chroma .gd { color: var(--syntax-error); background-color: var(--syntax-diff-bg) }
+/* GenericEmph */ .chroma .ge { font-style: italic }
+/* GenericError */ .chroma .gr { color: var(--syntax-error) }
+/* GenericHeading */ .chroma .gh { color: var(--syntax-constant); font-weight: bold }
+/* GenericInserted */ .chroma .gi { color: var(--syntax-string); background-color: var(--syntax-diff-bg) }
+/* GenericOutput */ .chroma .go {  }
+/* GenericPrompt */ .chroma .gp {  }
+/* GenericStrong */ .chroma .gs { font-weight: bold }
+/* GenericSubheading */ .chroma .gu { color: var(--syntax-constant); font-weight: bold }
+/* GenericTraceback */ .chroma .gt { color: var(--syntax-error) }
+/* GenericUnderline */ .chroma .gl { text-decoration: underline }
+/* TextWhitespace */ .chroma .w {  }

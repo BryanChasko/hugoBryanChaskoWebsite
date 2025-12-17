@@ -39,6 +39,16 @@ hugo && aws s3 sync public/ s3://bryanchasko.com
 
 **Note:** Dev server auto-rebuilds on file changes. Check [hugo.out](../hugo.out) for build logs if needed.
 
+**Preferred Deploy (with cache invalidation):**
+
+```bash
+perl scripts/deploy.pl --profile aerospaceug-admin
+```
+
+- Builds via Hugo, syncs `public/` to S3, and invalidates CloudFront (`/*`).
+- Reads config from env variables, `~/.bcc-site/config.json`, or SSM Parameter Store path (e.g., `/sites/bryanchasko.com`).
+- No secrets are committed to the repo.
+
 ## Configuration Details
 
 - **Primary Config**: [hugo.toml](../hugo.toml) (production settings)
@@ -75,6 +85,12 @@ tags: ["aws", "consulting"]
 - Blog posts: Individual `.md` files in `content/blog/posts/`
 - Use markdown anchors for in-page navigation: `[SKILLS](blog/posts/my-skills-and-experience#skills)`
 
+**Home Feature Card - Builder Center:**
+
+- The home page shows a feature card linking to your latest AWS Builder Center article above the social links.
+- To update the card text or link, edit [themes/bryan-chasko-theme/layouts/partials/home_info.html](../themes/bryan-chasko-theme/layouts/partials/home_info.html).
+- Visual styles live in [themes/bryan-chasko-theme/assets/css/components/home.css](../themes/bryan-chasko-theme/assets/css/components/home.css) under the `.builder-card` rules.
+
 ## AWS Infrastructure (Reference Only)
 
 - **S3 Bucket**: `bryanchasko.com` (us-west-2) - Static website hosting enabled
@@ -83,6 +99,22 @@ tags: ["aws", "consulting"]
 - **Deployment**: See [\_README_HOSTING.md](../_README_HOSTING.md) for full AWS setup steps
 
 **Critical:** AWS config files are gitignored but present locally. Never commit secrets or ARNs to public repo.
+
+### Deploy Script Configuration
+
+- ENV: `SITE_DOMAIN`, `SITE_BUCKET`, `SITE_DISTRIBUTION_ID`, `AWS_PROFILE`, `AWS_REGION` (optional: `SITE_PARAM_PATH`)
+- Home file: `~/.bcc-site/config.json` with the same keys (kept outside the repo)
+- SSM: Store under `/sites/<domain>/` keys like `s3_bucket`, `domain`, `cloudfront_distribution_id`
+
+### Typical Usage
+
+```bash
+# dry-run
+perl scripts/deploy.pl --dry-run --verbose
+
+# normal deploy
+perl scripts/deploy.pl --profile aerospaceug-admin
+```
 
 ## Common Editing Tasks
 
@@ -120,3 +152,28 @@ Edit `[menu]` section in [hugo.toml](../hugo.toml#L119-L144). Menu items ordered
 - **Gitignore**: AWS configs and hosting docs are intentionally excluded from public repo
 - **Hugo Warnings**: "Raw HTML omitted" warnings are expected - site allows raw HTML in markdown
 - **Build Output Committed**: Unlike typical Hugo projects, [public/](../public/) is version controlled for deployment verification
+
+## ⚠️ Protected Styles — Do Not Modify
+
+The following CSS rules are marked `PROTECTED` and use `!important` to prevent accidental breakage:
+
+| File                                                     | Rule                   | Purpose                                                                             |
+| -------------------------------------------------------- | ---------------------- | ----------------------------------------------------------------------------------- |
+| `themes/bryan-chasko-theme/assets/css/common/header.css` | `.logo img, .logo svg` | Logo/favicon sizing (26px height). Without explicit dimensions the icon disappears. |
+
+**Before editing header or logo styles:**
+
+1. Check `header.css` for the `PROTECTED` comment block.
+2. Test on localhost:1313 that the logo icon displays next to "Home".
+3. Never remove `height`, `width`, or `display` properties from `.logo img, .logo svg`.
+
+If the logo/favicon disappears after a CSS change, restore the protected block from git history or re-add:
+
+```css
+.logo img,
+.logo svg {
+  display: inline-block !important;
+  height: 26px !important;
+  width: auto !important;
+}
+```

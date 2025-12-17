@@ -1,0 +1,90 @@
+/* Help page enhancements: hero, service list and cards */
+/* Uses Nebula design system variables */
+
+#help-hero {
+  padding: var(--space-2xl, 1.75rem);
+  border-radius: var(--radius-lg, 8px);
+  background: var(--color-background-secondary, #f6f7f9);
+  box-shadow: var(--shadow-md, 0 6px 18px rgba(16, 24, 40, 0.06));
+  margin-bottom: var(--space-xl, 1.5rem);
+  border: 1px solid var(--color-border, #e6e7ea);
+}
+
+#help-hero h1 {
+  font-size: var(--font-size-3xl, 1.85rem);
+  margin-bottom: var(--space-md, 0.5rem);
+}
+
+#help-hero p,
+#help-hero strong,
+#help-hero b {
+  color: var(--color-text, #333);
+  line-height: var(--line-height-relaxed, 1.5);
+}
+
+/* Service list as responsive cards */
+.help-services-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md, 1rem);
+  margin: var(--space-md, 0.5rem) 0 var(--space-xl, 1.25rem) 0;
+  padding: 0;
+  list-style: none;
+}
+
+.help-service-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm, 0.5rem);
+  padding: var(--space-lg, 1rem);
+  border-radius: var(--radius-lg, 8px);
+  border: 1px solid var(--color-border, #e6e7ea);
+  background: var(--color-background, #ffffff);
+  transition: all var(--transition-base, 200ms ease);
+}
+
+.help-service-card:hover {
+  border-color: var(--color-primary, #5E41A2);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.help-service-card h3 {
+  margin: 0;
+  font-size: var(--font-size-xl, 1.05rem);
+}
+
+.help-service-card p {
+  margin: var(--space-xs, 0.25rem) 0 var(--space-md, 0.5rem) 0;
+  color: var(--color-text-secondary, #444);
+}
+
+/* CTA link styling (will complement shortcode inline styles) */
+.help-service-card a.cta-link {
+  display: inline-block;
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-md, 6px);
+  text-decoration: none;
+  font-weight: 600;
+  background: var(--color-primary, #5E41A2);
+  color: white;
+  transition: all var(--transition-base);
+}
+
+.help-service-card a.cta-link:hover {
+  background: var(--color-primary-hover, #8169C5);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
+  color: white;
+}
+
+@media (min-width: 720px) {
+  .help-services-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .help-service-card {
+    flex: 1 1 calc(50% - var(--space-md, 1rem));
+  }
+}

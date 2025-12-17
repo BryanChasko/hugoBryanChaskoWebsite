@@ -1,10 +1,33 @@
-# Bryan Chasko - Cloudcroft Cloud Company 🌿🦊🌸
+# Bryan Chasko - Cloudcroft Cloud Company 🌿🌸
 
 Development Command:
-hugo server --config config.dev.toml
+hugo server --config hugo.toml
 
 Production Command:
-hugo --config config.prod.toml
+hugo --minify --gc
+
+Deploy Command:
+hugo && aws s3 sync public/ s3://bryanchasko.com --profile aerospaceug-admin
+
+## Theme Development 🎨
+
+This site uses the custom **bryan-chasko-theme** with modular architecture and Nebula color palette.
+
+**Current Status**: Phase 1 Complete - Theme forked from PaperMod with customizations extracted
+
+**Completed:**
+- ✅ [#1 Create Custom Theme Repository](.github/issues/01-create-custom-theme-repository.md)
+- ✅ [#2 Extract Current Overrides](.github/issues/02-extract-current-overrides.md)
+
+**In Progress:**
+- ⏳ [#3 Modular CSS Architecture](.github/issues/03-modular-css-architecture.md)
+- ⏳ [#4 Nebula Color Theme](.github/issues/04-nebula-color-theme.md)
+- ⏳ [#5 Responsive Table of Contents](.github/issues/05-responsive-table-of-contents.md)
+- ⏳ [#6 Component Documentation](.github/issues/06-component-documentation.md)
+- ⏳ [#7 Theme README and Configuration](.github/issues/07-theme-readme-and-configuration.md)
+- ⏳ [#8 Integration Testing and Deployment](.github/issues/08-integration-testing-and-deployment.md)
+
+Full roadmap: [THEME_DEVELOPMENT.md](THEME_DEVELOPMENT.md)
 
 ## Why Hugo and Amazon S3? 🌱
 
@@ -32,7 +55,7 @@ Setting up a static website on S3 is straightforward:
 1. Create an S3 bucket and enable static website hosting.
 2. Upload your website files (HTML, CSS, JavaScript, etc.).
 3. Configure the bucket policy to make your files publicly accessible.
-# Bryan Chasko - Cloudcroft Cloud Company 🌿🦊🌸
+# Bryan Chasko - Cloudcroft Cloud Company 🌿🌸
 
 This repository contains the Hugo site for bryanchasko.com. Below are concise, developer-focused instructions to get the site running locally, troubleshoot common issues, and contribute.
 

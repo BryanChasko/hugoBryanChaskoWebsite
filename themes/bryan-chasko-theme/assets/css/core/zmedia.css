@@ -1,0 +1,123 @@
+@media screen and (max-width: 768px) {
+    /* theme-vars */
+    :root {
+        --gap: 14px;
+        --container-padding: var(--space-md);
+    }
+
+    /* Reduce padding on main container for mobile */
+    .main {
+        padding: var(--space-md);
+    }
+
+    /* Tighter navigation spacing on mobile */
+    .nav {
+        padding-inline: var(--space-md);
+    }
+
+    .logo,
+    #menu {
+        margin: auto var(--space-sm);
+    }
+
+    /* Improve home info spacing on mobile */
+    .home-info {
+        padding: var(--space-xl) var(--space-md);
+    }
+
+    .home-info .entry-header h1 {
+        margin-bottom: var(--space-md);
+    }
+
+    /* Better social icons spacing on mobile */
+    .social-icons {
+        gap: var(--space-xs);
+    }
+
+    .social-icons a {
+        padding: var(--space-xs);
+    }
+
+    .social-icons a svg {
+        height: 24px;
+        width: 24px;
+    }
+
+    /* profile-mode */
+    .profile img {
+        transform: scale(0.85);
+    }
+
+    /* post-entry */
+    .first-entry {
+        min-height: 260px;
+    }
+
+    /* archive */
+    .archive-month {
+        flex-direction: column;
+    }
+
+    .archive-year {
+        margin-top: 20px;
+    }
+
+    /* footer */
+    .footer {
+        padding: calc((var(--footer-height) - var(--gap) - 10px) / 2) var(--gap);
+    }
+}
+
+/* footer */
+@media screen and (max-width: 900px) {
+    .list .top-link {
+        transform: translateY(-5rem);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Extra tight spacing for very small screens */
+    .nav {
+        padding-inline: var(--space-sm);
+    }
+
+    .main {
+        padding: var(--space-sm);
+    }
+
+    .home-info {
+        padding: var(--space-lg) var(--space-sm);
+    }
+
+    /* Stack logo and menu on very small screens */
+    .nav {
+        gap: var(--space-xs);
+    }
+
+    .logo a {
+        font-size: 20px;
+    }
+
+    #menu {
+        gap: var(--space-xs);
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .share-buttons {
+        justify-content: unset;
+    }
+}
+
+@media (prefers-reduced-motion) {
+    /* terms; profile-mode; post-single; post-entry; post-entry; search; search */
+    .terms-tags a:active,
+    .button:active,
+    .post-entry:active,
+    .top-link,
+    #searchResults .focus,
+    #searchResults li:active {
+        transform: none;
+    }
+}

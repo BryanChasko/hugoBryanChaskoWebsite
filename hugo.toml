@@ -1,6 +1,6 @@
 baseURL = "https://bryanchasko.com/"
 title = "Bryan Chasko's Portfolio"
-theme = "PaperMod"
+theme = "bryan-chasko-theme"
 
 enableRobotsTXT = true
 buildDrafts = false
@@ -72,8 +72,21 @@ buildExpired = false
       url = "/contact/"
 
 [params.homeInfoParams]
-  Title = "👋 Hello, Friend. ^.^"
-Content = "[🦊me](blog/posts/about-bryan-chasko) | [🐈 Buddy](blog/posts/my-cat-buddy) | [🏈#ForeverNE](blog/posts/new-england-patriots-fandom) | [🔧SKILLS](blog/posts/my-skills-and-experience#skills)  | [📈EXPERIENCE](blog/posts/my-skills-and-experience#experience)  | [☁️AWS CLOUD](blog/posts/aws-cloud-projects)  |<br> [📅BOOK or HIRE](cloudcroft-cloud-company) "
+  Title = "Hello, Friend ^.^"
+Content = "[🦊&nbsp;About](blog/posts/about-bryan-chasko) | [🐈&nbsp;Buddy](blog/posts/my-cat-buddy) | [🏈&nbsp;#ForeverNE](blog/posts/new-england-patriots-fandom) | [🔧&nbsp;Skills](blog/posts/my-skills-and-experience#skills) | [📈&nbsp;Experience](blog/posts/my-skills-and-experience#experience) | [☁️&nbsp;AWS Cloud](blog/posts/aws-cloud-projects) | [📅&nbsp;Booking](cloudcroft-cloud-company)"
+
+  [[params.homeInfoParams.instagram]]
+    url = "https://www.instagram.com/p/EXAMPLE1/"
+    image = "/images/insta/example1.jpg"
+  [[params.homeInfoParams.instagram]]
+    url = "https://www.instagram.com/p/EXAMPLE2/"
+    image = "/images/insta/example2.jpg"
+  [[params.homeInfoParams.instagram]]
+    url = "https://www.instagram.com/p/EXAMPLE3/"
+    image = "/images/insta/example3.jpg"
+  [[params.homeInfoParams.instagram]]
+    url = "https://www.instagram.com/p/EXAMPLE4/"
+    image = "/images/insta/example4.jpg"
 
   [[params.socialIcons]]
     name = "github"
@@ -82,11 +95,14 @@ Content = "[🦊me](blog/posts/about-bryan-chasko) | [🐈 Buddy](blog/posts/my-
     name = "linkedin"
     url = "https://linkedin.com/in/bryanchasko"
   [[params.socialIcons]]
+    name = "x"
+    url = "https://twitter.com/bryanChasko"
+  [[params.socialIcons]]
+    name = "twitch"
+    url = "https://twitch.tv/bryanchasko"
+  [[params.socialIcons]]
     name = "instagram"
     url = "https://instagram.com/bryanChasko"
-  [[params.socialIcons]]
-    name = "twitter"
-    url = "https://twitter.com/bryanChasko"
 
   [params.analytics.google]
     SiteVerificationTag = "YOUR_GOOGLE_SITE_VERIFICATION_TAG"
