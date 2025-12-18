@@ -73,7 +73,7 @@ buildExpired = false
 
 [params.homeInfoParams]
   Title = "Hello, Friend ^.^"
-Content = "[🦊&nbsp;About](blog/posts/about-bryan-chasko) | [🐈&nbsp;Buddy](blog/posts/my-cat-buddy) | [🏈&nbsp;#ForeverNE](blog/posts/new-england-patriots-fandom) | [🔧&nbsp;Skills](blog/posts/my-skills-and-experience#skills) | [📈&nbsp;Experience](blog/posts/my-skills-and-experience#experience) | [☁️&nbsp;AWS Cloud](blog/posts/aws-cloud-projects) | [📅&nbsp;Booking](cloudcroft-cloud-company)"
+Content = "[🦊&nbsp;About](blog/posts/about-bryan-chasko) [🐈&nbsp;Buddy](blog/posts/my-cat-buddy) [🏈&nbsp;#ForeverNE](blog/posts/new-england-patriots-fandom) [🔧&nbsp;Skills](blog/posts/my-skills-and-experience#skills) [📈&nbsp;Experience](blog/posts/my-skills-and-experience#experience) [☁️&nbsp;AWS Cloud](blog/posts/aws-cloud-projects) [📅&nbsp;Booking](cloudcroft-cloud-company)"
 
   [[params.homeInfoParams.instagram]]
     url = "https://www.instagram.com/p/EXAMPLE1/"
@@ -132,11 +132,6 @@ Content = "[🦊&nbsp;About](blog/posts/about-bryan-chasko) | [🐈&nbsp;Buddy](
     keys = ["title", "permalink", "summary", "content"]
 
 [menu]
-  [[menu.main]]
-    identifier = "home"
-    name = "Home"
-    url = "/"
-    weight = 1
   [[menu.main]]
     identifier = "cloudcroft-cloud-company"
     name = "Cloudcroft Cloud Company"

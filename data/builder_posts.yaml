@@ -1,0 +1,62 @@
+# AWS Builder Center Posts
+# Add new posts at the top of this list
+# Profile: https://builder.aws.com/community/@bryanchasko
+
+profile:
+  name: "Bryan Chasko"
+  handle: "@bryanchasko"
+  title: "AWS Hero since 2018"
+  location: "United States"
+  followers: 55
+  following: 336
+  url: "https://builder.aws.com/community/@bryanchasko"
+  bio: "An inventor committed to modernization utilizing AWS cloud since 2008, Bryan has deployed over 100 AWS services into production, applying expertise in business systems integration, machine learning, industrial IoT, spatial computing, and serverless architectures."
+
+posts:
+  - title: "[300 Level] 📡☁️ Amazon Leo & AWS Architectures for Software-Defined Private Satellite Networking"
+    description: "How to use Amazon Leo as a first-class part of your architecture—treating satellite connectivity the same way you think about Wavelength, Local Zones, or Outposts. Network patterns like CVN and D2A, hybrid connectivity with PNI, and real-world solution architectures from Space IoT and digital twins to video analytics and egress inspection."
+    url: "https://builder.aws.com/content/36gPoSSMWwf5aqb2Vz81FcXmfbz/300-level-amazon-leo-and-aws-architectures-for-software-defined-private-satellite-networking"
+    date: "2024-12-10"
+    tags:
+      - "re:Invent 2025"
+      - "Amazon VPC"
+      - "IoT"
+      - "Livestreaming"
+    level: 300
+    image: ""
+
+  - title: "[200 Level] 🛰️ Amazon Leo & AWS | Building the Amazon Leo Constellation with AWS"
+    description: "Amazon Leo (formerly Kuiper) is Amazon's innovative new internet backbone. For enterprise, builders, and consumers, Leo delivers low-latency, high-bandwidth global connectivity, leveraging familiar AWS building blocks scaled to constellation level."
+    url: "https://builder.aws.com/content/36fvKToWy99YcAK3sDn34yjS6FE/200-level-amazon-leo-and-aws-or-building-the-amazon-leo-constellation-with-aws"
+    date: "2024-09-01"
+    tags:
+      - "re:Invent 2025"
+      - "Simulation"
+      - "GovCloud"
+      - "Innovation"
+      - "IoT"
+    level: 200
+    image: ""
+
+  - title: "[0 Level] 🛰️ intro to Amazon LEO: Amazon's Next Big Thought (Formerly Project Kuiper)"
+    description: "Amazon's Low Earth Orbit satellite mesh aims to add connectivity to the ways Amazon helps consumers and AWS customers—and it's poised to become the company's next major business tentpole and the backbone of our expansion into space innovation."
+    url: "https://builder.aws.com/content/327GGuej7K83tA7GnhMYsCuttgm/0-level-intro-to-amazon-leo-amazons-next-big-thought-formerly-project-kuiper"
+    date: "2024-09-01"
+    tags:
+      - "Infrastructure"
+      - "Edge Services"
+      - "Sustainability"
+      - "GovCloud"
+    level: 0
+    image: ""
+
+  - title: "[0 Level] 🔒 intro to AWS-LC | Securing Finance, Healthcare, and Utilities from Quantum Collapse"
+    description: "Quantum computing changes how math works — and that could break the encryption protecting stock trades, medical records, and electric grids. This article explains the risks, lessons from past failures, and how post-quantum cryptography (PQC) is already being integrated into tools developers rely on with AWS-LC."
+    url: "https://builder.aws.com/content/326sXD7FN3DlrvMtCkHWGahgMh7/0-level-intro-to-aws-lc-or-securing-finance-healthcare-and-utilities-from-quantum-collapse"
+    date: "2024-09-01"
+    tags:
+      - "Encryption"
+      - "Cloud Security"
+      - "Open Source"
+    level: 0
+    image: ""

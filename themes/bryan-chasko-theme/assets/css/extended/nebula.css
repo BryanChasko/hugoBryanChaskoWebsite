@@ -151,27 +151,413 @@ body {
   color: var(--color-text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* Subtle vertical gradient - light mode */
-  background: linear-gradient(
-    180deg,
-    #f8fafc 0%,
-    #f3f4f6 15%,
-    #ffffff 50%,
-    #f9fafb 100%
-  );
+  /* Light mode: Ethereal aurora mesh with dynamic color play */
+  background: 
+    /* Primary aurora bands - large flowing gradients */
+    radial-gradient(ellipse 120% 80% at 0% 0%, rgba(129, 105, 197, 0.28) 0%, transparent 50%),
+    radial-gradient(ellipse 100% 70% at 100% 5%, rgba(255, 153, 0, 0.22) 0%, transparent 45%),
+    radial-gradient(ellipse 90% 100% at 100% 100%, rgba(94, 65, 162, 0.25) 0%, transparent 55%),
+    radial-gradient(ellipse 80% 70% at 0% 95%, rgba(255, 180, 100, 0.2) 0%, transparent 50%),
+    /* Floating nebula clusters */
+    radial-gradient(ellipse 50% 45% at 30% 20%, rgba(167, 139, 250, 0.18) 0%, transparent 45%),
+    radial-gradient(ellipse 45% 50% at 75% 70%, rgba(255, 200, 100, 0.14) 0%, transparent 45%),
+    radial-gradient(ellipse 40% 35% at 50% 50%, rgba(129, 105, 197, 0.12) 0%, transparent 40%),
+    radial-gradient(ellipse 35% 40% at 20% 65%, rgba(255, 153, 0, 0.1) 0%, transparent 40%),
+    radial-gradient(ellipse 30% 30% at 85% 25%, rgba(94, 65, 162, 0.08) 0%, transparent 35%),
+    /* Luminous mesh base */
+    linear-gradient(
+      135deg,
+      #faf8ff 0%,
+      #fff9f5 6%,
+      #f5f0ff 14%,
+      #fffbf7 22%,
+      #ede8ff 32%,
+      #ffffff 42%,
+      #fff7f0 52%,
+      #f8f4ff 62%,
+      #fffaf5 72%,
+      #f0ebff 82%,
+      #fff8f3 92%,
+      #f8f5ff 100%
+    );
   background-attachment: fixed;
 }
 
+/* ============================================
+   LIGHT MODE ANIMATED BACKGROUND LAYERS
+   ============================================ */
+
+/* Layer 1: Primary aurora waves - slow majestic drift */
+body::before {
+  content: '';
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  z-index: -3;
+  background: 
+    /* Large aurora bands */
+    radial-gradient(ellipse 80% 60% at 20% 30%, rgba(129, 105, 197, 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse 70% 50% at 80% 20%, rgba(255, 153, 0, 0.15) 0%, transparent 45%),
+    radial-gradient(ellipse 60% 70% at 70% 80%, rgba(94, 65, 162, 0.18) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 60% at 25% 75%, rgba(255, 200, 120, 0.12) 0%, transparent 45%);
+  animation: aurora-drift 35s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+/* Layer 2: Floating light orbs with parallax effect */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: -2;
+  background: 
+    /* Bright highlight orbs */
+    radial-gradient(circle 400px at 15% 20%, rgba(167, 139, 250, 0.15) 0%, transparent 60%),
+    radial-gradient(circle 350px at 85% 15%, rgba(255, 180, 80, 0.12) 0%, transparent 55%),
+    radial-gradient(circle 300px at 75% 85%, rgba(129, 105, 197, 0.14) 0%, transparent 55%),
+    radial-gradient(circle 250px at 10% 80%, rgba(255, 153, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle 200px at 50% 45%, rgba(94, 65, 162, 0.08) 0%, transparent 50%),
+    radial-gradient(circle 180px at 30% 60%, rgba(255, 200, 150, 0.06) 0%, transparent 45%);
+  animation: orb-float 25s ease-in-out infinite;
+}
+
+/* Layer 3: Shimmer overlay - using a separate element */
+.main::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: -1;
+  background: 
+    linear-gradient(
+      45deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.5) 15%,
+      transparent 30%,
+      rgba(255, 255, 255, 0.4) 45%,
+      transparent 60%,
+      rgba(255, 255, 255, 0.3) 75%,
+      transparent 90%,
+      rgba(255, 255, 255, 0.2) 100%
+    );
+  background-size: 400% 400%;
+  animation: prismatic-sweep 12s ease-in-out infinite;
+  mix-blend-mode: overlay;
+  opacity: 0.7;
+}
+
+/* Aurora drift - slow, majestic movement */
+@keyframes aurora-drift {
+  0% {
+    transform: translate(0%, 0%) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  25% {
+    transform: translate(5%, -3%) rotate(2deg) scale(1.02);
+    opacity: 0.95;
+  }
+  50% {
+    transform: translate(-3%, 5%) rotate(-1deg) scale(0.98);
+    opacity: 1;
+  }
+  75% {
+    transform: translate(-5%, -2%) rotate(1deg) scale(1.01);
+    opacity: 0.92;
+  }
+  100% {
+    transform: translate(0%, 0%) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Floating orbs - gentle bobbing motion */
+@keyframes orb-float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 0.9;
+  }
+  40% {
+    transform: translateY(15px) translateX(-15px);
+    opacity: 0.95;
+  }
+  60% {
+    transform: translateY(-10px) translateX(-8px);
+    opacity: 0.88;
+  }
+  80% {
+    transform: translateY(12px) translateX(12px);
+    opacity: 0.92;
+  }
+}
+
+/* Prismatic color sweep */
+@keyframes prismatic-sweep {
+  0%, 100% {
+    background-position: 0% 0%;
+    filter: hue-rotate(0deg);
+  }
+  33% {
+    background-position: 100% 50%;
+    filter: hue-rotate(10deg);
+  }
+  66% {
+    background-position: 50% 100%;
+    filter: hue-rotate(-5deg);
+  }
+}
+
+/* Subtle pulse for depth */
+@keyframes ambient-pulse {
+  0%, 100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 0.95;
+    filter: brightness(1.02);
+  }
+}
+
+/* Legacy keyframes for compatibility */
+@keyframes ambient-drift-light {
+  0%, 100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  33% {
+    opacity: 0.9;
+    transform: translateY(-15px) scale(1.03);
+  }
+  66% {
+    opacity: 0.95;
+    transform: translateY(10px) scale(0.98);
+  }
+}
+
+@keyframes shimmer-light {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes ambient-drift {
+  0%, 100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-20px) scale(1.02);
+  }
+}
+
+/* ============================================
+   DARK MODE - DEEP SPACE NEBULA EFFECTS
+   ============================================ */
+
 [data-theme="dark"] body {
-  /* Dark mode: deep charcoal to slate fade */
-  background: linear-gradient(
-    180deg,
-    #0b0e14 0%,
-    #111827 20%,
-    #0f1219 60%,
-    #0b0e14 100%
-  );
+  /* Dark mode: immersive deep space with vibrant nebula clouds */
+  background: 
+    /* Primary nebula clouds - purple/violet hues */
+    radial-gradient(ellipse 120% 80% at 0% 0%, rgba(129, 105, 197, 0.25) 0%, transparent 50%),
+    radial-gradient(ellipse 100% 70% at 100% 10%, rgba(94, 65, 162, 0.2) 0%, transparent 45%),
+    radial-gradient(ellipse 90% 100% at 100% 100%, rgba(167, 139, 250, 0.18) 0%, transparent 55%),
+    radial-gradient(ellipse 80% 70% at 0% 90%, rgba(129, 105, 197, 0.15) 0%, transparent 50%),
+    /* Warm accent nebulae - orange/gold */
+    radial-gradient(ellipse 50% 45% at 25% 30%, rgba(255, 153, 0, 0.12) 0%, transparent 45%),
+    radial-gradient(ellipse 45% 50% at 80% 75%, rgba(255, 180, 100, 0.1) 0%, transparent 45%),
+    radial-gradient(ellipse 40% 35% at 60% 40%, rgba(255, 153, 0, 0.08) 0%, transparent 40%),
+    /* Deep space gradient base */
+    linear-gradient(
+      180deg,
+      #080b12 0%,
+      #0d1117 15%,
+      #111827 35%,
+      #0f1219 55%,
+      #0d1117 75%,
+      #080b12 100%
+    );
   background-attachment: fixed;
+}
+
+/* Layer 1: Cosmic nebula drift - slow celestial movement */
+[data-theme="dark"] body::before {
+  content: '';
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  z-index: -3;
+  background: 
+    /* Large nebula clouds */
+    radial-gradient(ellipse 80% 60% at 15% 25%, rgba(129, 105, 197, 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse 70% 50% at 85% 15%, rgba(167, 139, 250, 0.15) 0%, transparent 45%),
+    radial-gradient(ellipse 60% 70% at 75% 85%, rgba(94, 65, 162, 0.18) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 60% at 20% 80%, rgba(255, 153, 0, 0.1) 0%, transparent 45%),
+    /* Star clusters */
+    radial-gradient(circle 3px at 10% 15%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+    radial-gradient(circle 2px at 25% 35%, rgba(167, 139, 250, 0.9) 0%, transparent 100%),
+    radial-gradient(circle 4px at 80% 20%, rgba(255, 255, 255, 0.7) 0%, transparent 100%),
+    radial-gradient(circle 2px at 60% 60%, rgba(255, 200, 150, 0.8) 0%, transparent 100%),
+    radial-gradient(circle 3px at 90% 80%, rgba(255, 255, 255, 0.6) 0%, transparent 100%),
+    radial-gradient(circle 2px at 40% 90%, rgba(167, 139, 250, 0.7) 0%, transparent 100%);
+  animation: nebula-drift 40s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+/* Layer 2: Floating cosmic orbs with parallax */
+[data-theme="dark"] body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: -2;
+  background: 
+    /* Glowing orbs */
+    radial-gradient(circle 450px at 10% 20%, rgba(129, 105, 197, 0.15) 0%, transparent 60%),
+    radial-gradient(circle 380px at 90% 15%, rgba(94, 65, 162, 0.12) 0%, transparent 55%),
+    radial-gradient(circle 320px at 80% 85%, rgba(255, 153, 0, 0.1) 0%, transparent 55%),
+    radial-gradient(circle 280px at 15% 75%, rgba(167, 139, 250, 0.12) 0%, transparent 50%),
+    radial-gradient(circle 220px at 50% 50%, rgba(129, 105, 197, 0.08) 0%, transparent 50%),
+    /* Twinkling stars */
+    radial-gradient(circle 2px at 5% 10%, rgba(255, 255, 255, 0.9) 0%, transparent 100%),
+    radial-gradient(circle 1px at 15% 25%, rgba(255, 255, 255, 0.7) 0%, transparent 100%),
+    radial-gradient(circle 2px at 35% 8%, rgba(255, 220, 180, 0.8) 0%, transparent 100%),
+    radial-gradient(circle 1px at 55% 30%, rgba(255, 255, 255, 0.6) 0%, transparent 100%),
+    radial-gradient(circle 2px at 70% 45%, rgba(167, 139, 250, 0.9) 0%, transparent 100%),
+    radial-gradient(circle 1px at 85% 55%, rgba(255, 255, 255, 0.7) 0%, transparent 100%),
+    radial-gradient(circle 2px at 95% 70%, rgba(255, 200, 150, 0.8) 0%, transparent 100%),
+    radial-gradient(circle 1px at 45% 85%, rgba(255, 255, 255, 0.6) 0%, transparent 100%);
+  animation: cosmic-float 30s ease-in-out infinite, star-twinkle 4s ease-in-out infinite;
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 
+                   100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+}
+
+/* Layer 3: Dark mode aurora shimmer */
+[data-theme="dark"] .main::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: -1;
+  background: 
+    linear-gradient(
+      135deg,
+      transparent 0%,
+      rgba(129, 105, 197, 0.08) 20%,
+      transparent 40%,
+      rgba(255, 153, 0, 0.05) 60%,
+      transparent 80%,
+      rgba(167, 139, 250, 0.06) 100%
+    );
+  background-size: 300% 300%;
+  animation: aurora-shimmer 20s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+/* Nebula drift - cosmic cloud movement */
+@keyframes nebula-drift {
+  0% {
+    transform: translate(0%, 0%) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  25% {
+    transform: translate(3%, -4%) rotate(1deg) scale(1.03);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translate(-4%, 3%) rotate(-1deg) scale(0.97);
+    opacity: 1;
+  }
+  75% {
+    transform: translate(-2%, -3%) rotate(0.5deg) scale(1.02);
+    opacity: 0.95;
+  }
+  100% {
+    transform: translate(0%, 0%) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Cosmic float - gentle stellar motion */
+@keyframes cosmic-float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  25% {
+    transform: translateY(-15px) translateX(8px);
+    opacity: 0.95;
+  }
+  50% {
+    transform: translateY(10px) translateX(-12px);
+    opacity: 0.9;
+  }
+  75% {
+    transform: translateY(-8px) translateX(-5px);
+    opacity: 0.95;
+  }
+}
+
+/* Star twinkling effect */
+@keyframes star-twinkle {
+  0%, 100% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.8;
+  }
+}
+
+/* Aurora shimmer for dark mode */
+@keyframes aurora-shimmer {
+  0%, 100% {
+    background-position: 0% 0%;
+    filter: hue-rotate(0deg);
+  }
+  33% {
+    background-position: 100% 100%;
+    filter: hue-rotate(15deg);
+  }
+  66% {
+    background-position: 50% 0%;
+    filter: hue-rotate(-10deg);
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -527,20 +913,11 @@ button[type="submit"] {
   line-height: var(--line-height-relaxed);
 }
 
-/* Blog Post Cards */
-.post-entry {
-  background: var(--color-background);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-lg);
-  margin-bottom: var(--space-lg);
-  transition: all var(--transition-base);
-}
+/* Blog Post Cards - Styles moved to components/cards.css */
+/* Keeping only minimal overrides here */
 
 .post-entry:hover {
-  border-color: var(--color-primary);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+  border-color: rgba(94, 65, 162, 0.25);
 }
 
 /* Responsive Card Grid */
@@ -564,14 +941,19 @@ button[type="submit"] {
 
 /* Header Navigation */
 .nav {
-  background: var(--color-background);
-  border-bottom: 1px solid var(--color-border);
+  background: transparent;
+  border-bottom: none;
 }
 
 .nav a {
   color: var(--color-text);
   font-weight: 500;
-  transition: color var(--transition-fast);
+  transition: all var(--transition-base);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="dark"] .nav a {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .nav a:hover,

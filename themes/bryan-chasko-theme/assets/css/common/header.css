@@ -1,18 +1,27 @@
-/* Subtle animated gradient glow on header */
+/* Modern Header with Glassmorphism and Gradient Effects */
 .header {
     position: relative;
     background: linear-gradient(
-        90deg,
-        transparent 0%,
-        rgba(94, 65, 162, 0.03) 25%,
-        rgba(129, 105, 197, 0.05) 50%,
-        rgba(94, 65, 162, 0.03) 75%,
-        transparent 100%
+        135deg,
+        rgba(255, 255, 255, 0.85) 0%,
+        rgba(248, 240, 255, 0.75) 15%,
+        rgba(255, 250, 245, 0.8) 30%,
+        rgba(245, 240, 255, 0.7) 50%,
+        rgba(255, 248, 240, 0.75) 70%,
+        rgba(248, 245, 255, 0.8) 85%,
+        rgba(255, 255, 255, 0.85) 100%
     );
-    background-size: 200% 100%;
-    animation: header-glow 8s ease-in-out infinite;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: none;
+    box-shadow: 
+        0 8px 32px -4px rgba(94, 65, 162, 0.08),
+        0 4px 16px -2px rgba(255, 153, 0, 0.04),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
+/* Animated gradient accent line at bottom */
 .header::after {
     content: '';
     position: absolute;
@@ -23,54 +32,310 @@
     background: linear-gradient(
         90deg,
         transparent 0%,
-        rgba(94, 65, 162, 0.15) 20%,
-        rgba(129, 105, 197, 0.25) 50%,
-        rgba(94, 65, 162, 0.15) 80%,
+        rgba(94, 65, 162, 0.2) 20%,
+        rgba(129, 105, 197, 0.3) 40%,
+        rgba(255, 153, 0, 0.25) 60%,
+        rgba(94, 65, 162, 0.2) 80%,
         transparent 100%
     );
     background-size: 200% 100%;
-    animation: header-glow 8s ease-in-out infinite;
+    animation: header-gradient-sweep 8s ease-in-out infinite;
 }
 
-[data-theme="dark"] .header {
+/* Subtle top highlight */
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
     background: linear-gradient(
         90deg,
         transparent 0%,
-        rgba(129, 105, 197, 0.04) 25%,
-        rgba(129, 105, 197, 0.08) 50%,
-        rgba(129, 105, 197, 0.04) 75%,
+        rgba(255, 255, 255, 0.9) 20%,
+        rgba(255, 255, 255, 1) 50%,
+        rgba(255, 255, 255, 0.9) 80%,
         transparent 100%
     );
-    background-size: 200% 100%;
+}
+
+/* Dark mode header */
+[data-theme="dark"] .header {
+    background: linear-gradient(
+        135deg,
+        rgba(28, 34, 48, 0.95) 0%,
+        rgba(17, 24, 39, 0.98) 50%,
+        rgba(28, 34, 48, 0.92) 100%
+    );
+    border-bottom: 1px solid rgba(129, 105, 197, 0.2);
+    box-shadow: 
+        0 4px 24px -2px rgba(0, 0, 0, 0.3),
+        0 0 40px -10px rgba(129, 105, 197, 0.15),
+        inset 0 1px 0 rgba(129, 105, 197, 0.1);
 }
 
 [data-theme="dark"] .header::after {
     background: linear-gradient(
         90deg,
         transparent 0%,
-        rgba(129, 105, 197, 0.2) 20%,
-        rgba(129, 105, 197, 0.4) 50%,
-        rgba(129, 105, 197, 0.2) 80%,
+        rgba(129, 105, 197, 0.4) 15%,
+        var(--nebula-lavender) 35%,
+        #A78BFA 50%,
+        var(--nebula-orange) 65%,
+        rgba(255, 153, 0, 0.4) 85%,
         transparent 100%
     );
     background-size: 200% 100%;
+    height: 2px;
+    box-shadow: 0 0 12px 1px rgba(129, 105, 197, 0.3);
 }
 
-@keyframes header-glow {
+[data-theme="dark"] .header::before {
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(129, 105, 197, 0.15) 20%,
+        rgba(129, 105, 197, 0.25) 50%,
+        rgba(129, 105, 197, 0.15) 80%,
+        transparent 100%
+    );
+}
+
+@keyframes header-gradient-sweep {
     0%, 100% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
 }
 
 .nav {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     max-width: var(--container-max-width);
     margin-inline: auto;
     padding-inline: var(--container-padding);
     line-height: var(--header-height);
-    gap: var(--space-sm);
+    gap: var(--space-xs);
+}
+
+/* Mobile: compact single-line header - NO SCROLLING */
+@media (max-width: 768px) {
+    .nav {
+        padding-inline: var(--space-xs) !important;
+        gap: 4px !important;
+        flex-wrap: nowrap !important;
+        overflow: hidden !important;
+        justify-content: space-between !important;
+    }
+    
+    /* Logo container - shrink to fit */
+    .logo {
+        display: flex !important;
+        align-items: center !important;
+        gap: 2px !important;
+        flex-shrink: 1 !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .logo a {
+        display: flex !important;
+        align-items: center !important;
+        gap: 2px !important;
+        font-size: clamp(0.55rem, 2.5vw, 0.75rem) !important;
+        white-space: nowrap !important;
+        padding: 0.2em 0.4em !important;
+        text-transform: uppercase !important;
+    }
+    
+    .logo img,
+    .logo svg {
+        height: clamp(18px, 5vw, 24px) !important;
+        width: auto !important;
+        flex-shrink: 0 !important;
+    }
+    
+    /* Theme toggle switch positioning */
+    .logo-switches {
+        display: flex !important;
+        align-items: center !important;
+        margin-left: 4px !important;
+        flex-shrink: 0 !important;
+    }
+    
+    /* Compact theme toggle */
+    #theme-toggle {
+        padding: 4px !important;
+        font-size: clamp(16px, 4vw, 20px) !important;
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    #menu {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        gap: 2px !important;
+        flex: 1 1 auto !important;
+        justify-content: flex-end !important;
+        align-items: center !important;
+        margin: 0 !important;
+        overflow: hidden !important;
+        min-width: 0 !important;
+    }
+    
+    #menu li {
+        display: inline-flex !important;
+        flex-shrink: 1 !important;
+        min-width: 0 !important;
+        list-style: none !important;
+    }
+    
+    #menu li a {
+        padding: 0.2em 0.4em !important;
+        font-size: clamp(0.55rem, 2.5vw, 0.75rem) !important;
+        white-space: nowrap !important;
+        display: inline-block !important;
+    }
+    
+    /* Hide span text and replace with CCC abbreviation */
+    #menu li a[href*="cloudcroft"] span {
+        display: none;
+    }
+    #menu li a[href*="cloudcroft"]:not(.active-link)::after {
+        content: "CCC";
+        font-size: inherit;
+        /* Apply gradient text to match other menu items */
+        background: linear-gradient(
+            135deg,
+            var(--nebula-orange) 0%,
+            var(--nebula-purple) 50%,
+            var(--nebula-orange) 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% 100%;
+        animation: ccc-shimmer 3s ease-in-out infinite;
+    }
+    
+    /* Active CCC always shows content */
+    #menu li a[href*="cloudcroft"].active-link::after {
+        content: "CCC";
+        font-size: inherit;
+    }
+    
+    #menu li a[href*="cloudcroft"]:hover::after {
+        animation: none;
+        background-position: 50% 50%;
+    }
+    
+    /* CCC active state on mobile - using .active-link class on <a> */
+    #menu li a.active-link[href*="cloudcroft"]::after {
+        color: var(--nebula-orange) !important;
+        -webkit-text-fill-color: var(--nebula-orange) !important;
+        background: none !important;
+        background-image: none !important;
+        -webkit-background-clip: border-box !important;
+        background-clip: border-box !important;
+        animation: none !important;
+    }
+    
+    [data-theme="dark"] #menu li a[href*="cloudcroft"]:not(.active-link)::after {
+        background: linear-gradient(
+            135deg,
+            var(--nebula-orange) 0%,
+            var(--nebula-lavender) 50%,
+            var(--nebula-orange) 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% 100%;
+    }
+    
+    /* Dark mode CCC active state on mobile */
+    [data-theme="dark"] #menu li a.active-link[href*="cloudcroft"]::after {
+        color: var(--nebula-orange) !important;
+        -webkit-text-fill-color: var(--nebula-orange) !important;
+        background: none !important;
+        background-image: none !important;
+        -webkit-background-clip: border-box !important;
+        background-clip: border-box !important;
+        animation: none !important;
+    }
+}
+
+/* Extra small screens - even more compact, still NO scrolling */
+@media (max-width: 400px) {
+    .nav {
+        padding-inline: 2px !important;
+        gap: 2px !important;
+    }
+    
+    .logo a {
+        font-size: clamp(0.45rem, 3vw, 0.65rem) !important;
+        gap: 1px !important;
+        padding: 0.15em 0.25em !important;
+        text-transform: uppercase !important;
+    }
+    
+    .logo img,
+    .logo svg {
+        height: clamp(14px, 4.5vw, 20px) !important;
+        width: auto !important;
+    }
+    
+    .logo-switches {
+        margin-left: 2px !important;
+    }
+    
+    #theme-toggle {
+        font-size: clamp(14px, 4vw, 18px) !important;
+        padding: 2px !important;
+    }
+    
+    #menu {
+        gap: 1px !important;
+    }
+    
+    #menu li a {
+        padding: 0.15em 0.25em !important;
+        font-size: clamp(0.45rem, 3vw, 0.65rem) !important;
+    }
+    
+    #menu li a[href*="cloudcroft"]:not(.active-link)::after {
+        font-size: inherit !important;
+        /* Keep gradient styling at smaller size */
+        background: linear-gradient(
+            135deg,
+            var(--nebula-orange) 0%,
+            var(--nebula-purple) 50%,
+            var(--nebula-orange) 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% 100%;
+    }
+    
+    /* Active CCC at extra small size */
+    #menu li a[href*="cloudcroft"].active-link::after {
+        font-size: inherit;
+    }
+    
+    /* Extra small CCC active state */
+    #menu li a.active-link[href*="cloudcroft"]::after {
+        color: var(--nebula-orange) !important;
+        -webkit-text-fill-color: var(--nebula-orange) !important;
+        background: none !important;
+        background-image: none !important;
+        -webkit-background-clip: border-box !important;
+        background-clip: border-box !important;
+    }
 }
 
 .nav a {
@@ -93,6 +358,82 @@
     font-size: 24px;
     font-weight: 700;
     text-decoration: none;
+    padding: 0.3em 0.6em;
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+    border: none;
+    letter-spacing: 0.02em;
+    position: relative;
+    background: transparent;
+    /* Vibrant gradient text for light mode logo */
+    background: linear-gradient(
+        135deg,
+        var(--nebula-orange) 0%,
+        var(--nebula-purple) 35%,
+        var(--nebula-lavender) 65%,
+        var(--nebula-orange) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 250% 100%;
+    animation: logo-shimmer-enhanced 6s ease-in-out infinite;
+}
+
+@keyframes logo-shimmer-enhanced {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes logo-shimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+[data-theme="dark"] .logo a {
+    background: linear-gradient(
+        135deg,
+        var(--color-text) 0%,
+        var(--nebula-lavender) 50%,
+        var(--color-text) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+}
+
+.logo a:hover {
+    background: linear-gradient(
+        135deg,
+        var(--nebula-purple) 0%,
+        var(--nebula-orange) 30%,
+        var(--nebula-lavender) 60%,
+        var(--nebula-purple) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 100% 100%;
+    animation: none;
+    filter: drop-shadow(0 0 8px rgba(129, 105, 197, 0.4));
+    transform: translateY(-1px);
+}
+
+[data-theme="dark"] .logo a:hover {
+    background: linear-gradient(
+        135deg,
+        var(--nebula-lavender) 0%,
+        #A78BFA 50%,
+        var(--nebula-orange) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 100% 100%;
+    animation: none;
+    filter: drop-shadow(0 0 10px rgba(129, 105, 197, 0.5));
 }
 
 /* 
@@ -118,8 +459,98 @@
     background: transparent;
     border: none;
     cursor: pointer;
-    padding: 0;
-    color: inherit;
+    padding: 0.4em;
+    border-radius: 50%;
+    transition: all var(--transition-base);
+    position: relative;
+}
+
+[data-theme="dark"] #theme-toggle {
+    background: transparent;
+    border: none;
+}
+
+/* Gradient colored icon */
+#theme-toggle svg {
+    fill: url(#theme-toggle-gradient);
+    transition: all var(--transition-base);
+}
+
+/* Light mode: sun icon with warm glow and subtle pulse */
+#sun {
+    color: var(--nebula-orange);
+    filter: 
+        drop-shadow(0 0 3px rgba(255, 153, 0, 0.5))
+        drop-shadow(0 0 6px rgba(255, 200, 50, 0.3));
+    animation: sun-pulse 4s ease-in-out infinite;
+}
+
+@keyframes sun-pulse {
+    0%, 100% {
+        filter: 
+            drop-shadow(0 0 3px rgba(255, 153, 0, 0.5))
+            drop-shadow(0 0 6px rgba(255, 200, 50, 0.3));
+    }
+    50% {
+        filter: 
+            drop-shadow(0 0 4px rgba(255, 153, 0, 0.6))
+            drop-shadow(0 0 8px rgba(255, 200, 50, 0.4));
+    }
+}
+
+/* Light mode: moon icon purple like dark mode */
+#moon {
+    color: var(--nebula-lavender);
+    filter: drop-shadow(0 0 2px rgba(129, 105, 197, 0.4));
+}
+
+/* Dark mode: moon icon with cool gradient and subtle glow */
+[data-theme="dark"] #moon {
+    color: var(--nebula-lavender);
+    filter: 
+        drop-shadow(0 0 3px rgba(129, 105, 197, 0.5))
+        drop-shadow(0 0 8px rgba(167, 139, 250, 0.3));
+    animation: moon-glow 5s ease-in-out infinite;
+}
+
+@keyframes moon-glow {
+    0%, 100% {
+        filter: 
+            drop-shadow(0 0 3px rgba(129, 105, 197, 0.5))
+            drop-shadow(0 0 8px rgba(167, 139, 250, 0.3));
+    }
+    50% {
+        filter: 
+            drop-shadow(0 0 4px rgba(129, 105, 197, 0.6))
+            drop-shadow(0 0 10px rgba(167, 139, 250, 0.4));
+    }
+}
+
+#theme-toggle:hover {
+    background: rgba(129, 105, 197, 0.08);
+    transform: scale(1.12);
+}
+
+#theme-toggle:hover #sun {
+    filter: 
+        drop-shadow(0 0 8px rgba(255, 153, 0, 0.8))
+        drop-shadow(0 0 16px rgba(255, 200, 50, 0.5));
+    animation: none;
+}
+
+[data-theme="dark"] #theme-toggle:hover #moon {
+    filter: 
+        drop-shadow(0 0 8px rgba(129, 105, 197, 0.8))
+        drop-shadow(0 0 16px rgba(167, 139, 250, 0.5));
+    animation: none;
+}
+
+#theme-toggle:active {
+    transform: scale(0.95);
+}
+
+[data-theme="dark"] #theme-toggle:hover {
+    background: rgba(129, 105, 197, 0.1);
 }
 
 #moon {
@@ -145,7 +576,7 @@
     white-space: nowrap;
     display: flex;
     align-items: center;
-    gap: var(--gap);
+    gap: var(--space-xs);
     margin: 0;
     padding: 0;
     -webkit-overflow-scrolling: touch;
@@ -160,75 +591,172 @@
     display: inline-flex;
 }
 
-#menu .active {
-    font-weight: 500;
-    border-bottom: none;
-    position: relative;
-    background: linear-gradient(
-        180deg,
-        transparent 0%,
-        rgba(94, 65, 162, 0.08) 100%
-    );
-    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
-}
-
-/* Gradient underline for active menu item */
-#menu .active::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(
-        90deg,
-        transparent 0%,
-        var(--nebula-purple) 30%,
-        var(--nebula-lavender) 70%,
-        transparent 100%
-    );
-}
-
-/* Menu item hover - shift gradient direction */
+/* Modern menu item styling */
 #menu li a {
     position: relative;
-    padding: var(--space-xs) var(--space-sm);
-    border-radius: var(--radius-sm);
+    padding: 0.5em 0.9em;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border: 1px solid transparent;
+    background: transparent;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+/* Subtle gradient text for menu items */
+#menu li a span {
+    background: linear-gradient(
+        135deg,
+        var(--color-text) 0%,
+        var(--nebula-purple) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     transition: all var(--transition-base);
 }
 
+[data-theme="dark"] #menu li a span {
+    background: linear-gradient(
+        135deg,
+        var(--color-text) 0%,
+        var(--nebula-lavender) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Hover effect with gradient fill and glow */
 #menu li a:hover {
     background: linear-gradient(
-        180deg,
-        rgba(94, 65, 162, 0.05) 0%,
-        rgba(129, 105, 197, 0.1) 100%
+        135deg,
+        rgba(94, 65, 162, 0.08) 0%,
+        rgba(129, 105, 197, 0.12) 50%,
+        rgba(94, 65, 162, 0.08) 100%
     );
+    border-color: rgba(94, 65, 162, 0.15);
+    box-shadow: 
+        0 2px 8px rgba(94, 65, 162, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    transform: translateY(-1px);
 }
 
-[data-theme="dark"] #menu .active {
+#menu li a:hover span {
     background: linear-gradient(
-        180deg,
-        transparent 0%,
-        rgba(129, 105, 197, 0.12) 100%
+        135deg,
+        var(--nebula-purple) 0%,
+        var(--nebula-lavender) 50%,
+        var(--nebula-orange) 100%
     );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-[data-theme="dark"] #menu .active::after {
+[data-theme="dark"] #menu li a:hover span {
+    background: linear-gradient(
+        135deg,
+        var(--nebula-lavender) 0%,
+        #A78BFA 50%,
+        var(--nebula-orange) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Active state with visible gradient and accent styling */
+#menu li a span.active {
+    font-weight: 600;
+    /* Override the gradient text - use solid readable color */
+    color: var(--nebula-purple) !important;
+    -webkit-text-fill-color: var(--nebula-purple) !important;
+    background: none !important;
+    background-clip: border-box !important;
+    -webkit-background-clip: border-box !important;
+}
+
+/* Active menu item link - container styling */
+#menu li:has(.active) a {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.9) 0%,
+        rgba(248, 245, 255, 0.95) 50%,
+        rgba(255, 255, 255, 0.9) 100%
+    );
+    border: 1px solid rgba(94, 65, 162, 0.25);
+    box-shadow: 
+        0 2px 10px rgba(94, 65, 162, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* Gradient underline for active menu item - EXCLUDE CCC which uses ::after for text */
+#menu li:has(.active) a:not([href*="cloudcroft"])::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
     background: linear-gradient(
         90deg,
-        transparent 0%,
-        var(--nebula-lavender) 30%,
-        var(--nebula-lavender-chip) 70%,
-        transparent 100%
+        var(--nebula-purple) 0%,
+        var(--nebula-lavender) 50%,
+        var(--nebula-orange) 100%
     );
+    border-radius: 2px;
+    box-shadow: 0 0 6px rgba(94, 65, 162, 0.4);
 }
 
+/* Dark mode menu items */
 [data-theme="dark"] #menu li a:hover {
     background: linear-gradient(
-        180deg,
-        rgba(129, 105, 197, 0.08) 0%,
-        rgba(129, 105, 197, 0.15) 100%
+        135deg,
+        rgba(129, 105, 197, 0.12) 0%,
+        rgba(129, 105, 197, 0.18) 50%,
+        rgba(129, 105, 197, 0.12) 100%
     );
+    border-color: rgba(129, 105, 197, 0.25);
+    box-shadow: 
+        0 2px 12px rgba(129, 105, 197, 0.2),
+        0 0 20px -5px rgba(129, 105, 197, 0.15),
+        inset 0 1px 0 rgba(129, 105, 197, 0.1);
+}
+
+[data-theme="dark"] #menu li:has(.active) a {
+    background: linear-gradient(
+        135deg,
+        rgba(28, 34, 48, 0.95) 0%,
+        rgba(35, 40, 55, 0.9) 50%,
+        rgba(28, 34, 48, 0.95) 100%
+    );
+    border-color: rgba(129, 105, 197, 0.35);
+    box-shadow: 
+        0 2px 15px rgba(129, 105, 197, 0.2),
+        0 0 25px -5px rgba(129, 105, 197, 0.2),
+        inset 0 1px 0 rgba(129, 105, 197, 0.15);
+}
+
+/* Dark mode active text - solid readable color */
+[data-theme="dark"] #menu li a span.active {
+    color: var(--nebula-lavender) !important;
+    -webkit-text-fill-color: var(--nebula-lavender) !important;
+    background: none !important;
+    background-clip: border-box !important;
+    -webkit-background-clip: border-box !important;
+}
+
+[data-theme="dark"] #menu li:has(.active) a:not([href*="cloudcroft"])::after {
+    background: linear-gradient(
+        90deg,
+        var(--nebula-lavender) 0%,
+        #A78BFA 50%,
+        var(--nebula-orange) 100%
+    );
+    box-shadow: 0 0 10px rgba(129, 105, 197, 0.6);
 }
 
 .lang-switch li,
@@ -252,4 +780,105 @@
 
 .logo-switches {
     flex-wrap: inherit;
+}
+
+/* Special styling for CCC (Cloudcroft Cloud Company) menu item */
+#menu li a[href*="cloudcroft"] {
+    position: relative;
+    background: transparent;
+    border: 1px solid transparent;
+    box-shadow: none;
+    transition: all var(--transition-base);
+}
+
+#menu li a[href*="cloudcroft"] span {
+    background: linear-gradient(
+        135deg,
+        var(--nebula-orange) 0%,
+        var(--nebula-purple) 50%,
+        var(--nebula-orange) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    animation: ccc-shimmer 3s ease-in-out infinite;
+}
+
+/* CCC active state - solid readable color, no animation */
+#menu li a[href*="cloudcroft"] span.active {
+    color: var(--nebula-orange) !important;
+    -webkit-text-fill-color: var(--nebula-orange) !important;
+    background: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
+    animation: none !important;
+}
+
+@keyframes ccc-shimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+#menu li a[href*="cloudcroft"]:hover {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 153, 0, 0.15) 0%,
+        rgba(94, 65, 162, 0.18) 50%,
+        rgba(255, 153, 0, 0.15) 100%
+    );
+    border-color: rgba(255, 153, 0, 0.35);
+    box-shadow: 
+        0 4px 16px rgba(255, 153, 0, 0.2),
+        0 0 20px -5px rgba(255, 153, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+#menu li a[href*="cloudcroft"]:hover span {
+    animation: none;
+    background-position: 50% 50%;
+}
+
+/* Dark mode CCC styling */
+[data-theme="dark"] #menu li a[href*="cloudcroft"] {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+[data-theme="dark"] #menu li a[href*="cloudcroft"] span {
+    background: linear-gradient(
+        135deg,
+        var(--nebula-orange) 0%,
+        var(--nebula-lavender) 50%,
+        var(--nebula-orange) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+}
+
+/* Dark mode CCC active state */
+[data-theme="dark"] #menu li a[href*="cloudcroft"] span.active {
+    color: var(--nebula-orange) !important;
+    -webkit-text-fill-color: var(--nebula-orange) !important;
+    background: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
+    animation: none !important;
+}
+
+[data-theme="dark"] #menu li a[href*="cloudcroft"]:hover {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 153, 0, 0.2) 0%,
+        rgba(129, 105, 197, 0.22) 50%,
+        rgba(255, 153, 0, 0.2) 100%
+    );
+    border-color: rgba(255, 153, 0, 0.4);
+    box-shadow: 
+        0 4px 20px rgba(255, 153, 0, 0.25),
+        0 0 30px -8px rgba(255, 153, 0, 0.35),
+        inset 0 1px 0 rgba(255, 153, 0, 0.15);
 }

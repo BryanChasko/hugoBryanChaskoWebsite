@@ -154,18 +154,58 @@ sub cloudfront_invalidate {
   return Util::run(\@cmd, verbose=>1, dry_run=>$self->{dry_run});
 }
 
+# CloudFront list-distributions with better error handling
+sub cloudfront_list_distributions {
+  my ($self) = @_;
+  my @base = ('aws');
+  push @base, ('--profile', $self->{profile}) if $self->{profile};
+  my @cmd = (@base, 'cloudfront', 'list-distributions', '--output', 'json');
+  return Util::run(\@cmd, verbose=>$self->{verbose});
+}
+
 sub find_distribution_by_alias {
   my ($self, $domain) = @_;
   return ('DRYRUN', '') if $self->{dry_run};
-  my ($code,$out,$err) = $self->aws_json('cloudfront','list-distributions');
-  return (undef, "list-distributions failed: $err") if $code!=0;
-  my $data = eval { decode_json($out) } || {};
-  my $items = $data->{DistributionList}{Items} // [];
-  for my $d (@$items) {
-    my $aliases = $d->{Aliases}{Items} // [];
-    for my $al (@$aliases) { return ($d->{Id}, '') if lc($al) eq lc($domain) || lc($al) eq 'www.'.lc($domain); }
+  
+  Out::info("Looking up CloudFront distribution for domain: $domain") if $self->{verbose};
+  
+  my ($code,$out,$err) = $self->cloudfront_list_distributions();
+  if ($code != 0) {
+    Out::warn("list-distributions failed (code=$code): $err") if $self->{verbose};
+    return (undef, "list-distributions failed (code=$code): $err");
   }
-  return (undef, "No CloudFront distribution found for alias $domain");
+  
+  if (!defined $out || $out eq '') {
+    Out::warn("list-distributions returned empty output") if $self->{verbose};
+    return (undef, "list-distributions returned empty response");
+  }
+  
+  my $data = eval { JSON::PP::decode_json($out) };
+  if ($@ || !$data) {
+    my $parse_err = $@ // 'unknown error';
+    Out::warn("Failed to parse JSON: $parse_err") if $self->{verbose};
+    return (undef, "Failed to parse distributions response: $parse_err");
+  }
+  
+  my $items = $data->{DistributionList}{Items} // [];
+  my $count = scalar(@$items);
+  Out::info("Found $count CloudFront distribution(s)") if $self->{verbose};
+  
+  for my $d (@$items) {
+    my $dist_id = $d->{Id} // 'unknown';
+    my $aliases = $d->{Aliases}{Items} // [];
+    if ($self->{verbose}) {
+      my $alias_str = @$aliases ? join(', ', @$aliases) : '(none)';
+      Out::info("  Distribution $dist_id aliases: $alias_str");
+    }
+    for my $al (@$aliases) {
+      if (lc($al) eq lc($domain) || lc($al) eq 'www.'.lc($domain)) {
+        Out::ok("Matched distribution $dist_id for $domain") if $self->{verbose};
+        return ($dist_id, '');
+      }
+    }
+  }
+  return (undef, "No CloudFront distribution found with alias '$domain' or 'www.$domain'");
 }
 
 1;
@@ -250,26 +290,33 @@ sub deploy {
 
   Out::info("Build: ".($opts{skip_build}||$opts{invalidate_only}?'skip':'run').", Upload: ".($opts{skip_upload}||$opts{invalidate_only}?'skip':'run').", Invalidate: run");
 
+  # Step 1: Build
   if (!$opts{skip_build} && !$opts{invalidate_only}) {
-    Out::info('Building site with Hugo…');
+    Out::info('Step 1/3: Building site with Hugo…');
     my ($bc,$bo,$be) = $self->{aws}->hugo_build($opts{minify},);
     die Out::err("Hugo build failed") if $bc!=0;
     Out::ok('Hugo build complete');
   }
 
+  # Step 2: Upload to S3
   if (!$opts{skip_upload} && !$opts{invalidate_only}) {
-    Out::info("Syncing public/ to s3://$cfg{bucket} …");
+    Out::info("Step 2/3: Syncing public/ to s3://$cfg{bucket} …");
     my ($sc,$so,$se) = $self->{aws}->s3_sync_public($cfg{bucket});
     die Out::err('S3 sync failed') if $sc!=0;
     Out::ok('S3 sync complete');
+    
+    # Wait for S3 eventual consistency before invalidating CloudFront
+    Out::info('Waiting 5 seconds for S3 propagation…');
+    sleep(5) unless $opts{dry_run};
   }
 
-  Out::info("Invalidating CloudFront distribution $cfg{distribution_id} (paths=".($opts{paths}//'/*').") …");
+  # Step 3: Invalidate CloudFront (AFTER upload is complete)
+  Out::info("Step 3/3: Invalidating CloudFront distribution $cfg{distribution_id} (paths=".($opts{paths}//'/*').") …");
   my ($ic,$io,$ie) = $self->{aws}->cloudfront_invalidate($cfg{distribution_id}, $opts{paths}//'/*');
   die Out::err('CloudFront invalidation failed') if $ic!=0;
   Out::ok('CloudFront invalidation submitted');
 
-  Out::ok('Done.');
+  Out::ok('Deploy complete! Changes will be visible once CloudFront invalidation finishes (usually 1-2 minutes).');
 }
 
 1;

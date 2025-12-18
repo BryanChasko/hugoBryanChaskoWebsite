@@ -13,21 +13,32 @@ hugo && aws s3 sync public/ s3://bryanchasko.com --profile aerospaceug-admin
 
 This site uses the custom **bryan-chasko-theme** with modular architecture and Nebula color palette.
 
-**Current Status**: Phase 1 Complete - Theme forked from PaperMod with customizations extracted
+**Current Status**: Phase 2 In Progress - Modular CSS and Social Feed components implemented
 
 **Completed:**
 - ✅ [#1 Create Custom Theme Repository](.github/issues/01-create-custom-theme-repository.md)
 - ✅ [#2 Extract Current Overrides](.github/issues/02-extract-current-overrides.md)
+- ✅ [#3 Modular CSS Architecture](.github/issues/03-modular-css-architecture.md) - CSS organized into core/, components/, extended/
+- ✅ [#4 Nebula Color Theme](.github/issues/04-nebula-color-theme.md) - Brand colors with light/dark mode support
 
 **In Progress:**
-- ⏳ [#3 Modular CSS Architecture](.github/issues/03-modular-css-architecture.md)
-- ⏳ [#4 Nebula Color Theme](.github/issues/04-nebula-color-theme.md)
 - ⏳ [#5 Responsive Table of Contents](.github/issues/05-responsive-table-of-contents.md)
 - ⏳ [#6 Component Documentation](.github/issues/06-component-documentation.md)
 - ⏳ [#7 Theme README and Configuration](.github/issues/07-theme-readme-and-configuration.md)
 - ⏳ [#8 Integration Testing and Deployment](.github/issues/08-integration-testing-and-deployment.md)
 
 Full roadmap: [THEME_DEVELOPMENT.md](THEME_DEVELOPMENT.md)
+
+## Data-Driven Content 📊
+
+External profile content is managed via Hugo data files in `data/`:
+
+| File | Purpose |
+|------|--------|
+| `builder_posts.yaml` | AWS Builder Center profile & published articles |
+| `linkedin_posts.yaml` | LinkedIn profile info & featured activity |
+
+These power the **Social Feed Heroes** on the `/blog/` page, which prominently display profile cards with CTAs before blog posts.
 
 ## Why Hugo and Amazon S3? 🌱
 

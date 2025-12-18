@@ -1,3 +1,4 @@
+/* First Entry - Featured card with enhanced glassmorphism */
 .first-entry {
     position: relative;
     display: flex;
@@ -5,6 +6,84 @@
     justify-content: center;
     min-height: 320px;
     margin: var(--gap) 0 calc(var(--gap) * 2) 0;
+    background: linear-gradient(
+        135deg,
+        rgba(248, 250, 252, 0.98) 0%,
+        rgba(243, 232, 255, 0.18) 20%,
+        rgba(255, 255, 255, 0.95) 50%,
+        rgba(255, 247, 237, 0.15) 80%,
+        rgba(248, 250, 252, 0.98) 100%
+    );
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(94, 65, 162, 0.15);
+    border-radius: var(--radius-xl, 12px);
+    padding: var(--space-xl, 2rem);
+    box-shadow: 
+        0 6px 24px -6px rgba(94, 65, 162, 0.12),
+        0 3px 10px -3px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    overflow: hidden;
+}
+
+/* First entry gradient accent */
+.first-entry::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(94, 65, 162, 0.4) 10%,
+        var(--nebula-purple, #5E41A2) 25%,
+        var(--nebula-lavender, #8169C5) 50%,
+        var(--nebula-orange, #FF9900) 75%,
+        rgba(255, 153, 0, 0.4) 90%,
+        transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: first-entry-gradient 8s ease-in-out infinite;
+    border-radius: var(--radius-xl, 12px) var(--radius-xl, 12px) 0 0;
+}
+
+@keyframes first-entry-gradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Dark mode first entry */
+[data-theme="dark"] .first-entry {
+    background: linear-gradient(
+        135deg,
+        rgba(28, 34, 48, 0.95) 0%,
+        rgba(30, 26, 48, 0.92) 20%,
+        rgba(17, 24, 39, 0.98) 50%,
+        rgba(32, 28, 42, 0.9) 80%,
+        rgba(28, 34, 48, 0.95) 100%
+    );
+    border-color: rgba(129, 105, 197, 0.25);
+    box-shadow: 
+        0 8px 32px -8px rgba(0, 0, 0, 0.35),
+        0 0 40px -12px rgba(129, 105, 197, 0.15),
+        inset 0 1px 0 rgba(129, 105, 197, 0.12);
+}
+
+[data-theme="dark"] .first-entry::before {
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(129, 105, 197, 0.5) 10%,
+        var(--nebula-lavender, #8169C5) 25%,
+        #A78BFA 50%,
+        var(--nebula-orange, #FF9900) 75%,
+        rgba(255, 153, 0, 0.5) 90%,
+        transparent 100%
+    );
+    background-size: 200% 100%;
+    box-shadow: 0 0 12px 2px rgba(129, 105, 197, 0.25);
 }
 
 .first-entry .entry-header {
@@ -33,18 +112,16 @@
     -webkit-line-clamp: unset;
 }
 
+/* Base post-entry - Modern styles defined in components/cards.css */
+/* Keeping minimal base structure here for PaperMod compatibility */
 .post-entry {
     position: relative;
     margin-bottom: var(--gap);
-    padding: var(--gap);
-    background: var(--entry);
-    border-radius: var(--radius);
-    transition: transform 0.1s;
-    border: 1px solid var(--border);
+    transition: transform var(--transition-base, 0.2s);
 }
 
 .post-entry:active {
-    transform: scale(0.96);
+    transform: scale(0.98);
 }
 
 .tag-entry .entry-cover {
