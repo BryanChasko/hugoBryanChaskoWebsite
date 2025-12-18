@@ -46,7 +46,7 @@ buildExpired = false
     safari_pinned_tab = "/safari-pinned-tab.svg"
 
   [params.label]
-    text = "Home"
+    text = "HOME"
     icon = "/apple-touch-icon.png"
     iconHeight = 35
 
@@ -143,9 +143,9 @@ Content = "[🦊&nbsp;About](blog/posts/about-bryan-chasko) [🐈&nbsp;Buddy](bl
     url = "/blog/"
     weight = 20
   [[menu.main]]
-    identifier = "tags"
-    name = "Topics"
-    url = "/tags/"
+    identifier = "notes"
+    name = "Notes"
+    url = "/notes/"
     weight = 25
   [[menu.main]]
     identifier = "contact"

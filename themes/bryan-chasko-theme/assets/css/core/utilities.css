@@ -1,0 +1,313 @@
+/* Utility Classes - Reusable CSS patterns */
+
+/* ============================================
+   GRADIENT TEXT UTILITIES
+   Reusable gradient text effects
+   ============================================ */
+.gradient-text {
+  background: linear-gradient(
+    135deg,
+    var(--nebula-purple) 0%,
+    var(--nebula-lavender) 50%,
+    var(--nebula-orange) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+}
+
+.gradient-text--animated {
+  animation: gradient-text-sweep 4s ease-in-out infinite;
+}
+
+@keyframes gradient-text-sweep {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Variant: Purple to Lavender */
+.gradient-text--purple {
+  background: linear-gradient(
+    135deg,
+    var(--nebula-purple) 0%,
+    var(--nebula-lavender) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Variant: Orange accent */
+.gradient-text--orange {
+  background: linear-gradient(
+    135deg,
+    var(--nebula-orange) 0%,
+    var(--nebula-purple) 50%,
+    var(--nebula-orange) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+}
+
+/* Dark mode gradient adjustments */
+[data-theme="dark"] .gradient-text {
+  background: linear-gradient(
+    135deg,
+    var(--nebula-lavender) 0%,
+    #A78BFA 50%,
+    var(--nebula-orange) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+}
+
+/* ============================================
+   WEBGL CANVAS CONTAINERS
+   For future WebGL integration
+   ============================================ */
+.webgl-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Canvas element styling */
+.webgl-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* Prevent canvas from capturing pointer events */
+  pointer-events: none;
+}
+
+/* Allow interaction when explicitly enabled */
+.webgl-canvas--interactive {
+  pointer-events: auto;
+}
+
+/* Hero section WebGL container */
+.hero-canvas-container {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+/* Card WebGL container */
+.card-canvas-container {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.card-canvas-container:hover,
+.help-service-card:hover .card-canvas-container,
+.builder-card:hover .card-canvas-container {
+  opacity: 1;
+}
+
+/* Content layered above canvas */
+.webgl-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================
+   WEBGL FALLBACK CONTAINERS
+   Progressive enhancement for non-WebGL browsers
+   ============================================ */
+.webgl-fallback {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+/* Fallback gradient backgrounds */
+.webgl-fallback--hero {
+  background: 
+    radial-gradient(ellipse 80% 60% at 20% 30%, rgba(129, 105, 197, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse 70% 50% at 80% 20%, rgba(255, 153, 0, 0.12) 0%, transparent 45%),
+    radial-gradient(ellipse 60% 70% at 70% 80%, rgba(94, 65, 162, 0.12) 0%, transparent 50%);
+}
+
+.webgl-fallback--card {
+  background: 
+    radial-gradient(ellipse at 30% 30%, rgba(129, 105, 197, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 70%, rgba(255, 153, 0, 0.06) 0%, transparent 60%);
+}
+
+[data-theme="dark"] .webgl-fallback--hero {
+  background: 
+    radial-gradient(ellipse 80% 60% at 20% 30%, rgba(129, 105, 197, 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse 70% 50% at 80% 20%, rgba(167, 139, 250, 0.15) 0%, transparent 45%),
+    radial-gradient(ellipse 60% 70% at 70% 80%, rgba(94, 65, 162, 0.15) 0%, transparent 50%);
+}
+
+[data-theme="dark"] .webgl-fallback--card {
+  background: 
+    radial-gradient(ellipse at 30% 30%, rgba(129, 105, 197, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 70%, rgba(255, 153, 0, 0.08) 0%, transparent 60%);
+}
+
+/* Static fallback images for noscript */
+.webgl-fallback img,
+.webgl-fallback svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+/* Hide WebGL container when fallback is shown */
+.no-webgl .webgl-canvas,
+.no-webgl .webgl-container canvas {
+  display: none;
+}
+
+.no-webgl .webgl-fallback {
+  display: block;
+}
+
+/* ============================================
+   LOADING STATES
+   For WebGL initialization
+   ============================================ */
+.webgl-loading {
+  position: relative;
+}
+
+.webgl-loading::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--color-background);
+  opacity: 0.8;
+  z-index: 2;
+  animation: webgl-fade-out 0.5s ease-out 1s forwards;
+}
+
+@keyframes webgl-fade-out {
+  to { opacity: 0; pointer-events: none; }
+}
+
+/* ============================================
+   DECORATIVE ARIA HIDDEN
+   For purely visual elements
+   ============================================ */
+[aria-hidden="true"].decorative {
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ============================================
+   ASPECT RATIO CONTAINERS
+   For responsive WebGL canvases
+   ============================================ */
+.aspect-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-4-3 {
+  aspect-ratio: 4 / 3;
+}
+
+.aspect-1-1 {
+  aspect-ratio: 1 / 1;
+}
+
+.aspect-hero {
+  aspect-ratio: 21 / 9;
+}
+
+/* Fallback for older browsers */
+@supports not (aspect-ratio: 1) {
+  .aspect-16-9 {
+    padding-top: 56.25%;
+  }
+  .aspect-4-3 {
+    padding-top: 75%;
+  }
+  .aspect-1-1 {
+    padding-top: 100%;
+  }
+  .aspect-hero {
+    padding-top: 42.86%;
+  }
+}
+
+/* ============================================
+   CONSTELLATION HERO SPECIFIC
+   Positioned behind home-info content
+   ============================================ */
+.constellation-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+}
+
+/* Allow mouse interaction for particle effects */
+.constellation-hero .webgl-canvas {
+  pointer-events: auto;
+  z-index: -1;
+}
+
+/* Constellation fallback - nebula gradient */
+.constellation-hero .webgl-fallback {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse 80% 60% at 20% 30%, rgba(129, 105, 197, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 50% at 80% 70%, rgba(255, 153, 0, 0.1) 0%, transparent 45%),
+    radial-gradient(ellipse 40% 40% at 50% 50%, rgba(94, 65, 162, 0.08) 0%, transparent 40%);
+  opacity: 0.6;
+  animation: constellation-fallback-drift 20s ease-in-out infinite;
+}
+
+@keyframes constellation-fallback-drift {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.05) rotate(1deg); }
+}
+
+[data-theme="dark"] .constellation-hero .webgl-fallback {
+  background: 
+    radial-gradient(ellipse 80% 60% at 20% 30%, rgba(129, 105, 197, 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 50% at 80% 70%, rgba(167, 139, 250, 0.15) 0%, transparent 45%),
+    radial-gradient(ellipse 40% 40% at 50% 50%, rgba(94, 65, 162, 0.12) 0%, transparent 40%);
+  opacity: 0.8;
+}
+
+/* Hide fallback when WebGL is active */
+.constellation-hero:has(.constellation-canvas) .webgl-fallback {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+/* Reduced motion: show static fallback only */
+@media (prefers-reduced-motion: reduce) {
+  .constellation-hero .webgl-fallback {
+    animation: none;
+  }
+}
+

@@ -1,0 +1,385 @@
+/* Contact Page Styling */
+
+.contact-content {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+/* Social Badges Section */
+.social-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  justify-content: center;
+  margin: var(--space-xl) 0;
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(243, 232, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.8) 100%
+  );
+  border: 1px solid rgba(94, 65, 162, 0.15);
+}
+
+[data-theme="dark"] .social-badges {
+  background: linear-gradient(
+    135deg,
+    rgba(28, 34, 48, 0.9) 0%,
+    rgba(30, 26, 48, 0.8) 50%,
+    rgba(28, 34, 48, 0.9) 100%
+  );
+  border-color: rgba(129, 105, 197, 0.2);
+}
+
+.social-badges img {
+  max-height: 32px;
+  transition: all var(--transition-base);
+}
+
+.social-badges a:hover img {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+/* GitHub Section */
+.github-section {
+  margin: var(--space-2xl) 0;
+}
+
+.github-section h2 {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  background: linear-gradient(
+    135deg,
+    var(--nebula-purple) 0%,
+    var(--nebula-lavender) 50%,
+    var(--nebula-orange) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* View All Link */
+.view-all-link {
+  display: block;
+  text-align: center;
+  margin-top: var(--space-lg);
+  padding: var(--space-md);
+  color: var(--color-link);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+.view-all-link:hover {
+  color: var(--color-link-hover);
+  transform: translateX(4px);
+}
+
+.view-all-link::after {
+  content: ' →';
+  transition: transform var(--transition-fast);
+}
+
+.view-all-link:hover::after {
+  transform: translateX(4px);
+}
+
+/* Repos Grid */
+.repos-grid {
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-top: var(--space-lg);
+}
+
+@media (max-width: 640px) {
+  .repos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Repo Card */
+.repo-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: var(--color-background);
+  transition: all var(--transition-base);
+  text-decoration: none;
+  color: var(--color-text);
+  position: relative;
+  overflow: hidden;
+}
+
+.repo-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--nebula-purple) 0%,
+    var(--nebula-lavender) 50%,
+    var(--nebula-orange) 100%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.repo-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.repo-card:hover::before {
+  opacity: 1;
+}
+
+[data-theme="dark"] .repo-card {
+  background: linear-gradient(
+    145deg,
+    rgba(28, 34, 48, 0.9) 0%,
+    rgba(30, 26, 48, 0.85) 100%
+  );
+  border-color: rgba(129, 105, 197, 0.15);
+}
+
+[data-theme="dark"] .repo-card:hover {
+  border-color: rgba(129, 105, 197, 0.3);
+  box-shadow: 
+    0 8px 24px rgba(0, 0, 0, 0.3),
+    0 0 20px -5px rgba(129, 105, 197, 0.2);
+}
+
+/* Repo Card Elements */
+.repo-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.repo-title {
+  margin: 0;
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-link);
+}
+
+.repo-card:hover .repo-title {
+  color: var(--color-link-hover);
+}
+
+.repo-description {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-base);
+  flex: 1;
+}
+
+.repo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-border);
+}
+
+.repo-language,
+.repo-stars,
+.repo-updated {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.lang-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Loading State */
+.repos-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  color: var(--color-text-secondary);
+}
+
+.repos-loading::after {
+  content: '⏳';
+  font-size: 2rem;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Error State */
+.repos-error,
+.repos-empty {
+  text-align: center;
+  padding: var(--space-xl);
+  color: var(--color-text-secondary);
+}
+
+.repos-error a {
+  color: var(--color-link);
+  text-decoration: underline;
+}
+
+/* Twitter Section */
+.twitter-section {
+  margin: var(--space-2xl) 0;
+}
+
+.twitter-section h2 {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  background: linear-gradient(
+    135deg,
+    var(--nebula-purple) 0%,
+    var(--nebula-lavender) 50%,
+    var(--nebula-orange) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.twitter-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  background: var(--color-background-secondary);
+  border: 1px solid var(--color-border);
+}
+
+[data-theme="dark"] .twitter-container {
+  background: linear-gradient(
+    145deg,
+    rgba(28, 34, 48, 0.9) 0%,
+    rgba(30, 26, 48, 0.85) 100%
+  );
+  border-color: rgba(129, 105, 197, 0.15);
+}
+
+/* Twitter timeline widget dark mode */
+[data-theme="dark"] .twitter-timeline {
+  color-scheme: dark;
+}
+
+/* LinkedIn Posts Section */
+.linkedin-posts-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  align-items: center;
+  margin: var(--space-2xl) 0;
+}
+
+.linkedin-posts-section iframe {
+  max-width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  background: var(--color-background);
+}
+
+/* Twitter Posts Section */
+.twitter-posts-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+  margin: var(--space-2xl) 0;
+}
+
+/* LinkedIn Posts Section */
+.linkedin-posts-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+  margin: var(--space-2xl) 0;
+}
+
+.linkedin-posts-section iframe {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  background: var(--color-background);
+}
+
+/* Dark mode iframe styling - LinkedIn embeds don't support theme parameter,
+   but we can add a subtle overlay effect to reduce brightness */
+[data-theme="dark"] .linkedin-posts-section iframe {
+  opacity: 0.95;
+  filter: brightness(0.9) contrast(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* Stack Twitter and LinkedIn posts on mobile */
+  .twitter-posts-section,
+  .linkedin-posts-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .social-badges {
+    gap: var(--space-sm);
+    padding: var(--space-md);
+  }
+  
+  .social-badges img {
+    max-height: 28px;
+  }
+  
+  .repo-card {
+    padding: var(--space-md);
+  }
+  
+  .twitter-container {
+    padding: var(--space-md);
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .repo-card,
+  .social-badges img,
+  .repos-loading::after {
+    animation: none;
+    transition: none;
+  }
+  
+  .repo-card:hover {
+    transform: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .repo-card {
+    border-width: 2px;
+  }
+  
+  .repo-card:hover {
+    border-color: currentColor;
+  }
+}

@@ -10,6 +10,8 @@
 
 /* Home Info Content - Responsive font sizing for two-line layout */
 .home-info .entry-content {
+  position: relative;
+  z-index: 1;
   font-size: clamp(0.875rem, 2vw, 1.125rem);
   line-height: 1.8;
   text-align: center;
@@ -173,6 +175,8 @@
 /* Home Info Title - Terminal Style */
 /* Retro CRT Terminal - Amber Phosphor (IBM style) for light mode */
 .home-info .entry-header {
+  position: relative;
+  z-index: 1;
   max-width: 100%;
   width: 100%;
   margin-inline: auto;
@@ -557,6 +561,7 @@
 
 /* Center home-info container - completely transparent, no card styling */
 .home-info {
+  position: relative; /* For constellation positioning */
   max-width: var(--container-max-width);
   margin: 0 auto;
   padding: var(--space-xl) var(--container-padding);
@@ -568,6 +573,8 @@
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
   min-height: auto !important;
+  /* Ensure content is above constellation */
+  isolation: isolate;
 }
 
 /* Remove the gradient accent line from home-info */
@@ -587,8 +594,7 @@
 }
 
 /* Center social icons on home page - no enclosing box */
-.home-info .entry-footer,
-.home-info .social-icons {
+.home-info .entry-footer {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -597,7 +603,109 @@
   box-shadow: none !important;
 }
 
+/* Builder card needs pointer events */
+.builder-card {
+  pointer-events: auto;
+}
+
+/* Home social container - Instagram + Social icons side by side */
+.home-social-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: var(--space-xl);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: var(--space-lg);
+  pointer-events: none;
+}
+
+/* Instagram embed container */
+.home-instagram-embed {
+  display: flex;
+  justify-content: center;
+  pointer-events: auto; /* Instagram embed is interactive */
+}
+
+/* Instagram embed styling - enhanced integration */
+.home-instagram-embed .instagram-media {
+  border-radius: var(--radius-lg) !important;
+  box-shadow: 
+    0 4px 20px rgba(94, 65, 162, 0.15),
+    0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  border: 1px solid rgba(94, 65, 162, 0.12) !important;
+  transition: all var(--transition-base);
+}
+
+.home-instagram-embed .instagram-media:hover {
+  box-shadow: 
+    0 8px 30px rgba(94, 65, 162, 0.2),
+    0 4px 12px rgba(0, 0, 0, 0.12) !important;
+  transform: translateY(-2px);
+}
+
+/* Dark mode Instagram embed */
+[data-theme="dark"] .home-instagram-embed .instagram-media {
+  background: rgba(28, 34, 48, 0.95) !important;
+  border: 1px solid rgba(129, 105, 197, 0.25) !important;
+  box-shadow: 
+    0 4px 24px rgba(0, 0, 0, 0.4),
+    0 0 20px -5px rgba(129, 105, 197, 0.2) !important;
+}
+
+[data-theme="dark"] .home-instagram-embed .instagram-media:hover {
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    0 0 30px -5px rgba(129, 105, 197, 0.3) !important;
+}
+
+/* Dark mode Instagram embed */
+[data-theme="dark"] .home-instagram-embed .instagram-media {
+  background: rgba(28, 34, 48, 0.95) !important;
+  border: 1px solid rgba(129, 105, 197, 0.25) !important;
+  box-shadow: 
+    0 4px 24px rgba(0, 0, 0, 0.4),
+    0 0 20px -5px rgba(129, 105, 197, 0.2) !important;
+}
+
+/* Dark mode: Re-invert images to show original colors */
+[data-theme="dark"] .home-instagram-embed .instagram-media img {
+  filter: invert(1) hue-rotate(-180deg);
+}
+
+.home-info .social-icons {
+  display: flex;
+  justify-content: center;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  pointer-events: none;
+}
+
+/* Re-enable pointer events on actual icon links so they're clickable */
+.home-info .social-icons a {
+  pointer-events: auto;
+}
+
+/* Mobile: Stack with social icons above Instagram */
+@media (max-width: 768px) {
+  .home-social-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  
+  .home-instagram-embed {
+    order: 2; /* Instagram below */
+  }
+  
+  .home-info .social-icons {
+    order: 1; /* Social icons above */
+  }
+}
+
 .home-info .entry-footer {
+  position: relative;
+  z-index: 1;
   flex-direction: column;
   align-items: center;
   background: transparent !important;

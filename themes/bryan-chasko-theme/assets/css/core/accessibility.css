@@ -1,0 +1,275 @@
+/* Accessibility Utilities & Enhancements */
+
+/* ============================================
+   SKIP LINK - Keyboard Navigation
+   ============================================ */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--color-primary);
+  color: var(--white);
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  text-decoration: none;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+[data-theme="dark"] .skip-link {
+  background: var(--nebula-lavender);
+  color: var(--nebula-dark-navy);
+}
+
+/* ============================================
+   FOCUS STYLES - Enhanced Visibility
+   ============================================ */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+[data-theme="dark"] :focus-visible {
+  outline-color: var(--nebula-lavender);
+}
+
+/* Remove default outline when not using keyboard */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Enhanced focus for interactive elements */
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ============================================
+   PREFERS-REDUCED-MOTION
+   Respects user accessibility preferences
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  /* Disable specific heavy animations */
+  .home-info .entry-header,
+  .terminal-text,
+  .terminal-cursor,
+  .terminal-user,
+  .terminal-prompt,
+  body::before,
+  body::after,
+  .main::before {
+    animation: none !important;
+  }
+  
+  /* Show terminal content immediately without typing effect */
+  .terminal-text {
+    width: auto !important;
+    overflow: visible !important;
+  }
+  
+  /* Keep terminal visible (no collapse) */
+  .home-info .entry-header {
+    opacity: 1 !important;
+    max-height: none !important;
+    transform: none !important;
+  }
+  
+  /* Disable gradient animations on cards */
+  .builder-card::before,
+  .help-service-card::before,
+  .header::after {
+    animation: none !important;
+    background-size: 100% 100% !important;
+  }
+  
+  /* Disable hover transforms */
+  .builder-card:hover,
+  .help-service-card:hover,
+  .home-info .entry-content a:hover,
+  .social-icons a:hover {
+    transform: none !important;
+  }
+}
+
+/* ============================================
+   SCREEN READER ONLY - Visually Hidden
+   ============================================ */
+.sr-only,
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Allow element to be focusable when navigated to */
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* ============================================
+   ARIA LIVE REGIONS
+   For dynamic content announcements
+   ============================================ */
+[aria-live="polite"],
+[aria-live="assertive"] {
+  /* Ensure live regions are accessible but don't affect layout */
+}
+
+.aria-live-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ============================================
+   HIGH CONTRAST MODE SUPPORT
+   ============================================ */
+@media (prefers-contrast: high) {
+  :root {
+    --color-border: #000000;
+    --color-text: #000000;
+    --color-background: #ffffff;
+  }
+  
+  [data-theme="dark"] {
+    --color-border: #ffffff;
+    --color-text: #ffffff;
+    --color-background: #000000;
+  }
+  
+  /* Ensure sufficient contrast for interactive elements */
+  a,
+  button,
+  .cta-button {
+    text-decoration: underline;
+  }
+  
+  /* Stronger borders */
+  .builder-card,
+  .help-service-card,
+  .home-info .entry-content a {
+    border-width: 2px;
+  }
+}
+
+/* ============================================
+   FORCED COLORS MODE (Windows High Contrast)
+   ============================================ */
+@media (forced-colors: active) {
+  .skip-link:focus {
+    outline: 3px solid CanvasText;
+  }
+  
+  .cta-button,
+  .button {
+    border: 2px solid CanvasText;
+  }
+  
+  /* Ensure SVG icons are visible */
+  svg {
+    forced-color-adjust: auto;
+  }
+}
+
+/* ============================================
+   TOUCH TARGET SIZES
+   Minimum 44x44px for mobile accessibility
+   ============================================ */
+@media (pointer: coarse) {
+  /* Ensure touch targets meet WCAG 2.5.5 */
+  a,
+  button,
+  [role="button"],
+  input[type="checkbox"],
+  input[type="radio"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Menu items */
+  #menu li a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  /* Social icons */
+  .social-icons a {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  /* Theme toggle */
+  #theme-toggle {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* ============================================
+   PRINT ACCESSIBILITY
+   ============================================ */
+@media print {
+  /* Ensure links are visible in print */
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+  
+  /* Don't print URLs for internal links */
+  a[href^="#"]::after,
+  a[href^="/"]::after {
+    content: "";
+  }
+  
+  /* Hide decorative elements */
+  .skip-link,
+  #theme-toggle,
+  .social-icons {
+    display: none !important;
+  }
+}

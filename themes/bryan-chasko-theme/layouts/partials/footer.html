@@ -146,3 +146,9 @@
     });
 </script>
 {{- end }}
+
+{{/* WebGL Scripts - Load only when needed */}}
+{{- if .IsHome }}
+<script src="{{ "js/webgl-monitor.js" | relURL }}" defer></script>
+<script src="{{ "js/constellation.js" | relURL }}" defer></script>
+{{- end }}

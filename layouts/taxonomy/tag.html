@@ -1,26 +1,19 @@
 {{ define "main" }}
-<h1>Topics</h1>
+<div class="tags-hero">
+  <h1>Topics</h1>
+  <p class="tags-subtitle">Explore articles and projects by topic</p>
+</div>
 
-<ul>
+<div class="tags-grid">
     {{ range .Data.Pages }}
-    <li>
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
-    </li>
+    <article class="tag-card">
+        <a href="{{ .Permalink }}" class="tag-card-link">
+            <h3 class="tag-card-title">{{ .Title }}</h3>
+            <span class="tag-card-count">{{ len .Pages }} {{ if eq (len .Pages) 1 }}article{{ else }}articles{{ end }}</span>
+        </a>
+    </article>
     {{ else }}
-    <p>No content found.</p>
+    <p class="no-content">No topics found.</p>
     {{ end }}
-</ul>
-
-<style>
-    /* Add your fancy formatting styles here */
-
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    li {
-        margin-bottom: 10px;
-    }
-</style>
+</div>
 {{ end }}

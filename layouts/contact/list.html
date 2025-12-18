@@ -1,0 +1,57 @@
+{{- define "main" }}
+
+<header class="page-header">
+  {{- partial "breadcrumbs.html" . }}
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">
+    {{ .Description | markdownify }}
+  </div>
+  {{- end }}
+</header>
+
+<div class="post-content contact-content">
+  {{- .Content }}
+</div>
+
+{{/* Contact-specific scripts - MUST BE BEFORE {{- end }} */}}
+<script src="{{ "js/github-repos.js" | relURL }}" defer></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+{{/* Twitter theme switcher - updated for multiple tweets */}}
+<script>
+  // Update Twitter widgets theme based on current theme
+  function updateTwitterTheme() {
+    const twitterSection = document.querySelector('.twitter-posts-section');
+    if (!twitterSection) return;
+    
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    // Twitter widgets auto-detect theme, but we can reload them on theme change
+  }
+  
+  // Run on load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updateTwitterTheme);
+  } else {
+    updateTwitterTheme();
+  }
+  
+  // Watch for theme changes and reload all Twitter widgets
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+        const container = document.querySelector('.twitter-posts-section');
+        if (container && window.twttr && window.twttr.widgets) {
+          window.twttr.widgets.load(container);
+        }
+      }
+    });
+  });
+  
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['data-theme']
+  });
+</script>
+
+{{- end }}{{/* end main */}}

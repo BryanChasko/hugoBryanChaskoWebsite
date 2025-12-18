@@ -1,0 +1,462 @@
+/* Cloudcroft Cloud Company Page Styling */
+
+/* Hero Section with Gradient Background */
+.ccc-hero {
+  position: relative;
+  text-align: center;
+  padding: var(--space-3xl) var(--space-xl);
+  margin: calc(-1 * var(--container-padding)) calc(-1 * var(--container-padding)) var(--space-2xl);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 153, 0, 0.12) 0%,
+    rgba(248, 250, 252, 0.98) 20%,
+    rgba(243, 232, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.95) 80%,
+    rgba(94, 65, 162, 0.08) 100%
+  );
+  border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--nebula-orange) 20%,
+    var(--nebula-purple) 50%,
+    var(--nebula-orange) 80%,
+    transparent 100%
+  ) 1;
+  box-shadow: 
+    0 8px 32px -8px rgba(255, 153, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+}
+
+.ccc-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--nebula-orange) 20%,
+    var(--nebula-purple) 40%,
+    var(--nebula-lavender) 60%,
+    var(--nebula-orange) 80%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: ccc-gradient-sweep 8s ease-in-out infinite;
+}
+
+@keyframes ccc-gradient-sweep {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+[data-theme="dark"] .ccc-hero {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 153, 0, 0.18) 0%,
+    rgba(17, 24, 39, 0.98) 20%,
+    rgba(30, 26, 48, 0.9) 50%,
+    rgba(28, 34, 48, 0.95) 80%,
+    rgba(129, 105, 197, 0.15) 100%
+  );
+  box-shadow: 
+    0 8px 32px -8px rgba(0, 0, 0, 0.4),
+    0 0 40px -10px rgba(255, 153, 0, 0.2),
+    inset 0 1px 0 rgba(255, 153, 0, 0.15);
+}
+
+.ccc-hero h1 {
+  margin: 0 0 var(--space-md) 0;
+  font-size: var(--font-size-4xl);
+  background: linear-gradient(
+    135deg,
+    var(--nebula-orange) 0%,
+    var(--nebula-purple) 50%,
+    var(--nebula-orange) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  animation: hero-text-shimmer 4s ease-in-out infinite;
+}
+
+@keyframes hero-text-shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+[data-theme="dark"] .ccc-hero h1 {
+  background: linear-gradient(
+    135deg,
+    var(--nebula-orange) 0%,
+    var(--nebula-lavender) 50%,
+    var(--nebula-orange) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+}
+
+.ccc-tagline {
+  font-size: var(--font-size-xl);
+  color: var(--color-text-secondary);
+  margin: 0;
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.ccc-tagline strong {
+  color: var(--nebula-orange);
+  font-weight: 700;
+}
+
+[data-theme="dark"] .ccc-tagline strong {
+  color: var(--nebula-orange);
+}
+
+/* Services Grid */
+.ccc-services-grid {
+  display: grid;
+  gap: var(--space-xl);
+  margin: var(--space-xl) 0;
+}
+
+@media (min-width: 768px) {
+  .ccc-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Service Cards */
+.ccc-service-card {
+  position: relative;
+  padding: var(--space-xl);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(248, 246, 255, 0.9) 50%,
+    rgba(255, 250, 245, 0.92) 100%
+  );
+  border: 1px solid rgba(94, 65, 162, 0.15);
+  box-shadow: 
+    0 4px 20px rgba(94, 65, 162, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transition: all var(--transition-base);
+  overflow: hidden;
+}
+
+.ccc-service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--nebula-purple) 0%,
+    var(--nebula-lavender) 50%,
+    var(--nebula-orange) 100%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.ccc-service-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(94, 65, 162, 0.25);
+  box-shadow: 
+    0 12px 32px rgba(94, 65, 162, 0.15),
+    0 0 0 1px rgba(94, 65, 162, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+.ccc-service-card:hover::before {
+  opacity: 1;
+}
+
+[data-theme="dark"] .ccc-service-card {
+  background: linear-gradient(
+    145deg,
+    rgba(28, 34, 48, 0.95) 0%,
+    rgba(30, 26, 48, 0.9) 50%,
+    rgba(32, 28, 42, 0.92) 100%
+  );
+  border-color: rgba(129, 105, 197, 0.2);
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.3),
+    0 0 30px -10px rgba(129, 105, 197, 0.15),
+    inset 0 1px 0 rgba(129, 105, 197, 0.1);
+}
+
+[data-theme="dark"] .ccc-service-card:hover {
+  border-color: rgba(129, 105, 197, 0.35);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.4),
+    0 0 40px -10px rgba(129, 105, 197, 0.25),
+    0 0 0 1px rgba(129, 105, 197, 0.15),
+    inset 0 1px 0 rgba(129, 105, 197, 0.15);
+}
+
+/* Service Icon */
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-md);
+  display: inline-block;
+  filter: drop-shadow(0 2px 8px rgba(94, 65, 162, 0.2));
+  transition: transform var(--transition-base);
+}
+
+.ccc-service-card:hover .service-icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 12px rgba(94, 65, 162, 0.3));
+}
+
+.ccc-service-card h3 {
+  margin: 0 0 var(--space-md) 0;
+  font-size: var(--font-size-xl);
+  color: var(--color-text);
+}
+
+.ccc-service-card p {
+  margin: 0 0 var(--space-lg) 0;
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+/* CTA Button in cards - enhanced prominence with alternating colors */
+.ccc-service-card .cta-button {
+  width: 100%;
+  justify-content: center;
+  padding: 0.875rem 1.75rem !important;
+  font-size: 1.0625rem !important;
+  font-weight: 700 !important;
+  border: none !important;
+  transition: all var(--transition-base) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.ccc-service-card .cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 100%
+  );
+  transition: left 0.5s ease;
+}
+
+.ccc-service-card .cta-button:hover::before {
+  left: 100%;
+}
+
+/* First card - Purple gradient */
+.ccc-service-card:nth-child(1) .cta-button {
+  background: linear-gradient(135deg, var(--nebula-purple) 0%, var(--nebula-lavender) 100%) !important;
+  box-shadow: 
+    0 4px 16px rgba(94, 65, 162, 0.3),
+    0 8px 24px -4px rgba(94, 65, 162, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+.ccc-service-card:nth-child(1) .cta-button:hover {
+  background: linear-gradient(135deg, var(--nebula-lavender) 0%, #A78BFA 100%) !important;
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 
+    0 8px 28px rgba(94, 65, 162, 0.4),
+    0 12px 36px -8px rgba(94, 65, 162, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Second card - Orange gradient */
+.ccc-service-card:nth-child(2) .cta-button {
+  background: linear-gradient(135deg, var(--nebula-orange) 0%, #FF6600 100%) !important;
+  box-shadow: 
+    0 4px 16px rgba(255, 153, 0, 0.3),
+    0 8px 24px -4px rgba(255, 153, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+.ccc-service-card:nth-child(2) .cta-button:hover {
+  background: linear-gradient(135deg, #FFB84D 0%, var(--nebula-orange) 100%) !important;
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 
+    0 8px 28px rgba(255, 153, 0, 0.4),
+    0 12px 36px -8px rgba(255, 153, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Third card - Purple/Orange blend gradient */
+.ccc-service-card:nth-child(3) .cta-button {
+  background: linear-gradient(135deg, var(--nebula-purple) 0%, var(--nebula-orange) 100%) !important;
+  box-shadow: 
+    0 4px 16px rgba(129, 105, 197, 0.3),
+    0 8px 24px -4px rgba(255, 153, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+.ccc-service-card:nth-child(3) .cta-button:hover {
+  background: linear-gradient(135deg, var(--nebula-lavender) 0%, #FFB84D 100%) !important;
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 
+    0 8px 28px rgba(129, 105, 197, 0.35),
+    0 12px 36px -8px rgba(255, 153, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Fourth card - Lavender gradient */
+.ccc-service-card:nth-child(4) .cta-button {
+  background: linear-gradient(135deg, var(--nebula-lavender) 0%, var(--nebula-purple) 100%) !important;
+  box-shadow: 
+    0 4px 16px rgba(129, 105, 197, 0.3),
+    0 8px 24px -4px rgba(129, 105, 197, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+.ccc-service-card:nth-child(4) .cta-button:hover {
+  background: linear-gradient(135deg, #A78BFA 0%, var(--nebula-lavender) 100%) !important;
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 
+    0 8px 28px rgba(129, 105, 197, 0.4),
+    0 12px 36px -8px rgba(129, 105, 197, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Active state for all buttons */
+.ccc-service-card .cta-button:active {
+  transform: translateY(0) scale(0.98) !important;
+}
+
+/* Dark mode variations */
+[data-theme="dark"] .ccc-service-card:nth-child(1) .cta-button {
+  background: linear-gradient(135deg, var(--nebula-lavender) 0%, #A78BFA 100%) !important;
+  box-shadow: 
+    0 4px 20px rgba(129, 105, 197, 0.35),
+    0 8px 32px -4px rgba(129, 105, 197, 0.25),
+    0 0 20px -5px rgba(129, 105, 197, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+[data-theme="dark"] .ccc-service-card:nth-child(2) .cta-button {
+  background: linear-gradient(135deg, var(--nebula-orange) 0%, #FF8533 100%) !important;
+  box-shadow: 
+    0 4px 20px rgba(255, 153, 0, 0.35),
+    0 8px 32px -4px rgba(255, 153, 0, 0.25),
+    0 0 20px -5px rgba(255, 153, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+[data-theme="dark"] .ccc-service-card:nth-child(3) .cta-button {
+  background: linear-gradient(135deg, var(--nebula-lavender) 0%, var(--nebula-orange) 100%) !important;
+  box-shadow: 
+    0 4px 20px rgba(129, 105, 197, 0.3),
+    0 8px 32px -4px rgba(255, 153, 0, 0.2),
+    0 0 20px -5px rgba(167, 139, 250, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+[data-theme="dark"] .ccc-service-card:nth-child(4) .cta-button {
+  background: linear-gradient(135deg, #A78BFA 0%, var(--nebula-lavender) 100%) !important;
+  box-shadow: 
+    0 4px 20px rgba(167, 139, 250, 0.35),
+    0 8px 32px -4px rgba(129, 105, 197, 0.25),
+    0 0 20px -5px rgba(167, 139, 250, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+[data-theme="dark"] .ccc-service-card .cta-button:hover {
+  box-shadow: 
+    0 8px 32px rgba(129, 105, 197, 0.5),
+    0 12px 40px -8px rgba(255, 153, 0, 0.3),
+    0 0 30px -5px rgba(167, 139, 250, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Footer CTA */
+.ccc-footer-cta {
+  text-align: center;
+  margin: var(--space-3xl) 0 var(--space-xl) 0;
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(
+    135deg,
+    rgba(248, 250, 252, 0.5) 0%,
+    rgba(243, 232, 255, 0.3) 100%
+  );
+  border: 1px solid rgba(94, 65, 162, 0.1);
+}
+
+[data-theme="dark"] .ccc-footer-cta {
+  background: linear-gradient(
+    135deg,
+    rgba(28, 34, 48, 0.5) 0%,
+    rgba(30, 26, 48, 0.4) 100%
+  );
+  border-color: rgba(129, 105, 197, 0.15);
+}
+
+.ccc-footer-cta p {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+}
+
+.ccc-footer-cta a {
+  color: var(--nebula-purple);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(94, 65, 162, 0.3);
+  text-underline-offset: 3px;
+  transition: all var(--transition-fast);
+}
+
+.ccc-footer-cta a:hover {
+  color: var(--nebula-lavender);
+  text-decoration-color: rgba(129, 105, 197, 0.6);
+}
+
+[data-theme="dark"] .ccc-footer-cta a {
+  color: var(--nebula-lavender);
+}
+
+[data-theme="dark"] .ccc-footer-cta a:hover {
+  color: var(--nebula-orange);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .ccc-hero {
+    padding: var(--space-xl) var(--space-md);
+  }
+
+  .ccc-hero h1 {
+    font-size: var(--font-size-3xl);
+  }
+
+  .ccc-tagline {
+    font-size: var(--font-size-lg);
+  }
+
+  .ccc-service-card {
+    padding: var(--space-lg);
+  }
+
+  .service-icon {
+    font-size: 2.5rem;
+  }
+}
