@@ -209,6 +209,8 @@ data "aws_iam_policy_document" "github_actions_permissions" {
       "s3:PutBucketCORS",
       "s3:GetBucketLifecycleConfiguration",
       "s3:PutBucketLifecycleConfiguration",
+      "s3:GetLifecycleConfiguration",
+      "s3:PutLifecycleConfiguration",
       "s3:GetBucketTagging",
       "s3:PutBucketTagging",
       "s3:GetBucketAcl",
