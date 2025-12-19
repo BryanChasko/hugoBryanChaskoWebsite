@@ -16,6 +16,11 @@ const path = require('path');
 const baselineManager = new BaselineManager();
 
 test.describe('Builder Card Orbit Scene', () => {
+  // Skip Firefox in CI - headless Firefox on GitHub Actions doesn't support WebGL
+  // Error: "FEATURE_FAILURE_WEBGL_EXHAUSTED_DRIVERS" - no GPU drivers available
+  test.skip(({ browserName }) => browserName === 'firefox' && !!process.env.CI, 
+    'Firefox headless on GitHub Actions does not support WebGL');
+
   test.beforeEach(async ({ page }) => {
     // Listen to console logs from the page
     page.on('console', msg => console.log('PAGE LOG:', msg.text()));
