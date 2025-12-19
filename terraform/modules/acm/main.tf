@@ -3,11 +3,11 @@ resource "aws_acm_certificate" "main" {
   domain_name               = var.domain
   subject_alternative_names = ["www.${var.domain}"]
   validation_method         = "DNS"
-  
+
   lifecycle {
     create_before_destroy = true
   }
-  
+
   tags = {
     Name = var.domain
   }
@@ -22,7 +22,7 @@ resource "aws_route53_record" "cert_validation" {
       type   = dvo.resource_record_type
     }
   }
-  
+
   allow_overwrite = true
   name            = each.value.name
   records         = [each.value.record]

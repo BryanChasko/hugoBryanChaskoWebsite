@@ -1,7 +1,7 @@
 # IAM User for GitHub Actions
 resource "aws_iam_user" "github_actions" {
   name = var.iam_user_name
-  
+
   tags = {
     Purpose = "GitHub Actions CI/CD"
   }
@@ -11,7 +11,7 @@ resource "aws_iam_user" "github_actions" {
 resource "aws_iam_user_policy" "github_actions" {
   name = "github-actions-webgl-policy"
   user = aws_iam_user.github_actions.name
-  
+
   policy = jsonencode({
     Version = "2012-10-17"
     Statement = [

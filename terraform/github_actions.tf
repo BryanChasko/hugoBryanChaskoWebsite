@@ -54,8 +54,8 @@ data "aws_iam_policy_document" "github_actions_permissions" {
   }
 
   statement {
-    sid    = "S3BaselineBucket"
-    effect = "Allow"
+    sid     = "S3BaselineBucket"
+    effect  = "Allow"
     actions = ["s3:GetObject", "s3:PutObject", "s3:ListBucket"]
     resources = [
       module.s3.baseline_bucket_arn,
@@ -64,8 +64,8 @@ data "aws_iam_policy_document" "github_actions_permissions" {
   }
 
   statement {
-    sid    = "S3DeployBucket"
-    effect = "Allow"
+    sid     = "S3DeployBucket"
+    effect  = "Allow"
     actions = ["s3:*"]
     resources = [
       module.s3.production_bucket_arn,
@@ -91,9 +91,9 @@ data "aws_iam_policy_document" "github_actions_permissions" {
   }
 
   statement {
-    sid    = "CloudFrontManagement"
-    effect = "Allow"
-    actions = ["cloudfront:*"]
+    sid       = "CloudFrontManagement"
+    effect    = "Allow"
+    actions   = ["cloudfront:*"]
     resources = ["*"]
   }
 
@@ -102,9 +102,10 @@ data "aws_iam_policy_document" "github_actions_permissions" {
     effect = "Allow"
     actions = [
       "ssm:GetParameter",
-      "ssm:GetParameters"
+      "ssm:GetParameters",
+      "ssm:DescribeParameters"
     ]
-    resources = ["arn:aws:ssm:*:*:parameter/sites/*"]
+    resources = ["*"]
   }
 
   statement {
@@ -215,7 +216,9 @@ data "aws_iam_policy_document" "github_actions_permissions" {
       "s3:GetBucketLogging",
       "s3:PutBucketLogging",
       "s3:GetBucketOwnershipControls",
-      "s3:PutBucketOwnershipControls"
+      "s3:PutBucketOwnershipControls",
+      "s3:GetAccelerateConfiguration",
+      "s3:PutAccelerateConfiguration"
     ]
     resources = ["*"]
   }
