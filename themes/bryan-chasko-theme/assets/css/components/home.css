@@ -633,7 +633,7 @@
   display: grid;
   grid-template-columns: auto auto;
   gap: var(--space-xl);
-  align-items: center;
+  align-items: start;
   justify-content: center;
   width: 100%;
   margin-top: var(--space-lg);
