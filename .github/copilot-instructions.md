@@ -73,7 +73,7 @@ Hugo-based static site for Bryan Chasko's portfolio and Cloudcroft Cloud Company
 
 **AWS Profile:**
 
-- Default: `aerospaceug-admin`
+- Default: `[YOUR-AWS-PROFILE]` (see `.secrets-reference.json` for actual value)
 - Default region: `us-west-2` (Oregon)
 
 ## Environment Setup
@@ -627,10 +627,10 @@ perl scripts/deploy.pl --profile aerospaceug-admin --param-path /sites/bryanchas
 3. **External config file** - `~/.bcc-site/config.json` (NOT in repository)
    ```json
    {
-     "SITE_DOMAIN": "bryanchasko.com",
-     "SITE_BUCKET": "bryanchasko.com",
-     "SITE_DISTRIBUTION_ID": "[your-actual-distribution-id]", // Store in Parameter Store only
-     "AWS_PROFILE": "aerospaceug-admin",
+     "SITE_DOMAIN": "[your-site-domain]",
+     "SITE_BUCKET": "[your-site-domain]",
+     "SITE_DISTRIBUTION_ID": "[YOUR-DISTRIBUTION-ID]", // Store in Parameter Store only
+     "AWS_PROFILE": "[YOUR-AWS-PROFILE]",
      "AWS_REGION": "us-west-2"
    }
    ```

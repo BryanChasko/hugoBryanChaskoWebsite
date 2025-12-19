@@ -37,7 +37,7 @@ This site is deployed on a highly secure, modern AWS architecture using CloudFro
 │  │ Domain: bryanchasko.com.s3.us-west-2... │                   │
 │  │ Type: S3 (NOT Website Endpoint)          │                   │
 │  │ Authentication: Origin Access Control    │                   │
-│  │ OAC ID: E3CW7HU0VHU337                  │                   │
+│  │ OAC ID: [YOUR-OAC-ID]                  │                   │
 │  │ Protocol: HTTPS                         │                   │
 │  └──────────────────────────────────────────┘                   │
 └────────────────────────┬────────────────────────────────────────┘
@@ -107,7 +107,7 @@ This site is deployed on a highly secure, modern AWS architecture using CloudFro
 | Setting | Value | Why |
 |---------|-------|-----|
 | **Origins** | S3 Regional Endpoint | Direct S3 object access, better performance than website endpoint |
-| **Origin Access Control** | E3CW7HU0VHU337 (SigV4) | Private bucket access; OAC signs requests with AWS Signature Version 4 |
+| **Origin Access Control** | [YOUR-OAC-ID] (SigV4) | Private bucket access; OAC signs requests with AWS Signature Version 4 |
 | **Default Root Object** | index.html | Serves index.html when user requests `/` |
 | **Cache Behavior** | CloudFront Managed Policy | Compress with gzip/brotli; cache static assets |
 | **Minimum TTL** | 0 seconds | Allow short-lived content |
@@ -122,7 +122,7 @@ This site is deployed on a highly secure, modern AWS architecture using CloudFro
 
 **Purpose:** Authenticate CloudFront requests to S3 without public bucket access
 
-**OAC ID:** `E3CW7HU0VHU337`
+**OAC ID:** `[YOUR-OAC-ID]`
 
 **How It Works:**
 
@@ -375,7 +375,8 @@ aws cloudwatch get-metric-statistics \
 
 ### Verify OAC Configuration
 ```bash
-aws cloudfront get-origin-access-control --id E3CW7HU0VHU337 --profile aerospaceug-admin
+# Get OAC ID from .secrets-reference.json
+aws cloudfront get-origin-access-control --id [YOUR-OAC-ID] --profile [YOUR-AWS-PROFILE]
 ```
 
 ### Check Bucket Policy
@@ -401,7 +402,7 @@ curl -v https://bryanchasko.com/
    aws cloudfront get-distribution-config --id [your-actual-distribution-id] --profile aerospaceug-admin \
      | jq '.DistributionConfig.Origins.Items[0].OriginAccessControlId'
    
-   # Should return: "E3CW7HU0VHU337"
+   # Should return: "[YOUR-OAC-ID]"
    ```
 
 2. **Bucket Policy Missing OAC**

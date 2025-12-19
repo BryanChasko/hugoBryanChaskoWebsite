@@ -133,9 +133,9 @@ Before running `deploy.pl`, verify:
 - ✅ No direct public S3 URLs work
 
 **CloudFront + Origin Access Control (OAC):**
-- ✅ OAC ID: `E3CW7HU0VHU337` (bryanchasko-com-oac)
-- ✅ Distribution: `[your-actual-distribution-id]`
-- ✅ Origin: `bryanchasko.com.s3.us-west-2.amazonaws.com` (regional endpoint)
+- ✅ OAC ID: `[YOUR-OAC-ID]` (your OAC name)
+- ✅ Distribution: `[YOUR-DISTRIBUTION-ID]`
+- ✅ Origin: `[your-site-domain].s3.us-west-2.amazonaws.com` (regional endpoint)
 - ✅ HTTPS: ✅ Enabled with ACM cert
 - ✅ HTTP → HTTPS: Automatic redirect
 
@@ -194,11 +194,11 @@ perl scripts/deploy.pl --invalidate-only --profile aerospaceug-admin
 ### Never Commit to GitHub
 
 ❌ **DON'T hardcode:**
-- AWS Account ID: `318434843903`
-- S3 Bucket: `bryanchasko.com`
-- CloudFront Distribution: `[your-actual-distribution-id]`
-- OAC ID: `E3CW7HU0VHU337`
-- AWS Profile: `aerospaceug-admin`
+- AWS Account ID: `[YOUR-AWS-ACCOUNT-ID]`
+- S3 Bucket: `[your-site-domain]`
+- CloudFront Distribution: `[YOUR-DISTRIBUTION-ID]`
+- OAC ID: `[YOUR-OAC-ID]`
+- AWS Profile: `[YOUR-AWS-PROFILE]`
 
 ✅ **DO use:**
 - Environment variables
@@ -328,7 +328,7 @@ aws s3api get-bucket-policy --bucket bryanchasko.com --profile aerospaceug-admin
 # Verify CloudFront has OAC set
 aws cloudfront get-distribution-config --id [your-actual-distribution-id] --profile aerospaceug-admin | jq '.DistributionConfig.Origins.Items[0] | {OriginAccessControlId}'
 
-# Should show OAC ID: "E3CW7HU0VHU337"
+# Should show OAC ID: "[YOUR-OAC-ID]"
 ```
 
 ### Cache Not Updating After Deploy

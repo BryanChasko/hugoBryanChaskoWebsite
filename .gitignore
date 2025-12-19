@@ -1,4 +1,8 @@
 themes/PaperMod/
+
+# Private secrets reference (real values for documentation placeholders)
+.secrets-reference.json
+
 _README_HOSTING.md
 _AWS_ENVIRONMENT_DETAILS.md
 bucket-policy.json

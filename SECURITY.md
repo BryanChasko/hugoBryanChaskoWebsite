@@ -21,10 +21,10 @@ dns-record.json
 ```
 
 These files contain:
-- ❌ AWS Account ID: `318434843903`
-- ❌ S3 Bucket Name: `bryanchasko.com`
-- ❌ CloudFront Distribution ID: `[your-actual-distribution-id]` (example only - never hardcode actual IDs)
-- ❌ Origin Access Control ID: `E3CW7HU0VHU337`
+- ❌ AWS Account ID: `[YOUR-AWS-ACCOUNT-ID]`
+- ❌ S3 Bucket Name: `[your-site-domain]`
+- ❌ CloudFront Distribution ID: `[YOUR-DISTRIBUTION-ID]` (example only - never hardcode actual IDs)
+- ❌ Origin Access Control ID: `[YOUR-OAC-ID]`
 - ❌ AWS Role ARNs and IAM policies
 - ❌ Route 53 zone configuration
 
@@ -36,10 +36,10 @@ Create `~/.bcc-site/config.json` (in your home directory, NOT the repo):
 
 ```json
 {
-  "SITE_DOMAIN": "bryanchasko.com",
-  "SITE_BUCKET": "bryanchasko.com",
-  "SITE_DISTRIBUTION_ID": "[your-actual-distribution-id]",  // NEVER hardcode, use Parameter Store only
-  "AWS_PROFILE": "aerospaceug-admin",
+  "SITE_DOMAIN": "[your-site-domain]",
+  "SITE_BUCKET": "[your-site-domain]",
+  "SITE_DISTRIBUTION_ID": "[YOUR-DISTRIBUTION-ID]",  // NEVER hardcode, use Parameter Store only
+  "AWS_PROFILE": "[YOUR-AWS-PROFILE]",
   "AWS_REGION": "us-west-2"
 }
 ```
