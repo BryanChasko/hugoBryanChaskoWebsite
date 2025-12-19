@@ -218,7 +218,25 @@ data "aws_iam_policy_document" "github_actions_permissions" {
       "s3:GetBucketOwnershipControls",
       "s3:PutBucketOwnershipControls",
       "s3:GetAccelerateConfiguration",
-      "s3:PutAccelerateConfiguration"
+      "s3:PutAccelerateConfiguration",
+      "s3:GetBucketRequestPayment",
+      "s3:PutBucketRequestPayment",
+      "s3:GetBucketLocation",
+      "s3:GetBucketNotification",
+      "s3:PutBucketNotification",
+      "s3:GetBucketReplication",
+      "s3:PutBucketReplication",
+      "s3:GetBucketObjectLockConfiguration",
+      "s3:PutBucketObjectLockConfiguration",
+      "s3:GetBucketIntelligentTieringConfiguration",
+      "s3:PutBucketIntelligentTieringConfiguration",
+      "s3:GetAnalyticsConfiguration",
+      "s3:PutAnalyticsConfiguration",
+      "s3:GetInventoryConfiguration",
+      "s3:PutInventoryConfiguration",
+      "s3:GetMetricsConfiguration",
+      "s3:PutMetricsConfiguration",
+      "s3:ListBucket"
     ]
     resources = ["*"]
   }
