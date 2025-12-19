@@ -297,10 +297,34 @@ sub deploy {
     die Out::err("Hugo build failed") if $bc!=0;
     Out::ok('Hugo build complete');
   }
+  
+  # Step 1.5: Run WebGL Tests (unless --skip-tests flag)
+  if (!$opts{skip_tests} && !$opts{invalidate_only}) {
+    Out::info('Step 1.5/4: Running WebGL visual regression & performance tests…');
+    
+    # Check if npm and node_modules exist
+    my $has_npm = Util::which('npm');
+    my $has_node_modules = -d 'node_modules';
+    
+    if (!$has_npm) {
+      Out::warn('npm not found - skipping WebGL tests. Install Node.js to enable testing.');
+    } elsif (!$has_node_modules) {
+      Out::warn('node_modules not found - run `npm install` to enable WebGL tests');
+    } else {
+      my ($tc,$to,$te) = Util::run(['npm', 'test'], verbose=>1, dry_run=>$opts{dry_run});
+      if ($tc != 0) {
+        Out::err('WebGL tests failed. Use --skip-tests to bypass for emergency deploys.');
+        exit 1 unless $opts{dry_run};
+      }
+      Out::ok('All WebGL tests passed ✓');
+    }
+  } elsif ($opts{skip_tests}) {
+    Out::warn('Skipping WebGL tests (--skip-tests flag set)');
+  }
 
   # Step 2: Upload to S3
   if (!$opts{skip_upload} && !$opts{invalidate_only}) {
-    Out::info("Step 2/3: Syncing public/ to s3://$cfg{bucket} …");
+    Out::info("Step 2/4: Syncing public/ to s3://$cfg{bucket} …");
     my ($sc,$so,$se) = $self->{aws}->s3_sync_public($cfg{bucket});
     die Out::err('S3 sync failed') if $sc!=0;
     Out::ok('S3 sync complete');
@@ -311,10 +335,21 @@ sub deploy {
   }
 
   # Step 3: Invalidate CloudFront (AFTER upload is complete)
-  Out::info("Step 3/3: Invalidating CloudFront distribution $cfg{distribution_id} (paths=".($opts{paths}//'/*').") …");
+  Out::info("Step 3/4: Invalidating CloudFront distribution $cfg{distribution_id} (paths=".($opts{paths}//'/*').") …");
   my ($ic,$io,$ie) = $self->{aws}->cloudfront_invalidate($cfg{distribution_id}, $opts{paths}//'/*');
   die Out::err('CloudFront invalidation failed') if $ic!=0;
   Out::ok('CloudFront invalidation submitted');
+  
+  # Step 4: Update baselines if on main branch
+  if (!$opts{dry_run} && $ENV{GITHUB_REF} && $ENV{GITHUB_REF} eq 'refs/heads/main') {
+    Out::info('Step 4/4: Updating visual regression baselines (main branch)…');
+    my ($uc,$uo,$ue) = Util::run(['npm', 'run', 'test:update-baselines'], verbose=>1, dry_run=>$opts{dry_run});
+    if ($uc == 0) {
+      Out::ok('Baselines updated successfully ✓');
+    } else {
+      Out::warn('Baseline update failed (non-blocking): '.$ue);
+    }
+  }
 
   Out::ok('Deploy complete! Changes will be visible once CloudFront invalidation finishes (usually 1-2 minutes).');
 }
@@ -331,7 +366,7 @@ sub main {
   GetOptions(
     'profile=s'=>\$opts{profile}, 'region=s'=>\$opts{region}, 'bucket=s'=>\$opts{bucket}, 'domain=s'=>\$opts{domain},
     'distribution-id=s'=>\$opts{distribution_id}, 'param-path=s'=>\$opts{param_path}, 'paths=s'=>\$opts{paths},
-    'minify!' =>\$opts{minify}, 'skip-build'=>\$opts{skip_build}, 'skip-upload'=>\$opts{skip_upload},
+    'minify!' =>\$opts{minify}, 'skip-build'=>\$opts{skip_build}, 'skip-upload'=>\$opts{skip_upload}, 'skip-tests'=>\$opts{skip_tests},
     'invalidate-only'=>\$opts{invalidate_only}, 'dry-run'=>\$opts{dry_run}, 'verbose'=>\$opts{verbose}, 'help'=>\$opts{help},
   ) or die "Invalid options. Use --help.\n";
 
@@ -342,11 +377,12 @@ Usage:
                          [--bucket BUCKET] [--domain DOMAIN]
                          [--distribution-id ID] [--param-path /path]
                          [--paths "/*"] [--no-minify]
-                         [--skip-build] [--skip-upload] [--invalidate-only]
+                         [--skip-build] [--skip-upload] [--skip-tests] [--invalidate-only]
                          [--dry-run] [--verbose]
 
 Config priority: CLI > ENV (SITE_*, AWS_*) > ~/.bcc-site/config.json > SSM path > hugo.toml baseURL (domain)
-Always invalidates CloudFront. Build+upload run unless skipped. Dry-run avoids external calls and uses placeholders.
+Always invalidates CloudFront. Build+upload+tests run unless skipped. Use --skip-tests for emergency deploys.
+Dry-run avoids external calls and uses placeholders.
 
 ENV:
   SITE_DOMAIN, SITE_BUCKET, SITE_DISTRIBUTION_ID, SITE_PARAM_PATH, SITE_CONFIG_FILE

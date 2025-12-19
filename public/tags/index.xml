@@ -2,288 +2,288 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Bryan Chasko&#39;s Portfolio</title>
-    <link>https://bryanchasko.com/tags/</link>
+    <link>http://localhost:64541/tags/</link>
     <description>Recent content in Tags on Bryan Chasko&#39;s Portfolio</description>
     <image>
       <title>Bryan Chasko&#39;s Portfolio</title>
-      <url>https://bryanchasko.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://bryanchasko.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:64541/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:64541/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
     <lastBuildDate>Sun, 07 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://bryanchasko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:64541/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>#AWSHero</title>
-      <link>https://bryanchasko.com/tags/%23awshero/</link>
+      <link>http://localhost:64541/tags/%23awshero/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/%23awshero/</guid>
+      <guid>http://localhost:64541/tags/%23awshero/</guid>
       <description></description>
     </item>
     <item>
       <title>AboutMe</title>
-      <link>https://bryanchasko.com/tags/aboutme/</link>
+      <link>http://localhost:64541/tags/aboutme/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/aboutme/</guid>
+      <guid>http://localhost:64541/tags/aboutme/</guid>
       <description></description>
     </item>
     <item>
       <title>Amazon</title>
-      <link>https://bryanchasko.com/tags/amazon/</link>
+      <link>http://localhost:64541/tags/amazon/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/amazon/</guid>
+      <guid>http://localhost:64541/tags/amazon/</guid>
       <description></description>
     </item>
     <item>
       <title>AWS</title>
-      <link>https://bryanchasko.com/tags/aws/</link>
+      <link>http://localhost:64541/tags/aws/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/aws/</guid>
+      <guid>http://localhost:64541/tags/aws/</guid>
       <description></description>
     </item>
     <item>
       <title>AWS Hero</title>
-      <link>https://bryanchasko.com/tags/aws-hero/</link>
+      <link>http://localhost:64541/tags/aws-hero/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/aws-hero/</guid>
+      <guid>http://localhost:64541/tags/aws-hero/</guid>
       <description></description>
     </item>
     <item>
       <title>BryanChasko</title>
-      <link>https://bryanchasko.com/tags/bryanchasko/</link>
+      <link>http://localhost:64541/tags/bryanchasko/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/bryanchasko/</guid>
+      <guid>http://localhost:64541/tags/bryanchasko/</guid>
       <description></description>
     </item>
     <item>
       <title>CareerProfile</title>
-      <link>https://bryanchasko.com/tags/careerprofile/</link>
+      <link>http://localhost:64541/tags/careerprofile/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/careerprofile/</guid>
+      <guid>http://localhost:64541/tags/careerprofile/</guid>
       <description></description>
     </item>
     <item>
       <title>Cloud</title>
-      <link>https://bryanchasko.com/tags/cloud/</link>
+      <link>http://localhost:64541/tags/cloud/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/cloud/</guid>
+      <guid>http://localhost:64541/tags/cloud/</guid>
       <description></description>
     </item>
     <item>
       <title>Getting Started</title>
-      <link>https://bryanchasko.com/tags/getting-started/</link>
+      <link>http://localhost:64541/tags/getting-started/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/getting-started/</guid>
+      <guid>http://localhost:64541/tags/getting-started/</guid>
       <description></description>
     </item>
     <item>
       <title>ITConsulting</title>
-      <link>https://bryanchasko.com/tags/itconsulting/</link>
+      <link>http://localhost:64541/tags/itconsulting/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/itconsulting/</guid>
+      <guid>http://localhost:64541/tags/itconsulting/</guid>
       <description></description>
     </item>
     <item>
       <title>ProfessionalExperience</title>
-      <link>https://bryanchasko.com/tags/professionalexperience/</link>
+      <link>http://localhost:64541/tags/professionalexperience/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/professionalexperience/</guid>
+      <guid>http://localhost:64541/tags/professionalexperience/</guid>
       <description></description>
     </item>
     <item>
       <title>SoftwareDevelopment</title>
-      <link>https://bryanchasko.com/tags/softwaredevelopment/</link>
+      <link>http://localhost:64541/tags/softwaredevelopment/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/softwaredevelopment/</guid>
+      <guid>http://localhost:64541/tags/softwaredevelopment/</guid>
       <description></description>
     </item>
     <item>
       <title>Solutions Architect</title>
-      <link>https://bryanchasko.com/tags/solutions-architect/</link>
+      <link>http://localhost:64541/tags/solutions-architect/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/solutions-architect/</guid>
+      <guid>http://localhost:64541/tags/solutions-architect/</guid>
       <description></description>
     </item>
     <item>
       <title>TechnicalExpertise</title>
-      <link>https://bryanchasko.com/tags/technicalexpertise/</link>
+      <link>http://localhost:64541/tags/technicalexpertise/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/technicalexpertise/</guid>
+      <guid>http://localhost:64541/tags/technicalexpertise/</guid>
       <description></description>
     </item>
     <item>
       <title>TechSkills</title>
-      <link>https://bryanchasko.com/tags/techskills/</link>
+      <link>http://localhost:64541/tags/techskills/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/techskills/</guid>
+      <guid>http://localhost:64541/tags/techskills/</guid>
       <description></description>
     </item>
     <item>
       <title>Artificial Intelligence</title>
-      <link>https://bryanchasko.com/tags/artificial-intelligence/</link>
+      <link>http://localhost:64541/tags/artificial-intelligence/</link>
       <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/artificial-intelligence/</guid>
+      <guid>http://localhost:64541/tags/artificial-intelligence/</guid>
       <description></description>
     </item>
     <item>
       <title>Bryan Chasko</title>
-      <link>https://bryanchasko.com/tags/bryan-chasko/</link>
+      <link>http://localhost:64541/tags/bryan-chasko/</link>
       <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/bryan-chasko/</guid>
+      <guid>http://localhost:64541/tags/bryan-chasko/</guid>
       <description></description>
     </item>
     <item>
       <title>Career Profile</title>
-      <link>https://bryanchasko.com/tags/career-profile/</link>
+      <link>http://localhost:64541/tags/career-profile/</link>
       <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/career-profile/</guid>
+      <guid>http://localhost:64541/tags/career-profile/</guid>
       <description></description>
     </item>
     <item>
       <title>Consulting</title>
-      <link>https://bryanchasko.com/tags/consulting/</link>
+      <link>http://localhost:64541/tags/consulting/</link>
       <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/consulting/</guid>
+      <guid>http://localhost:64541/tags/consulting/</guid>
       <description></description>
     </item>
     <item>
       <title>Fractional CTO</title>
-      <link>https://bryanchasko.com/tags/fractional-cto/</link>
+      <link>http://localhost:64541/tags/fractional-cto/</link>
       <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/fractional-cto/</guid>
+      <guid>http://localhost:64541/tags/fractional-cto/</guid>
       <description></description>
     </item>
     <item>
       <title>Freelancer for Hire</title>
-      <link>https://bryanchasko.com/tags/freelancer-for-hire/</link>
+      <link>http://localhost:64541/tags/freelancer-for-hire/</link>
       <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/freelancer-for-hire/</guid>
+      <guid>http://localhost:64541/tags/freelancer-for-hire/</guid>
       <description></description>
     </item>
     <item>
       <title>GameTech</title>
-      <link>https://bryanchasko.com/tags/gametech/</link>
+      <link>http://localhost:64541/tags/gametech/</link>
       <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/gametech/</guid>
+      <guid>http://localhost:64541/tags/gametech/</guid>
       <description></description>
     </item>
     <item>
       <title>Leadership</title>
-      <link>https://bryanchasko.com/tags/leadership/</link>
+      <link>http://localhost:64541/tags/leadership/</link>
       <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/leadership/</guid>
+      <guid>http://localhost:64541/tags/leadership/</guid>
       <description></description>
     </item>
     <item>
       <title>ProjectManagement</title>
-      <link>https://bryanchasko.com/tags/projectmanagement/</link>
+      <link>http://localhost:64541/tags/projectmanagement/</link>
       <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/projectmanagement/</guid>
+      <guid>http://localhost:64541/tags/projectmanagement/</guid>
       <description></description>
     </item>
     <item>
       <title>Software Development</title>
-      <link>https://bryanchasko.com/tags/software-development/</link>
+      <link>http://localhost:64541/tags/software-development/</link>
       <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/software-development/</guid>
+      <guid>http://localhost:64541/tags/software-development/</guid>
       <description></description>
     </item>
     <item>
       <title>Technical Expertise</title>
-      <link>https://bryanchasko.com/tags/technical-expertise/</link>
+      <link>http://localhost:64541/tags/technical-expertise/</link>
       <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/technical-expertise/</guid>
+      <guid>http://localhost:64541/tags/technical-expertise/</guid>
       <description></description>
     </item>
     <item>
       <title>Animal Protection New Mexico, Route 66</title>
-      <link>https://bryanchasko.com/tags/animal-protection-new-mexico-route-66/</link>
+      <link>http://localhost:64541/tags/animal-protection-new-mexico-route-66/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/animal-protection-new-mexico-route-66/</guid>
+      <guid>http://localhost:64541/tags/animal-protection-new-mexico-route-66/</guid>
       <description></description>
     </item>
     <item>
       <title>Animal Shelter</title>
-      <link>https://bryanchasko.com/tags/animal-shelter/</link>
+      <link>http://localhost:64541/tags/animal-shelter/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/animal-shelter/</guid>
+      <guid>http://localhost:64541/tags/animal-shelter/</guid>
       <description></description>
     </item>
     <item>
       <title>Buddy</title>
-      <link>https://bryanchasko.com/tags/buddy/</link>
+      <link>http://localhost:64541/tags/buddy/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/buddy/</guid>
+      <guid>http://localhost:64541/tags/buddy/</guid>
       <description></description>
     </item>
     <item>
       <title>Cat</title>
-      <link>https://bryanchasko.com/tags/cat/</link>
+      <link>http://localhost:64541/tags/cat/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/cat/</guid>
+      <guid>http://localhost:64541/tags/cat/</guid>
       <description></description>
     </item>
     <item>
       <title>Guadalupe County</title>
-      <link>https://bryanchasko.com/tags/guadalupe-county/</link>
+      <link>http://localhost:64541/tags/guadalupe-county/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/guadalupe-county/</guid>
+      <guid>http://localhost:64541/tags/guadalupe-county/</guid>
       <description></description>
     </item>
     <item>
       <title>Mesilla Park</title>
-      <link>https://bryanchasko.com/tags/mesilla-park/</link>
+      <link>http://localhost:64541/tags/mesilla-park/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/mesilla-park/</guid>
+      <guid>http://localhost:64541/tags/mesilla-park/</guid>
       <description></description>
     </item>
     <item>
       <title>New Mexico</title>
-      <link>https://bryanchasko.com/tags/new-mexico/</link>
+      <link>http://localhost:64541/tags/new-mexico/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/new-mexico/</guid>
+      <guid>http://localhost:64541/tags/new-mexico/</guid>
       <description></description>
     </item>
     <item>
       <title>Santa Rosa</title>
-      <link>https://bryanchasko.com/tags/santa-rosa/</link>
+      <link>http://localhost:64541/tags/santa-rosa/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/santa-rosa/</guid>
+      <guid>http://localhost:64541/tags/santa-rosa/</guid>
       <description></description>
     </item>
     <item>
       <title>Tabby</title>
-      <link>https://bryanchasko.com/tags/tabby/</link>
+      <link>http://localhost:64541/tags/tabby/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/tabby/</guid>
+      <guid>http://localhost:64541/tags/tabby/</guid>
       <description></description>
     </item>
     <item>
       <title>ForeverNE</title>
-      <link>https://bryanchasko.com/tags/foreverne/</link>
+      <link>http://localhost:64541/tags/foreverne/</link>
       <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/foreverne/</guid>
+      <guid>http://localhost:64541/tags/foreverne/</guid>
       <description></description>
     </item>
     <item>
       <title>New England</title>
-      <link>https://bryanchasko.com/tags/new-england/</link>
+      <link>http://localhost:64541/tags/new-england/</link>
       <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/new-england/</guid>
+      <guid>http://localhost:64541/tags/new-england/</guid>
       <description></description>
     </item>
     <item>
       <title>New England Patriots</title>
-      <link>https://bryanchasko.com/tags/new-england-patriots/</link>
+      <link>http://localhost:64541/tags/new-england-patriots/</link>
       <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/new-england-patriots/</guid>
+      <guid>http://localhost:64541/tags/new-england-patriots/</guid>
       <description></description>
     </item>
     <item>
       <title>Patriots</title>
-      <link>https://bryanchasko.com/tags/patriots/</link>
+      <link>http://localhost:64541/tags/patriots/</link>
       <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/tags/patriots/</guid>
+      <guid>http://localhost:64541/tags/patriots/</guid>
       <description></description>
     </item>
   </channel>

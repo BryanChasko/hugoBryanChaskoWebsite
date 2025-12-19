@@ -1,14 +1,65 @@
-/* Nebula Color Palette - CSS Custom Properties */
+/* ============================================
+   EXTENDED COLOR PALETTE SYSTEM
+   
+   Organization:
+   1. Core Brand Colors (existing)
+   2. WebGL Palette A: Vibrant Cosmic
+   3. WebGL Palette B: Soft Tech
+   4. Neutral Grays
+   5. Syntax Highlighting (Catppuccin)
+   6. Semantic Mappings (light/dark mode)
+   ============================================ */
 
 :root {
-  /* === BRAND COLORS === */
-  --nebula-dark-navy: #1C2230;
-  --nebula-purple: #5E41A2;
-  --nebula-lavender: #8169C5;
-  --nebula-orange: #FF9900;
-  --nebula-orange-dark: #E68A00;  /* Hover state */
+  /* ============================================
+     CORE BRAND COLORS
+     Primary identity colors used across all UI
+     ============================================ */
+  --brand-dark-navy: #1C2230;
+  --brand-purple: #5E41A2;
+  --brand-lavender: #8169C5;
+  --brand-orange: #FF9900;
+  --brand-orange-dark: #E68A00;
+  --brand-lavender-light: #A78BFA;
   
-  /* === NEUTRAL COLORS === */
+  /* Legacy aliases (backwards compatibility) */
+  --nebula-dark-navy: var(--brand-dark-navy);
+  --nebula-purple: var(--brand-purple);
+  --nebula-lavender: var(--brand-lavender);
+  --nebula-orange: var(--brand-orange);
+  --nebula-orange-dark: var(--brand-orange-dark);
+  
+  /* ============================================
+     WEBGL PALETTE A: VIBRANT COSMIC
+     Purple/Teal clash for dynamic energy effects
+     Use for: Particle systems, active states, 
+              high-energy animations
+     ============================================ */
+  --cosmic-base: #1C2230;           /* Dark navy foundation */
+  --cosmic-primary: #5E41A2;        /* Deep purple */
+  --cosmic-accent: #FF9900;         /* Vibrant orange */
+  --cosmic-energy: #00FA9A;         /* Medium spring green - NEW */
+  --cosmic-teal: #00CED1;           /* Dark turquoise */
+  --cosmic-purple-bright: #9D4EDD; /* Bright purple highlight */
+  
+  /* ============================================
+     WEBGL PALETTE B: SOFT TECH
+     Clean, readable modern aesthetic
+     Use for: UI overlays, tooltips, cards,
+              professional/business contexts
+     ============================================ */
+  --tech-base: #F9FAFB;            /* Light gray foundation */
+  --tech-primary: #8169C5;         /* Lavender */
+  --tech-accent: #A78BFA;          /* Light lavender */
+  --tech-gold: #FFD700;            /* Gold - NEW (replaces orange) */
+  --tech-slate: #475569;           /* Slate gray for contrast */
+  --tech-cyan: #06B6D4;            /* Cyan for interactive elements */
+  
+  /* ============================================
+     NEUTRAL GRAYS
+     Systematic gray scale for backgrounds,
+     borders, text hierarchy
+     ============================================ */
   --white: #FFFFFF;
   --gray-50: #F9FAFB;
   --gray-100: #F3F4F6;
@@ -24,7 +75,10 @@
   --black-light: #444;
   --black: #333;
   
-  /* === SYNTAX HIGHLIGHTING (Catppuccin) === */
+  /* ============================================
+     SYNTAX HIGHLIGHTING - CATPPUCCIN MACCHIATO
+     Code editor theme colors
+     ============================================ */
   --syntax-bg: #24273a;
   --syntax-text: #cad3f5;
   --syntax-error: #ed8796;
@@ -41,12 +95,15 @@
   --syntax-line-number: #8087a2;
   --syntax-diff-bg: #363a4f;
   
-  /* === SEMANTIC COLOR MAPPINGS === */
-  --color-primary: var(--nebula-purple);
-  --color-primary-hover: var(--nebula-lavender);
-  --color-accent: var(--nebula-orange);
-  --color-accent-dark: var(--nebula-orange-dark);
-  --color-dark: var(--nebula-dark-navy);
+  /* ============================================
+     SEMANTIC COLOR MAPPINGS - LIGHT MODE
+     Context-specific color assignments
+     ============================================ */
+  --color-primary: var(--brand-purple);
+  --color-primary-hover: var(--brand-lavender);
+  --color-accent: var(--brand-orange);
+  --color-accent-dark: var(--brand-orange-dark);
+  --color-dark: var(--brand-dark-navy);
   
   /* Light Theme Colors */
   --color-background: var(--white);
@@ -54,10 +111,16 @@
   --color-text: var(--gray-900);
   --color-text-secondary: var(--gray-500);
   --color-text-muted: var(--black-light);
-  --color-link: var(--nebula-purple);
-  --color-link-hover: var(--nebula-lavender);
+  --color-link: var(--brand-purple);
+  --color-link-hover: var(--brand-lavender);
   --color-border: var(--gray-200);
-  --color-border-hover: var(--nebula-lavender);
+  --color-border-hover: var(--brand-lavender);
+  
+  /* WebGL scene defaults (light mode) */
+  --webgl-palette: vibrant-cosmic;
+  --webgl-primary: var(--cosmic-primary);
+  --webgl-accent: var(--cosmic-accent);
+  --webgl-energy: var(--cosmic-energy);
   
   /* Spacing Scale */
   --space-xs: 0.25rem;    /* 4px */
@@ -107,15 +170,20 @@
 
 /* Dark Theme Overrides */
 [data-theme="dark"] {
-  --color-background: var(--nebula-dark-navy);
+  --color-background: var(--brand-dark-navy);
   --color-background-secondary: var(--gray-800);
   --color-text: var(--gray-100);
   --color-text-secondary: var(--gray-300);
   --color-text-muted: var(--gray-400);
-  --color-link: var(--nebula-lavender);
-  --color-link-hover: #A78BFA;
+  --color-link: var(--brand-lavender);
+  --color-link-hover: var(--brand-lavender-light);
   --color-border: var(--gray-700);
-  --color-border-hover: var(--nebula-lavender);
+  --color-border-hover: var(--brand-lavender);
+  
+  /* WebGL scene defaults (dark mode) */
+  --webgl-primary: var(--cosmic-purple-bright);
+  --webgl-accent: var(--cosmic-energy);
+  --webgl-energy: var(--cosmic-teal);
 }
 
 /* Legacy PaperMod Variable Mappings for Compatibility */

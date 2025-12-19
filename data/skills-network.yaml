@@ -1,0 +1,59 @@
+# Skills Network Graph Data
+# Used by SkillsNetworkScene for interactive visualization
+
+core_skills:
+  - AWS Cloud
+  - Artificial Intelligence
+  - Software Architecture
+  - Cloud Infrastructure
+  - Data Solutions
+
+aws_services:
+  - Lambda (Serverless)
+  - RDS (Databases)
+  - S3 (Storage)
+  - EC2 (Compute)
+  - VPC (Networking)
+  - CloudFront (CDN)
+  - Bedrock (Generative AI)
+  - DynamoDB (NoSQL)
+  - EventBridge (Events)
+  - SQS/SNS (Messaging)
+
+ai_specialties:
+  - Generative AI (LLMs)
+  - RAG (Retrieval-Augmented Generation)
+  - ML Pipelines
+  - AI Integration
+  - Prompt Engineering
+  - Vector Databases
+
+specializations:
+  - Solutions Architecture
+  - Enterprise Consulting
+  - Fractional CTO Services
+  - Cloud Strategy
+  - AI Readiness Assessment
+  - Non-profit Cloud Strategy
+  - Security & Compliance
+  - Performance Optimization
+
+technologies:
+  - TypeScript / Node.js
+  - Python
+  - Go
+  - Terraform (IaC)
+  - Docker / Kubernetes
+  - Grafana (Monitoring)
+  - PostgreSQL
+  - GraphQL
+
+domains:
+  - FinTech
+  - EdTech
+  - Healthcare
+  - Non-profits
+  - GovCloud (AWS)
+  - Satellite Networks (Amazon Leo)
+  - IoT & Edge Computing
+  - Robotics & Game Tech

@@ -1,6 +1,7 @@
 /* Modern Header with Glassmorphism and Gradient Effects */
 .header {
     position: relative;
+    z-index: 1000; /* Ensure header is above all other content */
     background: linear-gradient(
         135deg,
         rgba(255, 255, 255, 0.85) 0%,
@@ -111,12 +112,13 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Ensures all nav items are vertically centered */
     max-width: var(--container-max-width);
     margin-inline: auto;
     padding-inline: var(--container-padding);
     line-height: var(--header-height);
     gap: var(--space-xs);
+    min-height: var(--header-height); /* Ensure consistent height */
 }
 
 /* Mobile: compact single-line header - NO SCROLLING */
@@ -125,7 +127,7 @@
         padding-inline: var(--space-xs) !important;
         gap: 4px !important;
         flex-wrap: nowrap !important;
-        overflow: hidden !important;
+        overflow: visible !important;
         justify-content: space-between !important;
     }
     
@@ -183,7 +185,8 @@
         justify-content: flex-end !important;
         align-items: center !important;
         margin: 0 !important;
-        overflow: hidden !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
         min-width: 0 !important;
     }
     
@@ -365,19 +368,11 @@
     letter-spacing: 0.02em;
     position: relative;
     background: transparent;
-    /* Vibrant gradient text for light mode logo */
-    background: linear-gradient(
-        135deg,
-        var(--nebula-orange) 0%,
-        var(--nebula-purple) 35%,
-        var(--nebula-lavender) 65%,
-        var(--nebula-orange) 100%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 250% 100%;
-    animation: logo-shimmer-enhanced 6s ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--nebula-orange);
+    cursor: pointer;
 }
 
 @keyframes logo-shimmer-enhanced {
@@ -392,47 +387,19 @@
 }
 
 [data-theme="dark"] .logo a {
-    background: linear-gradient(
-        135deg,
-        var(--color-text) 0%,
-        var(--nebula-lavender) 50%,
-        var(--color-text) 100%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% 100%;
+    color: var(--nebula-lavender);
 }
 
 .logo a:hover {
-    background: linear-gradient(
-        135deg,
-        var(--nebula-purple) 0%,
-        var(--nebula-orange) 30%,
-        var(--nebula-lavender) 60%,
-        var(--nebula-purple) 100%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 100% 100%;
-    animation: none;
-    filter: drop-shadow(0 0 8px rgba(129, 105, 197, 0.4));
+    color: var(--nebula-lavender);
+    opacity: 0.8;
     transform: translateY(-1px);
+    filter: drop-shadow(0 0 8px rgba(129, 105, 197, 0.4));
 }
 
 [data-theme="dark"] .logo a:hover {
-    background: linear-gradient(
-        135deg,
-        var(--nebula-lavender) 0%,
-        #A78BFA 50%,
-        var(--nebula-orange) 100%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 100% 100%;
-    animation: none;
+    color: #A78BFA;
+    opacity: 0.9;
     filter: drop-shadow(0 0 10px rgba(129, 105, 197, 0.5));
 }
 
@@ -446,23 +413,32 @@
 .logo svg {
     display: inline-block !important;
     vertical-align: middle;
-    pointer-events: none;
+    pointer-events: auto;
     border-radius: var(--radius-md);
     margin-inline-end: var(--space-sm);
     height: 26px !important;
     width: auto !important;
 }
 
+/* Logo error handling - hide if image fails to load */
+.logo img.error,
+.logo .logo-missing {
+    display: none !important;
+}
+
 #theme-toggle {
-    font-size: 26px;
+    font-size: 24px; /* Match logo text size */
     margin: auto 4px;
     background: transparent;
     border: none;
     cursor: pointer;
-    padding: 0.4em;
+    padding: 0.3em; /* Match logo padding for consistent baseline */
     border-radius: 50%;
     transition: all var(--transition-base);
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 [data-theme="dark"] #theme-toggle {
@@ -763,8 +739,9 @@
 .lang-switch ul,
 .logo-switches {
     display: inline-flex;
-    align-items: center;
+    align-items: center; /* Vertically center all switch elements */
     margin: auto 4px;
+    height: 100%; /* Match parent height for consistent alignment */
 }
 
 .lang-switch {

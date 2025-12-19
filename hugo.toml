@@ -73,7 +73,7 @@ buildExpired = false
 
 [params.homeInfoParams]
   Title = "Hello, Friend ^.^"
-Content = "[🦊&nbsp;About](blog/posts/about-bryan-chasko) [🐈&nbsp;Buddy](blog/posts/my-cat-buddy) [🏈&nbsp;#ForeverNE](blog/posts/new-england-patriots-fandom) [🔧&nbsp;Skills](blog/posts/my-skills-and-experience#skills) [📈&nbsp;Experience](blog/posts/my-skills-and-experience#experience) [☁️&nbsp;AWS Cloud](blog/posts/aws-cloud-projects) [📅&nbsp;Booking](cloudcroft-cloud-company)"
+Content = "[🦊&nbsp;About](blog/posts/about-bryan-chasko) [🐈&nbsp;Buddy](blog/posts/my-cat-buddy) [🏈&nbsp;#ForeverNE](blog/posts/new-england-patriots-fandom) [🔧&nbsp;Skills](blog/posts/my-skills-and-experience#skills) [📈&nbsp;Experience](blog/posts/my-skills-and-experience#experience) [☁️&nbsp;AWS Cloud](blog/posts/aws-hero-bryan-chasko) [📅&nbsp;Booking](cloudcroft-cloud-company)"
 
   [[params.homeInfoParams.instagram]]
     url = "https://www.instagram.com/p/EXAMPLE1/"
@@ -116,10 +116,10 @@ Content = "[🦊&nbsp;About](blog/posts/about-bryan-chasko) [🐈&nbsp;Buddy](bl
     hiddenInList = true # hide on list pages and home
     hiddenInSingle = true # hide on single page
 
-  [params.editPost]
-    URL = "https://github.com/BryanChasko/bryanChaskoHugo/content"
-    Text = "Suggest Changes" # edit text
-    appendFilePath = true # to append file path to Edit link
+  # [params.editPost]
+    # URL = "https://github.com/BryanChasko/bryan-chasko-com/content"
+    # Text = "Suggest Changes" # edit text
+    # appendFilePath = true # to append file path to Edit link
 
   [params.fuseOpts]
     isCaseSensitive = false
@@ -142,11 +142,6 @@ Content = "[🦊&nbsp;About](blog/posts/about-bryan-chasko) [🐈&nbsp;Buddy](bl
     name = "Blog"
     url = "/blog/"
     weight = 20
-  [[menu.main]]
-    identifier = "notes"
-    name = "Notes"
-    url = "/notes/"
-    weight = 25
   [[menu.main]]
     identifier = "contact"
     name = "Contact"

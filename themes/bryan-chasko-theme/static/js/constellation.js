@@ -8,7 +8,7 @@ class ConstellationScene {
   constructor(container, options = {}) {
     this.container = container;
     this.options = {
-      particleCount: options.particleCount || 80,
+      particleCount: options.particleCount || 82,
       connectionDistance: options.connectionDistance || 120,
       particleSpeed: options.particleSpeed || 0.3,
       mouseInfluence: options.mouseInfluence || 100,
@@ -23,11 +23,11 @@ class ConstellationScene {
     this.isRunning = false;
     this.lastTime = 0;
     
-    // Theme colors (will be updated by ThemeShaderHelper)
+    // Theme colors - orange/gold tones to avoid purple/white conflict
     this.colors = {
-      particle: [0.369, 0.255, 0.635, 1.0],      // nebula-purple
-      connection: [0.506, 0.412, 0.772, 0.3],    // nebula-lavender
-      highlight: [1.0, 0.6, 0.0, 1.0]            // nebula-orange
+      particle: [1.0, 0.6, 0.0, 0.15],           // nebula-orange, very subtle
+      connection: [1.0, 0.71, 0.39, 0.12],       // warm gold, barely visible
+      highlight: [1.0, 0.8, 0.4, 0.2]            // lighter gold highlight
     };
     
     // Check for reduced motion preference
@@ -408,7 +408,7 @@ class ConstellationScene {
     const lines = [];
     const lineColors = [];
     
-    // Find connections (O(n²) but acceptable for ~80 particles)
+    // Find connections (O(n²) but acceptable for ~132 particles)
     for (let i = 0; i < this.particles.length; i++) {
       for (let j = i + 1; j < this.particles.length; j++) {
         const p1 = this.particles[i];
@@ -521,34 +521,31 @@ class ConstellationScene {
 document.addEventListener('DOMContentLoaded', () => {
   const containers = document.querySelectorAll('[data-constellation]');
   
-  containers.forEach(container => {
-    // Check GPU capability first
-    if (window.GPUCapabilityDetector) {
-      const detector = new GPUCapabilityDetector();
-      const tier = detector.getTier();
+  console.log(`[Constellation] Found ${containers.length} constellation container(s)`);
+  
+  containers.forEach((container, index) => {
+    try {
+      console.log(`[Constellation] Initializing constellation ${index + 1}...`);
       
-      if (tier < 1) {
-        // Too low capability, skip WebGL
-        container.classList.add('webgl-fallback-active');
-        return;
-      }
+      // Use default particle count (GPU detection handled by WebGLResourceMonitor if available)
+      const scene = new ConstellationScene(container, { particleCount: 132 });
       
-      // Adjust particle count based on GPU tier
-      const particleCounts = { 1: 40, 2: 60, 3: 80 };
-      const particleCount = particleCounts[tier] || 60;
+      // Store reference for debugging
+      if (!window.constellationScenes) window.constellationScenes = [];
+      window.constellationScenes.push(scene);
       
-      const scene = new ConstellationScene(container, { particleCount });
+      console.log(`[Constellation] Successfully initialized constellation ${index + 1}`);
       
-      // Set up resource monitoring
+      // Set up resource monitoring if available
       if (window.WebGLResourceMonitor) {
         window.constellationMonitor = new WebGLResourceMonitor(scene.gl, {
           idleTimeout: 180000, // 3 minutes
           onDispose: () => scene.pause()
         });
       }
-    } else {
-      // No detector, use defaults
-      new ConstellationScene(container);
+    } catch (error) {
+      console.error(`[Constellation] Failed to initialize constellation ${index + 1}:`, error);
+      container.classList.add('webgl-fallback-active');
     }
   });
 });

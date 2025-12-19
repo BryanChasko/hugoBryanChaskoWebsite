@@ -147,8 +147,20 @@
 </script>
 {{- end }}
 
-{{/* WebGL Scripts - Load only when needed */}}
-{{- if .IsHome }}
+{{/* WebGL Scripts - Load scene modules progressively */}}
+{{- if or .IsHome (eq .Section "blog") (.Params.webglSkills) }}
 <script src="{{ "js/webgl-monitor.js" | relURL }}" defer></script>
+<script src="{{ "js/webgl-scenes/BaseScene.js" | relURL }}" defer></script>
+<script src="{{ "js/webgl-scenes/TransitionScene.js" | relURL }}" defer></script>
+{{- if .IsHome }}
+<script src="{{ "js/webgl-scenes/OrbitScene.js" | relURL }}" defer></script>
 <script src="{{ "js/constellation.js" | relURL }}" defer></script>
+{{- end }}
+{{- if eq .Section "blog" }}
+<script src="{{ "js/webgl-scenes/RippleScene.js" | relURL }}" defer></script>
+{{- end }}
+{{- if .Params.webglSkills }}
+<script src="{{ "js/webgl-scenes/SkillsNetworkScene.js" | relURL }}" defer></script>
+{{- end }}
+<script src="{{ "js/webgl-scenes/SceneInitializer.js" | relURL }}" defer></script>
 {{- end }}

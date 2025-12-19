@@ -4,6 +4,7 @@
 .home-info .entry-header {
   display: block !important;
   -webkit-line-clamp: unset !important;
+  line-clamp: unset !important;
   -webkit-box-orient: unset !important;
   overflow: visible !important;
 }
@@ -29,6 +30,7 @@
   justify-content: center !important;
   gap: 0.5rem !important;
   -webkit-line-clamp: unset !important;
+  line-clamp: unset !important;
   -webkit-box-orient: unset !important;
   overflow: visible !important;
 }
@@ -561,7 +563,7 @@
 
 /* Center home-info container - completely transparent, no card styling */
 .home-info {
-  position: relative; /* For constellation positioning */
+  position: relative;
   max-width: var(--container-max-width);
   margin: 0 auto;
   padding: var(--space-xl) var(--container-padding);
@@ -573,8 +575,17 @@
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
   min-height: auto !important;
-  /* Ensure content is above constellation */
+  /* Ensure content is above constellation (now full viewport) */
   isolation: isolate;
+  /* Allow clicks to pass through to constellation */
+  pointer-events: none;
+}
+
+/* Re-enable pointer events on interactive content */
+.home-info .entry-header,
+.home-info .entry-content,
+.home-info .entry-footer {
+  pointer-events: auto;
 }
 
 /* Remove the gradient accent line from home-info */
@@ -596,16 +607,25 @@
 /* Center social icons on home page - no enclosing box */
 .home-info .entry-footer {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   width: 100%;
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
+  /* Footer container transparent - let events pass through to constellation */
+  pointer-events: none !important;
 }
 
-/* Builder card needs pointer events */
+/* Builder card needs pointer events - it's interactive */
 .builder-card {
   pointer-events: auto;
+}
+
+/* Social container stays transparent (has its own pointer-events rules) */
+.home-social-container {
+  pointer-events: none !important;
 }
 
 /* Home social container - Instagram + Social icons side by side */
@@ -618,13 +638,20 @@
   width: 100%;
   margin-top: var(--space-lg);
   pointer-events: none;
+  /* Ensure grid items themselves are also transparent to events */
+  isolation: isolate;
 }
 
 /* Instagram embed container */
 .home-instagram-embed {
   display: flex;
   justify-content: center;
-  pointer-events: auto; /* Instagram embed is interactive */
+  pointer-events: none; /* Container transparent */
+}
+
+/* Only the actual Instagram iframe is interactive */
+.home-instagram-embed .instagram-media {
+  pointer-events: auto; /* Re-enable for actual embed */
 }
 
 /* Instagram embed styling - enhanced integration */
@@ -719,8 +746,8 @@
 .builder-card {
   margin: var(--space-sm) auto var(--space-lg) auto;
   max-width: var(--content-max-width);
-  padding: var(--space-lg);
-  border: 1px solid rgba(94, 65, 162, 0.18);
+  padding: 64px var(--space-xl);
+  border: 2px solid rgba(94, 65, 162, 0.25);
   border-radius: var(--radius-xl);
   background: linear-gradient(
     135deg,
@@ -732,14 +759,12 @@
   );
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: 
-    0 6px 24px -6px rgba(94, 65, 162, 0.15),
-    0 3px 12px -3px rgba(0, 0, 0, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9),
-    inset 0 -1px 0 rgba(94, 65, 162, 0.05);
+  /* No default shadow - only show on hover */
+  box-shadow: none;
   transition: all var(--transition-base);
   position: relative;
-  overflow: hidden;
+  overflow: visible; /* Allow WebGL canvas to render above card content */
+  z-index: 1;
 }
 
 /* Gradient accent line at top */
@@ -785,6 +810,7 @@
 
 .builder-card:hover {
   border-color: rgba(94, 65, 162, 0.25);
+  /* Show shadow only on hover */
   box-shadow: 
     0 8px 25px -5px rgba(94, 65, 162, 0.15),
     0 4px 10px -3px rgba(0, 0, 0, 0.08),
@@ -824,11 +850,9 @@
     rgba(32, 28, 42, 0.9) 75%,
     rgba(28, 34, 48, 0.95) 100%
   );
-  border-color: rgba(129, 105, 197, 0.2);
-  box-shadow: 
-    0 4px 20px -4px rgba(0, 0, 0, 0.3),
-    0 0 30px -10px rgba(129, 105, 197, 0.1),
-    inset 0 1px 0 rgba(129, 105, 197, 0.1);
+  border-color: rgba(129, 105, 197, 0.35);
+  /* No default shadow - only show on hover */
+  box-shadow: none;
 }
 
 [data-theme="dark"] .builder-card::before {
@@ -854,6 +878,7 @@
 
 [data-theme="dark"] .builder-card:hover {
   border-color: rgba(129, 105, 197, 0.35);
+  /* Show shadow only on hover */
   box-shadow: 
     0 12px 35px -8px rgba(0, 0, 0, 0.4),
     0 0 40px -10px rgba(129, 105, 197, 0.25),
@@ -869,46 +894,160 @@
   display: block;
   text-decoration: none;
   color: var(--color-text);
+  position: relative;
+  z-index: 2; /* Below canvas z-index: 3 */
+}
+
+/* Desktop: Position canvas on the arrow (right side of CTA button) */
+@media (min-width: 769px) {
+  .builder-card[data-orbit-scene] canvas {
+    position: absolute !important;
+    top: 50% !important;
+    right: -60px !important; /* Position to the right of the card, overlaying the button area */
+    left: auto !important;
+    transform: translateY(-50%) !important;
+    width: 240px !important;
+    height: 240px !important;
+    z-index: 3 !important; /* Above link text (z-index: 2) */
+    pointer-events: none !important; /* Click-through to button */
+  }
+}
+
+.builder-card-content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  height: 100%;
+}
+
+.builder-card-overline {
+  display: inline-block;
+  padding: 6px 16px;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--nebula-orange);
+  background: rgba(255, 153, 0, 0.12);
+  border: 1px solid rgba(255, 153, 0, 0.25);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-md);
+  width: fit-content;
+}
+
+[data-theme="dark"] .builder-card-overline {
+  color: var(--nebula-orange);
+  background: rgba(255, 153, 0, 0.15);
+  border-color: rgba(255, 153, 0, 0.3);
+}
+
+.builder-card-body {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-lg);
+  align-items: end;
+  margin-top: auto;
+}
+
+/* Desktop: Button in second column */
+@media (min-width: 769px) {
+  .builder-card-cta {
+    grid-column: 2;
+  }
+}
+
+/* Mobile: Stack vertically - button below text */
+@media (max-width: 768px) {
+  .builder-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    text-align: center;
+  }
+  
+  .builder-card-cta {
+    order: 2;
+    align-self: center;
+    margin-top: var(--space-md);
+    max-width: 240px;
+    width: 100%;
+  }
+  
+  .builder-card-description {
+    order: 1;
+  }
 }
 
 .builder-card-header {
-  font-weight: 600;
-  color: var(--color-link);
-  margin-bottom: var(--space-xs);
+  margin: 0;
 }
 
 .builder-card-title {
-  margin: 0 0 var(--space-xs) 0;
-  font-size: var(--font-size-xl);
+  margin: 0 0 var(--space-lg) 0;
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
   color: #1f2937;
+  line-height: var(--line-height-tight);
 }
 
 .builder-card-description {
-  margin: 0 0 var(--space-sm) 0;
-  color: #4b5563;
-  line-height: var(--line-height-base);
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  font-size: var(--font-size-base);
 }
 
 [data-theme="dark"] .builder-card-title {
-  color: var(--color-text);
+  color: #F5F5F5;
 }
 
 [data-theme="dark"] .builder-card-description {
-  color: var(--color-text-secondary);
+  color: #E0E0E0;
 }
 
 .builder-card-cta {
-  display: inline-block;
-  font-weight: 600;
-  color: var(--color-link);
-  background: rgba(216, 180, 254, 0.10);
-  border-radius: var(--radius-md);
-  padding: var(--space-xs) var(--space-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--nebula-orange), var(--nebula-orange-dark));
+  border: none;
+  border-radius: var(--radius-lg);
+  padding: var(--space-md) var(--space-xl);
+  box-shadow: 0 4px 16px rgba(255, 153, 0, 0.3);
+  transition: all var(--transition-base);
+  text-decoration: none;
+  cursor: pointer;
 }
 
+.builder-card-cta:hover,
 .builder-card-link:hover .builder-card-cta {
-  color: var(--color-link-hover);
-  background: rgba(216, 180, 254, 0.15);
+  background: linear-gradient(135deg, var(--nebula-orange-dark), #CC7A00);
+  box-shadow: 0 6px 20px rgba(255, 153, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Mobile OrbitScene positioning - canvas overlay on button area */
+@media (max-width: 768px) {
+  .builder-card[data-orbit-scene] canvas {
+    position: absolute !important;
+    bottom: -80px !important; /* Position below the card, overlaying the button */
+    right: 50% !important; /* Center horizontally */
+    left: auto !important;
+    transform: translateX(50%) !important; /* Offset to center */
+    width: 240px !important; /* Larger canvas for better visibility */
+    height: 240px !important;
+    z-index: 3 !important; /* Above link text (z-index: 2) */
+    pointer-events: none !important; /* Click-through to button */
+  }
+  
+  .builder-card[data-orbit-scene] {
+    position: relative; /* Establish positioning context */
+    overflow: visible !important; /* Allow canvas to overflow the card */
+  }
 }
 
 /* Removed social highlights and tweet embed styles */

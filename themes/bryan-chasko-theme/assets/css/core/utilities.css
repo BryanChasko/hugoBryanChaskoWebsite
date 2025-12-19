@@ -253,35 +253,35 @@
 
 /* ============================================
    CONSTELLATION HERO SPECIFIC
-   Positioned behind home-info content
+   Full viewport background - positioned behind all content
    ============================================ */
 .constellation-hero {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -1;
-  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  pointer-events: none; /* Container transparent */
   overflow: hidden;
-  border-radius: var(--radius-xl);
 }
 
-/* Allow mouse interaction for particle effects */
 .constellation-hero .webgl-canvas {
-  pointer-events: auto;
-  z-index: -1;
+  pointer-events: auto; /* Canvas interactive */
+  z-index: -2;
 }
 
-/* Constellation fallback - nebula gradient */
+/* Constellation fallback - subtle orange/gold gradient (matches WebGL colors) */
 .constellation-hero .webgl-fallback {
   position: absolute;
   inset: 0;
   background: 
-    radial-gradient(ellipse 80% 60% at 20% 30%, rgba(129, 105, 197, 0.15) 0%, transparent 50%),
-    radial-gradient(ellipse 60% 50% at 80% 70%, rgba(255, 153, 0, 0.1) 0%, transparent 45%),
-    radial-gradient(ellipse 40% 40% at 50% 50%, rgba(94, 65, 162, 0.08) 0%, transparent 40%);
-  opacity: 0.6;
+    radial-gradient(ellipse 80% 60% at 20% 30%, rgba(255, 153, 0, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 50% at 80% 70%, rgba(255, 180, 100, 0.06) 0%, transparent 45%),
+    radial-gradient(ellipse 40% 40% at 50% 50%, rgba(255, 200, 120, 0.04) 0%, transparent 40%);
+  opacity: 0.3;
   animation: constellation-fallback-drift 20s ease-in-out infinite;
 }
 
@@ -292,10 +292,10 @@
 
 [data-theme="dark"] .constellation-hero .webgl-fallback {
   background: 
-    radial-gradient(ellipse 80% 60% at 20% 30%, rgba(129, 105, 197, 0.2) 0%, transparent 50%),
-    radial-gradient(ellipse 60% 50% at 80% 70%, rgba(167, 139, 250, 0.15) 0%, transparent 45%),
-    radial-gradient(ellipse 40% 40% at 50% 50%, rgba(94, 65, 162, 0.12) 0%, transparent 40%);
-  opacity: 0.8;
+    radial-gradient(ellipse 80% 60% at 20% 30%, rgba(255, 153, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 50% at 80% 70%, rgba(255, 180, 100, 0.08) 0%, transparent 45%),
+    radial-gradient(ellipse 40% 40% at 50% 50%, rgba(255, 200, 120, 0.05) 0%, transparent 40%);
+  opacity: 0.4;
 }
 
 /* Hide fallback when WebGL is active */

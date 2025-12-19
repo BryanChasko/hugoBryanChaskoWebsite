@@ -1,10 +1,10 @@
 {{- with site.Params.homeInfoParams }}
+{{/* WebGL Constellation Background - Interactive full-viewport background */}}
+<div class="constellation-hero webgl-container" data-constellation aria-hidden="true">
+    <div class="webgl-fallback webgl-fallback--hero"></div>
+</div>
+
 <article class="first-entry home-info">
-    {{/* WebGL Constellation Background - Progressive Enhancement */}}
-    <div class="constellation-hero webgl-container" data-constellation aria-hidden="true">
-        <div class="webgl-fallback webgl-fallback--hero"></div>
-    </div>
-    
     <header class="entry-header">
         <h1><span class="terminal-user">^.^</span><span class="terminal-prompt">$</span><span class="terminal-text">Hello, Friend</span><span class="terminal-cursor">█</span></h1>
     </header>
@@ -12,12 +12,18 @@
         {{ .Content | markdownify }}
     </div>
     <footer class="entry-footer">
-        <div class="builder-card">
+        <div class="builder-card" data-orbit-scene>
             <a href="https://builder.aws.com/community/@bryanchasko" target="_blank" rel="noopener noreferrer" class="builder-card-link">
-                <div class="builder-card-header">AWS Builder Center</div>
-                <h3 class="builder-card-title">[300 Level] 📡☁️ Amazon Leo & AWS Architectures for Software-Defined Private Satellite Networking</h3>
-                <p class="builder-card-description">How to use Amazon Leo as a first-class part of your architecture—patterns like CVN and D2A, hybrid connectivity with PNI, and real‑world solution architectures from Space IoT and digital twins to video analytics and egress inspection.</p>
-                <span class="builder-card-cta">My latest article →</span>
+                <div class="builder-card-content">
+                    <div class="builder-card-header">
+                        <span class="builder-card-overline">AWS Builder Center</span>
+                    </div>
+                    <h3 class="builder-card-title">Amazon Leo & AWS Architectures for Software-Defined Private Satellite Networking 📡☁️</h3>
+                    <div class="builder-card-body">
+                        <p class="builder-card-description">How to use Amazon Leo as a first-class part of your architecture—patterns like CVN and D2A, hybrid connectivity with PNI, and real‑world solution architectures from Space IoT and digital twins to video analytics and egress inspection.</p>
+                        <span class="builder-card-cta">My Latest Article →</span>
+                    </div>
+                </div>
             </a>
         </div>
         <div class="home-social-container">

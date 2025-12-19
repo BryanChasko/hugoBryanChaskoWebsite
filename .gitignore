@@ -7,6 +7,9 @@ cloudfront-dns-record.json
 cors.json
 current-bucket-policy.json
 dns-record.json
+cloudfront-backup*.json
+current-distribution-config.json
+fixed-distribution-config.json
 # Internal development docs
 COLOR_PALETTE_REFERENCE.md
 CSS_REFACTORING_SUMMARY.md
@@ -15,3 +18,30 @@ THEME_DEVELOPMENT.md
 
 # Hugo build artifacts - hashed CSS files
 public/assets/css/stylesheet.*.css
+
+# WebGL Test Results & Artifacts
+test-results/
+playwright-report/
+tests/.baselines/
+*.spec.js-snapshots/
+videos/
+traces/
+.cache/
+node_modules/
+test-debug-output*.txt
+test-output*.txt
+test-orbit*.log
+
+# Terraform
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc

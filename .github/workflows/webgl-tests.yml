@@ -1,0 +1,169 @@
+name: WebGL Visual Regression & Performance Tests
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "themes/bryan-chasko-theme/static/js/**"
+      - "themes/bryan-chasko-theme/assets/js/**"
+      - "themes/bryan-chasko-theme/assets/css/**"
+      - "tests/**"
+      - "package.json"
+      - "playwright.config.js"
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: "20.x"
+  AWS_REGION: us-west-2
+
+jobs:
+  webgl-tests:
+    name: Cross-Browser WebGL Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, firefox, webkit]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Scan for secrets and sensitive information
+        run: |
+          echo "Scanning for hardcoded secrets, API keys, and credentials..."
+          # Check for common secret patterns
+          if grep -r --include="*.{js,ts,json,toml,yaml,yml,md}" \
+            -E "(password|api[_-]?key|secret|token|aws_access|aws_secret|private[_-]?key|credential)\s*[=:][\'\"]" \
+            . --exclude-dir=node_modules --exclude-dir=public --exclude-dir=.git; then
+            echo "❌ Potential secrets found in code. Please remove them before committing."
+            exit 1
+          fi
+          echo "✓ No hardcoded secrets detected"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps ${{ matrix.browser }}
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_OIDC_ROLE_ARN }}
+          role-session-name: webgl-tests-${{ matrix.browser }}-${{ github.run_id }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Run WebGL tests (${{ matrix.browser }})
+        run: npm run test:${{ matrix.browser }}
+        env:
+          # Auto-update baselines on main branch pushes
+          UPDATE_BASELINES: ${{ github.ref == 'refs/heads/main' && 'true' || 'false' }}
+          GITHUB_REF: ${{ github.ref }}
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results-${{ matrix.browser }}
+          path: |
+            test-results/
+            tests/.baselines/
+          retention-days: 30
+
+      - name: Upload Playwright report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-${{ matrix.browser }}
+          path: playwright-report/
+          retention-days: 30
+
+  comment-results:
+    name: Comment Test Results on PR
+    runs-on: ubuntu-latest
+    needs: webgl-tests
+    if: always() && github.event_name == 'pull_request'
+
+    steps:
+      - name: Download all test results
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts/
+
+      - name: Generate test summary
+        id: summary
+        run: |
+          echo "## WebGL Test Results" > summary.md
+          echo "" >> summary.md
+
+          # Check for test failures
+          if ls artifacts/test-results-*/results.json 2>/dev/null; then
+            echo "### Test Results by Browser" >> summary.md
+            for browser in chromium firefox webkit; do
+              if [ -f "artifacts/test-results-$browser/results.json" ]; then
+                echo "- **$browser**: ✅ Tests passed" >> summary.md
+              else
+                echo "- **$browser**: ❌ Tests failed or not run" >> summary.md
+              fi
+            done
+          else
+            echo "❌ No test results found" >> summary.md
+          fi
+
+          echo "" >> summary.md
+          echo "### Test Artifacts" >> summary.md
+          echo "View detailed test results and screenshots in the [Actions artifacts](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})" >> summary.md
+
+          # Save for PR comment
+          cat summary.md
+
+      - name: Comment on PR
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const summary = fs.readFileSync('summary.md', 'utf8');
+
+            // Find existing comment
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+
+            const botComment = comments.find(comment => 
+              comment.user.type === 'Bot' && 
+              comment.body.includes('WebGL Test Results')
+            );
+
+            const commentBody = `${summary}\n\n---\n*Automated comment by WebGL CI/CD*`;
+
+            if (botComment) {
+              // Update existing comment
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body: commentBody,
+              });
+            } else {
+              // Create new comment
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: commentBody,
+              });
+            }
