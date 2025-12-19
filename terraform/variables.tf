@@ -49,7 +49,7 @@ variable "terraform_state_lock_table_name" {
 variable "github_repository" {
   description = "GitHub repository used for OpenID Connect subject matching"
   type        = string
-  default     = "BryanChasko/bryan-chasko-com"
+  default     = "BryanChasko/hugoBryanChaskoWebsite"
 }
 
 variable "github_oidc_provider_url" {
@@ -73,5 +73,5 @@ variable "github_oidc_thumbprint" {
 variable "github_oidc_subject" {
   description = "OIDC subject pattern (repo and environment) allowed to assume the role"
   type        = string
-  default     = "repo:bryanchasko/bryan-chasko-com:*"
+  default     = "repo:BryanChasko/hugoBryanChaskoWebsite:*"
 }
