@@ -77,6 +77,9 @@ test.describe('WebGL Performance Budgets', () => {
     console.log(`  ✓ Initialization within budget\n`);
   });
   
+  // Skip FPS test in CI - requires real GPU hardware for accurate measurement
+  // GitHub Actions runners have no GPU acceleration, getting ~10 FPS vs expected 50+
+  test.skip(!!process.env.CI, 'FPS measurement requires GPU hardware not available in CI');
   test('should maintain >50 FPS during orbit animation @performance @fps', async ({ page, browserName }) => {
     // Increase timeout for slower CI runners
     test.setTimeout(60000);
@@ -147,6 +150,9 @@ test.describe('WebGL Performance Budgets', () => {
   });
   
   test('should use <200MB WebGL memory after 30s runtime @performance @memory', async ({ page, browserName }) => {
+    // Skip in CI - memory profiling with WebGL requires GPU hardware not available in GitHub Actions
+    test.skip(!!process.env.CI, 'Memory measurement requires GPU hardware not available in CI');
+    
     // This test runs for 30+ seconds, need extended timeout
     test.setTimeout(90000);
     
