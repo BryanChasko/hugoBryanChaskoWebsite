@@ -48,6 +48,12 @@ jobs:
           fi
           echo "✓ No hardcoded secrets detected"
 
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.152.2"
+          extended: true
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:

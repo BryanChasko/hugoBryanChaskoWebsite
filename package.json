@@ -6,6 +6,7 @@
   "scripts": {
     "test": "playwright test --config=playwright.config.js",
     "test:chrome": "playwright test --project=chromium",
+    "test:chromium": "playwright test --project=chromium",
     "test:firefox": "playwright test --project=firefox",
     "test:webkit": "playwright test --project=webkit",
     "test:update-baselines": "UPDATE_BASELINES=true playwright test",
