@@ -264,12 +264,19 @@
   width: 100vw;
   height: 100vh;
   z-index: -2;
-  pointer-events: none; /* Container transparent */
+  /* Container allows mouse events to reach canvas for interaction
+     Since z-index is -2, it won't block clicks on page content above it */
   overflow: hidden;
 }
 
 .constellation-hero .webgl-canvas {
-  pointer-events: auto; /* Canvas interactive */
+  /* Canvas must receive mouse events for particle interaction */
+  pointer-events: auto !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: -2;
 }
 
