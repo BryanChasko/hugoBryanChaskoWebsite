@@ -489,9 +489,9 @@ curl -I https://bryanchasko.com/
 
 This site uses a modern, secure AWS architecture:
 
-- **S3 Bucket** (`bryanchasko.com`) - Private bucket (Block Public Access enabled)
-- **Origin Access Control** (`E3CW7HU0VHU337`) - SigV4-signed CloudFront access
-- **CloudFront Distribution** (`[your-actual-distribution-id]`) - Global CDN for fast delivery
+- **S3 Bucket** (`[your-site-domain]`) - Private bucket (Block Public Access enabled)
+- **Origin Access Control** (`[YOUR-OAC-ID]`) - SigV4-signed CloudFront access
+- **CloudFront Distribution** (`[YOUR-DISTRIBUTION-ID]`) - Global CDN for fast delivery
 - **Route 53** - DNS routing to CloudFront
 - **ACM Certificate** - Free SSL/TLS with auto-renewal
 
@@ -518,10 +518,10 @@ Use `~/.bcc-site/config.json` for your AWS settings (not in GitHub):
 
 ```json
 {
-  "SITE_DOMAIN": "bryanchasko.com",
-  "SITE_BUCKET": "bryanchasko.com",
-  "SITE_DISTRIBUTION_ID": "[your-actual-distribution-id]",  // Store in Parameter Store only, never in public docs
-  "AWS_PROFILE": "aerospaceug-admin",
+  "SITE_DOMAIN": "[your-site-domain]",
+  "SITE_BUCKET": "[your-site-domain]",
+  "SITE_DISTRIBUTION_ID": "[YOUR-DISTRIBUTION-ID]",  // Store in Parameter Store only, never in public docs
+  "AWS_PROFILE": "[YOUR-AWS-PROFILE]",
   "AWS_REGION": "us-west-2"
 }
 ```

@@ -93,8 +93,8 @@ terraform import module.s3.aws_s3_bucket_server_side_encryption_configuration.ba
 terraform import module.s3.aws_s3_bucket_lifecycle_configuration.baselines bryanchasko-com-webgl-baselines
 terraform import module.s3.aws_s3_bucket_public_access_block.baselines bryanchasko-com-webgl-baselines
 
-# Import CloudFront
-terraform import module.cloudfront.aws_cloudfront_origin_access_control.main E3CW7HU0VHU337
+# Import CloudFront (get OAC ID from .secrets-reference.json)
+terraform import module.cloudfront.aws_cloudfront_origin_access_control.main [YOUR-OAC-ID]
 terraform import module.cloudfront.aws_cloudfront_distribution.main [YOUR_DISTRIBUTION_ID]
 
 # Import Route 53 (get zone ID: aws route53 list-hosted-zones)
