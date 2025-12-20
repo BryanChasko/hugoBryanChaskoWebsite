@@ -8,6 +8,7 @@
 }
 
 /* Blog Posts Section Header */
+
 .blog-posts-header {
   margin-top: var(--space-2xl);
   margin-bottom: var(--space-lg);
@@ -19,6 +20,73 @@
     var(--nebula-lavender) 50%,
     var(--nebula-orange) 100%
   ) 1;
+}
+
+/* High-contrast links in blog cards */
+.profile-hero a,
+.profile-hero .hero-cta,
+.profile-hero .hero-secondary,
+.profile-hero .company-link,
+.builder-post-card .post-title a,
+.linkedin-hero a,
+.linkedin-hero .hero-cta,
+.linkedin-hero .hero-secondary {
+  color: #fff !important;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.45);
+  background: linear-gradient(90deg, var(--nebula-purple) 0%, var(--nebula-orange) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: #fff;
+  text-fill-color: #fff;
+  font-weight: 600;
+}
+
+.profile-hero a:hover,
+.profile-hero .hero-cta:hover,
+.profile-hero .hero-secondary:hover,
+.profile-hero .company-link:hover,
+.builder-post-card .post-title a:hover,
+.linkedin-hero a:hover,
+.linkedin-hero .hero-cta:hover,
+.linkedin-hero .hero-secondary:hover {
+  color: #ffd700 !important;
+  -webkit-text-fill-color: #ffd700;
+  text-fill-color: #ffd700;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.55);
+}
+
+/* Uniform line-height and font size for bio/description */
+.hero-bio,
+.hero-headline,
+.builder-post-card .post-description,
+.linkedin-hero .hero-headline {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Card body text line-height */
+.profile-hero,
+.builder-post-card,
+.linkedin-hero {
+  line-height: 1.6;
+}
+
+/* Card padding and spacing */
+.profile-hero,
+.builder-post-card,
+.linkedin-hero {
+  padding: 1.5rem;
+}
+
+/* Margin between name and bio */
+.hero-name {
+  margin-bottom: 1.25rem;
+}
+
+.hero-bio,
+.hero-headline {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
 }
 
 .blog-posts-header h2 {

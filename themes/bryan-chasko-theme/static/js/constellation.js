@@ -559,8 +559,8 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       console.log(`[Constellation] Initializing constellation ${index + 1}...`);
       
-      // 80 particles for balanced visual effect and performance
-      const scene = new ConstellationScene(container, { particleCount: 80 });
+      // 580 particles for denser visual effect
+      const scene = new ConstellationScene(container, { particleCount: 580 });
       
       // Store reference for debugging
       if (!window.constellationScenes) window.constellationScenes = [];

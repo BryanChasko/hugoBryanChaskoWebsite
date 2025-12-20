@@ -175,14 +175,10 @@
 
 /* Second card: purple accent only on header, icon, and button */
 .ccc-card-link:nth-child(2) > .ccc-service-card {
-  /* Use standard card background (matches neighbors) */
-  background: linear-gradient(
-    145deg,
-    rgba(28, 34, 48, 0.95) 0%,
-    rgba(30, 26, 48, 0.9) 50%,
-    rgba(32, 28, 42, 0.92) 100%
-  );
+  /* Standard card background (matches neighbors) */
+  background: var(--card-bg, var(--color-background-secondary));
   color: var(--color-text);
+  border-top: 4px solid var(--nebula-purple);
 }
 
 .ccc-card-link:nth-child(2) .service-icon {
