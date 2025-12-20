@@ -23,11 +23,11 @@ class ConstellationScene {
     this.isRunning = false;
     this.lastTime = 0;
     
-    // Theme colors - orange/gold tones to avoid purple/white conflict
+    // Theme colors - orange/gold tones with improved visibility
     this.colors = {
-      particle: [1.0, 0.6, 0.0, 0.15],           // nebula-orange, very subtle
-      connection: [1.0, 0.71, 0.39, 0.12],       // warm gold, barely visible
-      highlight: [1.0, 0.8, 0.4, 0.2]            // lighter gold highlight
+      particle: [1.0, 0.6, 0.0, 0.25],           // nebula-orange, visible base (was 0.15)
+      connection: [1.0, 0.71, 0.39, 0.15],       // warm gold connections (was 0.12)
+      highlight: [1.0, 0.85, 0.3, 0.6]           // bright gold highlight (was 0.2)
     };
     
     // Check for reduced motion preference
@@ -268,8 +268,27 @@ class ConstellationScene {
   onMouseMove(e) {
     const rect = this.canvas.getBoundingClientRect();
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    this.mousePos.x = (e.clientX - rect.left) * dpr;
-    this.mousePos.y = (e.clientY - rect.top) * dpr;
+    
+    // Calculate mouse position relative to canvas, scaled by DPR
+    const mouseX = (e.clientX - rect.left) * dpr;
+    const mouseY = (e.clientY - rect.top) * dpr;
+    
+    // Only update if mouse is within canvas bounds
+    if (mouseX >= 0 && mouseX <= this.canvas.width && 
+        mouseY >= 0 && mouseY <= this.canvas.height) {
+      this.mousePos.x = mouseX;
+      this.mousePos.y = mouseY;
+      
+      // Debug: Log when mouse is over constellation (throttled)
+      if (!this._lastDebugLog || Date.now() - this._lastDebugLog > 1000) {
+        console.log('[Constellation] Mouse over canvas:', {
+          mousePos: { x: Math.round(this.mousePos.x), y: Math.round(this.mousePos.y) },
+          canvasSize: { w: this.canvas.width, h: this.canvas.height },
+          dpr: dpr
+        });
+        this._lastDebugLog = Date.now();
+      }
+    }
   }
   
   onTouchMove(e) {
@@ -289,6 +308,7 @@ class ConstellationScene {
   update(deltaTime) {
     const { width, height } = this.canvas;
     const { mouseInfluence, particleSpeed } = this.options;
+    let influencedCount = 0;  // Debug counter
     
     this.particles.forEach(p => {
       // Mouse influence - particles repel from mouse
@@ -296,21 +316,22 @@ class ConstellationScene {
       const dy = this.mousePos.y - p.y;
       const dist = Math.sqrt(dx * dx + dy * dy);
       
-      // Increased influence radius (200px) and stronger force (0.15)
+      // Increased influence radius (200px) and stronger force
       const influenceRadius = mouseInfluence * 2; // Double the radius
       if (dist < influenceRadius && dist > 0) {
-        const force = (influenceRadius - dist) / influenceRadius * 0.15; // 7.5x stronger
+        const force = (influenceRadius - dist) / influenceRadius * 0.3; // Stronger repulsion
         p.vx -= (dx / dist) * force;
         p.vy -= (dy / dist) * force;
+        influencedCount++;
       }
       
       // Update position
       p.x += p.vx * deltaTime * 60;
       p.y += p.vy * deltaTime * 60;
       
-      // Velocity damping
-      p.vx *= 0.99;
-      p.vy *= 0.99;
+      // Velocity damping - slightly less aggressive for smoother movement
+      p.vx *= 0.97;
+      p.vy *= 0.97;
       
       // Add slight random motion
       p.vx += (Math.random() - 0.5) * 0.01;
@@ -330,6 +351,12 @@ class ConstellationScene {
       if (p.y < 0) p.y = height;
       if (p.y > height) p.y = 0;
     });
+    
+    // Debug: Log when particles are being influenced (throttled)
+    if (influencedCount > 0 && (!this._lastInfluenceLog || Date.now() - this._lastInfluenceLog > 2000)) {
+      console.log('[Constellation] Particles influenced by mouse:', influencedCount, '/', this.particles.length);
+      this._lastInfluenceLog = Date.now();
+    }
   }
   
   render() {
@@ -370,11 +397,13 @@ class ConstellationScene {
       
       if (dist < this.options.mouseInfluence) {
         const t = 1 - (dist / this.options.mouseInfluence);
+        // Interpolate ALL channels including alpha for visible highlight
+        const highlightAlpha = this.colors.particle[3] * (1-t) + this.colors.highlight[3] * t;
         colors.push(
           this.colors.particle[0] * (1-t) + this.colors.highlight[0] * t,
           this.colors.particle[1] * (1-t) + this.colors.highlight[1] * t,
           this.colors.particle[2] * (1-t) + this.colors.highlight[2] * t,
-          this.colors.particle[3] * p.brightness
+          highlightAlpha * p.brightness * (1 + t * 0.5)  // Boost alpha when highlighting
         );
         sizes.push(p.size * (1 + t * 0.5));
       } else {
