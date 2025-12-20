@@ -121,7 +121,7 @@ test.describe('Constellation Mouse Interaction', () => {
     const centerY = canvasBox.y + canvasBox.height / 2;
     
     await page.mouse.move(centerX, centerY);
-    await page.waitForTimeout(100); // Let mouse event propagate
+    await page.waitForTimeout(300); // Let mouse event propagate (longer for CI/Firefox)
     
     // Check if mouse position was updated in the scene
     const afterMoveState = await page.evaluate(() => {
@@ -232,7 +232,7 @@ test.describe('Constellation Mouse Interaction', () => {
     
     // Move mouse to center
     await page.mouse.move(canvasBox.x + canvasBox.width / 2, canvasBox.y + canvasBox.height / 2);
-    await page.waitForTimeout(100);
+    await page.waitForTimeout(300); // Longer for CI/Firefox
     
     // Verify mouse is tracked
     const duringHover = await page.evaluate(() => {
@@ -246,7 +246,7 @@ test.describe('Constellation Mouse Interaction', () => {
     
     // Move mouse to corner of canvas (still inside)
     await page.mouse.move(canvasBox.x + 10, canvasBox.y + 10);
-    await page.waitForTimeout(100);
+    await page.waitForTimeout(300); // Longer for CI/Firefox
     
     // Check mouse position is now tracking the new position
     const afterMove = await page.evaluate(() => {
