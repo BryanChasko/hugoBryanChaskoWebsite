@@ -121,6 +121,104 @@
   color: var(--nebula-orange);
 }
 
+/* Hero Link Wrapper - makes entire hero clickable */
+.ccc-hero-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--transition-base);
+}
+
+.ccc-hero-link:hover {
+  transform: scale(1.005);
+}
+
+.ccc-hero-link:hover .ccc-hero {
+  box-shadow: 
+    0 12px 48px -8px rgba(255, 153, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+[data-theme="dark"] .ccc-hero-link:hover .ccc-hero {
+  box-shadow: 
+    0 12px 48px -8px rgba(0, 0, 0, 0.5),
+    0 0 60px -10px rgba(255, 153, 0, 0.3),
+    inset 0 1px 0 rgba(255, 153, 0, 0.2);
+}
+
+/* Card Link Wrapper - makes entire cards clickable */
+
+.ccc-card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  border-radius: var(--radius-xl);
+  transition: transform var(--transition-base);
+}
+
+
+.ccc-card-link:hover {
+  transform: translateY(-4px);
+}
+
+/* Ensure the card fills the anchor vertically */
+.ccc-card-link > .ccc-service-card {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Update nth-child(2) purple background logic */
+
+/* Second card: purple accent only on header, icon, and button */
+.ccc-card-link:nth-child(2) > .ccc-service-card {
+  /* Use standard card background (matches neighbors) */
+  background: linear-gradient(
+    145deg,
+    rgba(28, 34, 48, 0.95) 0%,
+    rgba(30, 26, 48, 0.9) 50%,
+    rgba(32, 28, 42, 0.92) 100%
+  );
+  color: var(--color-text);
+}
+
+.ccc-card-link:nth-child(2) .service-icon {
+  color: var(--nebula-purple);
+  filter: drop-shadow(0 2px 8px rgba(129, 105, 197, 0.3));
+}
+
+.ccc-card-link:nth-child(2) .ccc-service-card h3 {
+  background: linear-gradient(135deg, var(--nebula-purple) 0%, var(--nebula-lavender) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ccc-card-link:nth-child(2) .cta-button {
+  background: linear-gradient(135deg, var(--nebula-purple) 0%, var(--nebula-lavender) 100%) !important;
+  color: #fff;
+}
+
+.ccc-card-link:hover .ccc-service-card {
+  border-color: rgba(94, 65, 162, 0.25);
+  box-shadow: 
+    0 12px 40px rgba(94, 65, 162, 0.18),
+    0 0 0 1px rgba(94, 65, 162, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+[data-theme="dark"] .ccc-card-link:hover .ccc-service-card {
+  border-color: rgba(129, 105, 197, 0.4);
+  box-shadow: 
+    0 16px 48px rgba(0, 0, 0, 0.5),
+    0 0 50px -10px rgba(129, 105, 197, 0.3),
+    0 0 0 1px rgba(129, 105, 197, 0.2),
+    inset 0 1px 0 rgba(129, 105, 197, 0.2);
+}
+
 /* Services Grid */
 .ccc-services-grid {
   display: grid;
@@ -223,7 +321,62 @@
 .ccc-service-card h3 {
   margin: 0 0 var(--space-md) 0;
   font-size: var(--font-size-xl);
-  color: var(--color-text);
+  font-weight: 700;
+  background: linear-gradient(
+    135deg,
+    var(--nebula-purple) 0%,
+    var(--color-text) 40%,
+    var(--nebula-purple) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  transition: all var(--transition-base);
+}
+
+.ccc-card-link:hover .ccc-service-card h3 {
+  background: linear-gradient(
+    135deg,
+    var(--nebula-orange) 0%,
+    var(--nebula-purple) 50%,
+    var(--nebula-lavender) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  animation: header-shimmer 2s ease-in-out infinite;
+}
+
+@keyframes header-shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+[data-theme="dark"] .ccc-service-card h3 {
+  background: linear-gradient(
+    135deg,
+    var(--nebula-lavender) 0%,
+    var(--color-text) 40%,
+    var(--nebula-lavender) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+}
+
+[data-theme="dark"] .ccc-card-link:hover .ccc-service-card h3 {
+  background: linear-gradient(
+    135deg,
+    var(--nebula-orange) 0%,
+    var(--nebula-lavender) 50%,
+    #A78BFA 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .ccc-service-card p {
@@ -266,7 +419,7 @@
 }
 
 /* First card - Purple gradient */
-.ccc-service-card:nth-child(1) .cta-button {
+.ccc-card-link:nth-child(1) .cta-button {
   background: linear-gradient(135deg, var(--nebula-purple) 0%, var(--nebula-lavender) 100%) !important;
   box-shadow: 
     0 4px 16px rgba(94, 65, 162, 0.3),
@@ -274,7 +427,7 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
 }
 
-.ccc-service-card:nth-child(1) .cta-button:hover {
+.ccc-card-link:nth-child(1) .cta-button:hover {
   background: linear-gradient(135deg, var(--nebula-lavender) 0%, #A78BFA 100%) !important;
   transform: translateY(-2px) scale(1.02) !important;
   box-shadow: 
@@ -284,7 +437,7 @@
 }
 
 /* Second card - Orange gradient */
-.ccc-service-card:nth-child(2) .cta-button {
+.ccc-card-link:nth-child(2) .cta-button {
   background: linear-gradient(135deg, var(--nebula-orange) 0%, #FF6600 100%) !important;
   box-shadow: 
     0 4px 16px rgba(255, 153, 0, 0.3),
@@ -292,7 +445,7 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
 }
 
-.ccc-service-card:nth-child(2) .cta-button:hover {
+.ccc-card-link:nth-child(2) .cta-button:hover {
   background: linear-gradient(135deg, #FFB84D 0%, var(--nebula-orange) 100%) !important;
   transform: translateY(-2px) scale(1.02) !important;
   box-shadow: 
@@ -302,7 +455,7 @@
 }
 
 /* Third card - Purple/Orange blend gradient */
-.ccc-service-card:nth-child(3) .cta-button {
+.ccc-card-link:nth-child(3) .cta-button {
   background: linear-gradient(135deg, var(--nebula-purple) 0%, var(--nebula-orange) 100%) !important;
   box-shadow: 
     0 4px 16px rgba(129, 105, 197, 0.3),
@@ -310,7 +463,7 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
 }
 
-.ccc-service-card:nth-child(3) .cta-button:hover {
+.ccc-card-link:nth-child(3) .cta-button:hover {
   background: linear-gradient(135deg, var(--nebula-lavender) 0%, #FFB84D 100%) !important;
   transform: translateY(-2px) scale(1.02) !important;
   box-shadow: 
@@ -320,7 +473,7 @@
 }
 
 /* Fourth card - Lavender gradient */
-.ccc-service-card:nth-child(4) .cta-button {
+.ccc-card-link:nth-child(4) .cta-button {
   background: linear-gradient(135deg, var(--nebula-lavender) 0%, var(--nebula-purple) 100%) !important;
   box-shadow: 
     0 4px 16px rgba(129, 105, 197, 0.3),
@@ -328,7 +481,7 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
 }
 
-.ccc-service-card:nth-child(4) .cta-button:hover {
+.ccc-card-link:nth-child(4) .cta-button:hover {
   background: linear-gradient(135deg, #A78BFA 0%, var(--nebula-lavender) 100%) !important;
   transform: translateY(-2px) scale(1.02) !important;
   box-shadow: 
@@ -343,7 +496,7 @@
 }
 
 /* Dark mode variations */
-[data-theme="dark"] .ccc-service-card:nth-child(1) .cta-button {
+[data-theme="dark"] .ccc-card-link:nth-child(1) .cta-button {
   background: linear-gradient(135deg, var(--nebula-lavender) 0%, #A78BFA 100%) !important;
   box-shadow: 
     0 4px 20px rgba(129, 105, 197, 0.35),
@@ -352,7 +505,7 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
 }
 
-[data-theme="dark"] .ccc-service-card:nth-child(2) .cta-button {
+[data-theme="dark"] .ccc-card-link:nth-child(2) .cta-button {
   background: linear-gradient(135deg, var(--nebula-orange) 0%, #FF8533 100%) !important;
   box-shadow: 
     0 4px 20px rgba(255, 153, 0, 0.35),
@@ -361,7 +514,7 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
 }
 
-[data-theme="dark"] .ccc-service-card:nth-child(3) .cta-button {
+[data-theme="dark"] .ccc-card-link:nth-child(3) .cta-button {
   background: linear-gradient(135deg, var(--nebula-lavender) 0%, var(--nebula-orange) 100%) !important;
   box-shadow: 
     0 4px 20px rgba(129, 105, 197, 0.3),
@@ -370,7 +523,7 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
 }
 
-[data-theme="dark"] .ccc-service-card:nth-child(4) .cta-button {
+[data-theme="dark"] .ccc-card-link:nth-child(4) .cta-button {
   background: linear-gradient(135deg, #A78BFA 0%, var(--nebula-lavender) 100%) !important;
   box-shadow: 
     0 4px 20px rgba(167, 139, 250, 0.35),

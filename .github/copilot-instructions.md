@@ -6,9 +6,9 @@
 
 ALWAYS start by assessing what MCP tools can gather before speculating or reasoning through the problem.
 
-**Tool Priority for Investigation**:
+### Tool Priority for Investigation
 
-1. **`file_search`** — Locate files by pattern (e.g., `**/*.glsl`, `**/shaders/**`)
+1. **`file_search`** — Locate files by pattern (e.g., `**/*.glsl`, `**/shaders/**`, `**/*.css`)
 2. **`grep_search`** — Find code references, verify infrastructure exists (e.g., shader compilation, error handling)
 3. **`get_errors`** — Check for compilation/syntax errors across all files
 4. **`read_file`** — Inspect actual code logic and control flow (with adequate context lines)
@@ -16,6 +16,121 @@ ALWAYS start by assessing what MCP tools can gather before speculating or reason
 6. **`test_failure`** — Retrieve test diagnostics showing exact assertions failing
 7. **`mcp_pylance_*`** — Python-specific analysis (imports, syntax, refactoring)
 8. **`mcp_css_*`** — CSS analysis and browser compatibility validation
+
+---
+
+## 🎨 MCP CSS Tooling (Critical for This Project)
+
+This project has extensive CSS architecture. Use MCP CSS tools for analysis and compatibility checking.
+
+### Available MCP CSS Tools
+
+| Tool                                | Purpose                                | When to Use                                             |
+| ----------------------------------- | -------------------------------------- | ------------------------------------------------------- |
+| `mcp_css_analyze_css`               | Analyze CSS code quality & complexity  | Before refactoring, reviewing new styles                |
+| `mcp_css_analyze_project_css`       | Analyze all CSS files in project       | Audit entire CSS architecture, find patterns            |
+| `mcp_css_get_browser_compatibility` | Check browser support for CSS features | Before using modern CSS (grid, :has, container queries) |
+| `mcp_css_get_docs`                  | Fetch MDN documentation for CSS        | Learning proper usage, syntax reference                 |
+
+### CSS Analysis Workflow
+
+**Before Making CSS Changes:**
+
+```
+1. mcp_css_analyze_project_css → Get project-wide CSS health report
+2. mcp_css_get_browser_compatibility → Check any modern features you plan to use
+3. mcp_css_get_docs → Reference MDN for proper syntax
+```
+
+**Example Usage:**
+
+```
+# Analyze this project's CSS
+mcp_css_analyze_project_css path="themes/bryan-chasko-theme/assets/css/"
+
+# Check browser support for :has() selector
+mcp_css_get_browser_compatibility bcd_id="css.selectors.has"
+
+# Get MDN docs for CSS grid
+mcp_css_get_docs slug="grid"
+```
+
+### CSS File Locations (Use for Analysis)
+
+| Category        | Path                                                       | Purpose                              |
+| --------------- | ---------------------------------------------------------- | ------------------------------------ |
+| Core Variables  | `themes/bryan-chasko-theme/assets/css/core/variables.css`  | CSS custom properties                |
+| Extended Styles | `themes/bryan-chasko-theme/assets/css/extended/nebula.css` | Animated backgrounds, WebGL palettes |
+| Components      | `themes/bryan-chasko-theme/assets/css/components/*.css`    | Cards, home, social feed             |
+| Header          | `themes/bryan-chasko-theme/assets/css/common/header.css`   | Navigation, theme toggle             |
+
+### Browser Compatibility IDs for Common Features
+
+Use these with `mcp_css_get_browser_compatibility`:
+
+```
+css.properties.backdrop-filter      → Glassmorphism effects
+css.selectors.has                   → :has() parent selector
+css.properties.container-type       → Container queries
+css.properties.animation            → CSS animations
+css.at-rules.keyframes              → @keyframes
+css.types.color.oklch               → OKLCH color space
+css.properties.grid                 → CSS Grid
+css.properties.aspect-ratio         → Aspect ratio
+```
+
+---
+
+## 🌐 WebGL MCP Integration
+
+WebGL scenes in this project use CSS custom properties for theming. Use MCP tools to validate the integration.
+
+### WebGL + CSS Connection Points
+
+| WebGL File           | CSS Dependency                        | MCP Validation                   |
+| -------------------- | ------------------------------------- | -------------------------------- |
+| `OrbitScene.js`      | `--cosmic-teal`, `--cosmic-energy`    | `grep_search` for variable usage |
+| `TransitionScene.js` | None (shader-based)                   | N/A                              |
+| `constellation.js`   | `--cosmic-primary`, `--cosmic-accent` | `grep_search` for CSS vars       |
+
+### WebGL Diagnostic Workflow
+
+```
+1. grep_search "getThemeColor" → Find where scenes read CSS vars
+2. grep_search "cosmic-teal\|cosmic-energy" → Verify CSS var definitions exist
+3. mcp_css_analyze_css → Check CSS syntax validity
+4. file_search "**/*.spec.js" → Find test files for the scene
+5. test_failure → Get actual test output with pixel values (ground truth)
+```
+
+### WebGL Test Integration
+
+The WebGL test suite (`tests/webgl/`) extracts actual canvas pixels to validate colors:
+
+```javascript
+// Test extracts RGB from canvas - this is GROUND TRUTH
+const pixel = await page.evaluate(() => {
+  const canvas = document.querySelector("canvas");
+  const ctx = canvas.getContext("webgl", { preserveDrawingBuffer: true });
+  // Returns actual rendered RGB values
+});
+```
+
+If CSS variables are wrong or WebGL isn't reading them, tests will capture the actual colors rendered.
+
+---
+
+## 🐍 MCP Pylance Tools (For Python Scripts)
+
+While this project is primarily Hugo/JavaScript, Pylance tools are available if Python scripts are added.
+
+| Tool                                      | Purpose                                           |
+| ----------------------------------------- | ------------------------------------------------- |
+| `mcp_pylance_mcp_s_pylanceSyntaxErrors`   | Validate Python code snippets                     |
+| `mcp_pylance_mcp_s_pylanceRunCodeSnippet` | Execute Python directly (preferred over terminal) |
+| `mcp_pylance_mcp_s_pylanceImports`        | Analyze workspace imports                         |
+
+---
 
 **After Tool Analysis**:
 
@@ -807,63 +922,6 @@ Edit `[menu]` section in [hugo.toml](../hugo.toml#L119-L144). Menu items ordered
 5. Deploy and test live site within 5 minutes
 
 For comprehensive WebGL testing and regression prevention guide, see [TESTING.md](../TESTING.md).
-
-## Known Quirks
-
-- **PaperMod Theme**: If submodule is missing, run `git submodule update --init --recursive`
-- **Gitignore**: AWS configs and hosting docs are intentionally excluded from public repo
-- **Hugo Warnings**: "Raw HTML omitted" warnings are expected - site allows raw HTML in markdown
-- **Build Output Committed**: Unlike typical Hugo projects, [public/](../public/) is version controlled for deployment verification
-
-## 🎨 Animated Background System
-
-The site features a multi-layered animated background system in [themes/bryan-chasko-theme/assets/css/extended/nebula.css](../themes/bryan-chasko-theme/assets/css/extended/nebula.css). Both light and dark modes have distinct visual effects.
-
-### Light Mode Layers
-
-| Layer | Element         | Animation         | Duration | Effect                                                                                   |
-| ----- | --------------- | ----------------- | -------- | ---------------------------------------------------------------------------------------- |
-| 1     | `body::before`  | `aurora-drift`    | 35s      | Large flowing gradient bands with slow majestic movement, rotation, and scale transforms |
-| 2     | `body::after`   | `orb-float`       | 25s      | Multiple bright highlight orbs that gently bob and float                                 |
-| 3     | `.main::before` | `prismatic-sweep` | 12s      | Diagonal shimmer with hue-rotation and `mix-blend-mode: overlay`                         |
-
-### Dark Mode Layers (Deep Space Nebula)
-
-**Adding a New Blog Post:**
-
-```bash
-hugo new content/blog/posts/my-new-post.md
-```
-
-**Adding a Service Offering:**
-
-1. Create `content/help-services/new-service/_index.md`
-2. Add service summary to `content/cloudcroft-cloud-company/_index.md` with CTA button
-3. Use existing service pages as templates
-
-**Modifying Navigation:**
-Edit `[menu]` section in [hugo.toml](../hugo.toml#L119-L144). Menu items ordered by `weight`.
-
-**Customizing Theme:**
-
-- Override layouts by creating matching files in [layouts/](../layouts/)
-- Custom CSS: [assets/css/extended/help.css](../assets/css/extended/help.css)
-- Theme CSS: [themes/bryan-chasko-theme/assets/css/](../themes/bryan-chasko-theme/assets/css/)
-
-**Updating Social Profiles on Blog Page:**
-
-1. Edit [data/builder_posts.yaml](../data/builder_posts.yaml) for AWS Builder Center profile/articles
-2. Edit [data/linkedin_posts.yaml](../data/linkedin_posts.yaml) for LinkedIn profile/activity
-3. Update follower counts, headlines, featured posts as needed
-4. Rebuild and deploy
-
-## Testing Before Deploy
-
-1. Run `hugo server` and verify changes at localhost:1313
-2. Test all internal links and CTA buttons
-3. Run `hugo` to build - check for warnings in output
-4. Verify [public/](../public/) contains expected updated files
-5. Deploy and test live site within 5 minutes
 
 ## Known Quirks
 
