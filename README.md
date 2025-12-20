@@ -1,4 +1,23 @@
+
+
 # Bryan Chasko - Cloudcroft Cloud Company 🌿🌸
+
+---
+
+## 📄 Markdown Style Guide
+
+See [MARKDOWN_GUIDE.md](MARKDOWN_GUIDE.md) for Markdown syntax, formatting, autoformatting, and linting instructions.
+
+---
+
+---
+
+
+## 🧑‍💻 Agentic Instructions
+
+For focused agent instructions (CSS, setup, CI/CD, etc.), see [agentic_instructions/README.md](agentic_instructions/README.md) for the full menu and links to all fragments.
+
+---
 
 Development Command:
 hugo server --config hugo.toml

@@ -154,6 +154,34 @@ class OrbitScene extends BaseScene {
    */
 
   /**
+   * Handle canvas resize - recalculate orbit centers
+   * Called by BaseScene.handleResize() when window resizes
+   */
+  onResize() {
+    // If using dynamic centering (not fixed offset), recalculate center position
+    if (!this.centerOffsetX) {
+      this.centerX = this.options.width / 2;
+    } else {
+      this.centerX = this.centerOffsetX;
+    }
+    
+    if (!this.centerOffsetY) {
+      this.centerY = this.options.height / 2;
+    } else {
+      this.centerY = this.centerOffsetY;
+    }
+    
+    if (this.options.debug) {
+      console.log('[OrbitScene.onResize] Recalculated center position:', {
+        centerX: this.centerX,
+        centerY: this.centerY,
+        canvasWidth: this.options.width,
+        canvasHeight: this.options.height,
+      });
+    }
+  }
+
+  /**
    * Override destroy to cleanup container reference
    */
   destroy() {

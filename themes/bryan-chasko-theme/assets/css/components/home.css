@@ -182,7 +182,8 @@
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
-  margin-bottom: var(--space-lg);
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-md);
   /* Reserve space for social icons even after terminal fades */
   min-height: 120px;
 }
@@ -371,10 +372,10 @@
   letter-spacing: 0.08em;
   display: flex;
   align-items: baseline;
-  justify-content: center; /* Center the content */
-  line-height: 1.4;
-  /* Purple glow */
-  text-shadow: 
+  /* Spacing: gap from terminal header above and builder card below */
+  margin-top: var(--space-xl) !important;
+  margin-bottom: var(--space-2xl) !important;
+  padding: var(--space-md) 0 !important;
     0 0 5px rgba(94, 65, 162, 0.6),
     0 0 10px rgba(129, 105, 197, 0.4);
   flex-wrap: nowrap;
@@ -587,34 +588,66 @@
    SOCIAL ICONS REVEAL UNDER TERMINAL
    Positioned behind terminal, revealed when terminal fades
    ======================================== */
-.terminal-social-reveal {
-  position: absolute;
-  bottom: var(--space-md);
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1; /* Below terminal (z-index: 2) */
+
+
+
+  position: static;
+  z-index: 1;
   opacity: 0;
   visibility: hidden;
-  text-align: center;
-  padding: var(--space-sm) var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
   pointer-events: none;
-  /* Fade in after terminal fades (synced with terminal-collapse) */
   animation: social-reveal 0.6s ease-out 7.6s forwards;
 }
 
+  /* Diagnostic: force perfect centering and debug outlines */
+  .social-icons a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 2.75rem !important;
+    height: 2.75rem !important;
+    border-radius: var(--radius-full) !important;
+    background: rgba(94, 65, 162, 0.08) !important;
+    color: var(--nebula-purple) !important;
+    border: 1px solid rgba(94, 65, 162, 0.15) !important;
+    transition: all var(--transition-base) !important;
+    box-shadow: 0 2px 8px rgba(94, 65, 162, 0.08) !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+    padding: 0 !important;
+    vertical-align: middle !important;
+  }
+
+  .social-icons a > svg {
+    display: block !important;
+    margin: 0 auto !important;
+    height: 1.5rem !important;
+    width: 1.5rem !important;
+    vertical-align: middle !important;
+  }
 /* Social icons container inherits pointer events when visible */
+
 .terminal-social-reveal .social-icons {
-  display: flex;
-  justify-content: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   gap: var(--space-md);
   margin: 0;
+  height: 100%;
 }
 
 /* Override default social icon styles for this context */
+
 .terminal-social-reveal .social-icons a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   width: 2.75rem;
   height: 2.75rem;
   border-radius: var(--radius-full);
@@ -623,7 +656,21 @@
   border: 1px solid rgba(94, 65, 162, 0.15);
   transition: all var(--transition-base);
   box-shadow: 0 2px 8px rgba(94, 65, 162, 0.08);
+  margin: 0 !important;
+  line-height: 1 !important;
+  padding: 0 !important;
+  vertical-align: middle !important;
 }
+
+.terminal-social-reveal .social-icons a > svg {
+  display: block;
+  margin: 0 auto;
+  height: 1.5rem;
+  width: 1.5rem;
+  vertical-align: middle;
+}
+}
+
 
 .terminal-social-reveal .social-icons a:hover {
   background: var(--nebula-purple);
@@ -914,7 +961,7 @@
 
 /* Builder Center feature card - Modern Glassmorphism Design */
 .builder-card {
-  margin: var(--space-sm) auto var(--space-lg) auto;
+  margin: var(--space-xs) auto var(--space-md) auto;
   max-width: var(--content-max-width);
   padding: 64px var(--space-xl);
   border: 2px solid rgba(94, 65, 162, 0.25);

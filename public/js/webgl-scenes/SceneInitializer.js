@@ -87,7 +87,7 @@ class WebGLSceneInitializer {
         const orbitScene = new OrbitScene(orbitContainer, {
           width: canvasWidth,
           height: canvasHeight,
-          debug: true, // Enable debug logging for orbit scene
+          debug: false, // Disable debug logging for production
           centerOffsetX: centerOffsetX,
           centerOffsetY: centerOffsetY,
           orbits: orbits
