@@ -69,13 +69,14 @@ class ConstellationScene {
     // Set up shaders
     this.setupShaders();
     
-    // Mouse tracking
-    this.canvas.addEventListener('mousemove', (e) => this.onMouseMove(e));
-    this.canvas.addEventListener('mouseleave', () => this.onMouseLeave());
+    // Mouse tracking - listen on document since canvas is at z-index: -2 (behind content)
+    // This allows mouse interaction even though the canvas is positioned behind all page content
+    document.addEventListener('mousemove', (e) => this.onMouseMove(e));
+    document.addEventListener('mouseleave', () => this.onMouseLeave());
     
-    // Touch support
-    this.canvas.addEventListener('touchmove', (e) => this.onTouchMove(e), { passive: true });
-    this.canvas.addEventListener('touchend', () => this.onMouseLeave());
+    // Touch support - also on document for the same reason
+    document.addEventListener('touchmove', (e) => this.onTouchMove(e), { passive: true });
+    document.addEventListener('touchend', () => this.onMouseLeave());
     
     // Theme change listener
     this.setupThemeListener();
@@ -290,13 +291,15 @@ class ConstellationScene {
     const { mouseInfluence, particleSpeed } = this.options;
     
     this.particles.forEach(p => {
-      // Mouse influence
+      // Mouse influence - particles repel from mouse
       const dx = this.mousePos.x - p.x;
       const dy = this.mousePos.y - p.y;
       const dist = Math.sqrt(dx * dx + dy * dy);
       
-      if (dist < mouseInfluence && dist > 0) {
-        const force = (mouseInfluence - dist) / mouseInfluence * 0.02;
+      // Increased influence radius (200px) and stronger force (0.15)
+      const influenceRadius = mouseInfluence * 2; // Double the radius
+      if (dist < influenceRadius && dist > 0) {
+        const force = (influenceRadius - dist) / influenceRadius * 0.15; // 7.5x stronger
         p.vx -= (dx / dist) * force;
         p.vy -= (dy / dist) * force;
       }
@@ -527,8 +530,8 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       console.log(`[Constellation] Initializing constellation ${index + 1}...`);
       
-      // Use default particle count (GPU detection handled by WebGLResourceMonitor if available)
-      const scene = new ConstellationScene(container, { particleCount: 132 });
+      // 80 particles for balanced visual effect and performance
+      const scene = new ConstellationScene(container, { particleCount: 80 });
       
       // Store reference for debugging
       if (!window.constellationScenes) window.constellationScenes = [];

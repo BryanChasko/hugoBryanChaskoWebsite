@@ -26,6 +26,7 @@ public/assets/css/stylesheet.*.css
 # WebGL Test Results & Artifacts
 test-results/
 playwright-report/
+test-report/
 tests/.baselines/
 *.spec.js-snapshots/
 videos/

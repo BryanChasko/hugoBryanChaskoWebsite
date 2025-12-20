@@ -15,5 +15,6 @@ terraform {
     region         = "us-west-2"
     dynamodb_table = "bryanchasko-terraform-lock"
     encrypt        = true
+    profile        = "aerospaceug-admin"
   }
 }

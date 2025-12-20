@@ -224,8 +224,8 @@ test.describe('Constellation Mouse Interaction', () => {
     console.log('  ✓ Particles are responding to mouse influence\n');
   });
   
-  test('should reset mouse position when cursor leaves canvas @mouseleave', async ({ page }) => {
-    console.log('\n🚪 Testing mouse leave behavior');
+  test('should track mouse position throughout canvas @mouseleave', async ({ page }) => {
+    console.log('\n🚪 Testing mouse tracking throughout canvas');
     
     const canvasBox = await page.locator('.constellation-canvas').boundingBox();
     expect(canvasBox).not.toBeNull();
@@ -244,22 +244,23 @@ test.describe('Constellation Mouse Interaction', () => {
     expect(duringHover.y).toBeGreaterThan(0);
     console.log(`  Mouse during hover: (${duringHover.x.toFixed(0)}, ${duringHover.y.toFixed(0)})`);
     
-    // Move mouse completely outside canvas
-    await page.mouse.move(0, 0);
+    // Move mouse to corner of canvas (still inside)
+    await page.mouse.move(canvasBox.x + 10, canvasBox.y + 10);
     await page.waitForTimeout(100);
     
-    // Check mouse position was reset
-    const afterLeave = await page.evaluate(() => {
+    // Check mouse position is now tracking the new position
+    const afterMove = await page.evaluate(() => {
       const scenes = window.constellationScenes || [];
       return scenes.length > 0 ? { ...scenes[0].mousePos } : { x: 0, y: 0 };
     });
     
-    console.log(`  Mouse after leave: (${afterLeave.x.toFixed(0)}, ${afterLeave.y.toFixed(0)})`);
+    console.log(`  Mouse after corner move: (${afterMove.x.toFixed(0)}, ${afterMove.y.toFixed(0)})`);
     
-    // Mouse should be reset to default position (-1000, -1000)
-    expect(afterLeave.x).toBeLessThan(-900);
-    expect(afterLeave.y).toBeLessThan(-900);
+    // Mouse should be tracking the new position (near corner)
+    // With document-level events, position updates as cursor moves across the page
+    expect(afterMove.x).toBeGreaterThan(-500); // Should be valid position, not -1000
+    expect(afterMove.y).toBeGreaterThan(-500);
     
-    console.log('  ✓ Mouse position resets when leaving canvas\n');
+    console.log('  ✓ Mouse position tracks correctly throughout canvas\n');
   });
 });

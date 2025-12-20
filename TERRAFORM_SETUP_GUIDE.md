@@ -510,12 +510,128 @@ terraform init -reconfigure
 
 ---
 
+## 🌐 CloudFront URL Rewrite for Hugo Static Sites
+
+**Critical Lesson Learned (December 2025)**: Hugo generates `index.html` files in subdirectories (e.g., `/cloudcroft-cloud-company/index.html`). Without proper CloudFront configuration, subpage URLs return the homepage instead of actual content.
+
+### The Problem
+
+Hugo static site URL structure:
+```
+public/
+├── index.html                     # Homepage
+├── cloudcroft-cloud-company/
+│   └── index.html                 # Subpage (CCC landing)
+├── blog/
+│   └── index.html                 # Blog listing
+│   └── posts/
+│       └── my-post/
+│           └── index.html         # Individual post
+```
+
+**Wrong Configuration (SPA-style)**:
+- `default_root_object = ""` (empty)
+- 404 errors return `/index.html` with status 200
+- No URL rewriting
+
+**Result**: `/cloudcroft-cloud-company/` returns homepage content (wrong!)
+
+### The Fix: CloudFront Function
+
+Added URL rewrite function in `terraform/modules/cloudfront/main.tf`:
+
+```hcl
+resource "aws_cloudfront_function" "url_rewrite" {
+  name    = "${replace(var.domain, ".", "-")}-url-rewrite"
+  runtime = "cloudfront-js-2.0"
+  code    = <<-EOF
+function handler(event) {
+    var request = event.request;
+    var uri = request.uri;
+    // Handle /path → /path/index.html
+    if (!uri.includes('.') && !uri.endsWith('/')) {
+        request.uri = uri + '/index.html';
+    // Handle /path/ → /path/index.html  
+    } else if (uri.endsWith('/') && !uri.endsWith('/index.html')) {
+        request.uri = uri + 'index.html';
+    }
+    return request;
+}
+EOF
+}
+```
+
+**Also fixed**:
+- `default_root_object = "index.html"` (not empty)
+- Error responses return `/404.html` with status 404 (not homepage with 200)
+
+### Verification
+
+```bash
+# Test subpage returns actual content (not homepage)
+curl -sI https://bryanchasko.com/cloudcroft-cloud-company/ | head -5
+# Should show: HTTP/2 200, content-length > 10000 (actual page, not redirect)
+
+# Compare content lengths
+curl -s https://bryanchasko.com/ | wc -c       # Homepage bytes
+curl -s https://bryanchasko.com/cloudcroft-cloud-company/ | wc -c  # Subpage bytes (different!)
+```
+
+---
+
+## 🔑 AWS SSO + Terraform Local Workflow
+
+**Issue**: Terraform AWS provider doesn't natively support `sso_session` format in `~/.aws/config`.
+
+### Symptoms
+
+```bash
+terraform init
+# Error: error configuring S3 Backend: no valid credential sources for S3 Backend found
+```
+
+### Workaround: Export SSO Credentials as Environment Variables
+
+```bash
+# 1. First, authenticate with SSO (if not already)
+aws sso login --profile aerospaceug-admin
+
+# 2. Export SSO credentials as environment variables
+eval "$(aws configure export-credentials --profile aerospaceug-admin --format env)"
+
+# 3. Run Terraform commands (in same terminal session)
+terraform init -reconfigure
+terraform plan
+terraform apply
+```
+
+### Why This Works
+
+- AWS CLI v2 with SSO caches temporary credentials
+- `aws configure export-credentials` extracts those creds as `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_SESSION_TOKEN`
+- Terraform's AWS provider reads these env vars (standard credential chain)
+
+### Important Notes
+
+- **Credentials expire**: Re-run the `eval` command if you get auth errors after ~1 hour
+- **Terminal session specific**: Each new terminal window needs the `eval` command
+- **Don't commit credentials**: These are temporary, but still never echo or log them
+- **Backend S3 + DynamoDB**: Both state storage and locking work with this method
+
+### Alternative: Terraform Cloud
+
+For CI/CD, use HCP Terraform Cloud with workspace-configured AWS credentials (avoids SSO complexity in GitHub Actions).
+
+---
+
 ## 📖 Additional Resources
 
 - **Terraform Documentation**: https://developer.hashicorp.com/terraform
 - **HCP Terraform**: https://developer.hashicorp.com/terraform/cloud-docs
 - **AWS Provider**: https://registry.terraform.io/providers/hashicorp/aws
 - **GitHub Actions**: https://docs.github.com/en/actions
+- **CloudFront Functions**: https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-functions.html
+- **AWS SSO + Terraform**: https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html
 
 ---
 
