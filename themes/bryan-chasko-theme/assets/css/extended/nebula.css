@@ -1,3 +1,157 @@
+/* =============================
+   404 Cat Mascot Error State
+   ============================= */
+.cat-mascot {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0 auto 2.5rem auto;
+  width: 160px;
+  height: 160px;
+  position: relative;
+  pointer-events: none;
+}
+
+.cat-head {
+  position: relative;
+  width: 120px;
+  height: 110px;
+  background: var(--secondary);
+  border-radius: 100% / 120% 120% 80% 80%;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10), 0 1px 0 rgba(255,255,255,0.10) inset;
+  z-index: 2;
+  transform-origin: bottom center;
+  animation: head-tilt 4.5s cubic-bezier(.7,-0.2,.3,1.2) infinite;
+}
+
+.cat-ear {
+  position: absolute;
+  width: 38px;
+  height: 48px;
+  background: var(--secondary);
+  top: -28px;
+  z-index: 1;
+  border-radius: 60% 60% 40% 40% / 100% 100% 60% 60%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.cat-ear--left {
+  left: -10px;
+  transform: rotate(-18deg) skewY(-8deg);
+}
+.cat-ear--right {
+  right: -10px;
+  transform: rotate(18deg) skewY(8deg);
+}
+
+.cat-face {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 22px;
+}
+
+.cat-eye {
+  width: 28px;
+  height: 28px;
+  background: var(--theme);
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.10) inset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cat-eye--left { margin-right: 8px; }
+.cat-eye--right { margin-left: 8px; }
+
+.cat-pupil {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 55% 55%, #222 60%, #444 100%);
+  box-shadow: 0 0 2px 1px rgba(0,0,0,0.18);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: look-around 6.5s cubic-bezier(.7,-0.2,.3,1.2) infinite;
+}
+
+@keyframes look-around {
+  0%   { transform: translate(-50%, -50%) translate(0px, 0px); }
+  8%   { transform: translate(-50%, -50%) translate(4px, 2px); }
+  16%  { transform: translate(-50%, -50%) translate(-3px, 3px); }
+  24%  { transform: translate(-50%, -50%) translate(2px, -2px); }
+  32%  { transform: translate(-50%, -50%) translate(-2px, -3px); }
+  40%  { transform: translate(-50%, -50%) translate(3px, 1px); }
+  48%  { transform: translate(-50%, -50%) translate(-2px, 2px); }
+  56%  { transform: translate(-50%, -50%) translate(0px, 0px); }
+  100% { transform: translate(-50%, -50%) translate(0px, 0px); }
+}
+
+@keyframes head-tilt {
+  0%, 90%, 100% { transform: rotate(0deg); }
+  10% { transform: rotate(-10deg); }
+  20% { transform: rotate(8deg); }
+  30% { transform: rotate(-6deg); }
+  40% { transform: rotate(10deg); }
+  50% { transform: rotate(-8deg); }
+  60% { transform: rotate(6deg); }
+  70% { transform: rotate(-10deg); }
+  80% { transform: rotate(0deg); }
+}
+
+.error-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+.error-message {
+  text-align: center;
+  font-size: 1.25rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+}
+.error-link {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 0.75em 2em;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: var(--color-primary);
+  color: var(--white);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(94,65,162,0.10);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.error-link:hover {
+  background: var(--color-primary-hover);
+  color: var(--white);
+  transform: translateY(-2px) scale(1.04);
+}
+
+@media (max-width: 600px) {
+  .cat-mascot { width: 110px; height: 110px; }
+  .cat-head { width: 80px; height: 70px; }
+  .cat-ear { width: 24px; height: 30px; top: -16px; }
+  .cat-face { top: 22px; height: 36px; padding: 0 10px; }
+  .cat-eye { width: 16px; height: 16px; }
+  .cat-pupil { width: 7px; height: 7px; }
+  .error-title { font-size: 1.5rem; }
+  .error-message { font-size: 1rem; }
+  .error-link { font-size: 1rem; padding: 0.5em 1.2em; }
+}
 /* ============================================
    EXTENDED COLOR PALETTE SYSTEM
    

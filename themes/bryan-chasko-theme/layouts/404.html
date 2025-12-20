@@ -1,3 +1,21 @@
 {{- define "main" }}
-<div class="not-found">404</div>
+<main class="main">
+	<div class="cat-mascot" aria-hidden="true">
+		<div class="cat-head">
+			<div class="cat-ear cat-ear--left"></div>
+			<div class="cat-ear cat-ear--right"></div>
+			<div class="cat-face">
+				<div class="cat-eye cat-eye--left">
+					<div class="cat-pupil"></div>
+				</div>
+				<div class="cat-eye cat-eye--right">
+					<div class="cat-pupil"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<h1 class="error-title">404</h1>
+	<p class="error-message">404: Buddy The Cat Chewed the Routing Table.</p>
+	<a class="error-link" href="{{ .Site.BaseURL }}">Flee to safety</a>
+</main>
 {{- end }}{{/* end main */ -}}
