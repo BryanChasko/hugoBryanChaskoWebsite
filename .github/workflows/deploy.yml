@@ -1,4 +1,4 @@
-name: Build & Deploy to S3
+name: Deploy to S3
 
 on:
   push:
@@ -11,132 +11,67 @@ env:
   AWS_REGION: us-west-2
 
 jobs:
-  build-and-deploy:
-    name: Build Hugo & Deploy to S3
+  deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 15
     permissions:
       contents: read
-      id-token: write # Required for OIDC authentication
+      id-token: write
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+      - uses: actions/checkout@v4
 
-      - name: Scan for secrets and sensitive information
-        run: |
-          echo "Scanning for hardcoded secrets, API keys, and credentials..."
-          # Check for common secret patterns
-          if grep -r --include="*.{js,ts,json,toml,yaml,yml,md,pl}" \
-            -E "(password|api[_-]?key|secret|token|aws_access|aws_secret|private[_-]?key|credential)\s*[=:][\'\"]" \
-            . --exclude-dir=node_modules --exclude-dir=public --exclude-dir=.git; then
-            echo "❌ Potential secrets found in code. Please remove them before deploying."
-            exit 1
-          fi
-          echo "✓ No hardcoded secrets detected"
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+      - uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: ${{ env.HUGO_VERSION }}
           extended: true
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: "npm"
 
-      - name: Install dependencies
-        run: npm ci
+      - run: npm ci
+      - run: npx playwright install --with-deps
 
-      - name: Install Playwright browsers
-        run: npx playwright install --with-deps
-
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v4
+      - uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ secrets.AWS_OIDC_ROLE_ARN }}
           role-session-name: deploy-${{ github.run_id }}
           aws-region: ${{ env.AWS_REGION }}
 
-      - name: Run WebGL tests (test gate)
-        run: echo "⏭️  Skipping WebGL tests temporarily to verify deployment pipeline"
-        # run: npm test
-        # env:
-        #   GITHUB_REF: ${{ github.ref }}
+      - run: npm test
+        name: Run WebGL tests (test gate)
 
-      - name: Build Hugo site
-        run: hugo --minify
+      - run: hugo --minify
+        name: Build Hugo site
         env:
           HUGO_ENV: production
 
-      - name: Get configuration from Parameter Store
-        id: config
+      - id: config
+        name: Get S3 & CloudFront config
         run: |
           S3_BUCKET=$(aws ssm get-parameter --name /sites/bryanchasko.com/s3_bucket --query 'Parameter.Value' --output text)
           CF_DIST_ID=$(aws ssm get-parameter --name /sites/bryanchasko.com/cloudfront_distribution_id --query 'Parameter.Value' --output text)
           echo "s3_bucket=${S3_BUCKET}" >> $GITHUB_OUTPUT
           echo "cf_distribution_id=${CF_DIST_ID}" >> $GITHUB_OUTPUT
 
-      - name: Deploy to S3
-        run: |
+      - run: |
           aws s3 sync public/ s3://${{ steps.config.outputs.s3_bucket }} \
             --delete \
             --cache-control "public, max-age=3600" \
             --exclude ".git/*" \
             --exclude "*.md"
+        name: Deploy to S3
 
-      - name: Wait for S3 propagation
-        run: sleep 5
-
-      - name: Invalidate CloudFront
-        run: |
+      - run: sleep 5
+      - run: |
           aws cloudfront create-invalidation \
             --distribution-id "${{ steps.config.outputs.cf_distribution_id }}" \
             --paths "/*"
-          echo "CloudFront invalidation submitted for distribution: ${{ steps.config.outputs.cf_distribution_id }}"
+        name: Invalidate CloudFront
 
-      - name: Update test baselines
-        run: npm run test:update-baselines
+      - run: npm run test:update-baselines
+        name: Update test baselines
         env:
           GITHUB_REF: ${{ github.ref }}
-
-      - name: Upload test results
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: test-results
-          path: test-results/
-          retention-days: 30
-
-      - name: Upload Playwright report
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-report
-          path: playwright-report/
-          retention-days: 30
-
-      - name: Deployment summary
-        if: success()
-        run: |
-          echo "## ✅ Deployment Successful" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "- **Build**: Hugo site compiled with --minify" >> $GITHUB_STEP_SUMMARY
-          echo "- **Tests**: All WebGL tests passed" >> $GITHUB_STEP_SUMMARY
-          echo "- **Deploy**: Files synced to S3 (bryanchasko.com)" >> $GITHUB_STEP_SUMMARY
-          echo "- **Cache**: CloudFront invalidation submitted" >> $GITHUB_STEP_SUMMARY
-          echo "- **Live**: Changes visible at https://bryanchasko.com" >> $GITHUB_STEP_SUMMARY
-
-      - name: Deployment failure summary
-        if: failure()
-        run: |
-          echo "## ❌ Deployment Failed" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Check the logs above for details. Common issues:" >> $GITHUB_STEP_SUMMARY
-          echo "- **Test failures**: Review Playwright report artifact" >> $GITHUB_STEP_SUMMARY
-          echo "- **Hugo build errors**: Check Build Hugo step output" >> $GITHUB_STEP_SUMMARY
-          echo "- **AWS credentials**: Verify secrets are configured correctly" >> $GITHUB_STEP_SUMMARY

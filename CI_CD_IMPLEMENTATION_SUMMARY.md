@@ -85,22 +85,53 @@ Integrated detailed workflow documentation into project instructions:
 
 Follow the Quick Start in CI_CD_SETUP.md, but with the new OIDC-powered authentication instead of static IAM keys:
 
+
 1. **Provision the backend resources** — run the helper script (or the Terraform stack) to create the S3 state bucket, DynamoDB lock table, and GitHub OIDC role:
 
-   ```bash
-   perl scripts/setup-terraform-backend.pl --profile aerospaceug-admin --param-path /sites/bryanchasko.com
-   ```
+    ```bash
+    perl scripts/setup-terraform-backend.pl --profile websites-bryanchasko --param-path /sites/bryanchasko.com
+    ```
 
-   The script prints the `github_oidc_role_arn` value that GitHub Actions will assume.
+    The script prints the `github_oidc_role_arn` value that GitHub Actions will assume.
 
 2. **Capture the role ARN** — if you prefer not to rerun the script, `cd terraform && terraform output github_oidc_role_arn` returns the same ARN.
 
-3. **Store the secret in GitHub**:
-   - Go to **Settings → Secrets and variables → Actions** in this repository.
-   - Add `GITHUB_OIDC_ROLE_ARN`, pasting the ARN from step 1/2.
-   - Keep `AWS_REGION` (us-west-2) as a separate secret if you haven’t already.
+3. **Attach S3 baseline upload policy to the role**:
+    - Create a file named `policy.json` with:
+       ```json
+       {
+          "Version": "2012-10-17",
+          "Statement": [
+             {
+                "Effect": "Allow",
+                "Action": [
+                   "s3:PutObject",
+                   "s3:GetObject",
+                   "s3:ListBucket"
+                ],
+                "Resource": [
+                   "arn:aws:s3:::bryanchasko-com-webgl-baselines",
+                   "arn:aws:s3:::bryanchasko-com-webgl-baselines/*"
+                ]
+             }
+          ]
+       }
+       ```
+    - Attach the policy:
+       ```bash
+       aws iam put-role-policy \
+          --role-name github-actions-terraform-role \
+          --policy-name s3-baseline-access \
+          --policy-document file://policy.json \
+          --profile websites-bryanchasko
+       ```
 
-4. **Validate the workflows** — push a change to a feature branch or main and watch the GitHub Actions tab; the workflows now assume the role from `GITHUB_OIDC_ROLE_ARN` instead of using `AWS_ACCESS_KEY_ID`/`AWS_SECRET_ACCESS_KEY`.
+4. **Store the secret in GitHub**:
+    - Go to **Settings → Secrets and variables → Actions** in this repository.
+    - Add `GITHUB_OIDC_ROLE_ARN`, pasting the ARN from step 1/2.
+    - Keep `AWS_REGION` (us-west-2) as a separate secret if you haven’t already.
+
+5. **Validate the workflows** — push a change to a feature branch or main and watch the GitHub Actions tab; the workflows now assume the role from `GITHUB_OIDC_ROLE_ARN` instead of using `AWS_ACCESS_KEY_ID`/`AWS_SECRET_ACCESS_KEY`.
 
 ---
 

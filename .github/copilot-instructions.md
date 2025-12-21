@@ -39,7 +39,6 @@ Guidance for AI agents on project environment setup, toolchain, and configuratio
 
 ## References
 
-- [copilot-instructions.md](../.github/copilot-instructions.md) (for config hierarchy)
 - [GITHUB_ACTIONS_CHECKLIST.md]
 - [DEPLOYMENT.md]
 

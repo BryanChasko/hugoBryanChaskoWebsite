@@ -51,3 +51,4 @@ override.tf.json
 .terraformrc
 terraform.rc
 .github/copilot-instructions.md
+.github/copilot-instructions.md
