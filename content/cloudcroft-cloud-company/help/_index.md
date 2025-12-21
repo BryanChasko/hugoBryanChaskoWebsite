@@ -26,10 +26,10 @@ Choose your focus below to view details and book.
 
 Click a service to view details and book a dedicated engagement.
 
-- [AWS Account Access Audit & Remediation](/help-services/aws-account-access-audit/) — Access audit, IAM/SSO remediation, HIPAA/SOC2 posture fixes.
-- [GenAI / RAG Readiness Blueprint](/help-services/genai-rag-readiness/) — GenAI architecture & blueprint (Bedrock, RAG, vector search).
-- [Focused CTO-Level AWS Expertise](/help-services/2-day-cto-expertise/) — Hands-on CTO block for rapid fixes or high-impact delivery.
-- [CTO Cloud Strategy — Non-Profits](/help-services/cto-cloud-strategy-nonprofits/) — Discovery + research-backed follow-up for mission-driven orgs.
+- [AWS Account Access Audit & Remediation](/help/aws-account-access-audit/) — Access audit, IAM/SSO remediation, HIPAA/SOC2 posture fixes.
+- [GenAI / RAG Readiness Blueprint](/help/genai-rag-readiness/) — GenAI architecture & blueprint (Bedrock, RAG, vector search).
+- [Focused CTO-Level AWS Expertise](/help/2-day-cto-expertise/) — Hands-on CTO block for rapid fixes or high-impact delivery.
+- [CTO Cloud Strategy — Non-Profits](/help/cto-cloud-strategy-nonprofits/) — Discovery + research-backed follow-up for mission-driven orgs.
 
 ---
 

@@ -1479,17 +1479,21 @@
   font-size: inherit;
 }
 
-/* Hide skip to contributions link by matching background color */
-#github-calendar .sr-only,
-#github-calendar a[href*="contributions"] {
-  color: rgba(255, 255, 255, 0.95) !important;
-  background: rgba(255, 255, 255, 0.95) !important;
+/* Hide sr-only text but show contributions link */
+#github-calendar .sr-only {
+  display: none;
 }
 
-[data-theme="dark"] #github-calendar .sr-only,
-[data-theme="dark"] #github-calendar a[href*="contributions"] {
-  color: rgba(28, 34, 48, 0.95) !important;
-  background: rgba(28, 34, 48, 0.95) !important;
+#github-calendar a[href*="contributions"] {
+  display: inline-block;
+  font-size: 0.875rem;
+  color: var(--primary) !important;
+  text-decoration: underline;
+  margin-bottom: 0.5rem;
+}
+
+#github-calendar a[href*="contributions"]:hover {
+  opacity: 0.8;
 }
 
 /* Allow full year calendar to display naturally */

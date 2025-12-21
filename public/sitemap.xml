@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/help-services/aws-account-access-audit/</loc>
+    <loc>http://localhost:1313/help/aws-account-access-audit/</loc>
     <lastmod>2025-11-29T00:00:00-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
@@ -11,19 +11,19 @@
     <loc>http://localhost:1313/cloudcroft-cloud-company/</loc>
     <lastmod>2025-11-29T00:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/help-services/cto-cloud-strategy-nonprofits/</loc>
+    <loc>http://localhost:1313/help/cto-cloud-strategy-nonprofits/</loc>
     <lastmod>2025-11-29T00:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/help-services/2-day-cto-expertise/</loc>
+    <loc>http://localhost:1313/help/2-day-cto-expertise/</loc>
     <lastmod>2025-11-29T00:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/help-services/genai-rag-readiness/</loc>
+    <loc>http://localhost:1313/help/genai-rag-readiness/</loc>
     <lastmod>2025-11-29T00:00:00-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/help/</loc>
     <lastmod>2025-11-29T00:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/help-services/</loc>
+    <loc>http://localhost:1313/help/</loc>
     <lastmod>2025-11-29T00:00:00-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%23awshero/</loc>

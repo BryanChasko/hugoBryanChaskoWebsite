@@ -4,7 +4,7 @@ description: "Expert AWS consulting services focused on security, architecture, 
 ShowBreadCrumbs: false
 ---
 
-<a href="/help-services/" class="ccc-hero-link">
+<a href="/help/" class="ccc-hero-link">
 <div class="ccc-hero">
   <h1>Consulting Services</h1>
   <p class="ccc-tagline">Expert technical product (AI/Cloud/Data/Web) consulting at <strong>$222/hour</strong>. Senior advisory and hands-on execution, with hundreds of AWS cloud services deployed to production.</p>
@@ -15,7 +15,7 @@ ShowBreadCrumbs: false
 
 <div class="ccc-services-grid">
 
-<a href="/help-services/aws-account-access-audit/" class="ccc-card-link">
+<a href="/help/aws-account-access-audit/" class="ccc-card-link">
 <div class="ccc-service-card">
   <div class="service-icon">🛡️</div>
   <h3>AWS Account Access Audit & Remediation</h3>
@@ -24,7 +24,7 @@ ShowBreadCrumbs: false
 </div>
 </a>
 
-<a href="/help-services/genai-rag-readiness/" class="ccc-card-link">
+<a href="/help/genai-rag-readiness/" class="ccc-card-link">
 <div class="ccc-service-card">
   <div class="service-icon">🤖</div>
   <h3>GenAI / RAG Readiness Blueprint</h3>
@@ -33,7 +33,7 @@ ShowBreadCrumbs: false
 </div>
 </a>
 
-<a href="/help-services/2-day-cto-expertise/" class="ccc-card-link">
+<a href="/help/2-day-cto-expertise/" class="ccc-card-link">
 <div class="ccc-service-card">
   <div class="service-icon">⚡</div>
   <h3>Focused CTO-Level AWS Expertise</h3>
@@ -42,7 +42,7 @@ ShowBreadCrumbs: false
 </div>
 </a>
 
-<a href="/help-services/cto-cloud-strategy-nonprofits/" class="ccc-card-link">
+<a href="/help/cto-cloud-strategy-nonprofits/" class="ccc-card-link">
 <div class="ccc-service-card">
   <div class="service-icon">🌱</div>
   <h3>CTO Cloud Strategy Session — Non-Profits</h3>
