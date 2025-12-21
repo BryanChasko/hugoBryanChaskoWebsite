@@ -9,16 +9,7 @@
 ```bash
 # Create a feature branch for any changes
 git checkout -b feature/fix-menu-click
-# or
-git checkout -b bugfix/navigation-pointer-events
-
-# Make changes, test locally, commit
-git add .
 git commit -m "Fix: Navigation menu not clickable due to WebGL canvas pointer-events"
-
-# Push to remote for review
-git push origin feature/fix-menu-click
-```
 
 ### 2. Local Testing & Verification (REQUIRED BEFORE PR)
 
@@ -55,7 +46,6 @@ npm test
 - [ ] All tests passing (CI/CD checks green)
 - [ ] Manual QA verification (ideally by another person)
 - [ ] No broken functionality introduced
-- [ ] Documentation updated if needed
 
 ### 4. Merge to Main
 

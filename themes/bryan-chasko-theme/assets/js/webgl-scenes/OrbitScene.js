@@ -27,10 +27,12 @@ class OrbitScene extends BaseScene {
     }
 
     // Initialize orbits BEFORE starting animation
+    // Reduced total particle count by 150 (if possible)
+    // Original: 15+22+30=67, so set all to 1 to minimize
     this.orbits = options.orbits || [
-      { radius: 180, speed: 0.5, particleCount: 15, opacity: 0.7 },
-      { radius: 280, speed: 0.3, particleCount: 22, opacity: 0.5 },
-      { radius: 380, speed: 0.15, particleCount: 30, opacity: 0.35 },
+      { radius: 180, speed: 0.5, particleCount: 1, opacity: 0.7 },
+      { radius: 280, speed: 0.3, particleCount: 1, opacity: 0.5 },
+      { radius: 380, speed: 0.15, particleCount: 1, opacity: 0.35 },
     ];
 
     this.centerNode = {

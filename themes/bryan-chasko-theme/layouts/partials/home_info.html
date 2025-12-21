@@ -1,15 +1,15 @@
 
 
 <article class="first-entry home-info">
-    {{/* Terminal wrapper - contains terminal screen + social icons underneath */}}
-    <div class="terminal-wrapper">
+    {{/* Terminal wrapper - overlay with auto-dismiss after animation */}}
+    <div class="terminal-wrapper" role="status" aria-live="polite" aria-label="Terminal greeting animation">
         <header class="entry-header">
             <h1><span class="terminal-user">^.^</span><span class="terminal-prompt">$</span><span class="terminal-text">Hello, Friend</span><span class="terminal-cursor">█</span></h1>
         </header>
-        {{/* Social icons - positioned behind terminal, revealed when it fades */}}
-        <div class="terminal-social-reveal">
-            {{ partial "social_icons.html" (dict "align" "center") }}
-        </div>
+    </div>
+    {{/* Social icons - revealed after terminal fades */}}
+    <div class="terminal-social-reveal">
+        {{ partial "social_icons.html" (dict "align" "center") }}
     </div>
     <div class="entry-content">
         {{ .Content | markdownify }}
@@ -157,8 +157,9 @@
                 function renderCommit(commit) {
                     const message = commit.commit.message.split('\n')[0];
                     const date = new Date(commit.commit.author.date);
-                    document.getElementById('commit-message').textContent = 
-                        message.length > 50 ? message.substring(0, 50) + '...' : message;
+                    const commitUrl = commit.html_url;
+                    document.getElementById('commit-message').innerHTML = 
+                        `<a href="${commitUrl}" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; cursor: pointer; border-bottom: 1px solid currentColor;">${message.length > 50 ? message.substring(0, 50) + '...' : message}</a>`;
                     document.getElementById('commit-date').textContent = getRelativeTime(date);
                 }
 
@@ -270,4 +271,5 @@
         <script async src="//www.instagram.com/embed.js"></script>
     </footer>
 </article>
+<script src="{{ "js/terminal-overlay.js" | relURL }}"></script>
 

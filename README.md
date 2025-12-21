@@ -175,15 +175,32 @@ See [`TESTING.md`](TESTING.md) for complete testing guide.
 
 ### Deploy Pipeline
 
+
 The deploy script includes a **test gate** (tests must pass before S3 upload):
 
 ```bash
 # Standard deploy (tests block if they fail)
-perl scripts/deploy.pl --profile your-aws-profile
+# Uses profile/region from ~/.bcc-site/config.json if not specified
+perl scripts/deploy.pl --skip-tests --verbose
 
 # Emergency bypass (for hotfixes only)
-perl scripts/deploy.pl --skip-tests --profile your-aws-profile
+perl scripts/deploy.pl --skip-tests --profile your-aws-profile --verbose
 ```
+
+**Configuration Priority:**
+1. Command-line arguments
+2. Environment variables
+3. `~/.bcc-site/config.json`
+
+**Example config file (~/.bcc-site/config.json):**
+```json
+{
+  "AWS_PROFILE": "websites-bryanchasko",
+  "AWS_REGION": "us-west-2"
+}
+```
+
+See [`DEPLOYMENT.md`](DEPLOYMENT.md) for more details.
 
 **Pipeline Order**:
 1. Hugo Build (`hugo --minify`)

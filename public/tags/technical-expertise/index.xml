@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Technical Expertise on Bryan Chasko&#39;s Portfolio</title>
-    <link>https://bryanchasko.com/tags/technical-expertise/</link>
+    <link>http://localhost:1313/tags/technical-expertise/</link>
     <description>Recent content in Technical Expertise on Bryan Chasko&#39;s Portfolio</description>
     <image>
       <title>Bryan Chasko&#39;s Portfolio</title>
-      <url>https://bryanchasko.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://bryanchasko.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
     <lastBuildDate>Tue, 02 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://bryanchasko.com/tags/technical-expertise/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/technical-expertise/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bryan Chasko&#39;s Skills and Experience</title>
-      <link>https://bryanchasko.com/blog/posts/my-skills-and-experience/</link>
+      <link>http://localhost:1313/blog/posts/my-skills-and-experience/</link>
       <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/blog/posts/my-skills-and-experience/</guid>
+      <guid>http://localhost:1313/blog/posts/my-skills-and-experience/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;&lt;a name=&#34;top&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;skills-and-experience&#34;&gt;Skills and Experience&lt;/h2&gt;
