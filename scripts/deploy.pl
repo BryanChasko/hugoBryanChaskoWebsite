@@ -224,9 +224,29 @@ sub get {
 }
 
 package HomeFileProvider; use parent -norequire, 'ConfigProvider';
+use JSON::PP qw(decode_json);
 sub new { my($class)=@_; bless { cache=>undef }, $class }
-sub _load { my($self)=@_; return if defined $self->{cache}; my $path=$ENV{SITE_CONFIG_FILE}; if(!$path){ my $home=$ENV{HOME}//''; $path=File::Spec->catfile($home,'.bcc-site','config.json'); } if(-f $path){ my $c=Util::read_file($path); eval{ $self->{cache}=decode_json($c) } or do { $self->{cache}={} } } else { $self->{cache}={} } }
-sub get { my($self,$key)=@_; $self->_load; my %map=( bucket=>$self->{cache}{SITE_BUCKET}, domain=>$self->{cache}{SITE_DOMAIN}, distid=>$self->{cache}{SITE_DISTRIBUTION_ID}, profile=>$self->{cache}{AWS_PROFILE}, region=>$self->{cache}{AWS_REGION}, param_path=>$self->{cache}{SITE_PARAM_PATH} ); return $map{$key}; }
+sub _load { 
+  my($self)=@_; 
+  return if defined $self->{cache}; 
+  my $path=$ENV{SITE_CONFIG_FILE}; 
+  if(!$path){ 
+    my $home=$ENV{HOME}//''; 
+    $path=File::Spec->catfile($home,'.bcc-site','config.json'); 
+  } 
+  if(-f $path){ 
+    my $c=Util::read_file($path); 
+    eval{ $self->{cache}=decode_json($c) } or do { $self->{cache}={} } 
+  } else { 
+    $self->{cache}={}; 
+  } 
+}
+sub get { 
+  my($self,$key)=@_; 
+  $self->_load; 
+  my %map=( bucket=>$self->{cache}{SITE_BUCKET}, domain=>$self->{cache}{SITE_DOMAIN}, distid=>$self->{cache}{SITE_DISTRIBUTION_ID}, profile=>$self->{cache}{AWS_PROFILE}, region=>$self->{cache}{AWS_REGION}, param_path=>$self->{cache}{SITE_PARAM_PATH} ); 
+  return $map{$key}; 
+}
 
 package SSMProvider; use parent -norequire, 'ConfigProvider';
 sub new { my($class,%args)=@_; bless { aws=>$args{aws}, param_path=>$args{param_path} }, $class }
@@ -392,7 +412,12 @@ USAGE
   }
 
   eval {
-    my $aws = AWS->new(profile=>$opts{profile}//$ENV{AWS_PROFILE}, region=>$opts{region}//$ENV{AWS_REGION}, verbose=>$opts{verbose}//0, dry_run=>$opts{dry_run}//0);
+    # Load config from home file first, then override with ENV/CLI
+    my $home = HomeFileProvider->new;
+    my $profile = $opts{profile} // $ENV{AWS_PROFILE} // $home->get('profile');
+    my $region = $opts{region} // $ENV{AWS_REGION} // $home->get('region');
+    
+    my $aws = AWS->new(profile=>$profile, region=>$region, verbose=>$opts{verbose}//0, dry_run=>$opts{dry_run}//0);
     my $runner = Deployer->new(aws=>$aws, verbose=>$opts{verbose}//0);
     $runner->deploy(%opts);
   }; if ($@) { Out::err(Util::trim($@)); exit 1 }
