@@ -230,9 +230,10 @@
   left: auto;
   right: auto;
   z-index: 1;
-  width: 100%;
-  height: auto;
+  width: calc(100% - 100px);
   max-width: none;
+  height: auto;
+  margin: 0 50px;
   /* Frosted glass background for light mode */
   background: 
     /* Subtle scanline effect */
@@ -264,7 +265,6 @@
   overflow: hidden;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
