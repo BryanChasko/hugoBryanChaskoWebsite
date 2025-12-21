@@ -179,9 +179,8 @@
    ======================================== */
 .terminal-wrapper {
   position: sticky;
-  top: var(--header-height, 60px);
-  left: 0;
-  width: 100vw;
+  top: 0;
+  width: 100%;
   height: auto;
   z-index: 9999;
   display: flex;
