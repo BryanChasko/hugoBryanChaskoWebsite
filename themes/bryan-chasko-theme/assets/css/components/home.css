@@ -182,13 +182,13 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
+  height: 100vh;
   z-index: 9999;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  padding-top: 0;
+  justify-content: center;
+  padding: 0;
   pointer-events: none;
   animation: terminal-slide-down 0.6s ease-out forwards,
              terminal-glitch 8s ease-in-out 0.6s,
@@ -224,14 +224,15 @@
 
 /* Home Info Title - Terminal Style */
 /* Light mode: Frosted glass terminal with purple accent */
-.home-info .entry-header {
+.terminal-wrapper .entry-header {
   position: relative;
   top: auto;
   left: auto;
   right: auto;
   z-index: 1;
-  max-width: min(90vw, 600px);
   width: 100%;
+  height: 100%;
+  max-width: none;
   /* Frosted glass background for light mode */
   background: 
     /* Subtle scanline effect */
@@ -249,12 +250,9 @@
       rgba(243, 232, 255, 0.95) 50%,
       rgba(255, 250, 245, 0.95) 100%
     );
-  border-radius: 0 0 var(--radius-lg) var(--radius-lg); /* Straight top, rounded bottom */
+  border-radius: 0;
   padding: var(--space-lg) var(--space-xl);
-  border-top: 1px solid rgba(94, 65, 162, 0.15);
-  border-bottom: 1px solid rgba(94, 65, 162, 0.15);
-  border-left: none;
-  border-right: none;
+  border: none;
   /* Soft purple glow effect */
   box-shadow:
     /* Inner subtle glow */
@@ -267,6 +265,9 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Light mode: Subtle purple flicker overlay */
