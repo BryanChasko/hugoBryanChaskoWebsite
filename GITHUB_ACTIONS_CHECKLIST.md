@@ -23,7 +23,7 @@ Use this checklist to verify your GitHub Actions CI/CD setup is complete and wor
 ### Create GitHub Actions User
 ```bash
 aws iam create-user --user-name github-actions-webgl-tests \
-  --profile aerospaceug-admin
+  --profile websites-bryanchasko
 ```
 - [ ] IAM user created
 - [ ] User name: `github-actions-webgl-tests`
@@ -32,7 +32,7 @@ aws iam create-user --user-name github-actions-webgl-tests \
 ### Create Access Keys
 ```bash
 aws iam create-access-key --user-name github-actions-webgl-tests \
-  --profile aerospaceug-admin
+  --profile websites-bryanchasko
 ```
 - [ ] Access key created
 - [ ] Save `AccessKeyId` (use for `AWS_ACCESS_KEY_ID`)
@@ -89,7 +89,7 @@ aws iam put-user-policy \
       }
     ]
   }' \
-  --profile aerospaceug-admin
+  --profile websites-bryanchasko
 ```
 
 - [ ] Policy attached to IAM user
@@ -103,7 +103,7 @@ aws iam put-user-policy \
 aws iam get-user-policy \
   --user-name github-actions-webgl-tests \
   --policy-name github-actions-webgl-policy \
-  --profile aerospaceug-admin
+  --profile websites-bryanchasko
 ```
 
 - [ ] Policy exists and is readable
@@ -119,7 +119,7 @@ aws s3api create-bucket \
   --bucket bryanchasko-com-webgl-baselines \
   --region us-west-2 \
   --create-bucket-configuration LocationConstraint=us-west-2 \
-  --profile aerospaceug-admin
+  --profile websites-bryanchasko
 ```
 
 - [ ] Bucket created
@@ -131,7 +131,7 @@ aws s3api create-bucket \
 aws s3api put-bucket-versioning \
   --bucket bryanchasko-com-webgl-baselines \
   --versioning-configuration Status=Enabled \
-  --profile aerospaceug-admin
+  --profile websites-bryanchasko
 ```
 
 - [ ] Versioning enabled
@@ -147,7 +147,7 @@ aws s3api put-bucket-encryption \
       }
     }]
   }' \
-  --profile aerospaceug-admin
+  --profile websites-bryanchasko
 ```
 
 - [ ] Encryption enabled (AES256)
@@ -168,7 +168,7 @@ aws s3api put-bucket-lifecycle-configuration \
       }
     }]
   }' \
-  --profile aerospaceug-admin
+  --profile websites-bryanchasko
 ```
 
 - [ ] Lifecycle policy configured (180-day retention)
@@ -187,25 +187,25 @@ aws ssm put-parameter \
   --name /sites/bryanchasko.com/s3_bucket \
   --type String \
   --value bryanchasko.com \
-  --profile aerospaceug-admin
+  --profile websites-bryanchasko
 
 aws ssm put-parameter \
   --name /sites/bryanchasko.com/domain \
   --type String \
   --value bryanchasko.com \
-  --profile aerospaceug-admin
+  --profile websites-bryanchasko
 
 aws ssm put-parameter \
   --name /sites/bryanchasko.com/cloudfront_distribution_id \
   --type String \
   --value [your-actual-distribution-id] \
-  --profile aerospaceug-admin
+  --profile websites-bryanchasko
 
 aws ssm put-parameter \
   --name /sites/bryanchasko.com/aws_region \
   --type String \
   --value us-west-2 \
-  --profile aerospaceug-admin
+  --profile websites-bryanchasko
 ```
 
 ### Verify Parameters Created
@@ -215,7 +215,7 @@ aws ssm get-parameters \
             /sites/bryanchasko.com/domain \
             /sites/bryanchasko.com/cloudfront_distribution_id \
             /sites/bryanchasko.com/aws_region \
-  --profile aerospaceug-admin
+  --profile websites-bryanchasko
 ```
 
 - [ ] All 4 parameters created successfully
@@ -433,7 +433,7 @@ ls -la public/ | head -20
     --type String \
     --value [new-value] \
     --overwrite \
-    --profile aerospaceug-admin
+    --profile websites-bryanchasko
   ```
 
 - [ ] **Monthly**: Review workflow logs for failures

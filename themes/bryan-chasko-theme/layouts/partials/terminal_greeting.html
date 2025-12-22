@@ -1,0 +1,44 @@
+{{/*
+  Terminal Greeting Component
+  
+  A reusable terminal-style greeting component with customizable messages and styling.
+  Supports light/dark modes and is fully SSR-friendly.
+  
+  Usage:
+    {{ partial "terminal_greeting.html" (dict 
+      "message" "Hello, Friend"
+      "user" "^.^"
+      "prompt" "$"
+      "class" "my-custom-class"
+    ) }}
+  
+  Parameters:
+    - message: Text to display after prompt (default: "Hello, Friend")
+    - user: User indicator (default: "^.^")
+    - prompt: Prompt character (default: "$")
+    - class: Additional CSS classes for the wrapper
+    - showSocialReveal: Whether to show social icons reveal (default: true)
+*/}}
+
+{{- $message := .message | default "Hello, Friend" -}}
+{{- $user := .user | default "^.^" -}}
+{{- $prompt := .prompt | default "$" -}}
+{{- $customClass := .class | default "" -}}
+{{- $showSocialReveal := .showSocialReveal | default true -}}
+
+<div class="terminal-wrapper {{ $customClass }}" role="status" aria-live="polite" aria-label="Terminal greeting animation">
+  <header class="entry-header">
+    <h1>
+      <span class="terminal-user">{{ $user }}</span>
+      <span class="terminal-prompt">{{ $prompt }}</span>
+      <span class="terminal-text">{{ $message }}</span>
+      <span class="terminal-cursor">█</span>
+    </h1>
+  </header>
+</div>
+
+{{- if $showSocialReveal }}
+<div class="terminal-social-reveal">
+  {{ partial "social_icons.html" (dict "align" "center") }}
+</div>
+{{- end }}

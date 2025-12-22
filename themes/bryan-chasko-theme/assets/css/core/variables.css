@@ -11,6 +11,10 @@
   --nebula-orange: #FF9900;
   --nebula-orange-dark: #E68A00;  /* Hover state */
   
+  /* Social Dashboard Gradients */
+  --gradient-github: linear-gradient(135deg, #00CED1 0%, #FF9900 100%);
+  --gradient-insta: linear-gradient(135deg, #8169C5 0%, #A78BFA 100%);
+  
   /* === NEUTRAL COLORS === */
   --white: #FFFFFF;
   --gray-50: #F9FAFB;

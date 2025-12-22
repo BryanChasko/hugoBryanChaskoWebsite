@@ -1,4 +1,16 @@
-// Terminal overlay auto-dismiss after animation completes
+/**
+ * Terminal Overlay Auto-Dismiss
+ * 
+ * Automatically dismisses terminal greeting components after animation completes.
+ * Works with any element with class `.terminal-wrapper`.
+ * 
+ * Animation timeline:
+ * - 0-0.6s: Slide down
+ * - 0.6-8.6s: Glitch effect
+ * - 7.6-8.4s: Fade out
+ * - 8.5s: Dismiss (aria-hidden + pointer-events: none)
+ */
+
 document.addEventListener('DOMContentLoaded', () => {
   const terminal = document.querySelector('.terminal-wrapper');
   if (!terminal) return;

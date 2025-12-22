@@ -1,0 +1,87 @@
+/* GitHub Calendar Component - Responsive SVG Rendering */
+
+.calendar {
+  pointer-events: auto;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+/* SVG container - ensure full visibility */
+.calendar svg {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+  overflow: visible !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+/* SVG elements - prevent clipping */
+.calendar svg rect {
+  overflow: visible !important;
+}
+
+.calendar svg text {
+  overflow: visible !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
+
+.calendar svg g {
+  overflow: visible !important;
+}
+
+.calendar svg path {
+  overflow: visible !important;
+}
+
+/* Wrapper - ensure calendar renders at full width */
+.github-calendar-wrapper {
+  pointer-events: auto !important;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+/* Responsive sizing for different breakpoints */
+@media (max-width: 480px) {
+  .calendar svg {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .calendar svg {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .calendar svg {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .calendar svg text {
+  fill: #E0E0E0;
+}
+
+[data-theme="dark"] .calendar svg rect {
+  stroke: rgba(255, 255, 255, 0.1);
+}

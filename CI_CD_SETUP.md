@@ -16,7 +16,7 @@ This document is a comprehensive reference; the checklist is designed for hands-
 
 1. **Bootstrap backend resources**
    ```bash
-   perl scripts/setup-terraform-backend.pl --profile aerospaceug-admin
+  perl scripts/setup-terraform-backend.pl --profile websites-bryanchasko
    ```
    The script ensures the Terraform state bucket and DynamoDB lock table exist and prints the `github_oidc_role_arn` value for GitHub Actions.
 
@@ -411,7 +411,7 @@ An error occurred (AccessDenied) when calling the PutObject operation: Access De
 ```bash
 # Verify permissions
 aws iam get-user-policy --user-name github-actions-webgl-tests \
-  --policy-name baseline-bucket-access --profile aerospaceug-admin
+  --policy-name baseline-bucket-access --profile websites-bryanchasko
 
 # Check bucket policy
 aws s3api get-bucket-policy --bucket bryanchasko.com
@@ -432,12 +432,12 @@ Warning: Could not find CloudFront distribution
 **Fix**:
 ```bash
 # Check distribution aliases
-aws cloudfront list-distributions --profile aerospaceug-admin | \
+aws cloudfront list-distributions --profile websites-bryanchasko | \
   jq '.DistributionList.Items[] | {Id, Aliases}'
 
 # Verify CloudFront permission in policy
 aws iam get-user-policy --user-name github-actions-webgl-tests \
-  --policy-name baseline-bucket-access --profile aerospaceug-admin
+  --policy-name baseline-bucket-access --profile websites-bryanchasko
 ```
 
 ### Baselines Not Updating After Main Merge

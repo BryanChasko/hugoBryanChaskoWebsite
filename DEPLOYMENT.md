@@ -65,7 +65,7 @@ git status
 git log -1
 
 # Deploy (includes test gate)
-perl scripts/deploy.pl --profile aerospaceug-admin --verbose
+perl scripts/deploy.pl --profile websites-bryanchasko --verbose
 
 # Verify in production
 curl -s https://bryanchasko.com/ | head -20
@@ -96,7 +96,7 @@ The test gate ensures:
 
 ```bash
 # Skip tests ONLY for critical production hotfixes
-perl scripts/deploy.pl --skip-tests --profile aerospaceug-admin
+perl scripts/deploy.pl --skip-tests --profile websites-bryanchasko
 
 # But ALWAYS revert the issue and re-test within hours
 ```
@@ -171,10 +171,10 @@ CloudFront caches files for performance. When deploying, invalidate the cache:
 
 ```bash
 # Done automatically by deploy.pl
-aws cloudfront create-invalidation --distribution-id [your-actual-distribution-id] --paths "/*" --profile aerospaceug-admin
+aws cloudfront create-invalidation --distribution-id [your-actual-distribution-id] --paths "/*" --profile websites-bryanchasko
 
 # Or manually:
-perl scripts/deploy.pl --invalidate-only --profile aerospaceug-admin
+perl scripts/deploy.pl --invalidate-only --profile websites-bryanchasko
 ```
 
 **Cache invalidation takes 1-2 minutes to complete.** Changes may not be visible immediately—wait for invalidation to finish.
@@ -200,12 +200,12 @@ perl scripts/deploy.pl --invalidate-only --profile aerospaceug-admin
 
 1. **Command-line args** - Highest priority
    ```bash
-   perl scripts/deploy.pl --profile aerospaceug-admin --bucket bryanchasko.com
+  perl scripts/deploy.pl --profile websites-bryanchasko --bucket bryanchasko.com
    ```
 
 2. **Environment variables**
    ```bash
-   export AWS_PROFILE=aerospaceug-admin
+  export AWS_PROFILE=websites-bryanchasko
    export SITE_BUCKET=bryanchasko.com
    ```
 
@@ -215,7 +215,7 @@ perl scripts/deploy.pl --invalidate-only --profile aerospaceug-admin
      "SITE_DOMAIN": "bryanchasko.com",
      "SITE_BUCKET": "bryanchasko.com",
      "SITE_DISTRIBUTION_ID": "[your-actual-distribution-id]",
-     "AWS_PROFILE": "aerospaceug-admin",
+    "AWS_PROFILE": "websites-bryanchasko",
      "AWS_REGION": "us-west-2"
    }
    ```
@@ -240,7 +240,7 @@ git revert <commit-hash>     # OR git reset --hard <commit-hash>
 git push origin main
 
 # Deploy the fix
-perl scripts/deploy.pl --profile aerospaceug-admin
+perl scripts/deploy.pl --profile websites-bryanchasko
 ```
 
 ### From CloudFront Cache

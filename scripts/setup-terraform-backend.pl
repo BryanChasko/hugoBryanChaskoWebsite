@@ -142,7 +142,7 @@ sub main {
     bucket => 'bryanchasko-terraform-state',
     table  => 'bryanchasko-terraform-lock',
     region => 'us-west-2',
-    profile => 'aerospaceug-admin',
+    profile => 'websites-bryanchasko',
     verbose => 0,
     dry_run => 0,
   );
@@ -167,7 +167,7 @@ Options:
   --bucket    Terraform state bucket (default: bryanchasko-terraform-state)
   --table     DynamoDB lock table name (default: bryanchasko-terraform-lock)
   --region    AWS region (default: us-west-2)
-  --profile   AWS CLI profile (default: aerospaceug-admin)
+  --profile   AWS CLI profile (default: websites-bryanchasko)
   --dry-run   Show commands without executing them
   --verbose   Print AWS CLI commands as they run
 

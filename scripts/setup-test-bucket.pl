@@ -170,7 +170,7 @@ sub main {
   my %opts = (
     bucket => 'bryanchasko-com-webgl-baselines',
     region => 'us-west-2',
-    profile => 'aerospaceug-admin',
+    profile => 'websites-bryanchasko',
     verbose => 0,
     dry_run => 0,
   );
@@ -193,7 +193,7 @@ Usage:
 Options:
   --bucket    Bucket name (default: bryanchasko-com-webgl-baselines)
   --region    AWS region (default: us-west-2)
-  --profile   AWS profile (default: aerospaceug-admin)
+  --profile   AWS profile (default: websites-bryanchasko)
   --dry-run   Show what would happen without making AWS calls
   --verbose   Show detailed output
 

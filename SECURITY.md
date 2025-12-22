@@ -60,7 +60,7 @@ ls -la ~/.bcc-site/config.json
 export SITE_DOMAIN=bryanchasko.com
 export SITE_BUCKET=bryanchasko.com
 export SITE_DISTRIBUTION_ID=[your-actual-distribution-id]  # NEVER use - this is an example of what NOT to do
-export AWS_PROFILE=aerospaceug-admin
+export AWS_PROFILE=websites-bryanchasko
 export AWS_REGION=us-west-2
 
 # Then deploy
@@ -75,23 +75,23 @@ Store configuration securely in AWS:
 # One-time setup
 aws ssm put-parameter --name /sites/bryanchasko.com/s3_bucket \
   --type String --value bryanchasko.com \
-  --profile aerospaceug-admin
+  --profile websites-bryanchasko
 
 aws ssm put-parameter --name /sites/bryanchasko.com/domain \
   --type String --value bryanchasko.com \
-  --profile aerospaceug-admin
+  --profile websites-bryanchasko
 
 aws ssm put-parameter --name /sites/bryanchasko.com/cloudfront_distribution_id \
   --type String --value [your-actual-distribution-id] \
-  --profile aerospaceug-admin
+  --profile websites-bryanchasko
 
 aws ssm put-parameter --name /sites/bryanchasko.com/aws_profile \
-  --type String --value aerospaceug-admin \
-  --profile aerospaceug-admin
+  --type String --value websites-bryanchasko \
+  --profile websites-bryanchasko
 
 aws ssm put-parameter --name /sites/bryanchasko.com/aws_region \
   --type String --value us-west-2 \
-  --profile aerospaceug-admin
+  --profile websites-bryanchasko
 
 # Then deploy using SSM
 perl scripts/deploy.pl --param-path /sites/bryanchasko.com
@@ -111,7 +111,7 @@ perl scripts/deploy.pl --param-path /sites/bryanchasko.com
 Store AWS credentials in `~/.aws/credentials` (not in repo):
 
 ```ini
-[aerospaceug-admin]
+[websites-bryanchasko]
 aws_access_key_id = AKIAIOSFODNN7EXAMPLE
 aws_secret_access_key = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 ```
@@ -126,7 +126,7 @@ chmod 600 ~/.aws/credentials
 Set default region in `~/.aws/config`:
 
 ```ini
-[profile aerospaceug-admin]
+[profile websites-bryanchasko]
 region = us-west-2
 output = json
 ```
@@ -135,7 +135,7 @@ output = json
 
 ```bash
 # Test credentials
-aws sts get-caller-identity --profile aerospaceug-admin
+aws sts get-caller-identity --profile websites-bryanchasko
 
 # Should return:
 # {
@@ -153,12 +153,12 @@ The `scripts/deploy.pl` script includes security features:
 
 1. **Command-line args** (highest priority)
    ```bash
-   perl scripts/deploy.pl --profile aerospaceug-admin --bucket my-bucket
+  perl scripts/deploy.pl --profile websites-bryanchasko --bucket my-bucket
    ```
 
 2. **Environment variables**
    ```bash
-   export AWS_PROFILE=aerospaceug-admin
+  export AWS_PROFILE=websites-bryanchasko
    ```
 
 3. **Local config file** (`~/.bcc-site/config.json`)
@@ -190,13 +190,13 @@ Deployment **blocks** if WebGL tests fail (prevents broken code in production):
 
 ```bash
 # Normal deploy - tests must pass
-perl scripts/deploy.pl --profile aerospaceug-admin
+perl scripts/deploy.pl --profile websites-bryanchasko
 
 # If tests fail, fix the code and try again
 # NO broken code reaches production ✅
 
 # Emergency bypass (hotfix only)
-perl scripts/deploy.pl --skip-tests --profile aerospaceug-admin
+perl scripts/deploy.pl --skip-tests --profile websites-bryanchasko
 ```
 
 ## Git Security Best Practices
@@ -369,13 +369,13 @@ Create an IAM user for deployments with **minimum required permissions**:
    git revert <commit-hash>
 
    # Deploy the fix
-   perl scripts/deploy.pl --profile aerospaceug-admin
+  perl scripts/deploy.pl --profile websites-bryanchasko
    ```
 
 2. **Or manually restore from S3 versioning**
    ```bash
    # S3 versioning is enabled - restore previous version
-   aws s3api list-object-versions --bucket bryanchasko.com --profile aerospaceug-admin
+  aws s3api list-object-versions --bucket bryanchasko.com --profile websites-bryanchasko
    ```
 
 ## Regular Maintenance

@@ -148,7 +148,7 @@ sub main {
   my %opts = (
     domain => 'bryanchasko.com',
     region => 'us-west-2',
-    profile => 'aerospaceug-admin',
+    profile => 'websites-bryanchasko',
     verbose => 0,
     dry_run => 0,
   );
@@ -171,7 +171,7 @@ Usage:
 Options:
   --domain    Domain name (used as bucket name, default: bryanchasko.com)
   --region    AWS region (default: us-west-2)
-  --profile   AWS profile (default: aerospaceug-admin)
+  --profile   AWS profile (default: websites-bryanchasko)
   --dry-run   Show what would happen without making AWS calls
   --verbose   Show detailed output
 

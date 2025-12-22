@@ -246,7 +246,7 @@ aws ssm get-parameters \
           /sites/bryanchasko.com/domain \
           /sites/bryanchasko.com/cloudfront_distribution_id \
           /sites/bryanchasko.com/aws_region \
-  --profile aerospaceug-admin
+  --profile websites-bryanchasko
 ```
 
 ### Check GitHub Secrets
@@ -260,7 +260,7 @@ aws ssm get-parameters \
 ```bash
 perl scripts/deploy.pl --dry-run --verbose \
   --param-path /sites/bryanchasko.com \
-  --profile aerospaceug-admin
+  --profile websites-bryanchasko
 ```
 
 Expected output:
@@ -278,7 +278,7 @@ Expected output:
 **Solution**: Verify SSM parameters exist
 ```bash
 aws ssm get-parameters --names /sites/bryanchasko.com/* \
-  --profile aerospaceug-admin
+  --profile websites-bryanchasko
 ```
 
 ### IAM Permission Denied

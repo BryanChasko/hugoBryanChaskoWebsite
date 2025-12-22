@@ -1,0 +1,727 @@
+/* GitHub Dashboard Card Component */
+
+.github-dashboard {
+  pointer-events: auto;
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(248, 250, 252, 0.98) 0%,
+    rgba(243, 232, 255, 0.12) 30%,
+    rgba(255, 255, 255, 0.95) 60%,
+    rgba(255, 247, 237, 0.1) 100%
+  );
+  border: 1px solid rgba(94, 65, 162, 0.12);
+  border-radius: 12px;
+  padding: 24px;
+  margin: 0;
+  box-shadow: 
+    0 2px 12px -2px rgba(94, 65, 162, 0.08),
+    0 1px 4px -1px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+/* Gradient header strip - brand element */
+.github-dashboard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--nebula-purple) 0%,
+    var(--nebula-lavender) 50%,
+    var(--nebula-orange) 100%
+  );
+  background-size: 200% 100%;
+  opacity: 0.7;
+  animation: gradient-shift-brand 8s ease-in-out infinite;
+  transition: all var(--transition-base);
+}
+
+.github-dashboard:hover::before {
+  opacity: 1;
+  animation: gradient-shift-brand 4s ease-in-out infinite;
+}
+
+/* Corner accent glow */
+.github-dashboard::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(
+    circle at 100% 0%,
+    rgba(129, 105, 197, 0.06) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  pointer-events: none;
+}
+
+.github-dashboard:hover::after {
+  opacity: 1;
+}
+
+.github-dashboard:hover {
+  border-color: rgba(94, 65, 162, 0.25);
+  box-shadow: 
+    0 8px 25px -5px rgba(94, 65, 162, 0.15),
+    0 4px 10px -3px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(94, 65, 162, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.github-dashboard__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(94, 65, 162, 0.1);
+  width: 100%;
+}
+
+.github-dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 16px;
+  flex-wrap: nowrap;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(94, 65, 162, 0.1);
+  width: 100%;
+}
+
+.github-dashboard__button {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--white);
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, var(--nebula-purple) 0%, var(--nebula-lavender) 100%);
+  background-size: 200% 100%;
+  box-shadow: 0 4px 12px rgba(94, 65, 162, 0.4);
+  min-height: 44px;
+  animation: gradient-shift-brand 6s ease-in-out infinite;
+}
+
+.github-dashboard__button:hover {
+  background: linear-gradient(135deg, var(--nebula-lavender) 0%, var(--nebula-purple) 100%);
+  background-size: 200% 100%;
+  box-shadow: 0 8px 20px rgba(94, 65, 162, 0.6);
+  transform: translateY(-2px);
+  animation: gradient-shift-brand 3s ease-in-out infinite;
+}
+
+.github-dashboard__button svg {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .github-dashboard__actions {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .github-profile-link {
+    margin-right: 0;
+    flex-basis: 100%;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+
+  .github-repo-link {
+    margin-left: 0;
+    flex-basis: 100%;
+    justify-content: center;
+  }
+
+  .github-dashboard-header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .github-profile-link {
+    margin-right: 0;
+    flex-basis: 100%;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+
+  .github-repo-link {
+    margin-left: 0;
+    flex-basis: 100%;
+    justify-content: center;
+  }
+}
+
+.github-repo-link:hover {
+  background: linear-gradient(135deg, #FF6B35 0%, var(--nebula-orange) 100%);
+  border-color: #FF6B35;
+  color: var(--white);
+  box-shadow: 0 8px 20px rgba(255, 107, 53, 0.6);
+  transform: translateY(-2px);
+}
+
+.github-workflow-badges {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+  background: linear-gradient(
+    135deg,
+    rgba(248, 250, 252, 0.98) 0%,
+    rgba(243, 232, 255, 0.12) 30%,
+    rgba(255, 255, 255, 0.95) 60%,
+    rgba(255, 247, 237, 0.1) 100%
+  );
+  border: 1px solid rgba(94, 65, 162, 0.12);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 
+    0 2px 12px -2px rgba(94, 65, 162, 0.08),
+    0 1px 4px -1px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="dark"] .github-workflow-badges {
+  background: linear-gradient(
+    135deg,
+    rgba(28, 34, 48, 0.95) 0%,
+    rgba(30, 26, 48, 0.85) 30%,
+    rgba(17, 24, 39, 0.98) 60%,
+    rgba(32, 28, 42, 0.85) 100%
+  );
+  border-color: rgba(129, 105, 197, 0.2);
+  box-shadow: 
+    0 4px 20px -4px rgba(0, 0, 0, 0.3),
+    0 0 25px -10px rgba(129, 105, 197, 0.1),
+    inset 0 1px 0 rgba(129, 105, 197, 0.1);
+}
+
+.github-workflow-badge {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 320px;
+  margin: 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  transition: all 0.2s;
+  background: linear-gradient(135deg, rgba(129, 105, 197, 0.15) 0%, rgba(167, 139, 250, 0.1) 100%);
+  border: 1px solid rgba(129, 105, 197, 0.2);
+  border-radius: 8px;
+  padding: 10px 14px;
+  box-shadow: 0 2px 8px rgba(94, 65, 162, 0.1);
+}
+
+.github-workflow-badge:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 4px 12px rgba(129, 105, 197, 0.2));
+  background: linear-gradient(135deg, rgba(129, 105, 197, 0.25) 0%, rgba(167, 139, 250, 0.15) 100%);
+  border-color: rgba(129, 105, 197, 0.35);
+}
+
+.github-workflow-badge img {
+  pointer-events: auto;
+  height: 28px;
+  display: block;
+}
+
+@media (max-width: 650px) {
+  .github-workflow-badges {
+    flex-direction: column;
+  }
+
+  .github-workflow-badge {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 8px 0;
+  }
+
+  .github-workflow-badge:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.github-dashboard-card {
+  pointer-events: auto;
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(248, 250, 252, 0.98) 0%,
+    rgba(243, 232, 255, 0.12) 30%,
+    rgba(255, 255, 255, 0.95) 60%,
+    rgba(255, 247, 237, 0.1) 100%
+  );
+  border: 1px solid rgba(94, 65, 162, 0.12);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 
+    0 2px 12px -2px rgba(94, 65, 162, 0.08),
+    0 1px 4px -1px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all var(--transition-base);
+}
+
+.github-dashboard-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--nebula-purple) 0%,
+    var(--nebula-lavender) 50%,
+    var(--nebula-orange) 100%
+  );
+  background-size: 200% 100%;
+  opacity: 0.7;
+  animation: gradient-shift-brand 8s ease-in-out infinite;
+  transition: all var(--transition-base);
+}
+
+.github-dashboard-card:hover::before {
+  opacity: 1;
+  animation: gradient-shift-brand 4s ease-in-out infinite;
+}
+
+.github-dashboard-card:hover {
+  border-color: rgba(94, 65, 162, 0.25);
+  box-shadow: 
+    0 8px 25px -5px rgba(94, 65, 162, 0.15),
+    0 4px 10px -3px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(94, 65, 162, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="dark"] .github-dashboard-card {
+  background: linear-gradient(
+    135deg,
+    rgba(28, 34, 48, 0.95) 0%,
+    rgba(30, 26, 48, 0.85) 30%,
+    rgba(17, 24, 39, 0.98) 60%,
+    rgba(32, 28, 42, 0.85) 100%
+  );
+  border-color: rgba(129, 105, 197, 0.2);
+  box-shadow: 
+    0 4px 20px -4px rgba(0, 0, 0, 0.3),
+    0 0 25px -10px rgba(129, 105, 197, 0.1),
+    inset 0 1px 0 rgba(129, 105, 197, 0.1);
+}
+
+[data-theme="dark"] .github-dashboard-card:hover {
+  border-color: rgba(129, 105, 197, 0.35);
+  box-shadow: 
+    0 12px 30px -8px rgba(0, 0, 0, 0.4),
+    0 0 35px -10px rgba(129, 105, 197, 0.2),
+    inset 0 1px 0 rgba(129, 105, 197, 0.15);
+}
+
+[data-theme="dark"] .github-workflow-badge {
+  background: linear-gradient(135deg, rgba(129, 105, 197, 0.25) 0%, rgba(167, 139, 250, 0.15) 100%);
+  border-color: rgba(129, 105, 197, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .github-workflow-badge:hover {
+  background: linear-gradient(135deg, rgba(129, 105, 197, 0.35) 0%, rgba(167, 139, 250, 0.25) 100%);
+  border-color: rgba(129, 105, 197, 0.45);
+}
+
+.github-latest-commit {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 16px;
+  background: rgba(129, 105, 197, 0.08);
+  border-left: 3px solid var(--nebula-purple);
+  border-radius: 6px;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.github-latest-commit::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.github-latest-commit > * {
+  position: relative;
+  z-index: 2;
+}
+
+.github-latest-commit:hover {
+  background: rgba(129, 105, 197, 0.12);
+  box-shadow: 0 2px 8px rgba(129, 105, 197, 0.1);
+}
+
+.commit-icon {
+  flex-shrink: 0;
+  color: var(--nebula-purple);
+  margin-top: 2px;
+}
+
+.commit-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.commit-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--nebula-purple);
+}
+
+.commit-message {
+  pointer-events: auto;
+  color: var(--color-text);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  word-break: break-word;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.commit-message:hover {
+  transform: scale(1.02);
+  color: var(--nebula-orange);
+  border-bottom-color: var(--nebula-orange);
+}
+
+.workflow-badge-link {
+  pointer-events: auto;
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+.workflow-badge-link:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 4px 12px rgba(129, 105, 197, 0.2));
+}
+
+.commit-date {
+  font-size: 0.875rem;
+  opacity: 0.6;
+}
+
+.calendar {
+  pointer-events: auto;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
+  margin: 0;
+  padding: 0;
+}
+
+.calendar svg {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+  overflow: visible !important;
+}
+
+.calendar svg rect {
+  overflow: visible !important;
+}
+
+.calendar svg text {
+  overflow: visible !important;
+}
+
+.github-calendar-wrapper {
+  pointer-events: auto !important;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
+  margin: 0;
+  padding: 0;
+}
+
+.github-tech-stack {
+  margin-top: 0;
+}
+
+.tech-stack-label {
+  font-weight: 700;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--nebula-purple);
+  display: inline-block;
+}
+
+.tech-stack-label {
+  background: linear-gradient(90deg, 
+    var(--nebula-purple) 0%, 
+    var(--nebula-purple) 10%,
+    var(--nebula-orange) 20%,
+    var(--nebula-purple) 30%,
+    var(--nebula-purple) 40%,
+    var(--nebula-purple) 50%,
+    var(--nebula-purple) 60%,
+    var(--nebula-purple) 70%,
+    var(--nebula-purple) 80%,
+    var(--nebula-purple) 90%,
+    var(--nebula-purple) 100%
+  );
+  background-size: 500% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: letter-wave 6s ease-in-out infinite;
+}
+
+@keyframes letter-wave {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.tech-bars-container {
+  display: flex;
+  height: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 14px;
+  background: rgba(94, 65, 162, 0.08);
+  border: 1px solid rgba(94, 65, 162, 0.1);
+}
+
+.tech-bar {
+  pointer-events: auto;
+  transition: opacity 0.2s;
+}
+
+.tech-bar:hover {
+  opacity: 0.8;
+}
+
+.tech-stack-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.tech-legend-item {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+}
+
+.tech-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.tech-loading {
+  padding: 12px 0;
+  opacity: 0.6;
+  font-size: 0.875rem;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .github-dashboard {
+  background: linear-gradient(
+    135deg,
+    rgba(28, 34, 48, 0.95) 0%,
+    rgba(30, 26, 48, 0.85) 30%,
+    rgba(17, 24, 39, 0.98) 60%,
+    rgba(32, 28, 42, 0.85) 100%
+  );
+  border-color: rgba(129, 105, 197, 0.2);
+  box-shadow: 
+    0 4px 20px -4px rgba(0, 0, 0, 0.3),
+    0 0 25px -10px rgba(129, 105, 197, 0.1),
+    inset 0 1px 0 rgba(129, 105, 197, 0.1);
+}
+
+[data-theme="dark"] .github-dashboard::before {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--nebula-lavender) 20%,
+    #A78BFA 50%,
+    var(--nebula-orange) 80%,
+    transparent 100%
+  );
+}
+
+[data-theme="dark"] .github-dashboard::after {
+  background: radial-gradient(
+    circle at 100% 0%,
+    rgba(129, 105, 197, 0.12) 0%,
+    transparent 70%
+  );
+}
+
+[data-theme="dark"] .github-dashboard:hover {
+  border-color: rgba(129, 105, 197, 0.35);
+  box-shadow: 
+    0 12px 30px -8px rgba(0, 0, 0, 0.4),
+    0 0 35px -10px rgba(129, 105, 197, 0.2),
+    inset 0 1px 0 rgba(129, 105, 197, 0.15);
+}
+
+[data-theme="dark"] .github-dashboard-header {
+  border-bottom-color: rgba(129, 105, 197, 0.15);
+}
+
+[data-theme="dark"] .github-profile-link {
+  background: linear-gradient(135deg, #8169C5, #A78BFA);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 16px rgba(129, 105, 197, 0.3);
+}
+
+[data-theme="dark"] .github-profile-link:hover {
+  background: linear-gradient(135deg, #A78BFA, #8169C5);
+  box-shadow: 0 8px 24px rgba(129, 105, 197, 0.4);
+}
+
+[data-theme="dark"] .github-repo-link {
+  background: linear-gradient(135deg, rgba(255, 153, 0, 0.2), rgba(255, 153, 0, 0.1));
+  border-color: rgba(255, 153, 0, 0.5);
+  box-shadow: 0 2px 12px rgba(255, 153, 0, 0.15);
+}
+
+[data-theme="dark"] .github-repo-link:hover {
+  background: linear-gradient(135deg, rgba(255, 153, 0, 0.3), rgba(255, 153, 0, 0.2));
+  box-shadow: 0 6px 20px rgba(255, 153, 0, 0.3);
+}
+
+[data-theme="dark"] .github-workflow-badges {
+  background: rgba(129, 105, 197, 0.08);
+  border-color: rgba(129, 105, 197, 0.15);
+}
+
+[data-theme="dark"] .github-latest-commit {
+  background: rgba(129, 105, 197, 0.12);
+  border-left-color: var(--nebula-lavender);
+}
+
+[data-theme="dark"] .github-latest-commit:hover {
+  background: rgba(129, 105, 197, 0.16);
+}
+
+[data-theme="dark"] .tech-bars-container {
+  background: rgba(129, 105, 197, 0.1);
+  border-color: rgba(129, 105, 197, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .social-dashboard {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    padding: var(--space-md);
+  }
+
+  .github-dashboard {
+    padding: 24px;
+    margin: 24px 0;
+  }
+
+  .insta-card {
+    min-height: auto;
+    padding: 12px;
+  }
+
+  .github-dashboard-header {
+    flex-wrap: wrap;
+    left: 16px;
+  }
+
+  .github-profile-link {
+    flex-basis: 100%;
+    margin-bottom: 8px;
+  }
+
+  .github-repo-link {
+    flex: 1;
+    min-width: 0;
+    justify-content: center;
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+}
+
+/* Brand gradient animation - consistent across all elements */
+@keyframes gradient-shift-brand {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Fallback shimmer animation for WebGL unsupported */
+@keyframes shimmer-fallback {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}

@@ -52,7 +52,7 @@ class WebGLSceneInitializer {
   }
 
   /**
-   * Initialize home page scenes (constellation, orbit, builder card)
+   * Initialize home page scenes (constellation, orbit, builder card, shimmer accents)
    */
   initHomeScenes() {
     // Orbit scene around builder card - look for data-orbit-scene attribute
@@ -96,6 +96,24 @@ class WebGLSceneInitializer {
         console.log('[WebGL] OrbitScene initialized on home page');
       } catch (error) {
         console.warn('Failed to initialize OrbitScene:', error);
+      }
+    }
+
+    // Shimmer accent on Latest Commit card
+    const shimmerContainer = document.querySelector('[data-webgl-accent="shimmer"]');
+    if (shimmerContainer && !shimmerContainer.querySelector('.webgl-scene-canvas')) {
+      try {
+        const shimmerScene = new ShimmerScene(shimmerContainer, {
+          width: shimmerContainer.clientWidth,
+          height: shimmerContainer.clientHeight,
+          particleCount: 12,
+          shimmerIntensity: 0.3,
+          shimmerSpeed: 0.5
+        });
+        this.scenes.push(shimmerScene);
+        console.log('[WebGL] ShimmerScene initialized on Latest Commit card');
+      } catch (error) {
+        console.warn('Failed to initialize ShimmerScene:', error);
       }
     }
   }
