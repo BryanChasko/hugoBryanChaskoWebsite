@@ -71,8 +71,3 @@ jobs:
             --distribution-id "${{ steps.config.outputs.cf_distribution_id }}" \
             --paths "/*"
         name: Invalidate CloudFront
-
-      - run: npm run test:update-baselines
-        name: Update test baselines
-        env:
-          GITHUB_REF: ${{ github.ref }}
