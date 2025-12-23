@@ -14,3 +14,7 @@ You can use the session in whatever way serves you best. If your website feels s
 The goal is simple: give you clarity, confidence, and a practical path forward, whether that's improving your site, modernizing your infrastructure, or exploring responsible AI. You decide how to use the time, and you walk away with a plan that fits your mission and your capacity.
 
 {{< cta-button href="https://www.upwork.com/services/product/development-it-cto-cloud-strategy-session-for-non-profits-aws-ai-for-good-projects-1995140857463618651" label="Book CTO Strategy Session" >}}
+
+<div class="ccc-footer-cta">
+  <p>For ongoing strategic partnership beyond these engagements, please <a href="/contact/">say hello</a>.</p>
+</div>

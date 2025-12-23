@@ -28,3 +28,7 @@ This service strengthens your digital infrastructure, protects sensitive informa
 **Continuous Visibility**: Clear, executive-friendly reporting and ongoing maintenance so you always know your website's health and what's being handled behind the scenes.
 
 <a href="https://www.upwork.com/services/product/development-it-website-security-maintenance-technical-debt-audit-2003508545232151525?ref=project_share" class="cta-button" role="button" aria-label="Get Website Security Assessment on Upwork" target="_blank" rel="noopener">Get Security Assessment</a>
+
+<div class="ccc-footer-cta">
+  <p>For ongoing strategic partnership beyond these engagements, please <a href="/contact/">say hello</a>.</p>
+</div>

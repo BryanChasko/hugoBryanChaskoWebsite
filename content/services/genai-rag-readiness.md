@@ -13,3 +13,7 @@ description: "GenAI/RAG readiness blueprint using AWS Bedrock, Serverless, and v
 - Developer environment prep and deployment checklist
 
 {{< cta-button href="https://www.upwork.com/services/product/development-it-genai-rag-readiness-aws-architecture-blueprint-documentation-1995119551074186001" label="Book GenAI / RAG Blueprint" >}}
+
+<div class="ccc-footer-cta">
+  <p>For ongoing strategic partnership beyond these engagements, please <a href="/contact/">say hello</a>.</p>
+</div>

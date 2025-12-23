@@ -12,3 +12,7 @@ description: "Hands-on CTO-level AWS expertise for rapid, high-impact delivery."
 - A prioritized, documented handoff and next steps for your team
 
 {{< cta-button href="https://www.upwork.com/services/product/development-it-2-days-of-focused-cto-level-aws-expertise-1995148283888870048" label="Book CTO Expertise" >}}
+
+<div class="ccc-footer-cta">
+  <p>For ongoing strategic partnership beyond these engagements, please <a href="/contact/">say hello</a>.</p>
+</div>
