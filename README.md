@@ -34,33 +34,35 @@ hugo && aws s3 sync public/ s3://bryanchasko.com --profile websites-bryanchasko
 ### Website Architecture
 
 ```mermaid
-architecture-beta
-    service user(logos:aws-route53)[User Browser]
-    service dns(logos:aws-route53)[Route 53 DNS]
-    service cdn(logos:aws-cloudfront)[CloudFront CDN]
-    service functions(logos:aws-lambda)[CloudFront Functions]
-    service bucket(logos:aws-s3)[S3 Bucket]
-
-    user:R -- L:dns
-    dns:R -- L:cdn
-    cdn:B -- T:functions
-    functions:B -- T:bucket
+graph LR
+    A["🌐 User Browser"] -->|HTTPS| B["🔍 Route 53 DNS"]
+    B -->|Resolves| C["⚡ CloudFront CDN"]
+    C -->|Edge Logic| D["λ CloudFront Functions"]
+    D -->|SigV4 Signed| E["📦 S3 Bucket"]
+    
+    style A fill:#e1f5ff
+    style B fill:#fff3e0
+    style C fill:#f3e5f5
+    style D fill:#e8f5e9
+    style E fill:#fce4ec
 ```
 
 ### CI/CD Pipeline
 
 ```mermaid
-architecture-beta
-    service github(logos:github-actions)[GitHub]
-    service runner(logos:github-actions)[GitHub Actions]
-    service cli(logos:aws-cli)[AWS CLI]
-    service s3(logos:aws-s3)[S3 Deploy]
-    service cdn_invalidate(logos:aws-cloudfront)[CloudFront Invalidate]
-
-    github:R -- L:runner
-    runner:B -- T:cli
-    cli:B -- T:s3
-    s3:R -- L:cdn_invalidate
+graph LR
+    A["📝 GitHub"] -->|Push| B["⚙️ GitHub Actions"]
+    B -->|Build & Test| C["🔨 Hugo Build"]
+    C -->|npm test| D["✅ Tests Pass"]
+    D -->|aws s3 sync| E["📦 S3 Deploy"]
+    E -->|Invalidate| F["⚡ CloudFront Cache"]
+    
+    style A fill:#f5f5f5
+    style B fill:#fff3e0
+    style C fill:#e3f2fd
+    style D fill:#e8f5e9
+    style E fill:#fce4ec
+    style F fill:#f3e5f5
 ```
 
 ## 🚀 How to Replicate This Stack for Your Own Site
