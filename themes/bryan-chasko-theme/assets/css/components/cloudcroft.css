@@ -210,11 +210,17 @@
   .ccc-services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  
+  /* Single card on row takes full width */
+  .ccc-services-grid .ccc-service-card:nth-child(odd):nth-last-child(1) {
+    grid-column: 1 / -1;
+  }
 }
 
 /* Service Cards */
 .ccc-service-card {
   position: relative;
+  z-index: 1;
   padding: var(--space-xl);
   border-radius: var(--radius-xl);
   background: linear-gradient(135deg, var(--color-background-secondary) 0%, rgba(94, 65, 162, 0.12) 100%);
@@ -243,6 +249,7 @@
 }
 
 [data-theme="dark"] .ccc-service-card {
+  z-index: 1;
   background: linear-gradient(135deg, var(--color-background-secondary) 0%, rgba(94, 65, 162, 0.08) 100%);
   border-color: var(--color-border);
   box-shadow: 

@@ -15,11 +15,20 @@ ShowBreadCrumbs: false
 
 <div class="ccc-services-grid">
 
-<a href="/services/aws-account-access-audit/" class="ccc-card-link">
+<a href="/services/2-day-cto-expertise/" class="ccc-card-link">
 <div class="ccc-service-card">
-  <div class="service-icon">🛡️</div>
-  <h3>AWS Account Access Audit & Remediation</h3>
-  <p>Access audit focused on IAM, Identity Center (SSO), stale access remediation, and improving your HIPAA/SOC2 posture. We deliver a prioritized remediation plan and hands-on fixes where appropriate.</p>
+  <div class="service-icon">⚡</div>
+  <h3>Focused CTO-Level AWS Expertise</h3>
+  <p>Hands-on CTO-level work to deliver a high-impact outcome: incident remediation, architecture changes, or prioritized delivery for your team.</p>
+  <span class="cta-button cta-button--primary">View details / Book</span>
+</div>
+</a>
+
+<a href="/services/website-security-managed-service/" class="ccc-card-link">
+<div class="ccc-service-card">
+  <div class="service-icon">🔒</div>
+  <h3>Website Security & Resilience Roadmap</h3>
+  <p>A clear framework that helps your organization move from unexpected website issues to steady, confident control. Strengthens digital infrastructure and protects sensitive information.</p>
   <span class="cta-button cta-button--primary">View details / Book</span>
 </div>
 </a>
@@ -33,11 +42,11 @@ ShowBreadCrumbs: false
 </div>
 </a>
 
-<a href="/services/2-day-cto-expertise/" class="ccc-card-link">
+<a href="/services/aws-account-access-audit/" class="ccc-card-link">
 <div class="ccc-service-card">
-  <div class="service-icon">⚡</div>
-  <h3>Focused CTO-Level AWS Expertise</h3>
-  <p>Hands-on CTO-level work to deliver a high-impact outcome: incident remediation, architecture changes, or prioritized delivery for your team.</p>
+  <div class="service-icon">🛡️</div>
+  <h3>AWS Account Access Audit & Remediation</h3>
+  <p>Access audit focused on IAM, Identity Center (SSO), stale access remediation, and improving your HIPAA/SOC2 posture. We deliver a prioritized remediation plan and hands-on fixes where appropriate.</p>
   <span class="cta-button cta-button--primary">View details / Book</span>
 </div>
 </a>
