@@ -34,7 +34,7 @@ hugo && aws s3 sync public/ s3://bryanchasko.com --profile websites-bryanchasko
 ### Website Architecture
 
 ```mermaid
-%%{init: {'flowchart': {'curve': 'linear'}, 'theme': 'base', 'themeVariables': {'fontSize': '16px', 'fontFamily': 'arial'}}}%%
+%%{init: {'flowchart': {'curve': 'linear'}, 'theme': 'base', 'themeVariables': {'fontSize': '16px', 'fontFamily': 'arial', 'lineColor': '#d8bfd8'}}}%%
 graph TB
     A["🌐 User<br/>Browser"] -->|HTTPS| B["🔍 Route 53<br/>DNS"]
     B -->|Resolves| C["⚡ CloudFront<br/>CDN"]
@@ -51,7 +51,7 @@ graph TB
 ### CI/CD Pipeline
 
 ```mermaid
-%%{init: {'flowchart': {'curve': 'linear'}, 'theme': 'base', 'themeVariables': {'fontSize': '16px', 'fontFamily': 'arial'}}}%%
+%%{init: {'flowchart': {'curve': 'linear'}, 'theme': 'base', 'themeVariables': {'fontSize': '16px', 'fontFamily': 'arial', 'lineColor': '#00ff41'}}}%%
 graph TB
     A["📝 GitHub"] -->|Push| B["⚙️ GitHub<br/>Actions"]
     B -->|Build & Test| C["🔨 Hugo<br/>Build"]
@@ -495,6 +495,27 @@ This site uses the custom **bryan-chasko-theme** with modular architecture and N
 - ⏳ [#8 Integration Testing and Deployment](.github/issues/08-integration-testing-and-deployment.md)
 
 Full roadmap: [THEME_DEVELOPMENT.md](THEME_DEVELOPMENT.md)
+
+### Layout Architecture
+
+The theme uses Hugo's layout cascade to provide section-specific control over content rendering:
+
+| Layout | Purpose | Behavior |
+|--------|---------|----------|
+| `_default/list.html` | Default for all sections | Renders page header + content + child page list |
+| `services/list.html` | Services section only | Renders page header + content (cards + CTA) **without** child page list |
+| `notes/list.html` | Notes section only | Renders page header + social feed + content + "📝 Website Notes" header + child page list |
+
+**How to add section-specific layouts:**
+1. Create `layouts/[section]/list.html` in the theme
+2. Copy essential structure from `_default/list.html` (header, breadcrumbs, content)
+3. Customize the child page rendering loop (or remove it entirely)
+4. Hugo automatically uses the section-specific layout when available
+
+**Example: Services page**
+- Markdown content in `content/services/_index.md` contains hardcoded card grid HTML
+- `services/list.html` renders this content but skips the `{{ range $paginator.Pages }}` loop
+- Result: Card grid displays, no duplicate list below
 
 ## Data-Driven Content 📊
 
