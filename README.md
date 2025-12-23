@@ -34,35 +34,37 @@ hugo && aws s3 sync public/ s3://bryanchasko.com --profile websites-bryanchasko
 ### Website Architecture
 
 ```mermaid
-graph LR
-    A["🌐 User Browser"] -->|HTTPS| B["🔍 Route 53 DNS"]
-    B -->|Resolves| C["⚡ CloudFront CDN"]
-    C -->|Edge Logic| D["λ CloudFront Functions"]
-    D -->|SigV4 Signed| E["📦 S3 Bucket"]
+%%{init: {'flowchart': {'curve': 'linear'}, 'theme': 'base', 'themeVariables': {'fontSize': '16px', 'fontFamily': 'arial'}}}%%
+graph TB
+    A["🌐 User<br/>Browser"] -->|HTTPS| B["🔍 Route 53<br/>DNS"]
+    B -->|Resolves| C["⚡ CloudFront<br/>CDN"]
+    C -->|Edge Logic| D["λ CloudFront<br/>Functions"]
+    D -->|SigV4 Signed| E["📦 S3<br/>Bucket"]
     
-    style A fill:#e1f5ff
-    style B fill:#fff3e0
-    style C fill:#f3e5f5
-    style D fill:#e8f5e9
-    style E fill:#fce4ec
+    style A fill:#e1f5ff,stroke:#01579b,stroke-width:2px
+    style B fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style C fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    style D fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px
+    style E fill:#fce4ec,stroke:#880e4f,stroke-width:2px
 ```
 
 ### CI/CD Pipeline
 
 ```mermaid
-graph LR
-    A["📝 GitHub"] -->|Push| B["⚙️ GitHub Actions"]
-    B -->|Build & Test| C["🔨 Hugo Build"]
-    C -->|npm test| D["✅ Tests Pass"]
-    D -->|aws s3 sync| E["📦 S3 Deploy"]
-    E -->|Invalidate| F["⚡ CloudFront Cache"]
+%%{init: {'flowchart': {'curve': 'linear'}, 'theme': 'base', 'themeVariables': {'fontSize': '16px', 'fontFamily': 'arial'}}}%%
+graph TB
+    A["📝 GitHub"] -->|Push| B["⚙️ GitHub<br/>Actions"]
+    B -->|Build & Test| C["🔨 Hugo<br/>Build"]
+    C -->|npm test| D["✅ Tests<br/>Pass"]
+    D -->|aws s3 sync| E["📦 S3<br/>Deploy"]
+    E -->|Invalidate| F["⚡ CloudFront<br/>Cache"]
     
-    style A fill:#f5f5f5
-    style B fill:#fff3e0
-    style C fill:#e3f2fd
-    style D fill:#e8f5e9
-    style E fill:#fce4ec
-    style F fill:#f3e5f5
+    style A fill:#f5f5f5,stroke:#333,stroke-width:2px
+    style B fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style C fill:#e3f2fd,stroke:#01579b,stroke-width:2px
+    style D fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px
+    style E fill:#fce4ec,stroke:#880e4f,stroke-width:2px
+    style F fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
 ```
 
 ## 🚀 How to Replicate This Stack for Your Own Site
