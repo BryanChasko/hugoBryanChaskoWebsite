@@ -12,6 +12,9 @@ summaryLength = 50
   disableXML = true
   minifyOutput = true
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [params]
   env = "production" # to enable google analytics, opengraph, twitter-cards and schema.
   title = "Bryan Chasko"

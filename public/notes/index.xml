@@ -18,7 +18,10 @@
       <link>http://localhost:1313/notes/posts/aws-hero-bryan-chasko/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/notes/posts/aws-hero-bryan-chasko/</guid>
-      <description>&lt;h2 id=&#34;-day-1-on-amazon-web-services-aws-cloud-wbryan-chasko&#34;&gt;☁️ Day 1 on Amazon Web Services (AWS) Cloud w/Bryan Chasko&lt;/h2&gt;
+      <description>&lt;!--
+File Path: content/blog/posts/aws-hero-bryan-chasko.md
+--&gt;
+&lt;h2 id=&#34;-day-1-on-amazon-web-services-aws-cloud-wbryan-chasko&#34;&gt;☁️ Day 1 on Amazon Web Services (AWS) Cloud w/Bryan Chasko&lt;/h2&gt;
 &lt;h3 id=&#34;a-journey-of-innovation-leadership-and-aws-expertise&#34;&gt;A Journey of Innovation, Leadership, and AWS Expertise&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.lascrucesbulletin.com/stories/local-company-takes-cutting-edge-health-technology-global,2642&#34;&gt;“One of the leading innovators in the world”&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id=&#34;background&#34;&gt;Background&lt;/h4&gt;
@@ -39,7 +42,7 @@
       <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/notes/posts/my-skills-and-experience/</guid>
       <description>&lt;hr&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a name=&#34;top&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;skills-and-experience&#34;&gt;Skills and Experience&lt;/h2&gt;
 &lt;h3 id=&#34;quick-links&#34;&gt;Quick Links&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Skills:&lt;/strong&gt; &lt;a href=&#34;#cloud-platforms--services-&#34;&gt;Cloud Platforms &amp;amp; Services ☁️&lt;/a&gt; • &lt;a href=&#34;#infrastructure--networking-&#34;&gt;Infrastructure &amp;amp; Networking 🔧&lt;/a&gt; • &lt;a href=&#34;#data-management-&#34;&gt;Data Management 📊&lt;/a&gt; • &lt;a href=&#34;#observability--monitoring-&#34;&gt;Observability &amp;amp; Monitoring 📈&lt;/a&gt; • &lt;a href=&#34;#security--compliance-&#34;&gt;Security &amp;amp; Compliance 🔒&lt;/a&gt; • &lt;a href=&#34;#design--prototyping-&#34;&gt;Design &amp;amp; Prototyping 🎨&lt;/a&gt; • &lt;a href=&#34;#project-management--leadership-&#34;&gt;Project Management &amp;amp; Leadership 👥&lt;/a&gt; • &lt;a href=&#34;#data-visualization-&#34;&gt;Data Visualization 📊&lt;/a&gt; • &lt;a href=&#34;#crm-systems-&#34;&gt;CRM Systems 💼&lt;/a&gt; • &lt;a href=&#34;#industry-experience-&#34;&gt;Industry Experience 🏢&lt;/a&gt; • &lt;a href=&#34;#design--engineering-&#34;&gt;Design &amp;amp; Engineering 🏗️&lt;/a&gt; • &lt;a href=&#34;#machine-learning--ai-&#34;&gt;Machine Learning &amp;amp; AI 🤖&lt;/a&gt; • &lt;a href=&#34;#internet-of-things-iot-&#34;&gt;Internet of Things (IoT) 🌐&lt;/a&gt; • &lt;a href=&#34;#big-data-&#34;&gt;Big Data 📉&lt;/a&gt; • &lt;a href=&#34;#additional-skills-&#34;&gt;Additional Skills 🔧&lt;/a&gt;&lt;/p&gt;</description>
@@ -51,6 +54,7 @@
       <guid>http://localhost:1313/notes/posts/my-cat-buddy/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.animalshelter.org/search/shelterpets.asp?rescueId=3220&#34;&gt;Adopt a pet from Guadalupe County Animal Control&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;my-cat-buddy-&#34;&gt;My Cat Buddy 🐱&lt;/h2&gt;
+&lt;!-- content/blog/posts/my-cat-buddy.md --&gt;
 &lt;p&gt;Buddy is a tabby cat from Mesilla Park, New Mexico. He likes to play catch with springs and eat fish. See #caturday on my insta, X, and threads. Buddy and Bryan both appreciate your donations to, and adoptions from:&lt;/p&gt;</description>
     </item>
     <item>
@@ -59,6 +63,8 @@
       <pubDate>Thu, 13 Jun 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/notes/posts/about-bryan-chasko/</guid>
       <description>&lt;h2 id=&#34;about-bryan&#34;&gt;About Bryan&lt;/h2&gt;
+&lt;!-- 
+![Bryan Chasko](/images/profile.jpg) &lt;!-- Make sure to replace this with the actual path to your image --&gt;
 &lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/posts/aws-hero-bryan-chasko/&#34;&gt;#AWSHero&lt;/a&gt; since 2018 &lt;a href=&#34;http://localhost:1313/blog/posts/my-skills-and-experience/&#34;&gt;known for 🌟&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Community &amp;amp; Spatial Computing&lt;/strong&gt; 🌍&lt;a href=&#34;https://aws.amazon.com/developer/community/heroes/bryan-chasko/&#34;&gt;AWS Hero Bio&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;personal-background&#34;&gt;Personal Background&lt;/h3&gt;
@@ -69,11 +75,7 @@ New York Institute of Photography Alumni 📸. &lt;a href=&#34;https://instagram
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Nature Lover&lt;/strong&gt; 🌲&lt;br&gt;
-From New Mexico&amp;rsquo;s Sacramento Mountains 🏞️. &lt;a href=&#34;https://www.fs.usda.gov/recarea/lincoln/recarea/?recid=33266&#34;&gt;trails&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/posts/new-england-patriots-fandom/&#34;&gt;&lt;strong&gt;Top 5000&lt;/strong&gt; 🏆&lt;br&gt;
-In EA&amp;rsquo;s Madden NFL 3 times as the New England Patriots 🏈&lt;/a&gt;&lt;/p&gt;</description>
+From New Mexico&amp;rsquo;s Sacramento Mountains 🏞️. &lt;a href=&#34;https://www.fs.usda.gov/recarea/lincoln/recarea/?recid=33266&#34;&gt;trails&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>New England Patriots Fandom 🏈</title>

@@ -11,7 +11,7 @@
 </header>
 
 <div class="post-content contact-content">
-  {{- .Content }}
+  {{- .Content | safeHTML }}
 </div>
 
 {{/* Contact-specific scripts - MUST BE BEFORE {{- end }} */}}
