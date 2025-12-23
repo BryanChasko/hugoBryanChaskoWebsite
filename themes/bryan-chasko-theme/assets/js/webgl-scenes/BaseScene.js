@@ -73,7 +73,7 @@ class BaseScene {
       this.canvas.height = this.options.height * this.options.dpr;
       this.canvas.style.display = 'block';
       this.canvas.style.position = 'absolute';
-      this.canvas.style.top = '0';
+      this.canvas.style.bottom = '0';
       this.canvas.style.left = '0';
       this.canvas.style.width = '100%';
       this.canvas.style.height = '100%';

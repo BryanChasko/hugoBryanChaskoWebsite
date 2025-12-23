@@ -265,7 +265,8 @@
 .terminal-user {
   color: var(--nebula-orange);
   margin-right: 0.5ch;
-  white-space: nowrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
   animation: prompt-appear 8s ease-in-out 1;
   text-shadow: 
     0 0 5px rgba(255, 153, 0, 0.6),

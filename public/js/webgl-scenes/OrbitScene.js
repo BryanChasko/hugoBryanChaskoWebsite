@@ -27,10 +27,12 @@ class OrbitScene extends BaseScene {
     }
 
     // Initialize orbits BEFORE starting animation
+    // Reduced total particle count by 150 (if possible)
+    // Original: 15+22+30=67, so set all to 1 to minimize
     this.orbits = options.orbits || [
-      { radius: 180, speed: 0.5, particleCount: 15, opacity: 0.7 },
-      { radius: 280, speed: 0.3, particleCount: 22, opacity: 0.5 },
-      { radius: 380, speed: 0.15, particleCount: 30, opacity: 0.35 },
+      { radius: 180, speed: 0.5, particleCount: 1, opacity: 0.7 },
+      { radius: 280, speed: 0.3, particleCount: 1, opacity: 0.5 },
+      { radius: 380, speed: 0.15, particleCount: 1, opacity: 0.35 },
     ];
 
     this.centerNode = {
@@ -64,6 +66,17 @@ class OrbitScene extends BaseScene {
     // BaseScene's auto-start (in init()) already called this if useIntersectionObserver=false
     // but we have another startAnimating() call to ensure it's started
     this.startAnimating();
+
+    // Initialize hover state system
+    this.isHovering = false;
+    this.hoverStartTime = null;
+    this.hoverTimeoutId = null;
+    this.hoverAnimationComplete = false;
+    this.pulsePhase = 0;
+    this.lavenderColor = this.hexToRgb('#8169C5');
+    
+    // Setup CTA button hover listeners
+    this.setupCTAHoverListeners();
   }
 
   setupBuffers() {
@@ -195,6 +208,59 @@ class OrbitScene extends BaseScene {
     super.destroy();
   }
 
+  /**
+   * Setup CTA button hover listeners
+   */
+  setupCTAHoverListeners() {
+    const ctaButton = document.querySelector('.builder-card-cta');
+    if (!ctaButton) return;
+
+    ctaButton.addEventListener('mouseenter', () => this.setHoverState(true));
+    ctaButton.addEventListener('mouseleave', () => this.setHoverState(false));
+  }
+
+  /**
+   * Set hover state and manage 20-second timeout
+   */
+  setHoverState(isHovering) {
+    if (this.hoverAnimationComplete) return; // Ignore hovers after 20s timeout
+    
+    this.isHovering = isHovering;
+    
+    if (isHovering && !this.hoverStartTime) {
+      this.hoverStartTime = Date.now();
+      
+      // Set 20-second timeout
+      this.hoverTimeoutId = setTimeout(() => {
+        this.hoverAnimationComplete = true;
+        this.isHovering = false;
+      }, 20000);
+    }
+  }
+
+  /**
+   * Convert hex color to RGB array
+   */
+  hexToRgb(hex) {
+    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? [
+      parseInt(result[1], 16) / 255,
+      parseInt(result[2], 16) / 255,
+      parseInt(result[3], 16) / 255
+    ] : [0.5, 0.4, 0.77];
+  }
+
+  /**
+   * Interpolate between two RGB colors
+   */
+  lerpColor(color1, color2, t) {
+    return [
+      color1[0] + (color2[0] - color1[0]) * t,
+      color1[1] + (color2[1] - color1[1]) * t,
+      color1[2] + (color2[2] - color1[2]) * t
+    ];
+  }
+
   update(deltaTime, elapsed) {
     // Orbits rotate at different speeds, particles follow parametric paths
   }
@@ -314,7 +380,27 @@ class OrbitScene extends BaseScene {
       this.gl.vertexAttribPointer(this.positionAttrLocation, 2, this.gl.FLOAT, false, 0, 0);
 
       // Set orbit-specific uniforms
-      const color = this.getThemeColor('--cosmic-teal'); // Dark turquoise
+      let color = this.getThemeColor('--cosmic-teal'); // Dark turquoise
+      let opacity = orbit.opacity * 0.8;
+      
+      // Apply hover effects
+      if (this.isHovering && this.hoverStartTime) {
+        const hoverElapsed = (Date.now() - this.hoverStartTime) / 1000;
+        
+        // Pulsing effect (2-second cycle = 0.5Hz)
+        this.pulsePhase = (hoverElapsed * Math.PI) % (Math.PI * 2);
+        const pulseFactor = 0.5 + Math.sin(this.pulsePhase) * 0.5; // 0.5 to 1.5
+        
+        // Speed boost
+        const speedBoost = 1 + pulseFactor * 0.5;
+        
+        // Color shift to lavender
+        const colorLerpT = Math.min(pulseFactor * 0.6, 1.0);
+        color = this.lerpColor(color, this.lavenderColor, colorLerpT);
+        
+        // Opacity variation
+        opacity = orbit.opacity * 0.8 * pulseFactor;
+      }
       
       if (orbitIdx === 0 && !this.colorDebugLogged) {
         this.colorDebugLogged = true;
@@ -322,7 +408,7 @@ class OrbitScene extends BaseScene {
       }
       
       this.gl.uniform3f(this.uColor, color[0], color[1], color[2]);
-      this.gl.uniform1f(this.uOpacity, orbit.opacity * 0.8); // Add transparency
+      this.gl.uniform1f(this.uOpacity, opacity);
       this.gl.uniform1f(this.uPointSize, 8.0 - orbitIdx * 0.8); // Larger particles
 
       // Debug on first orbit

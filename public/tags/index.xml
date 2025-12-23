@@ -2,288 +2,288 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Bryan Chasko&#39;s Portfolio</title>
-    <link>http://localhost:49706/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Bryan Chasko&#39;s Portfolio</description>
     <image>
       <title>Bryan Chasko&#39;s Portfolio</title>
-      <url>http://localhost:49706/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>http://localhost:49706/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
     <lastBuildDate>Sun, 07 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:49706/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>#AWSHero</title>
-      <link>http://localhost:49706/tags/%23awshero/</link>
+      <link>http://localhost:1313/tags/%23awshero/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/%23awshero/</guid>
+      <guid>http://localhost:1313/tags/%23awshero/</guid>
       <description></description>
     </item>
     <item>
       <title>AboutMe</title>
-      <link>http://localhost:49706/tags/aboutme/</link>
+      <link>http://localhost:1313/tags/aboutme/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/aboutme/</guid>
+      <guid>http://localhost:1313/tags/aboutme/</guid>
       <description></description>
     </item>
     <item>
       <title>Amazon</title>
-      <link>http://localhost:49706/tags/amazon/</link>
+      <link>http://localhost:1313/tags/amazon/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/amazon/</guid>
+      <guid>http://localhost:1313/tags/amazon/</guid>
       <description></description>
     </item>
     <item>
       <title>AWS</title>
-      <link>http://localhost:49706/tags/aws/</link>
+      <link>http://localhost:1313/tags/aws/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/aws/</guid>
+      <guid>http://localhost:1313/tags/aws/</guid>
       <description></description>
     </item>
     <item>
       <title>AWS Hero</title>
-      <link>http://localhost:49706/tags/aws-hero/</link>
+      <link>http://localhost:1313/tags/aws-hero/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/aws-hero/</guid>
+      <guid>http://localhost:1313/tags/aws-hero/</guid>
       <description></description>
     </item>
     <item>
       <title>BryanChasko</title>
-      <link>http://localhost:49706/tags/bryanchasko/</link>
+      <link>http://localhost:1313/tags/bryanchasko/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/bryanchasko/</guid>
+      <guid>http://localhost:1313/tags/bryanchasko/</guid>
       <description></description>
     </item>
     <item>
       <title>CareerProfile</title>
-      <link>http://localhost:49706/tags/careerprofile/</link>
+      <link>http://localhost:1313/tags/careerprofile/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/careerprofile/</guid>
+      <guid>http://localhost:1313/tags/careerprofile/</guid>
       <description></description>
     </item>
     <item>
       <title>Cloud</title>
-      <link>http://localhost:49706/tags/cloud/</link>
+      <link>http://localhost:1313/tags/cloud/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/cloud/</guid>
+      <guid>http://localhost:1313/tags/cloud/</guid>
       <description></description>
     </item>
     <item>
       <title>Getting Started</title>
-      <link>http://localhost:49706/tags/getting-started/</link>
+      <link>http://localhost:1313/tags/getting-started/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/getting-started/</guid>
+      <guid>http://localhost:1313/tags/getting-started/</guid>
       <description></description>
     </item>
     <item>
       <title>ITConsulting</title>
-      <link>http://localhost:49706/tags/itconsulting/</link>
+      <link>http://localhost:1313/tags/itconsulting/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/itconsulting/</guid>
+      <guid>http://localhost:1313/tags/itconsulting/</guid>
       <description></description>
     </item>
     <item>
       <title>ProfessionalExperience</title>
-      <link>http://localhost:49706/tags/professionalexperience/</link>
+      <link>http://localhost:1313/tags/professionalexperience/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/professionalexperience/</guid>
+      <guid>http://localhost:1313/tags/professionalexperience/</guid>
       <description></description>
     </item>
     <item>
       <title>SoftwareDevelopment</title>
-      <link>http://localhost:49706/tags/softwaredevelopment/</link>
+      <link>http://localhost:1313/tags/softwaredevelopment/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/softwaredevelopment/</guid>
+      <guid>http://localhost:1313/tags/softwaredevelopment/</guid>
       <description></description>
     </item>
     <item>
       <title>Solutions Architect</title>
-      <link>http://localhost:49706/tags/solutions-architect/</link>
+      <link>http://localhost:1313/tags/solutions-architect/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/solutions-architect/</guid>
+      <guid>http://localhost:1313/tags/solutions-architect/</guid>
       <description></description>
     </item>
     <item>
       <title>TechnicalExpertise</title>
-      <link>http://localhost:49706/tags/technicalexpertise/</link>
+      <link>http://localhost:1313/tags/technicalexpertise/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/technicalexpertise/</guid>
+      <guid>http://localhost:1313/tags/technicalexpertise/</guid>
       <description></description>
     </item>
     <item>
       <title>TechSkills</title>
-      <link>http://localhost:49706/tags/techskills/</link>
+      <link>http://localhost:1313/tags/techskills/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/techskills/</guid>
+      <guid>http://localhost:1313/tags/techskills/</guid>
       <description></description>
     </item>
     <item>
       <title>Artificial Intelligence</title>
-      <link>http://localhost:49706/tags/artificial-intelligence/</link>
+      <link>http://localhost:1313/tags/artificial-intelligence/</link>
       <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/artificial-intelligence/</guid>
+      <guid>http://localhost:1313/tags/artificial-intelligence/</guid>
       <description></description>
     </item>
     <item>
       <title>Bryan Chasko</title>
-      <link>http://localhost:49706/tags/bryan-chasko/</link>
+      <link>http://localhost:1313/tags/bryan-chasko/</link>
       <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/bryan-chasko/</guid>
+      <guid>http://localhost:1313/tags/bryan-chasko/</guid>
       <description></description>
     </item>
     <item>
       <title>Career Profile</title>
-      <link>http://localhost:49706/tags/career-profile/</link>
+      <link>http://localhost:1313/tags/career-profile/</link>
       <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/career-profile/</guid>
+      <guid>http://localhost:1313/tags/career-profile/</guid>
       <description></description>
     </item>
     <item>
       <title>Consulting</title>
-      <link>http://localhost:49706/tags/consulting/</link>
+      <link>http://localhost:1313/tags/consulting/</link>
       <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/consulting/</guid>
+      <guid>http://localhost:1313/tags/consulting/</guid>
       <description></description>
     </item>
     <item>
       <title>Fractional CTO</title>
-      <link>http://localhost:49706/tags/fractional-cto/</link>
+      <link>http://localhost:1313/tags/fractional-cto/</link>
       <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/fractional-cto/</guid>
+      <guid>http://localhost:1313/tags/fractional-cto/</guid>
       <description></description>
     </item>
     <item>
       <title>Freelancer for Hire</title>
-      <link>http://localhost:49706/tags/freelancer-for-hire/</link>
+      <link>http://localhost:1313/tags/freelancer-for-hire/</link>
       <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/freelancer-for-hire/</guid>
+      <guid>http://localhost:1313/tags/freelancer-for-hire/</guid>
       <description></description>
     </item>
     <item>
       <title>GameTech</title>
-      <link>http://localhost:49706/tags/gametech/</link>
+      <link>http://localhost:1313/tags/gametech/</link>
       <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/gametech/</guid>
+      <guid>http://localhost:1313/tags/gametech/</guid>
       <description></description>
     </item>
     <item>
       <title>Leadership</title>
-      <link>http://localhost:49706/tags/leadership/</link>
+      <link>http://localhost:1313/tags/leadership/</link>
       <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/leadership/</guid>
+      <guid>http://localhost:1313/tags/leadership/</guid>
       <description></description>
     </item>
     <item>
       <title>ProjectManagement</title>
-      <link>http://localhost:49706/tags/projectmanagement/</link>
+      <link>http://localhost:1313/tags/projectmanagement/</link>
       <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/projectmanagement/</guid>
+      <guid>http://localhost:1313/tags/projectmanagement/</guid>
       <description></description>
     </item>
     <item>
       <title>Software Development</title>
-      <link>http://localhost:49706/tags/software-development/</link>
+      <link>http://localhost:1313/tags/software-development/</link>
       <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/software-development/</guid>
+      <guid>http://localhost:1313/tags/software-development/</guid>
       <description></description>
     </item>
     <item>
       <title>Technical Expertise</title>
-      <link>http://localhost:49706/tags/technical-expertise/</link>
+      <link>http://localhost:1313/tags/technical-expertise/</link>
       <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/technical-expertise/</guid>
+      <guid>http://localhost:1313/tags/technical-expertise/</guid>
       <description></description>
     </item>
     <item>
       <title>Animal Protection New Mexico, Route 66</title>
-      <link>http://localhost:49706/tags/animal-protection-new-mexico-route-66/</link>
+      <link>http://localhost:1313/tags/animal-protection-new-mexico-route-66/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/animal-protection-new-mexico-route-66/</guid>
+      <guid>http://localhost:1313/tags/animal-protection-new-mexico-route-66/</guid>
       <description></description>
     </item>
     <item>
       <title>Animal Shelter</title>
-      <link>http://localhost:49706/tags/animal-shelter/</link>
+      <link>http://localhost:1313/tags/animal-shelter/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/animal-shelter/</guid>
+      <guid>http://localhost:1313/tags/animal-shelter/</guid>
       <description></description>
     </item>
     <item>
       <title>Buddy</title>
-      <link>http://localhost:49706/tags/buddy/</link>
+      <link>http://localhost:1313/tags/buddy/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/buddy/</guid>
+      <guid>http://localhost:1313/tags/buddy/</guid>
       <description></description>
     </item>
     <item>
       <title>Cat</title>
-      <link>http://localhost:49706/tags/cat/</link>
+      <link>http://localhost:1313/tags/cat/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/cat/</guid>
+      <guid>http://localhost:1313/tags/cat/</guid>
       <description></description>
     </item>
     <item>
       <title>Guadalupe County</title>
-      <link>http://localhost:49706/tags/guadalupe-county/</link>
+      <link>http://localhost:1313/tags/guadalupe-county/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/guadalupe-county/</guid>
+      <guid>http://localhost:1313/tags/guadalupe-county/</guid>
       <description></description>
     </item>
     <item>
       <title>Mesilla Park</title>
-      <link>http://localhost:49706/tags/mesilla-park/</link>
+      <link>http://localhost:1313/tags/mesilla-park/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/mesilla-park/</guid>
+      <guid>http://localhost:1313/tags/mesilla-park/</guid>
       <description></description>
     </item>
     <item>
       <title>New Mexico</title>
-      <link>http://localhost:49706/tags/new-mexico/</link>
+      <link>http://localhost:1313/tags/new-mexico/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/new-mexico/</guid>
+      <guid>http://localhost:1313/tags/new-mexico/</guid>
       <description></description>
     </item>
     <item>
       <title>Santa Rosa</title>
-      <link>http://localhost:49706/tags/santa-rosa/</link>
+      <link>http://localhost:1313/tags/santa-rosa/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/santa-rosa/</guid>
+      <guid>http://localhost:1313/tags/santa-rosa/</guid>
       <description></description>
     </item>
     <item>
       <title>Tabby</title>
-      <link>http://localhost:49706/tags/tabby/</link>
+      <link>http://localhost:1313/tags/tabby/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/tabby/</guid>
+      <guid>http://localhost:1313/tags/tabby/</guid>
       <description></description>
     </item>
     <item>
       <title>ForeverNE</title>
-      <link>http://localhost:49706/tags/foreverne/</link>
+      <link>http://localhost:1313/tags/foreverne/</link>
       <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/foreverne/</guid>
+      <guid>http://localhost:1313/tags/foreverne/</guid>
       <description></description>
     </item>
     <item>
       <title>New England</title>
-      <link>http://localhost:49706/tags/new-england/</link>
+      <link>http://localhost:1313/tags/new-england/</link>
       <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/new-england/</guid>
+      <guid>http://localhost:1313/tags/new-england/</guid>
       <description></description>
     </item>
     <item>
       <title>New England Patriots</title>
-      <link>http://localhost:49706/tags/new-england-patriots/</link>
+      <link>http://localhost:1313/tags/new-england-patriots/</link>
       <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/new-england-patriots/</guid>
+      <guid>http://localhost:1313/tags/new-england-patriots/</guid>
       <description></description>
     </item>
     <item>
       <title>Patriots</title>
-      <link>http://localhost:49706/tags/patriots/</link>
+      <link>http://localhost:1313/tags/patriots/</link>
       <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49706/tags/patriots/</guid>
+      <guid>http://localhost:1313/tags/patriots/</guid>
       <description></description>
     </item>
   </channel>

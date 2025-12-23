@@ -113,13 +113,59 @@
 
 .insta-profile-btn {
   position: relative;
-  box-shadow: 0 4px 16px rgba(129, 105, 197, 0.4);
-  color: var(--white);
+  box-shadow: 0 4px 16px rgba(129, 105, 197, 0.2), 0 0 20px rgba(129, 105, 197, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  background: linear-gradient(135deg, rgba(129, 105, 197, 0.08) 0%, rgba(167, 139, 250, 0.04) 50%, rgba(129, 105, 197, 0.02) 100%);
+  color: var(--nebula-purple);
+  transition: all var(--transition-base);
+  border: 1px solid rgba(129, 105, 197, 0.3);
+}
+
+.insta-profile-btn:hover {
+  color: var(--nebula-lavender) !important;
+  box-shadow: 0 6px 20px rgba(129, 105, 197, 0.3), 0 0 25px rgba(129, 105, 197, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  border-color: rgba(129, 105, 197, 0.45);
 }
 
 .insta-follow-link {
   position: relative;
-  box-shadow: 0 4px 16px rgba(129, 105, 197, 0.4);
+  box-shadow: 0 4px 16px rgba(129, 105, 197, 0.2), 0 0 20px rgba(129, 105, 197, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  background: linear-gradient(135deg, rgba(129, 105, 197, 0.08) 0%, rgba(167, 139, 250, 0.04) 50%, rgba(129, 105, 197, 0.02) 100%);
+  color: var(--nebula-purple);
+  transition: all var(--transition-base);
+  border: 1px solid rgba(129, 105, 197, 0.3);
+}
+
+.insta-follow-link:hover {
+  color: var(--nebula-lavender) !important;
+  box-shadow: 0 6px 20px rgba(129, 105, 197, 0.3), 0 0 25px rgba(129, 105, 197, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  border-color: rgba(129, 105, 197, 0.45);
+}
+
+[data-theme="dark"] .github-dashboard__button:hover {
+  color: var(--nebula-purple) !important;
+  background: linear-gradient(135deg, rgba(255, 153, 0, 0.1), rgba(255, 153, 0, 0.05)) !important;
+}
+
+[data-theme="dark"] .github-dashboard__button:hover svg {
+  color: var(--nebula-purple) !important;
+}
+
+[data-theme="dark"] .insta-profile-btn {
+  color: var(--white);
+}
+
+[data-theme="dark"] .insta-profile-btn:hover {
+  color: #E1306C !important;
+  box-shadow: 0 8px 24px rgba(225, 48, 108, 0.6), 0 0 30px rgba(225, 48, 108, 0.5);
+}
+
+[data-theme="dark"] .insta-follow-link {
+  color: var(--white);
+}
+
+[data-theme="dark"] .insta-follow-link:hover {
+  color: #E1306C !important;
+  box-shadow: 0 8px 24px rgba(225, 48, 108, 0.6), 0 0 30px rgba(225, 48, 108, 0.5);
 }
 
 /* GitHub dashboard enhanced */
@@ -130,20 +176,64 @@
 }
 
 .github-dashboard__button {
-  box-shadow: 0 4px 16px rgba(255, 153, 0, 0.4);
+  box-shadow: 0 4px 16px rgba(255, 153, 0, 0.25), 0 0 20px rgba(255, 153, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  background: linear-gradient(135deg, rgba(255, 153, 0, 0.08) 0%, rgba(255, 200, 100, 0.04) 50%, rgba(255, 153, 0, 0.02) 100%);
+  transition: all var(--transition-base);
+  border: 1px solid rgba(255, 153, 0, 0.3);
+  color: var(--nebula-orange);
 }
 
 .github-dashboard__button:hover {
-  box-shadow: 0 8px 24px rgba(255, 153, 0, 0.5);
+  color: var(--nebula-purple) !important;
+  box-shadow: 0 6px 20px rgba(255, 153, 0, 0.35), 0 0 25px rgba(255, 153, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  border-color: rgba(255, 153, 0, 0.45);
+  background: linear-gradient(135deg, rgba(255, 153, 0, 0.1) 0%, rgba(255, 200, 100, 0.06) 50%, rgba(255, 153, 0, 0.03) 100%);
+}
+
+.github-dashboard__button:hover svg {
+  color: var(--nebula-purple) !important;
+}
+
+[data-theme="dark"] .github-dashboard__button {
+  color: var(--white);
+}
+
+[data-theme="dark"] .github-dashboard__button:hover {
+  color: var(--nebula-orange) !important;
+  background: linear-gradient(135deg, rgba(255, 153, 0, 0.1), rgba(255, 153, 0, 0.05)) !important;
+}
+
+[data-theme="dark"] .github-dashboard__button:hover svg {
+  color: var(--nebula-orange) !important;
+}
+
+[data-theme="dark"] .github-repo-button:hover {
+  color: #00ff00 !important;
+  box-shadow: 0 4px 16px rgba(129, 105, 197, 0.4), 0 0 20px rgba(129, 105, 197, 0.3) !important;
+}
+
+[data-theme="dark"] .github-repo-button:hover svg {
+  color: #00ff00 !important;
 }
 
 .github-repo-button {
-  color: var(--white) !important;
-  box-shadow: 0 4px 16px rgba(129, 105, 197, 0.4) !important;
+  color: var(--nebula-purple) !important;
+  box-shadow: 0 4px 16px rgba(129, 105, 197, 0.2), 0 0 20px rgba(129, 105, 197, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
+  background: linear-gradient(135deg, rgba(129, 105, 197, 0.08) 0%, rgba(167, 139, 250, 0.04) 50%, rgba(129, 105, 197, 0.02) 100%) !important;
+  border: 1px solid rgba(129, 105, 197, 0.3) !important;
+  transition: all var(--transition-base);
 }
 
 .github-repo-button:hover {
-  box-shadow: 0 8px 24px rgba(129, 105, 197, 0.5) !important;
+  color: #00cc00 !important;
+  box-shadow: 0 6px 20px rgba(129, 105, 197, 0.3), 0 0 25px rgba(129, 105, 197, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.7) !important;
+  border-color: rgba(129, 105, 197, 0.45) !important;
+  text-shadow: 0 0 0 1px black;
+}
+
+.github-repo-button:hover svg {
+  color: #00cc00 !important;
+  filter: drop-shadow(0 0 0 1px black);
 }
 
 .github-dashboard::after {

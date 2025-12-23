@@ -272,7 +272,8 @@
     0 2px 6px rgba(94, 65, 162, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
   transition: all var(--transition-fast);
-  white-space: nowrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 /* Alternating subtle background tints for visual variety */
@@ -327,7 +328,7 @@
 
 /* Center home-info container - completely transparent, no card styling */
 .home-info {
-  max-width: var(--container-max-width);
+  max-width: 100%;
   margin: -70px auto 0 auto;
   padding: var(--space-xl) var(--container-padding);
   text-align: center;
@@ -743,6 +744,7 @@
   height: 500px;
   opacity: 0;
   animation: showEmbed 0.3s ease-in 3s forwards;
+  overflow: hidden;
 }
 
 @keyframes showEmbed {
@@ -778,18 +780,14 @@
 }
 
 /* Hide embed until Instagram script loads */
+/* Only the actual Instagram iframe is interactive */
+/* Instagram embed styling - enhanced integration */
 .home-instagram-embed .instagram-media {
   opacity: 1;
   visibility: visible;
-}
-
-/* Only the actual Instagram iframe is interactive */
-.home-instagram-embed .instagram-media {
   pointer-events: auto;
-}
-
-/* Instagram embed styling - enhanced integration */
-.home-instagram-embed .instagram-media {
+  max-width: 100% !important;
+  width: 100% !important;
   border-radius: var(--radius-lg) !important;
   box-shadow: 
     0 4px 20px rgba(94, 65, 162, 0.15),
@@ -801,11 +799,11 @@
   will-change: mask-image;
   -webkit-mask-image:
     linear-gradient(to bottom, transparent 0%, transparent 10%, black 15%, black 60%, transparent 70%, transparent 100%),
-    linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    linear-gradient(to right, black 0%, black 100%);
   -webkit-mask-composite: multiply;
   mask-image:
     linear-gradient(to bottom, transparent 0%, transparent 10%, black 15%, black 60%, transparent 70%, transparent 100%),
-    linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    linear-gradient(to right, black 0%, black 100%);
   mask-composite: intersect;
 }
 
@@ -962,7 +960,8 @@
 
 /* Builder Center feature card - Modern Glassmorphism Design */
 .builder-card {
-  margin: auto var(--space-md) auto;
+  margin: auto;
+  max-width: calc(100% - 2 * var(--space-md));
   padding: 64px var(--space-xl);
   border: 1px solid rgba(94, 65, 162, 0.15);
   border-radius: var(--radius-xl);
@@ -1120,18 +1119,18 @@
   z-index: 2; /* Below canvas z-index: 3 */
 }
 
-/* Desktop: Position canvas on the arrow (right side of CTA button) */
+/* Desktop: Position canvas centered on the arrow (right side of CTA button) */
 @media (min-width: 769px) {
   .builder-card[data-orbit-scene] canvas {
     position: absolute !important;
-    top: 50% !important;
-    right: -60px !important; /* Position to the right of the card, overlaying the button area */
+    top: auto !important;
     left: auto !important;
-    transform: translateY(-50%) !important;
+    bottom: -26px !important;
+    right: -2px !important;
     width: 240px !important;
     height: 240px !important;
-    z-index: 3 !important; /* Above link text (z-index: 2) */
-    pointer-events: none !important; /* Click-through to button */
+    z-index: 3 !important;
+    pointer-events: none !important;
   }
 }
 
@@ -1256,18 +1255,17 @@
 @media (max-width: 768px) {
   .builder-card[data-orbit-scene] canvas {
     position: absolute !important;
-    bottom: -80px !important; /* Position below the card, overlaying the button */
-    right: 50% !important; /* Center horizontally */
+    bottom: -350px !important;
+    right: 55px !important;
     left: auto !important;
-    transform: translateX(50%) !important; /* Offset to center */
-    width: 240px !important; /* Larger canvas for better visibility */
+    width: 240px !important;
     height: 240px !important;
-    z-index: 3 !important; /* Above link text (z-index: 2) */
-    pointer-events: none !important; /* Click-through to button */
+    z-index: 3 !important;
+    pointer-events: none !important;
   }
   
   .builder-card[data-orbit-scene] {
-    position: relative; /* Establish positioning context */
-    overflow: visible !important; /* Allow canvas to overflow the card */
+    position: relative;
+    overflow: visible !important;
   }
 }

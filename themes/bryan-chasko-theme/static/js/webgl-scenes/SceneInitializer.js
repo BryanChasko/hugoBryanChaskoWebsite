@@ -65,11 +65,10 @@ class WebGLSceneInitializer {
         const containerWidth = orbitContainer.clientWidth;
         const containerHeight = orbitContainer.clientHeight;
         
-        // Minimum canvas size: 120px, maximum 240px for reasonable performance
         const canvasWidth = Math.min(Math.max(containerWidth, 120), 240);
         const canvasHeight = Math.min(Math.max(containerHeight, 120), 240);
         
-        // Center orbits in the canvas (will recalculate on resize via onResize())
+        // Center orbits in the canvas
         const centerOffsetX = canvasWidth / 2;
         const centerOffsetY = canvasHeight / 2;
         

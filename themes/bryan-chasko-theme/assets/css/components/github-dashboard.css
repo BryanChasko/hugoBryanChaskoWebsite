@@ -232,12 +232,36 @@
   align-items: center;
   justify-content: center;
   pointer-events: auto;
-  transition: all 0.2s;
+  transition: all 0.3s ease;
   background: linear-gradient(135deg, rgba(129, 105, 197, 0.15) 0%, rgba(167, 139, 250, 0.1) 100%);
   border: 1px solid rgba(129, 105, 197, 0.2);
   border-radius: 8px;
-  padding: 10px 14px;
+  padding: 14px 16px;
   box-shadow: 0 2px 8px rgba(94, 65, 162, 0.1);
+  position: relative;
+}
+
+.github-workflow-badge::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(129, 105, 197, 0.3);
+  transition: all 0.3s ease;
+}
+
+.github-workflow-badge[data-status="passing"]::after {
+  background: #10b981;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.6);
+}
+
+.github-workflow-badge[data-status="failing"]::after {
+  background: #ef4444;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.6);
 }
 
 .github-workflow-badge:hover {
@@ -249,19 +273,27 @@
 
 .github-workflow-badge img {
   pointer-events: auto;
-  height: 28px;
+  height: auto;
+  max-height: 32px;
   display: block;
+  line-height: 1;
 }
 
 @media (max-width: 650px) {
   .github-workflow-badges {
     flex-direction: column;
+    padding: 20px;
   }
 
   .github-workflow-badge {
     width: 100%;
     max-width: 100%;
-    margin: 0 0 8px 0;
+    margin: 0 0 12px 0;
+    padding: 16px 18px;
+  }
+
+  .github-workflow-badge::after {
+    bottom: -10px;
   }
 
   .github-workflow-badge:last-child {

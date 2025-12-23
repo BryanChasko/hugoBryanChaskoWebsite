@@ -153,9 +153,7 @@ Content = "[🦊&nbsp;About](notes/posts/about-bryan-chasko) [🐈&nbsp;Buddy](n
   category = "categories"
   tag = "tags"
 
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-  [markup.highlight]
-    noClasses = false
+[build]
+  [[build.cachebusters]]
+    source = "assets/css/components/home.css"
+    target = "static/css/components/home.css"
