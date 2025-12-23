@@ -285,6 +285,7 @@
 /* Blog Post Cards - Professional Tech Brand Design */
 .note-entry {
   position: relative;
+  z-index: 1;
   background: linear-gradient(135deg, var(--color-background-secondary) 0%, rgba(94, 65, 162, 0.12) 100%);
   border: 1px solid var(--color-border);
   border-radius: 8px;

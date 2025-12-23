@@ -1,6 +1,8 @@
 /* Social Feed Section Styling */
 
 .social-feed-section {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   gap: var(--space-2xl);
@@ -148,6 +150,7 @@
 /* Builder Note Card - Spatial Computing Hub */
 .builder-note-card {
   position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   padding: var(--space-lg);
@@ -951,6 +954,8 @@
 
 /* Activity Card */
 .activity-card {
+  position: relative;
+  z-index: 1;
   padding: var(--space-md);
   border-radius: var(--radius-lg);
   background: linear-gradient(135deg, var(--color-background-secondary) 0%, rgba(94, 65, 162, 0.12) 100%);
