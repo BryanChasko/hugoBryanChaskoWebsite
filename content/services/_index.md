@@ -27,7 +27,7 @@ ShowBreadCrumbs: false
 <a href="/services/website-security-managed-service/" class="ccc-card-link">
 <div class="ccc-service-card">
   <div class="service-icon">🔒</div>
-  <h3>Website Security & Resilience Roadmap</h3>
+  <h3>Website Improvement, Security, & Future-Proofing</h3>
   <p>A clear framework that helps your organization move from unexpected website issues to steady, confident control. Strengthens digital infrastructure and protects sensitive information.</p>
   <span class="cta-button cta-button--primary">View details / Book</span>
 </div>

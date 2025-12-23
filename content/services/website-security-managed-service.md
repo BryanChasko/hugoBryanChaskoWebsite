@@ -1,13 +1,11 @@
 ---
-title: "🔒 Website Security & Resilience Roadmap"
+title: "🔒 Website Security & Performance Improvement"
 date: 2025-12-23T00:00:00-07:00
 draft: false
-description: "A clear, easy-to-follow framework that helps your organization move from unexpected website issues to steady, confident control."
+description: "I will guide you through establishing a followable framework that helps your organization move from unexpected website issues and costs to steady, confident control. Or to help you implement a new idea or improvement."
 ---
 
-# 🔒 Website Security & Resilience Roadmap
-
-A clear, easy-to-follow framework that helps your organization move from unexpected website issues to steady, confident control. This service strengthens your digital infrastructure, protects sensitive information, and ensures your site runs smoothly — all while aligning improvements with your budget and goals.
+This service strengthens your digital infrastructure, protects sensitive information, and ensures your site runs smoothly — all while aligning improvements with your budget and goals.
 
 ## Active Remediation & Prevention
 
@@ -29,4 +27,4 @@ A clear, easy-to-follow framework that helps your organization move from unexpec
 
 **Continuous Visibility**: Clear, executive-friendly reporting and ongoing maintenance so you always know your website's health and what's being handled behind the scenes.
 
-<a href="/contact/" class="cta-button" role="button" aria-label="Contact for Website Security Service">Get Security Assessment</a>
+<a href="https://www.upwork.com/services/product/development-it-website-security-maintenance-technical-debt-audit-2003508545232151525?ref=project_share" class="cta-button" role="button" aria-label="Get Website Security Assessment on Upwork" target="_blank" rel="noopener">Get Security Assessment</a>

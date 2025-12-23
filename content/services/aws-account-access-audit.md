@@ -5,10 +5,6 @@ draft: false
 description: "AWS Account Access Audit & Remediation — IAM, SSO, stale access remediation, HIPAA/SOC2 posture fixes."
 ---
 
-# 🛡️ AWS Account Access Audit & Remediation
-
-A high-fidelity security assessment to establish professional access protocols and compliance guardrails across your AWS environment, ensuring you meet enterprise standards and minimize organizational risk.
-
 **What you get:**
 
 - Implement IAM Identity Center (SSO) best practices and federated access

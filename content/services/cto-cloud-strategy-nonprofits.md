@@ -1,13 +1,9 @@
 ---
-title: "CTO Cloud Strategy — Non-Profits (AI • Web • Cloud)"
+title: "CTO Technical Strategy Session for Non-Profits"
 date: 2025-11-29T00:00:00-07:00
 draft: false
 description: "Flexible working session designed for nonprofits that need clarity, direction, or expert help without committing to a big project."
 ---
-
-# 🌱 CTO Cloud Strategy — Non-Profits (AI • Web • Cloud)
-
-A flexible working session designed for nonprofits that need clarity, direction, or expert help without committing to a big project. Every organization comes in with different needs, so the session adapts to you. Some teams use the time to strengthen their website. Others want guidance on AWS or help understanding whether AI could support their mission. You choose the focus, and we shape the conversation around what will make the biggest difference right now.
 
 Before we meet, you'll share a bit of background so I understand your goals, pain points, and constraints. During the session, we walk through what's working, what isn't, and where the biggest opportunities are. The conversation stays grounded in plain language and practical steps — no jargon, no pressure to "go big," and no assumptions about your technical capacity.
 

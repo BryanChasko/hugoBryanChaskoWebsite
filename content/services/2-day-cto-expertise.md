@@ -5,10 +5,6 @@ draft: false
 description: "Hands-on CTO-level AWS expertise for rapid, high-impact delivery."
 ---
 
-# ⚡ Focused CTO-Level AWS Expertise
-
-Senior, hands-on AWS engineering and architecture work focused on delivering high-impact results: architecture changes, incident remediation, or a prioritized delivery plan.
-
 **What you get:**
 
 - Hands-on implementation or architecture guidance across a focused scope
