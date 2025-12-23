@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  margin: 0 auto 2.5rem auto;
+  margin: 0 auto var(--space-2xl) auto;
   width: 160px;
   height: 160px;
   position: relative;
@@ -52,7 +52,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 22px;
+  padding: 0 var(--space-lg);
 }
 
 .cat-eye {
@@ -67,8 +67,8 @@
   align-items: center;
   justify-content: center;
 }
-.cat-eye--left { margin-right: 8px; }
-.cat-eye--right { margin-left: 8px; }
+.cat-eye--left { margin-right: var(--space-sm); }
+.cat-eye--right { margin-left: var(--space-sm); }
 
 .cat-pupil {
   width: 12px;
@@ -111,21 +111,21 @@
   text-align: center;
   font-size: 2.5rem;
   font-weight: 800;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-sm);
   color: var(--color-primary);
 }
 .error-message {
   text-align: center;
   font-size: 1.25rem;
   color: var(--color-text-secondary);
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-2xl);
 }
 .error-link {
   display: block;
   margin: 0 auto;
   width: fit-content;
-  padding: 0.75em 2em;
+  padding: var(--space-sm) var(--space-xl);
   font-size: 1.1rem;
   font-weight: 600;
   background: var(--color-primary);
@@ -150,7 +150,7 @@
   .cat-pupil { width: 7px; height: 7px; }
   .error-title { font-size: 1.5rem; }
   .error-message { font-size: 1rem; }
-  .error-link { font-size: 1rem; padding: 0.5em 1.2em; }
+  .error-link { font-size: 1rem; padding: var(--space-sm) var(--space-md); }
 }
 /* ============================================
    EXTENDED COLOR PALETTE SYSTEM
@@ -1138,7 +1138,7 @@ button[type="submit"] {
 /* Blog Post Cards - Styles moved to components/cards.css */
 /* Keeping only minimal overrides here */
 
-.post-entry:hover {
+.note-entry:hover {
   border-color: rgba(94, 65, 162, 0.25);
 }
 
@@ -1243,8 +1243,8 @@ footer a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: var(--space-xl);
+  height: var(--space-xl);
   border-radius: var(--radius-full);
   background: var(--color-background-secondary);
   color: var(--color-text);

@@ -1,0 +1,14 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "declaration-property-value-disallowed-list": {
+      "margin-top": ["8px", "16px", "32px", "48px"],
+      "margin-bottom": ["8px", "16px", "32px", "48px"],
+      "padding-top": ["8px", "16px", "32px", "48px"],
+      "padding-bottom": ["8px", "16px", "32px", "48px"],
+      "gap": ["8px", "16px", "32px", "48px"]
+    },
+    "selector-class-pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$",
+    "no-descending-specificity": null
+  }
+}

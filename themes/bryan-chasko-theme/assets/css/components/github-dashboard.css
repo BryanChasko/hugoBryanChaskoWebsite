@@ -12,7 +12,7 @@
   );
   border: 1px solid rgba(94, 65, 162, 0.12);
   border-radius: 12px;
-  padding: 24px;
+  padding: var(--space-lg);
   margin: 0;
   box-shadow: 
     0 2px 12px -2px rgba(94, 65, 162, 0.08),
@@ -84,9 +84,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 24px;
-  padding-bottom: 16px;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-md);
   border-bottom: 1px solid rgba(94, 65, 162, 0.1);
   width: 100%;
 }
@@ -95,10 +95,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 24px;
-  gap: 16px;
+  margin-bottom: var(--space-lg);
+  gap: var(--space-md);
   flex-wrap: nowrap;
-  padding-bottom: 16px;
+  padding-bottom: var(--space-md);
   border-bottom: 1px solid rgba(94, 65, 162, 0.1);
   width: 100%;
 }
@@ -108,10 +108,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: var(--space-sm);
   color: var(--white);
   text-decoration: none;
-  padding: 12px 18px;
+  padding: var(--space-sm) var(--space-lg);
   border-radius: 8px;
   font-weight: 600;
   font-size: 0.95rem;
@@ -129,15 +129,14 @@
 .github-dashboard__button:hover {
   background: linear-gradient(135deg, var(--nebula-lavender) 0%, var(--nebula-purple) 100%);
   background-size: 200% 100%;
-  box-shadow: 0 8px 20px rgba(94, 65, 162, 0.6);
+  box-shadow: 0 8px 20px rgba(255, 153, 0, 0.6);
   transform: translateY(-2px);
   animation: gradient-shift-brand 3s ease-in-out infinite;
+  color: #00ff00;
 }
 
-.github-dashboard__button svg {
-  flex-shrink: 0;
-  width: 20px;
-  height: 20px;
+.github-dashboard__button:hover svg {
+  color: #00ff00;
 }
 
 @media (max-width: 768px) {
@@ -150,7 +149,7 @@
     margin-right: 0;
     flex-basis: 100%;
     justify-content: center;
-    margin-bottom: 8px;
+    margin-bottom: var(--space-sm);
   }
 
   .github-repo-link {
@@ -168,7 +167,7 @@
     margin-right: 0;
     flex-basis: 100%;
     justify-content: center;
-    margin-bottom: 8px;
+    margin-bottom: var(--space-sm);
   }
 
   .github-repo-link {

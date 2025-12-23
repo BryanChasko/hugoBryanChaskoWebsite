@@ -1,5 +1,14 @@
 {{- define "main" }}
 
+{{- if .IsHome }}
+{{/* Terminal wrapper - placed before main content so it scrolls naturally */}}
+<div class="terminal-wrapper" role="status" aria-live="polite" aria-label="Terminal greeting animation">
+    <header class="entry-header">
+        <h1><span class="terminal-user">^.^</span><span class="terminal-prompt">$</span><span class="terminal-text">Hello, Friend</span><span class="terminal-cursor">█</span></h1>
+    </header>
+</div>
+{{- end }}
+
 {{- if (and site.Params.profileMode.enabled .IsHome) }}
 {{- partial "index_profile.html" . }}
 {{- else }} {{/* if not profileMode */}}
@@ -23,7 +32,7 @@
     {{- end }}
   </h1>
   {{- if .Description }}
-  <div class="post-description">
+  <div class="note-description">
     {{ .Description | markdownify }}
   </div>
   {{- end }}
@@ -31,7 +40,7 @@
 {{- end }}
 
 {{- if .Content }}
-<div class="post-content">
+<div class="note-content">
   {{- if not (.Param "disableAnchoredHeadings") }}
   {{- partial "anchored_headings.html" .Content -}}
   {{- else }}{{ .Content }}{{ end }}
@@ -54,13 +63,13 @@
 {{- $term := .Data.Term }}
 {{- range $index, $page := $paginator.Pages }}
 
-{{- $class := "post-entry" }}
+{{- $class := "note-entry" }}
 
 {{- $user_preferred := or site.Params.disableSpecial1stPost site.Params.homeInfoParams }}
 {{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) (not $user_preferred)) }}
 {{- $class = "first-entry" }}
 {{- else if $term }}
-{{- $class = "post-entry tag-entry" }}
+{{- $class = "note-entry tag-entry" }}
 {{- end }}
 
 <article class="{{ $class }}">
@@ -89,7 +98,7 @@
     {{- partial "post_meta.html" . -}}
   </footer>
   {{- end }}
-  <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+  <a class="entry-link" aria-label="note link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
 </article>
 {{- end }}
 

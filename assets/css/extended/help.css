@@ -31,20 +31,154 @@
 }
 
 .help-service-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
-  padding: var(--space-md);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-border);
-  background: var(--color-background);
-  transition: all var(--transition-base);
+  padding: var(--space-lg);
+  border-radius: var(--radius-xl);
+  border: 2px solid rgba(94, 65, 162, 0.16);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(248, 245, 255, 0.94) 30%,
+    rgba(255, 255, 255, 0.98) 100%
+  );
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  box-shadow: 
+    0 8px 24px -6px rgba(94, 65, 162, 0.12),
+    0 4px 12px -3px rgba(0, 0, 0, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 2px rgba(94, 65, 162, 0.05);
+}
+
+/* Gradient accent line at top */
+.help-service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--nebula-purple) 20%,
+    var(--nebula-lavender) 50%,
+    var(--nebula-orange) 80%,
+    transparent 100%
+  );
+  opacity: 0.75;
+  transition: all 0.3s ease;
+}
+
+/* Subtle corner glow */
+.help-service-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(
+    circle at 100% 0%,
+    rgba(129, 105, 197, 0.08) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.help-service-card:hover::before {
+  opacity: 1;
+  background: linear-gradient(
+    90deg,
+    var(--nebula-purple) 0%,
+    var(--nebula-lavender) 40%,
+    var(--nebula-orange) 70%,
+    var(--nebula-purple) 100%
+  );
+  background-size: 200% 100%;
+  animation: card-gradient-sweep 3s ease-in-out infinite;
+}
+
+.help-service-card:hover::after {
+  opacity: 0.8;
 }
 
 .help-service-card:hover {
-  border-color: var(--color-primary);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+  border-color: rgba(94, 65, 162, 0.28);
+  box-shadow: 
+    0 16px 32px -8px rgba(94, 65, 162, 0.2),
+    0 6px 16px -4px rgba(0, 0, 0, 0.1),
+    0 0 0 2px rgba(94, 65, 162, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 2px rgba(94, 65, 162, 0.08);
+  transform: translateY(-3px);
+  filter: brightness(1.02);
+}
+
+/* Alternating card backgrounds */
+.help-service-card:nth-child(3n+1) {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(245, 240, 255, 0.22) 30%,
+    rgba(255, 255, 255, 0.98) 100%
+  );
+  border-color: rgba(94, 65, 162, 0.18);
+}
+
+.help-service-card:nth-child(3n+2) {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(255, 248, 240, 0.25) 35%,
+    rgba(255, 255, 255, 0.98) 100%
+  );
+  border-color: rgba(255, 153, 0, 0.16);
+}
+
+.help-service-card:nth-child(3n+3) {
+  background: linear-gradient(
+    125deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(240, 248, 255, 0.2) 30%,
+    rgba(255, 255, 255, 0.98) 100%
+  );
+  border-color: rgba(94, 130, 200, 0.16);
+}
+
+/* Dark mode */
+[data-theme="dark"] .help-service-card {
+  background: linear-gradient(
+    135deg,
+    rgba(28, 34, 48, 0.95) 0%,
+    rgba(30, 26, 48, 0.88) 30%,
+    rgba(17, 24, 39, 0.97) 100%
+  );
+  border-color: rgba(129, 105, 197, 0.15);
+  box-shadow: 
+    0 8px 24px -6px rgba(0, 0, 0, 0.3),
+    0 4px 12px -3px rgba(0, 0, 0, 0.2),
+    0 0 20px -8px rgba(129, 105, 197, 0.1),
+    inset 0 1px 0 rgba(129, 105, 197, 0.08),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] .help-service-card:hover {
+  border-color: rgba(129, 105, 197, 0.28);
+  box-shadow: 
+    0 16px 32px -8px rgba(0, 0, 0, 0.4),
+    0 6px 16px -4px rgba(0, 0, 0, 0.25),
+    0 0 30px -8px rgba(129, 105, 197, 0.2),
+    inset 0 1px 0 rgba(129, 105, 197, 0.1),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .service-card-title {

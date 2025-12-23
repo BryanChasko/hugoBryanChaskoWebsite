@@ -39,8 +39,8 @@
     }
 
     .social-icons a svg {
-        height: 24px;
-        width: 24px;
+        height: var(--space-md);
+        width: var(--space-md);
     }
 
     /* profile-mode */
@@ -48,7 +48,7 @@
         transform: scale(0.85);
     }
 
-    /* post-entry */
+    /* note-entry */
     .first-entry {
         min-height: 260px;
     }
@@ -111,10 +111,10 @@
 }
 
 @media (prefers-reduced-motion) {
-    /* terms; profile-mode; post-single; post-entry; post-entry; search; search */
+    /* terms; profile-mode; note-single; note-entry; note-entry; search; search */
     .terms-tags a:active,
     .button:active,
-    .post-entry:active,
+    .note-entry:active,
     .top-link,
     #searchResults .focus,
     #searchResults li:active {

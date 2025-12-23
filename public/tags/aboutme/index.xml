@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>AboutMe on Bryan Chasko&#39;s Portfolio</title>
-    <link>https://bryanchasko.com/tags/aboutme/</link>
+    <link>http://localhost:49706/tags/aboutme/</link>
     <description>Recent content in AboutMe on Bryan Chasko&#39;s Portfolio</description>
     <image>
       <title>Bryan Chasko&#39;s Portfolio</title>
-      <url>https://bryanchasko.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://bryanchasko.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:49706/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:49706/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
     <lastBuildDate>Sun, 07 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://bryanchasko.com/tags/aboutme/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:49706/tags/aboutme/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>☁️ How I Became an AWS Hero 🦸‍️</title>
-      <link>https://bryanchasko.com/blog/posts/aws-hero-bryan-chasko/</link>
+      <link>http://localhost:49706/notes/posts/aws-hero-bryan-chasko/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/blog/posts/aws-hero-bryan-chasko/</guid>
+      <guid>http://localhost:49706/notes/posts/aws-hero-bryan-chasko/</guid>
       <description>&lt;!--
 File Path: content/blog/posts/aws-hero-bryan-chasko.md
 --&gt;
@@ -38,27 +38,23 @@ File Path: content/blog/posts/aws-hero-bryan-chasko.md
     </item>
     <item>
       <title>My Cat Buddy 🐈</title>
-      <link>https://bryanchasko.com/blog/posts/my-cat-buddy/</link>
+      <link>http://localhost:49706/notes/posts/my-cat-buddy/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/blog/posts/my-cat-buddy/</guid>
+      <guid>http://localhost:49706/notes/posts/my-cat-buddy/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.animalshelter.org/search/shelterpets.asp?rescueId=3220&#34;&gt;Adopt a pet from Guadalupe County Animal Control&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;my-cat-buddy-&#34;&gt;My Cat Buddy 🐱&lt;/h2&gt;
 &lt;!-- content/blog/posts/my-cat-buddy.md --&gt;
-&lt;p&gt;Buddy is a tabby cat from Mesilla Park, New Mexico. He likes to play catch with springs and eat fish. See #caturday on my insta, X, and threads. Buddy and Bryan both appreciate your donations to, and adoptions from:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Guadalupe County Animal Control&lt;/strong&gt;
-Phone: &lt;a href=&#34;tel:505-472-3711&#34;&gt;505-472-3711&lt;/a&gt;&lt;br&gt;
-Santa Rosa Animal Shelter, 117 S. 5th Street,
-Santa Rosa, New Mexico 88435&lt;/p&gt;</description>
+&lt;p&gt;Buddy is a tabby cat from Mesilla Park, New Mexico. He likes to play catch with springs and eat fish. See #caturday on my insta, X, and threads. Buddy and Bryan both appreciate your donations to, and adoptions from:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Bryan Chasko&#39;s Basics</title>
-      <link>https://bryanchasko.com/blog/posts/about-bryan-chasko/</link>
+      <link>http://localhost:49706/notes/posts/about-bryan-chasko/</link>
       <pubDate>Thu, 13 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/blog/posts/about-bryan-chasko/</guid>
+      <guid>http://localhost:49706/notes/posts/about-bryan-chasko/</guid>
       <description>&lt;h2 id=&#34;about-bryan&#34;&gt;About Bryan&lt;/h2&gt;
 &lt;!-- 
 ![Bryan Chasko](/images/profile.jpg) &lt;!-- Make sure to replace this with the actual path to your image --&gt;
-&lt;p&gt;&lt;a href=&#34;https://bryanchasko.com/blog/posts/aws-hero-bryan-chasko/&#34;&gt;#AWSHero&lt;/a&gt; since 2018 &lt;a href=&#34;https://bryanchasko.com/blog/posts/my-skills-and-experience/&#34;&gt;known for 🌟&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:49706/blog/posts/aws-hero-bryan-chasko/&#34;&gt;#AWSHero&lt;/a&gt; since 2018 &lt;a href=&#34;http://localhost:49706/blog/posts/my-skills-and-experience/&#34;&gt;known for 🌟&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Community &amp;amp; Spatial Computing&lt;/strong&gt; 🌍&lt;a href=&#34;https://aws.amazon.com/developer/community/heroes/bryan-chasko/&#34;&gt;AWS Hero Bio&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;personal-background&#34;&gt;Personal Background&lt;/h3&gt;
 &lt;ul&gt;
@@ -68,22 +64,17 @@ New York Institute of Photography Alumni 📸. &lt;a href=&#34;https://instagram
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Nature Lover&lt;/strong&gt; 🌲&lt;br&gt;
-From New Mexico&amp;rsquo;s Sacramento Mountains 🏞️. &lt;a href=&#34;https://www.fs.usda.gov/recarea/lincoln/recarea/?recid=33266&#34;&gt;trails&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://bryanchasko.com/blog/posts/new-england-patriots-fandom/&#34;&gt;&lt;strong&gt;Top 5000&lt;/strong&gt; 🏆&lt;br&gt;
-In EA&amp;rsquo;s Madden NFL 3 times as the New England Patriots 🏈&lt;/a&gt;&lt;/p&gt;</description>
+From New Mexico&amp;rsquo;s Sacramento Mountains 🏞️. &lt;a href=&#34;https://www.fs.usda.gov/recarea/lincoln/recarea/?recid=33266&#34;&gt;trails&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>New England Patriots Fandom 🏈</title>
-      <link>https://bryanchasko.com/blog/posts/new-england-patriots-fandom/</link>
+      <link>http://localhost:49706/notes/posts/new-england-patriots-fandom/</link>
       <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://bryanchasko.com/blog/posts/new-england-patriots-fandom/</guid>
+      <guid>http://localhost:49706/notes/posts/new-england-patriots-fandom/</guid>
       <description>&lt;h2 id=&#34;new-england-patriots-fandom-&#34;&gt;New England Patriots Fandom 🏈&lt;/h2&gt;
 &lt;p&gt;My first football memory was rooting for the 1985 patriots as they got pummeled in the super bowl-&lt;/p&gt;
 &lt;p&gt;In elementary we were the Ronald Reagan Patriots&lt;/p&gt;
-&lt;p&gt;In rural New Mexico, the Drew Bledsoe era patriots had superior coverage to any other team as the world&amp;rsquo;s first pro sports website and world&amp;rsquo;s original podcast&lt;/p&gt;
-&lt;p&gt;I mowed lawns dreaming unrealistically of getting to visit old foxboro stadium&lt;/p&gt;</description>
+&lt;p&gt;In rural New Mexico, the Drew Bledsoe era patriots had superior coverage to any other team as the world&amp;rsquo;s first pro sports website and world&amp;rsquo;s original podcast&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

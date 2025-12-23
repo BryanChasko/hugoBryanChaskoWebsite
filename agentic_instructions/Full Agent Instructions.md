@@ -15,7 +15,6 @@ Focused technical guide for AI agents working on WebGL effects, CSS architecture
 1. **Diagnostic First**: Use MCP tools (`file_search`, `grep_search`, `get_errors`, `read_file`) before making changes
 2. **Test-Driven**: All WebGL changes must pass visual regression tests (`npm test`) before deployment
 3. **No Hardcoding**: Never hardcode AWS credentials, ARNs, bucket names, or distribution IDs
-4. **Cache-Aware**: Browser cache is the most common cause of "code not working" — always consider hard refresh
 
 ---
 
@@ -93,10 +92,7 @@ cp themes/bryan-chasko-theme/assets/js/webgl-scenes/*.js \
 # 3. Rebuild Hugo
 hugo --minify
 
-# 4. Hard refresh browser
-# macOS: Cmd+Shift+R | Windows/Linux: Ctrl+Shift+R
-
-# 5. Verify with tests
+# 4. Verify with tests
 npm test
 ```
 
@@ -262,13 +258,13 @@ scripts/deploy.pl  # Perl script with test gate
 
 ```bash
 # With test gate (recommended)
-perl scripts/deploy.pl --profile aerospaceug-admin --verbose
+perl scripts/deploy.pl --profile websites-bryanchasko --verbose
 
 # Dry run (no AWS calls)
 perl scripts/deploy.pl --dry-run --verbose
 
 # Emergency bypass (skip tests - NOT recommended)
-perl scripts/deploy.pl --skip-tests --profile aerospaceug-admin
+perl scripts/deploy.pl --skip-tests --profile websites-bryanchasko
 ```
 
 ### Configuration Priority
@@ -286,16 +282,16 @@ The deploy script reads configuration in this order:
 ```bash
 # Store config in SSM (one-time)
 aws ssm put-parameter --name /sites/bryanchasko.com/s3_bucket \
-  --type String --value bryanchasko.com --profile aerospaceug-admin
+  --type String --value bryanchasko.com --profile websites-bryanchasko
 
 aws ssm put-parameter --name /sites/bryanchasko.com/domain \
-  --type String --value bryanchasko.com --profile aerospaceug-admin
+  --type String --value bryanchasko.com --profile websites-bryanchasko
 
 aws ssm put-parameter --name /sites/bryanchasko.com/cloudfront_distribution_id \
-  --type String --value [YOUR-DISTRIBUTION-ID] --profile aerospaceug-admin
+  --type String --value [YOUR-DISTRIBUTION-ID] --profile websites-bryanchasko
 
 # Deploy using SSM
-perl scripts/deploy.pl --profile aerospaceug-admin --param-path /sites/bryanchasko.com
+perl scripts/deploy.pl --profile websites-bryanchasko --param-path /sites/bryanchasko.com
 ```
 
 ---
@@ -453,13 +449,10 @@ npm test -- tests/webgl/orbit-scene.spec.js
 # 1. Rebuild Hugo
 hugo --minify
 
-# 2. Hard refresh browser
-# macOS: Cmd+Shift+R | Windows/Linux: Ctrl+Shift+R
-
-# 3. Check file is in correct directory
+# 2. Check file is in correct directory
 ls themes/bryan-chasko-theme/assets/css/components/
 
-# 4. Verify import chain
+# 3. Verify import chain
 grep -r "home.css" themes/bryan-chasko-theme/
 ```
 
@@ -470,13 +463,13 @@ grep -r "home.css" themes/bryan-chasko-theme/
 npm test
 
 # 2. Verify AWS credentials
-aws sts get-caller-identity --profile aerospaceug-admin
+aws sts get-caller-identity --profile websites-bryanchasko
 
 # 3. Dry run deploy
 perl scripts/deploy.pl --dry-run --verbose
 
 # 4. Check CloudFront distribution
-aws cloudfront list-distributions --profile aerospaceug-admin
+aws cloudfront list-distributions --profile websites-bryanchasko
 ```
 
 ---
@@ -495,7 +488,7 @@ npm run test:chrome                     # Chrome only
 
 # Deploy
 perl scripts/deploy.pl --dry-run --verbose              # Preview
-perl scripts/deploy.pl --profile aerospaceug-admin      # Deploy
+perl scripts/deploy.pl --profile websites-bryanchasko      # Deploy
 
 # WebGL Asset Sync
 cp themes/bryan-chasko-theme/assets/js/webgl-scenes/*.js \

@@ -3,25 +3,36 @@ themes/PaperMod/
 # Private secrets reference (real values for documentation placeholders)
 .secrets-reference.json
 
-_README_HOSTING.md
-_AWS_ENVIRONMENT_DETAILS.md
-bucket-policy.json
-cloudfront-config.json
-cloudfront-dns-record.json
-cors.json
-current-bucket-policy.json
-dns-record.json
-cloudfront-backup*.json
-current-distribution-config.json
-fixed-distribution-config.json
-# Internal development docs
-COLOR_PALETTE_REFERENCE.md
-CSS_REFACTORING_SUMMARY.md
-THEME_DEVELOPMENT.md
-.github/issues/
+# Hugo build artifacts
+public/
+.hugo_build.lock
+.hugo_pid
+hugo.log
+hugo.out
 
-# Hugo build artifacts - hashed CSS files
-public/assets/css/stylesheet.*.css
+# Temporary screenshots and test artifacts
+*.png
+!static/**/*.png
+*.log
+*.txt
+test-*.log
+test-*.txt
+phase*.png
+baseline-ref-*.png
+current-spacing-screenshot.png
+
+# Chrome DevTools artifacts
+chrome-devtools*
+hover
+list_pages
+navigate_page
+trust
+take_snapshot
+evaluate_script
+
+# Backup files
+*.bak
+home_info.*.html
 
 # WebGL Test Results & Artifacts
 test-results/
@@ -33,9 +44,6 @@ videos/
 traces/
 .cache/
 node_modules/
-test-debug-output*.txt
-test-output*.txt
-test-orbit*.log
 
 # Terraform
 .terraform/
@@ -50,5 +58,7 @@ override.tf.json
 *_override.tf.json
 .terraformrc
 terraform.rc
-.github/copilot-instructions.md
+
+# GitHub
+.github/issues/
 .github/copilot-instructions.md

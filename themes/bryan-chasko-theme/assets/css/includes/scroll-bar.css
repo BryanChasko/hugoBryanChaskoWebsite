@@ -21,7 +21,7 @@
     background: var(--theme);
 }
 
-/* from post-single */
+/* from note-single */
 .post-content .highlighttable td .highlight pre code::-webkit-scrollbar {
     display: none;
 }

@@ -171,48 +171,32 @@
   height: 100%;
 }
 
-/* Update nth-child(2) purple background logic */
-
-/* Second card: purple accent only on header, icon, and button */
-.ccc-card-link:nth-child(2) > .ccc-service-card {
-  /* Standard card background (matches neighbors) */
-  background: var(--card-bg, var(--color-background-secondary));
-  color: var(--color-text);
-  border-top: 4px solid var(--nebula-purple);
-}
-
-.ccc-card-link:nth-child(2) .service-icon {
-  color: var(--nebula-purple);
-  filter: drop-shadow(0 2px 8px rgba(129, 105, 197, 0.3));
-}
-
-.ccc-card-link:nth-child(2) .ccc-service-card h3 {
-  background: linear-gradient(135deg, var(--nebula-purple) 0%, var(--nebula-lavender) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.ccc-card-link:nth-child(2) .cta-button {
-  background: linear-gradient(135deg, var(--nebula-purple) 0%, var(--nebula-lavender) 100%) !important;
-  color: #fff;
-}
-
 .ccc-card-link:hover .ccc-service-card {
-  border-color: rgba(94, 65, 162, 0.25);
+  border-color: var(--color-border);
   box-shadow: 
-    0 12px 40px rgba(94, 65, 162, 0.18),
-    0 0 0 1px rgba(94, 65, 162, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+    0 12px 24px rgba(94, 65, 162, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
 [data-theme="dark"] .ccc-card-link:hover .ccc-service-card {
-  border-color: rgba(129, 105, 197, 0.4);
+  border-color: var(--color-border);
   box-shadow: 
-    0 16px 48px rgba(0, 0, 0, 0.5),
-    0 0 50px -10px rgba(129, 105, 197, 0.3),
-    0 0 0 1px rgba(129, 105, 197, 0.2),
-    inset 0 1px 0 rgba(129, 105, 197, 0.2);
+    0 12px 24px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(94, 65, 162, 0.15);
+}
+
+/* Service Icon */
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-md);
+  display: inline-block;
+  filter: drop-shadow(0 2px 8px rgba(94, 65, 162, 0.2));
+  transition: transform var(--transition-base);
+}
+
+.ccc-service-card:hover .service-icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 12px rgba(94, 65, 162, 0.3));
 }
 
 /* Services Grid */
@@ -233,71 +217,43 @@
   position: relative;
   padding: var(--space-xl);
   border-radius: var(--radius-xl);
-  background: linear-gradient(
-    145deg,
-    rgba(255, 255, 255, 0.95) 0%,
-    rgba(248, 246, 255, 0.9) 50%,
-    rgba(255, 250, 245, 0.92) 100%
-  );
-  border: 1px solid rgba(94, 65, 162, 0.15);
+  background: linear-gradient(135deg, var(--color-background-secondary) 0%, rgba(94, 65, 162, 0.12) 100%);
+  border: 1px solid var(--color-border);
   box-shadow: 
-    0 4px 20px rgba(94, 65, 162, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
-  transition: all var(--transition-base);
+    0 2px 8px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   overflow: hidden;
 }
 
 .ccc-service-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(
-    90deg,
-    var(--nebula-purple) 0%,
-    var(--nebula-lavender) 50%,
-    var(--nebula-orange) 100%
-  );
-  opacity: 0;
-  transition: opacity var(--transition-base);
+  display: none;
 }
 
 .ccc-service-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(94, 65, 162, 0.25);
+  border-color: var(--color-border);
   box-shadow: 
-    0 12px 32px rgba(94, 65, 162, 0.15),
-    0 0 0 1px rgba(94, 65, 162, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+    0 12px 24px rgba(94, 65, 162, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
 .ccc-service-card:hover::before {
-  opacity: 1;
+  display: none;
 }
 
 [data-theme="dark"] .ccc-service-card {
-  background: linear-gradient(
-    145deg,
-    rgba(28, 34, 48, 0.95) 0%,
-    rgba(30, 26, 48, 0.9) 50%,
-    rgba(32, 28, 42, 0.92) 100%
-  );
-  border-color: rgba(129, 105, 197, 0.2);
+  background: linear-gradient(135deg, var(--color-background-secondary) 0%, rgba(94, 65, 162, 0.08) 100%);
+  border-color: var(--color-border);
   box-shadow: 
-    0 4px 20px rgba(0, 0, 0, 0.3),
-    0 0 30px -10px rgba(129, 105, 197, 0.15),
-    inset 0 1px 0 rgba(129, 105, 197, 0.1);
+    0 2px 8px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(94, 65, 162, 0.1);
 }
 
 [data-theme="dark"] .ccc-service-card:hover {
-  border-color: rgba(129, 105, 197, 0.35);
   box-shadow: 
-    0 12px 40px rgba(0, 0, 0, 0.4),
-    0 0 40px -10px rgba(129, 105, 197, 0.25),
-    0 0 0 1px rgba(129, 105, 197, 0.15),
-    inset 0 1px 0 rgba(129, 105, 197, 0.15);
+    0 12px 24px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(94, 65, 162, 0.15);
 }
 
 /* Service Icon */
@@ -585,6 +541,11 @@
 
 [data-theme="dark"] .ccc-footer-cta a:hover {
   color: var(--nebula-orange);
+}
+
+/* Hide duplicate services list - keep only hero cards */
+.page-header ~ .note-entry {
+  display: none;
 }
 
 /* Mobile Adjustments */

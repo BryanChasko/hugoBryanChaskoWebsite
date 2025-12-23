@@ -256,13 +256,13 @@ scripts/deploy.pl  # Perl script with test gate
 
 ```bash
 # With test gate (recommended)
-perl scripts/deploy.pl --profile aerospaceug-admin --verbose
+perl scripts/deploy.pl --profile websites-bryanchasko --verbose
 
 # Dry run (no AWS calls)
 perl scripts/deploy.pl --dry-run --verbose
 
 # Emergency bypass (skip tests - NOT recommended)
-perl scripts/deploy.pl --skip-tests --profile aerospaceug-admin
+perl scripts/deploy.pl --skip-tests --profile websites-bryanchasko
 ```
 
 ### Configuration Priority
@@ -280,16 +280,16 @@ The deploy script reads configuration in this order:
 ```bash
 # Store config in SSM (one-time)
 aws ssm put-parameter --name /sites/bryanchasko.com/s3_bucket \
-  --type String --value bryanchasko.com --profile aerospaceug-admin
+  --type String --value bryanchasko.com --profile websites-bryanchasko
 
 aws ssm put-parameter --name /sites/bryanchasko.com/domain \
-  --type String --value bryanchasko.com --profile aerospaceug-admin
+  --type String --value bryanchasko.com --profile websites-bryanchasko
 
 aws ssm put-parameter --name /sites/bryanchasko.com/cloudfront_distribution_id \
-  --type String --value [YOUR-DISTRIBUTION-ID] --profile aerospaceug-admin
+  --type String --value [YOUR-DISTRIBUTION-ID] --profile websites-bryanchasko
 
 # Deploy using SSM
-perl scripts/deploy.pl --profile aerospaceug-admin --param-path /sites/bryanchasko.com
+perl scripts/deploy.pl --profile websites-bryanchasko --param-path /sites/bryanchasko.com
 ```
 
 ---
@@ -464,13 +464,13 @@ grep -r "home.css" themes/bryan-chasko-theme/
 npm test
 
 # 2. Verify AWS credentials
-aws sts get-caller-identity --profile aerospaceug-admin
+aws sts get-caller-identity --profile websites-bryanchasko
 
 # 3. Dry run deploy
 perl scripts/deploy.pl --dry-run --verbose
 
 # 4. Check CloudFront distribution
-aws cloudfront list-distributions --profile aerospaceug-admin
+aws cloudfront list-distributions --profile websites-bryanchasko
 ```
 
 ---
@@ -489,7 +489,7 @@ npm run test:chrome                     # Chrome only
 
 # Deploy
 perl scripts/deploy.pl --dry-run --verbose              # Preview
-perl scripts/deploy.pl --profile aerospaceug-admin      # Deploy
+perl scripts/deploy.pl --profile websites-bryanchasko      # Deploy
 
 # WebGL Asset Sync
 cp themes/bryan-chasko-theme/assets/js/webgl-scenes/*.js \

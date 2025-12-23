@@ -6,6 +6,7 @@ enableRobotsTXT = true
 buildDrafts = false
 buildFuture = false
 buildExpired = false
+summaryLength = 50
 
 [minify]
   disableXML = true
@@ -14,12 +15,12 @@ buildExpired = false
 [params]
   env = "production" # to enable google analytics, opengraph, twitter-cards and schema.
   title = "Bryan Chasko"
-  description = "Welcome to Bryan Chasko's Portfolio - A showcase of projects, blog posts, and contact information."
-  keywords = ["Portfolio", "Blog", "Projects", "Bryan Chasko", "AWS", "AI"]
+  description = "Welcome to Bryan Chasko's Portfolio - A showcase of projects, notes, and contact information."
+  keywords = ["Portfolio", "Notes", "Projects", "Bryan Chasko", "AWS", "AI"]
   author = "Bryan Chasko"
   images = ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat = "January 2, 2006"
-  defaultTheme = "light" # dark, light
+  defaultTheme = "auto" # dark, light, auto
   disableThemeToggle = false
 
   ShowReadingTime = true
@@ -59,11 +60,11 @@ buildExpired = false
     imageHeight = 120
     imageTitle = "Bryan Chasko"
     [[params.profileMode.buttons]]
-      name = "Cloudcroft Cloud Company"
-      url = "/cloudcroft-cloud-company/"
+      name = "Services"
+      url = "/services/"
     [[params.profileMode.buttons]]
-      name = "Blog"
-      url = "/blog/"
+      name = "Notes"
+      url = "/notes/"
     [[params.profileMode.buttons]]
       name = "Topics"
       url = "/topics/"
@@ -73,7 +74,7 @@ buildExpired = false
 
 [params.homeInfoParams]
   Title = "Hello, Friend ^.^"
-Content = "[🦊&nbsp;About](blog/posts/about-bryan-chasko) [🐈&nbsp;Buddy](blog/posts/my-cat-buddy) [🏈&nbsp;#ForeverNE](blog/posts/new-england-patriots-fandom) [🔧&nbsp;Skills](blog/posts/my-skills-and-experience#skills) [📈&nbsp;Experience](blog/posts/my-skills-and-experience#experience) [☁️&nbsp;AWS Cloud](blog/posts/aws-hero-bryan-chasko) [📅&nbsp;Booking](cloudcroft-cloud-company)"
+Content = "[🦊&nbsp;About](notes/posts/about-bryan-chasko) [🐈&nbsp;Buddy](notes/posts/my-cat-buddy) [🏈&nbsp;#ForeverNE](notes/posts/new-england-patriots-fandom) [🔧&nbsp;Skills](notes/posts/my-skills-and-experience#skills) [📈&nbsp;Experience](notes/posts/my-skills-and-experience#experience) [☁️&nbsp;AWS Cloud](notes/posts/aws-hero-bryan-chasko) [📅&nbsp;Booking](services)"
 
   [[params.homeInfoParams.instagram]]
     url = "https://www.instagram.com/p/EXAMPLE1/"
@@ -133,14 +134,14 @@ Content = "[🦊&nbsp;About](blog/posts/about-bryan-chasko) [🐈&nbsp;Buddy](bl
 
 [menu]
   [[menu.main]]
-    identifier = "cloudcroft-cloud-company"
-    name = "Cloudcroft Cloud Company"
-    url = "/cloudcroft-cloud-company/"
+    identifier = "services"
+    name = "Services"
+    url = "/services/"
     weight = 10
   [[menu.main]]
     identifier = "blog"
-    name = "Blog"
-    url = "/blog/"
+    name = "Notes"
+    url = "/notes/"
     weight = 20
   [[menu.main]]
     identifier = "contact"

@@ -4,8 +4,8 @@
 
 /* Terminal wrapper - overlay with auto-dismiss after animation */
 .terminal-wrapper {
-  position: relative;
-  top: auto;
+  position: absolute;
+  top: 75px;
   left: 0;
   width: 100%;
   height: auto;
@@ -22,6 +22,7 @@
   background: transparent;
   backdrop-filter: none;
   will-change: opacity, visibility;
+  margin: 0;
 }
 
 /* Accessibility: Live region for screen readers */
@@ -69,27 +70,27 @@
       0deg,
       transparent,
       transparent 2px,
-      rgba(94, 65, 162, 0.02) 2px,
-      rgba(94, 65, 162, 0.02) 4px
+      rgba(94, 65, 162, 0.015) 2px,
+      rgba(94, 65, 162, 0.015) 4px
     ),
     /* Soft gradient background */
     linear-gradient(
       135deg,
-      rgba(248, 245, 255, 0.98) 0%,
-      rgba(243, 232, 255, 0.95) 50%,
-      rgba(255, 250, 245, 0.95) 100%
+      rgba(248, 245, 255, 0.97) 0%,
+      rgba(243, 232, 255, 0.93) 50%,
+      rgba(255, 250, 245, 0.94) 100%
     );
   /* Soft purple glow effect */
   box-shadow:
     /* Inner subtle glow */
-    inset 0 0 60px rgba(94, 65, 162, 0.05),
-    inset 0 0 20px rgba(129, 105, 197, 0.03),
+    inset 0 0 40px rgba(94, 65, 162, 0.04),
+    inset 0 0 15px rgba(129, 105, 197, 0.02),
     /* Outer shadow */
-    0 4px 20px -4px rgba(94, 65, 162, 0.1),
-    0 0 40px -10px rgba(94, 65, 162, 0.08);
+    0 2px 12px -2px rgba(94, 65, 162, 0.08),
+    0 0 30px -8px rgba(94, 65, 162, 0.06);
   overflow: hidden;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -108,12 +109,12 @@
     linear-gradient(
       180deg,
       transparent 0%,
-      rgba(94, 65, 162, 0.015) 50%,
+      rgba(94, 65, 162, 0.01) 50%,
       transparent 100%
     );
   pointer-events: none;
   animation: crt-flicker 0.15s infinite;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 /* Light mode: Purple scanline moving effect */
@@ -160,8 +161,8 @@
       0deg,
       transparent,
       transparent 2px,
-      rgba(0, 0, 0, 0.15) 2px,
-      rgba(0, 0, 0, 0.15) 4px
+      rgba(0, 0, 0, 0.12) 2px,
+      rgba(0, 0, 0, 0.12) 4px
     ),
     /* CRT curvature vignette - deeper black */
     radial-gradient(
@@ -170,14 +171,14 @@
       #050d05 70%,
       #020502 100%
     );
-  border: 3px solid #1a2a1a;
+  border: 2px solid #1a2a1a;
   box-shadow:
     /* Inner green phosphor glow */
-    inset 0 0 80px rgba(0, 255, 65, 0.06),
-    inset 0 0 30px rgba(0, 200, 50, 0.04),
+    inset 0 0 60px rgba(0, 255, 65, 0.05),
+    inset 0 0 20px rgba(0, 200, 50, 0.03),
     /* Outer monitor shadow with green bleed */
-    0 4px 30px -4px rgba(0, 0, 0, 0.6),
-    0 0 50px -10px rgba(0, 255, 65, 0.12);
+    0 2px 20px -2px rgba(0, 0, 0, 0.5),
+    0 0 40px -8px rgba(0, 255, 65, 0.1);
 }
 
 /* Dark mode CRT flicker - green tint */
@@ -186,11 +187,11 @@
     linear-gradient(
       180deg,
       transparent 0%,
-      rgba(0, 255, 65, 0.015) 50%,
+      rgba(0, 255, 65, 0.01) 50%,
       transparent 100%
     );
   animation: crt-flicker 0.12s infinite;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 /* Dark mode scanline - green */
@@ -234,6 +235,10 @@
   display: flex;
   align-items: baseline;
   margin-top: 0 !important;
+  justify-content: flex-start;
+  width: 100%;
+  margin-left: 60px;
+}
   margin-bottom: 0 !important;
   padding: 0 !important;
   text-shadow: 
@@ -251,6 +256,9 @@
   display: inline-block;
   vertical-align: baseline;
   flex-shrink: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 /* Orange prompt characters - distinct from typed text */
@@ -279,10 +287,9 @@
   width: 0;
   animation: typing-loop 8s steps(13) 1;
   color: var(--nebula-purple);
-  text-shadow: 
-    0 0 5px rgba(94, 65, 162, 0.6),
-    0 0 10px rgba(129, 105, 197, 0.4),
-    0 0 20px rgba(94, 65, 162, 0.2);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .terminal-cursor {
@@ -357,7 +364,7 @@
   99%, 100% { opacity: 1; transform: none; }
 }
 
-/* Terminal fades out and removes from flow */
+/* Terminal fades out */
 @keyframes terminal-fade-out {
   0% { 
     opacity: 1;
@@ -368,7 +375,6 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    position: fixed;
   }
 }
 
@@ -376,9 +382,9 @@
 @keyframes typing-loop {
   0%, 3% { width: 0; opacity: 0; }
   4% { width: 0; opacity: 1; }
-  45% { width: 16ch; opacity: 1; }
-  46%, 85% { width: 16ch; opacity: 1; }
-  86%, 97% { width: 16ch; opacity: 0; }
+  45% { width: 15ch; opacity: 1; }
+  46%, 85% { width: 15ch; opacity: 1; }
+  86%, 97% { width: 15ch; opacity: 0; }
   98% { width: 0; opacity: 0; }
   99%, 100% { width: 0; opacity: 1; }
 }
@@ -451,7 +457,7 @@
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: var(--space-md);
+  gap: var(--space-sm);
   margin: 0;
   height: 100%;
   pointer-events: auto;
@@ -461,8 +467,8 @@
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  width: 2.75rem;
-  height: 2.75rem;
+  width: var(--space-2xl);
+  height: var(--space-2xl);
   border-radius: var(--radius-full);
   background: rgba(94, 65, 162, 0.08);
   color: var(--nebula-purple);
@@ -479,8 +485,8 @@
 .terminal-social-reveal .social-icons a > svg {
   display: block;
   margin: 0 auto;
-  height: 1.5rem;
-  width: 1.5rem;
+  height: var(--space-lg);
+  width: var(--space-lg);
   vertical-align: middle;
 }
 

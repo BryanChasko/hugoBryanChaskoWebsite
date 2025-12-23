@@ -25,7 +25,7 @@ class WebGLSceneInitializer {
     }
 
     if (document.body.classList.contains('single') && document.querySelector('article')) {
-      this.initBlogScenes();
+      this.initNoteScenes();
     }
 
     if (document.querySelector('[data-skills-network]')) {
@@ -101,10 +101,10 @@ class WebGLSceneInitializer {
   }
 
   /**
-   * Initialize blog/article scenes (ripple effects on article cards)
+   * Initialize note/article scenes (ripple effects on article cards)
    */
-  initBlogScenes() {
-    const articleCards = document.querySelectorAll('.builder-post-card, .article-card');
+  initNoteScenes() {
+    const articleCards = document.querySelectorAll('.builder-note-card, .article-card');
     
     articleCards.forEach((card, index) => {
       if (!card.querySelector('.webgl-scene-canvas')) {
@@ -121,7 +121,7 @@ class WebGLSceneInitializer {
     });
 
     if (this.scenes.filter(s => s instanceof RippleScene).length > 0) {
-      console.log('[WebGL] RippleScene(s) initialized on blog page');
+      console.log('[WebGL] RippleScene(s) initialized on notes page');
     }
   }
 

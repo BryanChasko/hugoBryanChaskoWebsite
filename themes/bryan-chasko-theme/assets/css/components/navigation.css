@@ -99,8 +99,8 @@ footer a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: var(--space-xl);
+  height: var(--space-xl);
   border-radius: var(--radius-full);
   background: var(--color-background-secondary);
   color: var(--color-text);

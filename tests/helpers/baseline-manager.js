@@ -17,7 +17,7 @@ class BaselineManager {
     this.bucketName = options.bucketName || 'bryanchasko-com-webgl-baselines';
     this.region = options.region || 'us-west-2';
     this.localCacheDir = options.localCacheDir || path.join(__dirname, '../.baselines');
-    this.profile = process.env.AWS_PROFILE || 'aerospaceug-admin';
+    this.profile = process.env.AWS_PROFILE || 'websites-bryanchasko';
     
     // Track AWS connection status
     this.isCI = !!process.env.GITHUB_ACTIONS;

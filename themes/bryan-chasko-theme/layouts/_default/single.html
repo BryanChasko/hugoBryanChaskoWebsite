@@ -1,9 +1,9 @@
 {{- define "main" }}
 
-<article class="post-single">
-  <header class="post-header">
+<article class="note-single">
+  <header class="note-header">
     {{ partial "breadcrumbs.html" . }}
-    <h1 class="post-title entry-hint-parent">
+    <h1 class="note-title entry-hint-parent">
       {{ .Title }}
       {{- if .Draft }}
       <span class="entry-hint" title="Draft">
@@ -15,12 +15,12 @@
       {{- end }}
     </h1>
     {{- if .Description }}
-    <div class="post-description">
+    <div class="note-description">
       {{ .Description }}
     </div>
     {{- end }}
     {{- if not (.Param "hideMeta") }}
-    <div class="post-meta">
+    <div class="note-meta">
       {{- partial "post_meta.html" . -}}
       {{- partial "translation_list.html" . -}}
       {{- partial "edit_post.html" . -}}
@@ -35,7 +35,7 @@
   {{- end }}
 
   {{- if .Content }}
-  <div class="post-content">
+  <div class="note-content">
     {{- if not (.Param "disableAnchoredHeadings") }}
     {{- partial "anchored_headings.html" .Content -}}
     {{- else }}{{ .Content }}{{ end }}

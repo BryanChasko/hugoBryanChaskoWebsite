@@ -9,14 +9,14 @@
 .github-profile-link {
   display: flex;
   align-items: center;
-  gap: 0.5em;
+  gap: var(--space-sm);
   font-weight: 700;
   color: var(--nebula-purple);
   font-size: 1.1rem;
   letter-spacing: 0.01em;
   background: rgba(243, 232, 255, 0.12);
   border-radius: 6px;
-  padding: 0.25em 0.75em;
+  padding: var(--space-xs) var(--space-sm);
   border: 1px solid rgba(94, 65, 162, 0.15);
   transition: all 0.2s;
 }
@@ -40,7 +40,7 @@
   color: var(--nebula-orange);
   background: rgba(255, 153, 0, 0.12);
   border-radius: 6px;
-  padding: 0.25em 0.75em;
+  padding: var(--space-xs) var(--space-sm);
   font-weight: 600;
   text-decoration: none;
   font-size: 1.05rem;
@@ -57,8 +57,8 @@
 .github-latest-commit {
   background: rgba(243,232,255,0.10);
   border-radius: 8px;
-  padding: 1em 1.5em;
-  margin: 1em 0;
+  padding: var(--space-md) var(--space-lg);
+  margin: var(--space-md) 0;
   box-shadow: 0 2px 8px rgba(94,65,162,0.06);
   border: 1px solid rgba(94,65,162,0.10);
   color: var(--color-text);
@@ -70,7 +70,7 @@
   font-size: 0.95em;
   font-weight: 700;
   letter-spacing: 0.04em;
-  margin-bottom: 0.25em;
+  margin-bottom: var(--space-xs);
   text-transform: uppercase;
   opacity: 0.85;
 }
@@ -78,7 +78,7 @@
   color: var(--color-link);
   font-size: 1.08em;
   font-weight: 600;
-  margin-bottom: 0.2em;
+  margin-bottom: var(--space-xs);
   word-break: break-word;
 }
 .commit-message a {
@@ -172,14 +172,14 @@
   max-width: 100%;
   margin-inline: auto;
   /* Minimal spacing for tight layout */
-  margin-top: var(--space-sm) !important;
+  margin-top: 0 !important;
   margin-bottom: 0 !important;
-  padding: var(--space-sm) 0 !important;
+  padding: 0 !important;
   /* Fix overlapping - override line-clamp from other rules */
   display: flex !important;
   flex-wrap: wrap !important;
   justify-content: center !important;
-  gap: 0.5rem !important;
+  gap: var(--space-sm) !important;
   -webkit-line-clamp: unset !important;
   line-clamp: unset !important;
   -webkit-box-orient: unset !important;
@@ -327,9 +327,8 @@
 
 /* Center home-info container - completely transparent, no card styling */
 .home-info {
-  position: relative;
   max-width: var(--container-max-width);
-  margin: 0 auto;
+  margin: -70px auto 0 auto;
   padding: var(--space-xl) var(--container-padding);
   text-align: center;
   /* Override all first-entry card styling */
@@ -431,23 +430,37 @@
   grid-template-columns: auto auto;
   gap: var(--space-xl);
   align-items: start;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
   margin-top: var(--space-lg);
-  margin-bottom: 0;
+  margin-bottom: var(--space-lg);
   pointer-events: none;
   /* Ensure grid items themselves are also transparent to events */
   isolation: isolate;
+}
+
+/* Mobile: Stack and center */
+@media (max-width: 768px) {
+  .home-social-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    justify-content: center;
+  }
+  
+  .insta-card,
+  .github-dashboard {
+    justify-self: center;
+  }
 }
 
 /* Profile button - positioned at top with 10% margin */
 .insta-profile-btn {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 16px;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
   color: var(--nebula-purple);
-  background: rgba(243, 232, 255, 0.12);
+  background: linear-gradient(135deg, #ffffff 0%, rgba(248, 245, 255, 0.95) 100%);
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
@@ -467,7 +480,7 @@
 
 .insta-profile-btn:hover {
   transform: translateY(-2px);
-  background: rgba(243, 232, 255, 0.25);
+  background: linear-gradient(135deg, #ffffff 0%, rgba(243, 232, 255, 0.98) 100%);
   border-color: rgba(94, 65, 162, 0.35);
   box-shadow: 0 0 12px rgba(94, 65, 162, 0.2);
 }
@@ -478,12 +491,12 @@
 
 [data-theme="dark"] .insta-profile-btn {
   color: var(--nebula-lavender);
-  background: rgba(129, 105, 197, 0.12);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(248, 245, 255, 0.04) 100%);
   border-color: rgba(129, 105, 197, 0.15);
 }
 
 [data-theme="dark"] .insta-profile-btn:hover {
-  background: rgba(129, 105, 197, 0.2);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(248, 245, 255, 0.08) 100%);
   border-color: rgba(129, 105, 197, 0.25);
 }
 
@@ -676,9 +689,9 @@
 /* Follow link button - positioned at bottom with 10% margin */
 .insta-follow-link {
   display: inline-block;
-  padding: 10px 16px;
+  padding: var(--space-sm) var(--space-md);
   color: var(--nebula-orange);
-  background: rgba(255, 153, 0, 0.12);
+  background: linear-gradient(135deg, #ffffff 0%, rgba(248, 245, 255, 0.95) 100%);
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
@@ -698,19 +711,19 @@
 
 .insta-follow-link:hover {
   transform: translateY(-2px);
-  background: rgba(255, 153, 0, 0.25);
+  background: linear-gradient(135deg, #ffffff 0%, rgba(243, 232, 255, 0.98) 100%);
   border-color: rgba(255, 153, 0, 0.35);
   box-shadow: 0 0 12px rgba(255, 153, 0, 0.2);
 }
 
 [data-theme="dark"] .insta-follow-link {
   color: var(--nebula-orange);
-  background: rgba(255, 153, 0, 0.1);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(248, 245, 255, 0.04) 100%);
   border-color: rgba(255, 153, 0, 0.15);
 }
 
 [data-theme="dark"] .insta-follow-link:hover {
-  background: rgba(255, 153, 0, 0.18);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(248, 245, 255, 0.08) 100%);
   border-color: rgba(255, 153, 0, 0.25);
 }
 
@@ -863,17 +876,18 @@
 }
 
 .github-placeholder-link:hover {
-  color: white;
+  color: #00ff00;
   background: var(--nebula-purple);
   border-color: var(--nebula-purple);
   transform: translateY(-2px);
   box-shadow: 
-    0 6px 20px rgba(94, 65, 162, 0.25),
-    0 0 0 2px rgba(94, 65, 162, 0.1);
+    0 6px 20px rgba(255, 153, 0, 0.4),
+    0 0 0 2px rgba(255, 153, 0, 0.2);
 }
 
 .github-placeholder-link:hover svg {
   transform: scale(1.1);
+  color: #00ff00;
 }
 
 /* Dark mode GitHub placeholder */
@@ -942,34 +956,32 @@
   align-items: center;
   background: transparent !important;
   border: none !important;
-  border-top: none !important;
-  padding-top: 0 !important;
-  margin-top: 0;
-  margin-bottom: 0;
+  padding: 0 !important;
+  margin: 0;
 }
 
 /* Builder Center feature card - Modern Glassmorphism Design */
 .builder-card {
-  margin: 0 auto 1rem auto;
-  max-width: var(--content-max-width);
+  margin: auto var(--space-md) auto;
   padding: 64px var(--space-xl);
-  border: 2px solid rgba(94, 65, 162, 0.25);
+  border: 1px solid rgba(94, 65, 162, 0.15);
   border-radius: var(--radius-xl);
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.95) 0%,
-    rgba(243, 232, 255, 0.3) 20%,
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(243, 232, 255, 0.2) 20%,
     rgba(255, 255, 255, 0.98) 45%,
-    rgba(255, 247, 237, 0.25) 70%,
-    rgba(255, 255, 255, 0.95) 100%
+    rgba(255, 247, 237, 0.15) 70%,
+    rgba(255, 255, 255, 0.96) 100%
   );
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  /* No default shadow - only show on hover */
-  box-shadow: none;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 
+    0 2px 8px -2px rgba(94, 65, 162, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
   transition: all var(--transition-base);
   position: relative;
-  overflow: visible; /* Allow WebGL canvas to render above card content */
+  overflow: visible;
   z-index: 1;
 }
 
@@ -980,15 +992,15 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 2px;
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(94, 65, 162, 0.3) 10%,
+    rgba(94, 65, 162, 0.25) 10%,
     var(--nebula-purple) 30%,
     var(--nebula-lavender) 50%,
     var(--nebula-orange) 70%,
-    rgba(255, 153, 0, 0.3) 90%,
+    rgba(255, 153, 0, 0.25) 90%,
     transparent 100%
   );
   opacity: 0.6;
@@ -1006,7 +1018,7 @@
   height: 120px;
   background: radial-gradient(
     circle at 100% 0%,
-    rgba(129, 105, 197, 0.08) 0%,
+    rgba(129, 105, 197, 0.06) 0%,
     transparent 60%
   );
   opacity: 0;
@@ -1016,17 +1028,15 @@
 
 .builder-card:hover {
   border-color: rgba(94, 65, 162, 0.25);
-  /* Show shadow only on hover */
   box-shadow: 
-    0 8px 25px -5px rgba(94, 65, 162, 0.15),
-    0 4px 10px -3px rgba(0, 0, 0, 0.08),
-    0 0 0 1px rgba(94, 65, 162, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
-  transform: translateY(-3px);
+    0 8px 20px -6px rgba(94, 65, 162, 0.12),
+    0 4px 10px -3px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  transform: translateY(-2px);
 }
 
 .builder-card:hover::before {
-  opacity: 1;
+  opacity: 0.9;
   background: linear-gradient(
     90deg,
     var(--nebula-purple) 0%,
@@ -1039,7 +1049,7 @@
 }
 
 .builder-card:hover::after {
-  opacity: 1;
+  opacity: 0.8;
 }
 
 @keyframes card-gradient-sweep {
@@ -1056,26 +1066,28 @@
 [data-theme="dark"] .builder-card {
   background: linear-gradient(
     135deg,
-    rgba(28, 34, 48, 0.95) 0%,
-    rgba(30, 26, 48, 0.9) 25%,
-    rgba(17, 24, 39, 0.98) 50%,
-    rgba(32, 28, 42, 0.9) 75%,
-    rgba(28, 34, 48, 0.95) 100%
+    rgba(28, 34, 48, 0.94) 0%,
+    rgba(30, 26, 48, 0.88) 25%,
+    rgba(17, 24, 39, 0.96) 50%,
+    rgba(32, 28, 42, 0.88) 75%,
+    rgba(28, 34, 48, 0.94) 100%
   );
-  border-color: rgba(129, 105, 197, 0.35);
-  /* No default shadow - only show on hover */
-  box-shadow: none;
+  border-color: rgba(129, 105, 197, 0.15);
+  box-shadow: 
+    0 2px 12px -2px rgba(0, 0, 0, 0.25),
+    0 0 20px -8px rgba(129, 105, 197, 0.08),
+    inset 0 1px 0 rgba(129, 105, 197, 0.08);
 }
 
 [data-theme="dark"] .builder-card::before {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(129, 105, 197, 0.4) 10%,
+    rgba(129, 105, 197, 0.3) 10%,
     var(--nebula-lavender) 30%,
     #A78BFA 50%,
     var(--nebula-orange) 70%,
-    rgba(255, 153, 0, 0.4) 90%,
+    rgba(255, 153, 0, 0.3) 90%,
     transparent 100%
   );
 }
@@ -1083,23 +1095,21 @@
 [data-theme="dark"] .builder-card::after {
   background: radial-gradient(
     circle at 100% 0%,
-    rgba(129, 105, 197, 0.15) 0%,
+    rgba(129, 105, 197, 0.12) 0%,
     transparent 60%
   );
 }
 
 [data-theme="dark"] .builder-card:hover {
-  border-color: rgba(129, 105, 197, 0.35);
-  /* Show shadow only on hover */
+  border-color: rgba(129, 105, 197, 0.3);
   box-shadow: 
-    0 12px 35px -8px rgba(0, 0, 0, 0.4),
-    0 0 40px -10px rgba(129, 105, 197, 0.25),
-    0 0 0 1px rgba(129, 105, 197, 0.15),
-    inset 0 1px 0 rgba(129, 105, 197, 0.15);
+    0 8px 24px -6px rgba(0, 0, 0, 0.35),
+    0 0 30px -8px rgba(129, 105, 197, 0.2),
+    inset 0 1px 0 rgba(129, 105, 197, 0.12);
 }
 
 [data-theme="dark"] .builder-card:hover::before {
-  box-shadow: 0 0 10px 1px rgba(129, 105, 197, 0.3);
+  box-shadow: 0 0 8px 1px rgba(129, 105, 197, 0.2);
 }
 
 .builder-card-link {

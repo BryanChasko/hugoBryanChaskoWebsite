@@ -23,7 +23,7 @@
         0 6px 24px -6px rgba(94, 65, 162, 0.12),
         0 3px 10px -3px rgba(0, 0, 0, 0.06),
         inset 0 1px 0 rgba(255, 255, 255, 0.9);
-    overflow: hidden;
+    /* Removed overflow: hidden to prevent content clipping */
 }
 
 /* First entry gradient accent */
@@ -87,10 +87,7 @@
 }
 
 .first-entry .entry-header {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    /* Removed overflow constraints to prevent text clipping */
 }
 
 .first-entry .entry-header h1 {
@@ -101,7 +98,7 @@
 .first-entry .entry-content {
     margin: 14px 0;
     font-size: 16px;
-    -webkit-line-clamp: 3;
+    /* Removed line-clamp to allow full content display */
 }
 
 .first-entry .entry-footer {
@@ -112,15 +109,15 @@
     -webkit-line-clamp: unset;
 }
 
-/* Base post-entry - Modern styles defined in components/cards.css */
+/* Base note-entry - Modern styles defined in components/cards.css */
 /* Keeping minimal base structure here for PaperMod compatibility */
-.post-entry {
+.note-entry {
     position: relative;
     margin-bottom: var(--gap);
     transition: transform var(--transition-base, 0.2s);
 }
 
-.post-entry:active {
+.note-entry:active {
     transform: scale(0.98);
 }
 
@@ -138,10 +135,10 @@
     color: var(--secondary);
     font-size: 14px;
     line-height: 1.6;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    /* Removed all overflow constraints to prevent text clipping */
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .entry-footer {

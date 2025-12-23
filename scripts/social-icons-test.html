@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Social Icons Test</title>
+    <style>
+        :root {
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+            --space-2xl: 3rem;
+            --radius-full: 9999px;
+            --nebula-purple: #5e41a2;
+            --transition-base: 0.2s ease;
+        }
+        
+        body {
+            font-family: system-ui, sans-serif;
+            padding: 2rem;
+            background: #f8f9fa;
+        }
+        
+        .test-section {
+            margin: 2rem 0;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        /* Terminal Social Icons */
+        .terminal-social-reveal .social-icons {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: var(--space-sm);
+            margin: 0;
+            height: 100%;
+            pointer-events: auto;
+        }
+
+        .terminal-social-reveal .social-icons a {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: var(--space-2xl);
+            height: var(--space-2xl);
+            border-radius: var(--radius-full);
+            background: rgba(94, 65, 162, 0.08);
+            color: var(--nebula-purple);
+            border: 1px solid rgba(94, 65, 162, 0.15);
+            transition: all var(--transition-base);
+            box-shadow: 0 2px 8px rgba(94, 65, 162, 0.08);
+            margin: 0 !important;
+            line-height: 1 !important;
+            padding: 0 !important;
+            vertical-align: middle !important;
+            pointer-events: auto;
+            text-decoration: none;
+        }
+
+        .terminal-social-reveal .social-icons a > svg {
+            display: block;
+            margin: 0 auto;
+            height: var(--space-lg);
+            width: var(--space-lg);
+            vertical-align: middle;
+        }
+        
+        /* Standard Social Icons */
+        .social-icons {
+            display: flex;
+            gap: var(--space-sm);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: var(--space-xl);
+            height: var(--space-xl);
+            border-radius: var(--radius-full);
+            background: #e9ecef;
+            color: #495057;
+            transition: all var(--transition-base);
+            text-decoration: none;
+        }
+
+        .social-icons a svg {
+            height: var(--space-lg);
+            width: var(--space-lg);
+        }
+        
+        .spacing-info {
+            font-size: 0.875rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Social Icon Spacing Test</h1>
+    
+    <div class="test-section">
+        <h3>Terminal Social Reveal (Fixed)</h3>
+        <div class="terminal-social-reveal">
+            <div class="social-icons">
+                <a href="#" title="GitHub">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77 5.44 5.44 0 0 0 3.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                    </svg>
+                </a>
+                <a href="#" title="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                        <rect x="2" y="9" width="4" height="12"/>
+                        <circle cx="4" cy="4" r="2"/>
+                    </svg>
+                </a>
+                <a href="#" title="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                        <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="spacing-info">
+            Container: 48px (--space-2xl) | SVG: 24px (--space-lg) | Gap: 8px (--space-sm)
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h3>Standard Social Icons (Fixed)</h3>
+        <div class="social-icons">
+            <a href="#" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77 5.44 5.44 0 0 0 3.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                </svg>
+            </a>
+            <a href="#" title="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                    <rect x="2" y="9" width="4" height="12"/>
+                    <circle cx="4" cy="4" r="2"/>
+                </svg>
+            </a>
+            <a href="#" title="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+            </a>
+        </div>
+        <div class="spacing-info">
+            Container: 32px (--space-xl) | SVG: 24px (--space-lg) | Gap: 8px (--space-sm)
+        </div>
+    </div>
+</body>
+</html>

@@ -60,10 +60,10 @@ buildExpired = false
     imageTitle = "Bryan Chasko"
     [[params.profileMode.buttons]]
       name = "Cloudcroft Cloud Company"
-      url = "/cloudcroft-cloud-company/"
+      url = "/services/"
     [[params.profileMode.buttons]]
       name = "Blog"
-      url = "/blog/"
+      url = "/notes/"
     [[params.profileMode.buttons]]
       name = "Topics"
       url = "/topics/"
@@ -73,7 +73,7 @@ buildExpired = false
 
 [params.homeInfoParams]
   Title = "👋 Hello, Friend. ^.^"
-Content = "[🦊me](blog/posts/about-bryan-chasko) | [🐈 Buddy](blog/posts/my-cat-buddy) | [🏈#ForeverNE](blog/posts/new-england-patriots-fandom) | [🔧SKILLS](blog/posts/my-skills-and-experience#skills)  | [📈EXPERIENCE](blog/posts/my-skills-and-experience#experience)  | [☁️AWS CLOUD](blog/posts/aws-cloud-projects)  |<br> [📅BOOK or HIRE](cloudcroft-cloud-company) "
+Content = "[🦊me](notes/posts/about-bryan-chasko) | [🐈 Buddy](notes/posts/my-cat-buddy) | [🏈#ForeverNE](notes/posts/new-england-patriots-fandom) | [🔧SKILLS](notes/posts/my-skills-and-experience#skills)  | [📈EXPERIENCE](notes/posts/my-skills-and-experience#experience)  | [☁️AWS CLOUD](notes/posts/aws-cloud-projects)  |<br> [📅BOOK or HIRE](cloudcroft-cloud-company) "
 
   [[params.socialIcons]]
     name = "github"
@@ -124,12 +124,12 @@ Content = "[🦊me](blog/posts/about-bryan-chasko) | [🐈 Buddy](blog/posts/my-
   [[menu.main]]
     identifier = "cloudcroft-cloud-company"
     name = "Cloudcroft Cloud Company"
-    url = "/cloudcroft-cloud-company/"
+    url = "/services/"
     weight = 10
   [[menu.main]]
     identifier = "blog"
     name = "Blog"
-    url = "/blog/"
+    url = "/notes/"
     weight = 20
   [[menu.main]]
     identifier = "tags"

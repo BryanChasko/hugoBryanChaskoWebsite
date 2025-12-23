@@ -43,8 +43,8 @@
 }
 
 .social-icons a svg {
-    height: 28px;
-    width: 28px;
+    height: var(--space-lg);
+    width: var(--space-lg);
 }
 
 code {

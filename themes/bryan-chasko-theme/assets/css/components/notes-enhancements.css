@@ -1,0 +1,148 @@
+/* Notes Page Modern Enhancements */
+
+/* Typography System with Fluid Scaling */
+:root {
+  --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-size-base: clamp(0.9375rem, 1.5vw, 1rem);
+  --font-size-sm: clamp(0.8125rem, 1.25vw, 0.875rem);
+  --font-size-lg: clamp(1.0625rem, 1.75vw, 1.125rem);
+  --font-size-xl: clamp(1.25rem, 2vw, 1.5rem);
+  --font-size-2xl: clamp(1.5rem, 2.5vw, 1.875rem);
+  --line-height-tight: 1.25;
+  --line-height-base: 1.5;
+  --line-height-relaxed: 1.75;
+}
+
+/* Apply Inter font globally */
+body, .note-entry, .profile-hero, .linkedin-hero, .builder-note-card {
+  font-family: var(--font-inter);
+}
+
+/* 3D Tilt Interaction System */
+.note-entry, .profile-hero, .linkedin-hero, .builder-note-card {
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
+  --tilt-z: 0deg;
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  transform-style: preserve-3d;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .note-entry, .profile-hero, .linkedin-hero, .builder-note-card {
+    --tilt-x: 0deg !important;
+    --tilt-y: 0deg !important;
+    --tilt-z: 0deg !important;
+    transform: none !important;
+  }
+}
+
+/* 3D Tilt on hover - subtle 2-3 degrees */
+.note-entry:hover {
+  --tilt-y: 2deg;
+  transform: perspective(1000px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y)) rotateZ(var(--tilt-z));
+}
+
+.profile-hero:hover, .linkedin-hero:hover {
+  --tilt-y: 3deg;
+  transform: perspective(1200px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y)) rotateZ(var(--tilt-z));
+}
+
+.builder-note-card:hover {
+  --tilt-y: 2.5deg;
+  transform: perspective(1000px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y)) rotateZ(var(--tilt-z));
+}
+
+/* Fluid Typography for Note Entries */
+.note-entry .entry-header h2 {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.015em;
+}
+
+.note-entry .entry-content {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  font-weight: 400;
+}
+
+.note-entry .entry-footer {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+}
+
+/* Profile Hero Typography */
+.profile-hero .hero-name, .linkedin-hero .hero-name {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  line-height: var(--line-height-tight);
+}
+
+.profile-hero .hero-bio, .linkedin-hero .hero-headline {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  font-weight: 400;
+}
+
+/* Builder Note Card Typography */
+.builder-note-card .note-title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  line-height: var(--line-height-tight);
+}
+
+.builder-note-card .note-description {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+  font-weight: 400;
+}
+
+/* Dark Mode Typography Adjustments */
+[data-theme="dark"] .note-entry .entry-header h2,
+[data-theme="dark"] .profile-hero .hero-name,
+[data-theme="dark"] .linkedin-hero .hero-name {
+  color: #e5e5eb;
+  font-weight: 700;
+}
+
+[data-theme="dark"] .note-entry .entry-content,
+[data-theme="dark"] .profile-hero .hero-bio,
+[data-theme="dark"] .linkedin-hero .hero-headline {
+  color: #c8c8d0;
+  font-weight: 400;
+}
+
+/* Accessibility: Ensure sufficient contrast */
+@media (prefers-contrast: more) {
+  .note-entry .entry-header h2 {
+    font-weight: 800;
+  }
+  
+  .profile-hero .hero-name, .linkedin-hero .hero-name {
+    font-weight: 800;
+  }
+}
+
+/* Performance: GPU acceleration for smooth transforms */
+.note-entry, .profile-hero, .linkedin-hero, .builder-note-card {
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Intersection Observer for lazy animation trigger */
+.note-entry.in-view, .profile-hero.in-view, .builder-note-card.in-view {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

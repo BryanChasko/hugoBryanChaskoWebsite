@@ -287,8 +287,8 @@
   color-scheme: dark;
 }
 
-/* LinkedIn Posts Section */
-.linkedin-posts-section {
+/* LinkedIn Notes Section */
+.linkedin-notes-section {
   display: flex;
   flex-direction: column;
   gap: var(--space-xl);
@@ -296,30 +296,30 @@
   margin: var(--space-2xl) 0;
 }
 
-.linkedin-posts-section iframe {
+.linkedin-notes-section iframe {
   max-width: 100%;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   background: var(--color-background);
 }
 
-/* Twitter Posts Section */
-.twitter-posts-section {
+/* Twitter Notes Section */
+.twitter-notes-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-lg);
   margin: var(--space-2xl) 0;
 }
 
-/* LinkedIn Posts Section */
-.linkedin-posts-section {
+/* LinkedIn Notes Section */
+.linkedin-notes-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-lg);
   margin: var(--space-2xl) 0;
 }
 
-.linkedin-posts-section iframe {
+.linkedin-notes-section iframe {
   width: 100%;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
@@ -328,7 +328,7 @@
 
 /* Dark mode iframe styling - LinkedIn embeds don't support theme parameter,
    but we can add a subtle overlay effect to reduce brightness */
-[data-theme="dark"] .linkedin-posts-section iframe {
+[data-theme="dark"] .linkedin-notes-section iframe {
   opacity: 0.95;
   filter: brightness(0.9) contrast(1.05);
 }
@@ -336,8 +336,8 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   /* Stack Twitter and LinkedIn posts on mobile */
-  .twitter-posts-section,
-  .linkedin-posts-section {
+  .twitter-notes-section,
+  .linkedin-notes-section {
     grid-template-columns: 1fr;
   }
   

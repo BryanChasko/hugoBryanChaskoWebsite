@@ -9,12 +9,12 @@
         </svg>
     </h1>
     {{- if .Description }}
-    <div class="post-description">
+    <div class="note-description">
         {{ .Description }}
     </div>
     {{- end }}
     {{- if not (.Param "hideMeta") }}
-    <div class="post-meta">
+    <div class="note-meta">
         {{- partial "translation_list.html" . -}}
     </div>
     {{- end }}

@@ -27,7 +27,7 @@ Production Command:
 hugo --minify --gc
 
 Deploy Command:
-hugo && aws s3 sync public/ s3://bryanchasko.com --profile aerospaceug-admin
+hugo && aws s3 sync public/ s3://bryanchasko.com --profile websites-bryanchasko
 
 ## 🚀 How to Replicate This Stack for Your Own Site
 
@@ -253,7 +253,7 @@ AWS_REGION                 # e.g., us-west-2
 **S3 Baseline Bucket Setup**:
 ```bash
 # One-time IAM user creation with S3 baseline bucket policy
-aws iam create-user --user-name github-actions-webgl-tests --profile aerospaceug-admin
+aws iam create-user --user-name github-actions-webgl-tests --profile websites-bryanchasko
 
 # Attach policy for baseline bucket access
 aws iam put-user-policy --user-name github-actions-webgl-tests \
@@ -268,11 +268,11 @@ aws iam put-user-policy --user-name github-actions-webgl-tests \
         "arn:aws:s3:::bryanchasko-com-webgl-baselines/*"
       ]
     }]
-  }' --profile aerospaceug-admin
+  }' --profile websites-bryanchasko
 
 # Create access key for GitHub Actions
 aws iam create-access-key --user-name github-actions-webgl-tests \
-  --profile aerospaceug-admin
+  --profile websites-bryanchasko
 
 # Copy the AccessKeyId and SecretAccessKey into GitHub Secrets
 ```
@@ -516,7 +516,7 @@ git status
 npm test
 
 # 2. Deploy to production (includes test gate)
-perl scripts/deploy.pl --profile aerospaceug-admin --verbose
+perl scripts/deploy.pl --profile websites-bryanchasko --verbose
 
 # 3. Verify site is live
 curl -I https://bryanchasko.com/
@@ -582,7 +582,7 @@ Use `~/.bcc-site/config.json` for your AWS settings (not in GitHub):
 - Build site: `hugo --config hugo.toml`
 - Add PaperMod (quick): `git clone https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod`
 - Run tests: `npm test` (must pass before deploy)
-- Deploy: `perl scripts/deploy.pl --profile aerospaceug-admin`
+- Deploy: `perl scripts/deploy.pl --profile websites-bryanchasko`
 
 ---
 

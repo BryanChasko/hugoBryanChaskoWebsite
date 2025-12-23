@@ -1,0 +1,45 @@
+# LinkedIn Feed Configuration
+# Profile: https://www.linkedin.com/in/bryanchasko/
+
+profile:
+  name: "Bryan Chasko"
+  headline: "Polymath | Inventor | Problem Solver | Business Logic, Data, Connectivity, Cloud Technology Expert | AI, Game Tech, Robotics, Rural Issues & Innovation | Community 👐"
+  location: "El Paso, Texas"
+  url: "https://linkedin.com/in/bryanchasko"
+  activity_url: "https://linkedin.com/in/bryanchasko/recent-activity/all/"
+  company_name: "Cloudcroft Cloud Company"
+  company_url: "https://www.linkedin.com/company/104376031"
+  followers: "3,200+"
+
+show_activity_link: true
+show_company_link: true
+
+# Featured Activity - Recent LinkedIn Notes
+featured_notes:
+  - content: "😶‍🌫️ 🛰️ Welcome to the AWS developer community, Amazon Leo & meet the #AWSHeroes 📡👐 I'm always pestering our AWS Community teams for access to sweet Aerospace and Satellite technologies. Check out my 3 AWS Builder's Center articles with notes from Amazon Leo re:Invent sessions and booth. #ListenToTheHeroes"
+    date: "December 2024"
+    type: "note"
+    topic: "Amazon Leo"
+    reactions: 74
+    comments: 20
+    
+  - content: "☁️ Security/Compliance stalling AI? US Navy Submarine Forces went from a box of hard drives and 3 dusty data centers to unleashed innovation powered by Amazon Bedrock & DataSync. If Sailors working in AWS' restrictive GovCloud can quickly modernize, the rest of us have no excuse. Adapt, else, irrelevance."
+    date: "December 2024"
+    type: "note"
+    topic: "re:Invent 2025"
+    reactions: 36
+    comments: 1
+
+  - content: "👉 bryanChasko.com/help 😾 Buddy cat knows it's time for Vegas for my 10th AWS reInvent. I'm launching my business providing expertise utilizing Amazon Web Services with eyes on emerging critical services like Amazon Bedrock Agent Core and Amazon LEO. Check out my list of services!"
+    date: "December 2024"
+    type: "note"
+    topic: "Cloudcroft Cloud Company"
+    reactions: 38
+    comments: 1
+    link: "https://bryanchasko.com/help/"
+
+  - content: "☁️ reInvent Friday has the best sessions as there's no longer anything held back under NDA. Friday 'repeats' are vastly different from Monday sessions. If you want hands and eyes on the latest services and tooling, stay tuned to 'New Launch'. x2 with Werner Vogels scheduled Thursday evening 🍿"
+    date: "December 2024"
+    type: "note"
+    topic: "re:Invent 2025"
+    reactions: 6

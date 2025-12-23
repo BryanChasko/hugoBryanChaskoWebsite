@@ -113,7 +113,8 @@
 
 .insta-profile-btn {
   position: relative;
-  box-shadow: 0 4px 16px rgba(255, 153, 0, 0.4);
+  box-shadow: 0 4px 16px rgba(129, 105, 197, 0.4);
+  color: var(--white);
 }
 
 .insta-follow-link {
@@ -137,7 +138,12 @@
 }
 
 .github-repo-button {
-  color: var(--nebula-orange) !important;
+  color: var(--white) !important;
+  box-shadow: 0 4px 16px rgba(129, 105, 197, 0.4) !important;
+}
+
+.github-repo-button:hover {
+  box-shadow: 0 8px 24px rgba(129, 105, 197, 0.5) !important;
 }
 
 .github-dashboard::after {
@@ -180,8 +186,16 @@
 }
 
 /* Dark mode adjustments */
-[data-theme="dark"] .entry-content {
-  background: linear-gradient(135deg, rgba(28, 34, 48, 0.5) 0%, rgba(30, 26, 48, 0.3) 100%);
+[data-theme="light"] .github-dashboard__button:first-of-type {
+  box-shadow: 0 4px 16px rgba(129, 105, 197, 0.4);
+}
+
+[data-theme="light"] .github-dashboard__button:first-of-type:hover {
+  box-shadow: 0 8px 24px rgba(129, 105, 197, 0.5);
+}
+
+[data-theme="light"] .insta-follow-link {
+  color: var(--nebula-purple);
 }
 
 [data-theme="dark"] .terminal-wrapper {
