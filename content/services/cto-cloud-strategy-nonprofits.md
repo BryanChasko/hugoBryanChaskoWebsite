@@ -5,7 +5,7 @@ draft: false
 description: "Flexible working session designed for nonprofits that need clarity, direction, or expert help without committing to a big project."
 ---
 
-Before we meet, you'll share a bit of background so I understand your goals, pain points, and constraints. During the session, we walk through what's working, what isn't, and where the biggest opportunities are. The conversation stays grounded in plain language and practical steps — no jargon, no pressure to "go big," and no assumptions about your technical capacity.
+Let's dig into whatever you're facing — whether it's an AI idea, a website issue, or an AWS ambition — and map it against your real‑world pain points and constraints. During the session, we walk through what's working, what isn't, and where the biggest opportunities are. The conversation stays grounded in plain language and practical steps — no jargon, no pressure to "go big," and no assumptions about your technical capacity.
 
 Afterward, you receive a clear, research‑backed summary that outlines what we discussed and the most realistic next steps. It's written so you can hand it to a board member, a program lead, or a funder and they'll understand exactly what you're trying to accomplish.
 
