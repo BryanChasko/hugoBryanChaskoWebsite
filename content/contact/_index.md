@@ -15,7 +15,7 @@ Let's connect! Find me on social media, check out my latest projects, and see wh
     <img src="https://img.shields.io/badge/Instagram-bryanChasko-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram Profile">
   </a>
   <a href="https://twitter.com/bryanChasko" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/X-bryanChasko-000000?style=for-the-badge&logo=x&logoColor=white" alt="X (Twitter) Profile">
+    <img src="https://img.shields.io/badge/X-bryanChasko-000000?style=for-the-badge&logo=x&logoColor=white" alt="X Profile">
   </a>
 </div>
 

@@ -90,10 +90,12 @@
             {{- $page_url:= $currentPage.Permalink | absLangURL }}
             {{- $is_search := eq (site.GetPage .KeyName).Layout `search` }}
             {{- $is_active := or (eq $menu_item_url $page_url) (and (ne .URL "/") (hasPrefix $page_url $menu_item_url)) }}
+            {{- $is_services := eq .Name "Services" }}
             <li>
                 <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
                 {{- cond $is_search (" accesskey=/" | safeHTMLAttr) ("" | safeHTMLAttr ) }}
-                {{- if $is_active }} class="active-link"{{- end }}>
+                {{- if $is_active }} class="active-link"{{- end }}
+                {{- if $is_services }} data-glimmer="true"{{- end }}>
                     <span {{- if $is_active }} class="active" {{- end }}>
                         {{- .Pre }}
                         {{- .Name -}}

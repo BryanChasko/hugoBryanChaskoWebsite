@@ -8,11 +8,10 @@
 /* Social Badges Section */
 .social-badges {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-md);
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   margin: var(--space-xl) 0;
-  padding: var(--space-lg);
+  padding: var(--space-2xl);
   border-radius: var(--radius-lg);
   background: linear-gradient(
     135deg,
@@ -33,14 +32,18 @@
   border-color: rgba(129, 105, 197, 0.2);
 }
 
-.social-badges img {
-  max-height: 32px;
+.social-badges a {
+  text-decoration: none;
   transition: all var(--transition-base);
 }
 
-.social-badges a:hover img {
+.social-badges a:hover {
   transform: translateY(-2px);
-  filter: brightness(1.1);
+}
+
+.social-badges img {
+  height: 28px;
+  transition: all var(--transition-base);
 }
 
 /* GitHub Section */
@@ -264,6 +267,13 @@
   -webkit-text-fill-color: transparent;
 }
 
+.twitter-posts-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+  margin: var(--space-2xl) 0;
+}
+
 .twitter-container {
   max-width: 600px;
   margin: 0 auto;
@@ -287,17 +297,17 @@
   color-scheme: dark;
 }
 
-/* LinkedIn Notes Section */
-.linkedin-notes-section {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xl);
-  align-items: center;
+/* LinkedIn Posts Section */
+.linkedin-posts-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
   margin: var(--space-2xl) 0;
+  align-items: start;
 }
 
-.linkedin-notes-section iframe {
-  max-width: 100%;
+.linkedin-posts-section iframe {
+  width: 100%;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   background: var(--color-background);
@@ -336,18 +346,16 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   /* Stack Twitter and LinkedIn posts on mobile */
+  .twitter-posts-section,
   .twitter-notes-section,
   .linkedin-notes-section {
     grid-template-columns: 1fr;
   }
   
   .social-badges {
-    gap: var(--space-sm);
-    padding: var(--space-md);
-  }
-  
-  .social-badges img {
-    max-height: 28px;
+    flex-direction: column;
+    gap: var(--space-md);
+    padding: var(--space-lg);
   }
   
   .repo-card {

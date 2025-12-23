@@ -543,8 +543,8 @@
   color: var(--nebula-orange);
 }
 
-/* Hide duplicate services list - keep only hero cards */
-.page-header ~ .note-entry {
+/* Hide duplicate services list - keep only hero cards (services page only) */
+.services .page-header ~ .note-entry {
   display: none;
 }
 
