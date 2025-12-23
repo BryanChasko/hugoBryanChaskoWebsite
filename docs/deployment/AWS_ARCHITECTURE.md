@@ -202,7 +202,70 @@ Automatic rollback: If you need to revert to a previous version, S3 keeps versio
 - Reduces CloudFront IP addressing complexity
 - Industry standard since 2010
 
-### 6. Deployment Endpoints
+### 6. CloudFront Functions
+
+**Purpose:** Execute lightweight logic at the edge (viewer-request stage) without Lambda overhead
+
+**Current Functions:**
+
+| Function | Stage | Purpose | Trigger | Source |
+|----------|-------|---------|---------|--------|
+| `bryanchasko-com-url-rewrite` | LIVE | URL rewriting + redirects | viewer-request | [`infrastructure/cloudfront-url-rewrite-function.js`](../../infrastructure/cloudfront-url-rewrite-function.js) |
+
+**URL Rewrite Function Logic:**
+```javascript
+function handler(event) {
+    var request = event.request;
+    var uri = request.uri.toLowerCase();
+    
+    // Redirect /help to /services (case-insensitive)
+    if (uri === '/help' || uri === '/help/') {
+        return {
+            statusCode: 301,
+            statusDescription: 'Moved Permanently',
+            headers: {
+                'location': { value: '/services' }
+            }
+        };
+    }
+    
+    // URL rewriting for SPA routing
+    if (!uri.includes('.') && !uri.endsWith('/')) {
+        request.uri = uri + '/index.html';
+    }
+    else if (uri.endsWith('/') && !uri.endsWith('/index.html')) {
+        request.uri = uri + 'index.html';
+    }
+    
+    return request;
+}
+```
+
+**Why CloudFront Functions?**
+- ✅ Executes at edge (low latency)
+- ✅ No cold starts (unlike Lambda@Edge)
+- ✅ Cheaper than Lambda@Edge (~$0.60/month vs $0.50 per 1M requests)
+- ✅ Handles redirects without S3 objects
+- ✅ Case-insensitive URL matching
+
+**Deployment:**
+```bash
+# Update function code
+aws cloudfront update-function \
+  --name bryanchasko-com-url-rewrite \
+  --function-code fileb://./function.js \
+  --function-config Comment="URL rewriting and redirects",Runtime=cloudfront-js-1.0 \
+  --if-match [ETAG] \
+  --profile websites-bryanchasko
+
+# Publish to LIVE
+aws cloudfront publish-function \
+  --name bryanchasko-com-url-rewrite \
+  --if-match [NEW-ETAG] \
+  --profile websites-bryanchasko
+```
+
+### 7. Deployment Endpoints
 
 **Development Server:**
 ```

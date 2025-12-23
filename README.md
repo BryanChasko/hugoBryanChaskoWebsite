@@ -29,6 +29,40 @@ hugo --minify --gc
 Deploy Command:
 hugo && aws s3 sync public/ s3://bryanchasko.com --profile websites-bryanchasko
 
+## 🏗️ Architecture Diagrams
+
+### Website Architecture
+
+```mermaid
+architecture-beta
+    service user(logos:aws-route53)[User Browser]
+    service dns(logos:aws-route53)[Route 53 DNS]
+    service cdn(logos:aws-cloudfront)[CloudFront CDN]
+    service functions(logos:aws-lambda)[CloudFront Functions]
+    service bucket(logos:aws-s3)[S3 Bucket]
+
+    user:R -- L:dns
+    dns:R -- L:cdn
+    cdn:B -- T:functions
+    functions:B -- T:bucket
+```
+
+### CI/CD Pipeline
+
+```mermaid
+architecture-beta
+    service github(logos:github-actions)[GitHub]
+    service runner(logos:github-actions)[GitHub Actions]
+    service cli(logos:aws-cli)[AWS CLI]
+    service s3(logos:aws-s3)[S3 Deploy]
+    service cdn_invalidate(logos:aws-cloudfront)[CloudFront Invalidate]
+
+    github:R -- L:runner
+    runner:B -- T:cli
+    cli:B -- T:s3
+    s3:R -- L:cdn_invalidate
+```
+
 ## 🚀 How to Replicate This Stack for Your Own Site
 
 This project is designed to be reproducible for any Hugo site wanting WebGL visual effects with professional testing.
@@ -51,6 +85,8 @@ This project is designed to be reproducible for any Hugo site wanting WebGL visu
 | Baseline Storage | AWS S3 | Visual regression screenshots |
 | CI/CD | GitHub Actions | Automated test pipeline |
 | CSS Architecture | CSS Custom Properties | 3-palette theming system |
+| CDN | AWS CloudFront | Global content delivery |
+| Edge Logic | CloudFront Functions | URL rewriting & redirects |
 
 ### Quick Start for New Project
 
@@ -276,6 +312,87 @@ aws iam create-access-key --user-name github-actions-webgl-tests \
 
 # Copy the AccessKeyId and SecretAccessKey into GitHub Secrets
 ```
+
+### CloudFront Functions for Edge Logic
+
+This site uses **CloudFront Functions** to handle URL rewriting and redirects at the edge (viewer-request stage):
+
+**Current Function: `bryanchasko-com-url-rewrite`**
+- Redirects `/help` → `/services` (case-insensitive)
+- Rewrites URLs for SPA routing (e.g., `/blog` → `/blog/index.html`)
+- Executes at CloudFront edge locations (~1ms latency)
+- Cost: ~$0.60/month (vs $0.50 per 1M requests for Lambda@Edge)
+
+**Why CloudFront Functions?**
+- ✅ No cold starts (unlike Lambda@Edge)
+- ✅ Handles redirects without S3 objects
+- ✅ Case-insensitive URL matching
+- ✅ Cheaper and faster than Lambda@Edge
+
+**To Update the Function:**
+```bash
+# Edit function code
+cat > /tmp/function.js << 'EOF'
+function handler(event) {
+    var request = event.request;
+    var uri = request.uri.toLowerCase();
+    
+    // Add your redirects here
+    if (uri === '/help' || uri === '/help/') {
+        return {
+            statusCode: 301,
+            statusDescription: 'Moved Permanently',
+            headers: { 'location': { value: '/services' } }
+        };
+    }
+    
+    // URL rewriting for SPA routing
+    if (!uri.includes('.') && !uri.endsWith('/')) {
+        request.uri = uri + '/index.html';
+    }
+    else if (uri.endsWith('/') && !uri.endsWith('/index.html')) {
+        request.uri = uri + 'index.html';
+    }
+    
+    return request;
+}
+EOF
+
+# Get current DEVELOPMENT version ETag
+DEV_ETAG=$(aws cloudfront get-function \
+  --name bryanchasko-com-url-rewrite \
+  --stage DEVELOPMENT \
+  --profile websites-bryanchasko \
+  /tmp/dev-function.js 2>&1 | jq -r '.ETag')
+
+# Update DEVELOPMENT version
+aws cloudfront update-function \
+  --name bryanchasko-com-url-rewrite \
+  --function-code fileb:///tmp/function.js \
+  --function-config Comment="URL rewriting and redirects",Runtime=cloudfront-js-1.0 \
+  --if-match "$DEV_ETAG" \
+  --profile websites-bryanchasko
+
+# Get new ETag and publish to LIVE
+NEW_ETAG=$(aws cloudfront get-function \
+  --name bryanchasko-com-url-rewrite \
+  --stage DEVELOPMENT \
+  --profile websites-bryanchasko \
+  /tmp/dev-function-updated.js 2>&1 | jq -r '.ETag')
+
+aws cloudfront publish-function \
+  --name bryanchasko-com-url-rewrite \
+  --if-match "$NEW_ETAG" \
+  --profile websites-bryanchasko
+
+# Invalidate cache to apply changes
+aws cloudfront create-invalidation \
+  --distribution-id E2E9BSL5RVN6DI \
+  --paths "/*" \
+  --profile websites-bryanchasko
+```
+
+See [AWS_ARCHITECTURE.md](docs/deployment/AWS_ARCHITECTURE.md#6-cloudfront-functions) for complete CloudFront Functions documentation.
 
 ### Common Pitfalls
 
