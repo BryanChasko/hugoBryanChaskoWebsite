@@ -39,7 +39,7 @@ class OrbitScene extends BaseScene {
       radius: 10,
       glow: 20,
       opacity: 0.9,
-      color: this.getThemeColor('--cosmic-energy'), // Medium spring green
+      color: this.getThemeColor('--brand-lavender'), // Lavender for all modes
     };
 
     // Use custom center offset if provided, otherwise use canvas center
@@ -380,7 +380,7 @@ class OrbitScene extends BaseScene {
       this.gl.vertexAttribPointer(this.positionAttrLocation, 2, this.gl.FLOAT, false, 0, 0);
 
       // Set orbit-specific uniforms
-      let color = this.getThemeColor('--cosmic-teal'); // Dark turquoise
+      let color = this.getThemeColor('--brand-lavender'); // Lavender for all modes
       let opacity = orbit.opacity * 0.8;
       
       // Apply hover effects

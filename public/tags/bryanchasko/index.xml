@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>BryanChasko on Bryan Chasko&#39;s Portfolio</title>
-    <link>http://localhost:1313/tags/bryanchasko/</link>
+    <link>http://localhost:49920/tags/bryanchasko/</link>
     <description>Recent content in BryanChasko on Bryan Chasko&#39;s Portfolio</description>
     <image>
       <title>Bryan Chasko&#39;s Portfolio</title>
-      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:49920/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:49920/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
     <lastBuildDate>Sun, 07 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/bryanchasko/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:49920/tags/bryanchasko/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>☁️ How I Became an AWS Hero 🦸‍️</title>
-      <link>http://localhost:1313/notes/posts/aws-hero-bryan-chasko/</link>
+      <link>http://localhost:49920/notes/posts/aws-hero-bryan-chasko/</link>
       <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/posts/aws-hero-bryan-chasko/</guid>
+      <guid>http://localhost:49920/notes/posts/aws-hero-bryan-chasko/</guid>
       <description>&lt;!--
 File Path: content/blog/posts/aws-hero-bryan-chasko.md
 --&gt;
@@ -38,9 +38,9 @@ File Path: content/blog/posts/aws-hero-bryan-chasko.md
     </item>
     <item>
       <title>My Cat Buddy 🐈</title>
-      <link>http://localhost:1313/notes/posts/my-cat-buddy/</link>
+      <link>http://localhost:49920/notes/posts/my-cat-buddy/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/posts/my-cat-buddy/</guid>
+      <guid>http://localhost:49920/notes/posts/my-cat-buddy/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.animalshelter.org/search/shelterpets.asp?rescueId=3220&#34;&gt;Adopt a pet from Guadalupe County Animal Control&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;my-cat-buddy-&#34;&gt;My Cat Buddy 🐱&lt;/h2&gt;
 &lt;!-- content/blog/posts/my-cat-buddy.md --&gt;
@@ -48,13 +48,13 @@ File Path: content/blog/posts/aws-hero-bryan-chasko.md
     </item>
     <item>
       <title>Bryan Chasko&#39;s Basics</title>
-      <link>http://localhost:1313/notes/posts/about-bryan-chasko/</link>
+      <link>http://localhost:49920/notes/posts/about-bryan-chasko/</link>
       <pubDate>Thu, 13 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/posts/about-bryan-chasko/</guid>
+      <guid>http://localhost:49920/notes/posts/about-bryan-chasko/</guid>
       <description>&lt;h2 id=&#34;about-bryan&#34;&gt;About Bryan&lt;/h2&gt;
 &lt;!-- 
 ![Bryan Chasko](/images/profile.jpg) &lt;!-- Make sure to replace this with the actual path to your image --&gt;
-&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/posts/aws-hero-bryan-chasko/&#34;&gt;#AWSHero&lt;/a&gt; since 2018 &lt;a href=&#34;http://localhost:1313/blog/posts/my-skills-and-experience/&#34;&gt;known for 🌟&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:49920/blog/posts/aws-hero-bryan-chasko/&#34;&gt;#AWSHero&lt;/a&gt; since 2018 &lt;a href=&#34;http://localhost:49920/blog/posts/my-skills-and-experience/&#34;&gt;known for 🌟&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Community &amp;amp; Spatial Computing&lt;/strong&gt; 🌍&lt;a href=&#34;https://aws.amazon.com/developer/community/heroes/bryan-chasko/&#34;&gt;AWS Hero Bio&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;personal-background&#34;&gt;Personal Background&lt;/h3&gt;
 &lt;ul&gt;
@@ -68,9 +68,9 @@ From New Mexico&amp;rsquo;s Sacramento Mountains 🏞️. &lt;a href=&#34;https:
     </item>
     <item>
       <title>New England Patriots Fandom 🏈</title>
-      <link>http://localhost:1313/notes/posts/new-england-patriots-fandom/</link>
+      <link>http://localhost:49920/notes/posts/new-england-patriots-fandom/</link>
       <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/posts/new-england-patriots-fandom/</guid>
+      <guid>http://localhost:49920/notes/posts/new-england-patriots-fandom/</guid>
       <description>&lt;h2 id=&#34;new-england-patriots-fandom-&#34;&gt;New England Patriots Fandom 🏈&lt;/h2&gt;
 &lt;p&gt;My first football memory was rooting for the 1985 patriots as they got pummeled in the super bowl-&lt;/p&gt;
 &lt;p&gt;In elementary we were the Ronald Reagan Patriots&lt;/p&gt;
